@@ -2910,7 +2910,7 @@ footer .footer-wrap {
   background-color:#F5EFE7;
 }
 footer .footer-body {
-  padding: 80px 0;
+  padding: 50px 0;
 }
 footer .footer-bottom-wrap {
   padding-top: 14px;
@@ -2937,7 +2937,7 @@ footer .footer-infor .footer-logo > a {
   display: flex;
 }
 .footer-logo{
-  width: 110px;
+  width: 80px;
 
 }
 footer .footer-address {
@@ -5692,8 +5692,8 @@ input.style-line-bottom::placeholder {
   margin-bottom: 20px;
 }
 .tf-product-modal .tf-social-icon .box-icon {
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
   border-radius: 999px;
   font-size: 16px;
   color: var(--white);
@@ -7227,8 +7227,8 @@ input.style-line-bottom::placeholder {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  width: 33px;
+  height: 33px;
   font-size: 20px;
   color: var(--main);
   border: 1px solid var(--main);
@@ -14980,6 +14980,10 @@ ul.list-text.type-number {
   }
 }
 @media (min-width: 992px) {
+
+   .footer-menu-texts{
+    padding-top:110px;
+  }
   .news-item-2 {
     gap: 40px;
   }
@@ -15889,6 +15893,7 @@ ul.list-text.type-number {
   .footer .footer-menu {
     gap: 100px;
   }
+ 
   .tf-dropdown-sort {
     padding: 5px 12px;
     min-width: 164px;
