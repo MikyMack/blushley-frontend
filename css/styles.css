@@ -2767,7 +2767,7 @@ header {
   -o-transition: 0.2s ease-out;
   transition: 0.2s ease-out;
   z-index: 888;
-  background-color: #F5EFE7;
+  background-color: #ffffff;
 }
 header.header-bg {
   background-color: var(--white);
