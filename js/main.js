@@ -1287,7 +1287,7 @@
 
     /* Preloader
   -------------------------------------------------------------------------------------*/
-    var preloader = function () {
+  /*  var preloader = function () {
         if ($("body").hasClass("preload-wrapper")) {
             setTimeout(function () {
                 $(".preload").fadeOut("slow", function () {
@@ -1295,8 +1295,41 @@
                 });
             }, 100);
         }
-    };
+    };*/
 
+
+    /* Preloader
+  -------------------------------------------------------------------------------------*/
+var preloader = function () {
+    if ($("body").hasClass("preload-wrapper")) {
+        var video = document.getElementById('preloaderVideo');
+        
+        if (video) {
+            // Wait for video to end
+            video.addEventListener('ended', function() {
+                $(".preload").fadeOut("slow", function () {
+                    $(this).remove();
+                });
+            });
+            
+            // Fallback: If video takes too long or fails, hide after timeout
+            setTimeout(function () {
+                if ($(".preload").is(":visible")) {
+                    $(".preload").fadeOut("slow", function () {
+                        $(this).remove();
+                    });
+                }
+            }, 5000); // 5 second max wait time
+        } else {
+            // No video found, use original timeout
+            setTimeout(function () {
+                $(".preload").fadeOut("slow", function () {
+                    $(this).remove();
+                });
+            }, 100);
+        }
+    }
+};
     // Dom Ready
     $(function () {
         selectImages();
@@ -1344,3 +1377,52 @@
         preloader();
     });
 })(jQuery);
+
+
+/*************ABoutus page-Read more section**** */
+
+// Add this script at the bottom of your page or in your main JS file
+document.addEventListener('DOMContentLoaded', function() {
+    const readMoreBtn = document.querySelector('.read-more-btn');
+    const tabItems = document.querySelectorAll('.widget-menu-tab .item-title');
+    
+    // Handle Read More button click
+    if (readMoreBtn) {
+        readMoreBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Get the active tab's content
+            const activeContent = document.querySelector('.widget-content-inner.active');
+            const readMoreContent = activeContent.querySelector('.read-more-content');
+            const btnText = this.querySelector('.text');
+            
+            if (readMoreContent) {
+                readMoreContent.classList.toggle('expanded');
+                
+                // Change button text
+                if (readMoreContent.classList.contains('expanded')) {
+                    btnText.textContent = 'Read Less';
+                } else {
+                    btnText.textContent = 'Read More';
+                }
+            }
+        });
+    }
+    
+    // Reset Read More when switching tabs
+    tabItems.forEach(function(tab) {
+        tab.addEventListener('click', function() {
+            // Close all expanded content
+            const allReadMoreContent = document.querySelectorAll('.read-more-content');
+            allReadMoreContent.forEach(function(content) {
+                content.classList.remove('expanded');
+            });
+            
+            // Reset button text
+            const btnText = readMoreBtn.querySelector('.text');
+            if (btnText) {
+                btnText.textContent = 'Read More';
+            }
+        });
+    });
+});
