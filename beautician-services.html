@@ -1,42 +1,37 @@
-
-
 <!DOCTYPE html>
-
-<!--[if IE 8 ]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
-<!--<![endif]-->
-
-
-<!-- Mirrored from themesflat.co/html/modave/shop-default-list.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Oct 2025 04:04:41 GMT -->
+<html lang="en-US">
 <head>
     <meta charset="utf-8">
-    <title>Modave - Multipurpose eCommerce</title>
+    <title>Blushley</title>
 
-    <meta name="author" content="themesflat.com">
+    <meta name="author" content="trivlogic.com">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="Themesflat Modave, Multipurpose eCommerce Template">
+    <meta name="description" content="Blushley - Beauty Marketplace & Beautician Booking Platform ">
 
-   <!-- font -->
-   <link rel="stylesheet" href="fonts/fonts.css">
-   <link rel="stylesheet" href="fonts/font-icons.css">
-   <link rel="stylesheet" href="css/bootstrap.min.css">
-   <link rel="stylesheet" href="css/swiper-bundle.min.css">
-   <link rel="stylesheet" href="css/animate.css">
-   <link rel="stylesheet" href="../../../sibforms.com/forms/end-form/build/sib-styles.css">
-   <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+    <!-- font -->
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="stylesheet" href="fonts/font-icons.css">
+    <!-- css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="../../../sibforms.com/forms/end-form/build/sib-styles.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+
 
     <!-- Favicon and Touch Icons  -->
-    <link rel="shortcut icon" href="images/logo/favicon.png">
-    <link rel="apple-touch-icon-precomposed" href="images/logo/favicon.png">
+
+
+    <link rel="shortcut" type="image/x-icon" href="images/logo/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/logo/favicon-16x16.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="images/logo/apple-touch-icon.png">
 
 </head>
 
 <body class="preload-wrapper">
 
-    <!-- RTL -->
-    <a href="javascript:void(0);" id="toggle-rtl" class="btn-style-2 radius-3"><span>RTL</span></a>
-    <!-- /RTL  -->
+  
 
     <!-- Scroll Top -->
     <button id="scroll-top">
@@ -52,10 +47,15 @@
         </svg> 
     </button>
 
+   
     <!-- preload -->
     <div class="preload preload-container">
         <div class="preload-logo">
-            <div class="spinner"></div>
+            <video autoplay muted playsinline class="preloader-video" id="preloaderVideo">
+                <source src="images/video/blushley loader.mp4" type="video/mp4">
+                <!-- Fallback spinner if video fails to load -->
+                <div class="spinner"></div>
+            </video>
         </div>
     </div>
     <!-- /preload -->
@@ -67,7 +67,7 @@
                 <div class="tf-topbar_wrap d-flex align-items-center justify-content-center justify-content-xl-between">
                     <ul class="topbar-left">
                         <li><a class="text-caption-1 text-white" href="tel:315-666-6688">315-666-6688</a></li>
-                        <li><a class="text-caption-1 text-white" href="#">themesflat@gmail.com</a></li>
+                        <li><a class="text-caption-1 text-white" href="#">blushley@gmail.com</a></li>
                         <li><a class="text-caption-1 text-white text-decoration-underline" href="store-list.html">Our Store</a></li>
                     </ul>
                     <div class="topbar-right d-none d-xl-block">
@@ -90,6 +90,7 @@
             </div>
         </div>
         <!-- /Top Bar -->
+
 <!-- Header -->
         <header id="header" class="header-default">
             <div class="container">
@@ -185,11 +186,11 @@
         <!-- /Header -->
 
         <!-- page-title -->
-        <div class="page-title" style="background-image: url(images/section/page-title.jpg);">
+        <div class="page-title" style="background-image: url('images/banners/beautician-services.png');">
             <div class="container-full">
                 <div class="row">
                     <div class="col-12">
-                        <h3 class="heading text-center">Women</h3>
+                        <h3 class="heading text-center">services</h3>
                         <ul class="breadcrumbs d-flex align-items-center justify-content-center">
                             <li>
                                 <a class="link" href="index.html">Homepage</a>
@@ -198,7 +199,7 @@
                                 <i class="icon-arrRight"></i>
                             </li>
                             <li>
-                                Women
+                                services
                             </li>
                         </ul>
                     </div>
@@ -206,1382 +207,419 @@
             </div>
         </div>
         <!-- /page-title -->
-        <!-- Section product -->
-        <section class="flat-spacing">
-            <div class="container">
-                <div class="tf-shop-control">
-                    <div class="tf-control-filter">
-                        <a href="#filterShop" data-bs-toggle="offcanvas" aria-controls="filterShop" class="tf-btn-filter"><span class="icon icon-filter"></span><span class="text">Filters</span></a>
-                        <div class="d-none d-lg-flex shop-sale-text">
-                            <i class="icon icon-checkCircle"></i>
-                            <p class="text-caption-1">Shop sale items only</p>
-                        </div>
-                    </div>
-                    <ul class="tf-control-layout">
-                        <li class="tf-view-layout-switch sw-layout-list list-layout active" data-value-layout="list">
-                            <div class="item">
-                                <svg class="icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="3" cy="6" r="2.5" stroke="#181818"/>
-                                    <rect x="7.5" y="3.5" width="12" height="5" rx="2.5" stroke="#181818"/>
-                                    <circle cx="3" cy="14" r="2.5" stroke="#181818"/>
-                                    <rect x="7.5" y="11.5" width="12" height="5" rx="2.5" stroke="#181818"/>
-                                </svg>     
-                            </div>
-                        </li>
-                        <li class="tf-view-layout-switch sw-layout-2" data-value-layout="tf-col-2">
-                            <div class="item">
-                                <svg class="icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="6" cy="6" r="2.5" stroke="#181818"/>
-                                    <circle cx="14" cy="6" r="2.5" stroke="#181818"/>
-                                    <circle cx="6" cy="14" r="2.5" stroke="#181818"/>
-                                    <circle cx="14" cy="14" r="2.5" stroke="#181818"/>
-                                </svg>   
-                            </div>
-                        </li>
-                        <li class="tf-view-layout-switch sw-layout-3" data-value-layout="tf-col-3">
-                            <div class="item">
-                                <svg class="icon" width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="3" cy="6" r="2.5" stroke="#181818"/>
-                                    <circle cx="11" cy="6" r="2.5" stroke="#181818"/>
-                                    <circle cx="19" cy="6" r="2.5" stroke="#181818"/>
-                                    <circle cx="3" cy="14" r="2.5" stroke="#181818"/>
-                                    <circle cx="11" cy="14" r="2.5" stroke="#181818"/>
-                                    <circle cx="19" cy="14" r="2.5" stroke="#181818"/>
-                                </svg>                                    
-                            </div>
-                        </li>
-                        <li class="tf-view-layout-switch sw-layout-4" data-value-layout="tf-col-4">
-                            <div class="item">
-                                <svg class="icon" width="30" height="20" viewBox="0 0 30 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="3" cy="6" r="2.5" stroke="#181818"/>
-                                    <circle cx="11" cy="6" r="2.5" stroke="#181818"/>
-                                    <circle cx="19" cy="6" r="2.5" stroke="#181818"/>
-                                    <circle cx="27" cy="6" r="2.5" stroke="#181818"/>
-                                    <circle cx="3" cy="14" r="2.5" stroke="#181818"/>
-                                    <circle cx="11" cy="14" r="2.5" stroke="#181818"/>
-                                    <circle cx="19" cy="14" r="2.5" stroke="#181818"/>
-                                    <circle cx="27" cy="14" r="2.5" stroke="#181818"/>
-                                </svg>
-                            </div>
-                        </li>
-                        <li class="tf-view-layout-switch sw-layout-5" data-value-layout="tf-col-5">
-                            <div class="item">
-                                <svg class="icon" width="38" height="20" viewBox="0 0 38 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="3" cy="6" r="2.5" stroke="#181818"/>
-                                    <circle cx="11" cy="6" r="2.5" stroke="#181818"/>
-                                    <circle cx="19" cy="6" r="2.5" stroke="#181818"/>
-                                    <circle cx="27" cy="6" r="2.5" stroke="#181818"/>
-                                    <circle cx="35" cy="6" r="2.5" stroke="#181818"/>
-                                    <circle cx="3" cy="14" r="2.5" stroke="#181818"/>
-                                    <circle cx="11" cy="14" r="2.5" stroke="#181818"/>
-                                    <circle cx="19" cy="14" r="2.5" stroke="#181818"/>
-                                    <circle cx="27" cy="14" r="2.5" stroke="#181818"/>
-                                    <circle cx="35" cy="14" r="2.5" stroke="#181818"/>
-                                </svg>                                    
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="tf-control-sorting">
-                        <p class="d-none d-lg-block text-caption-1">Sort by:</p>
-                        <div class="tf-dropdown-sort" data-bs-toggle="dropdown">
-                            <div class="btn-select">
-                                <span class="text-sort-value">Best selling</span>
-                                <span class="icon icon-arrow-down"></span>
-                            </div>
-                            <div class="dropdown-menu">
-                                <div class="select-item" data-sort-value="best-selling">
-                                    <span class="text-value-item">Best selling</span>
-                                </div>
-                                <div class="select-item" data-sort-value="a-z">
-                                    <span class="text-value-item">Alphabetically, A-Z</span>
-                                </div>
-                                <div class="select-item" data-sort-value="z-a">
-                                    <span class="text-value-item">Alphabetically, Z-A</span>
-                                </div>
-                                <div class="select-item" data-sort-value="price-low-high">
-                                    <span class="text-value-item">Price, low to high</span>
-                                </div>
-                                <div class="select-item" data-sort-value="price-high-low">
-                                    <span class="text-value-item">Price, high to low</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
+<!-- Section beautician list -->
+<section class="flat-spacing">
+    <div class="container">
+        <div class="tf-shop-control">
+            <div class="tf-control-filter">
+                <a href="#filterShop" data-bs-toggle="offcanvas" aria-controls="filterShop" class="tf-btn-filter"><span class="icon icon-filter"></span><span class="text">Filters</span></a>
+                <div class="d-none d-lg-flex shop-sale-text">
+                    <i class="icon icon-checkCircle"></i>
+                    <p class="text-caption-1">Available today only</p>
                 </div>
-                <div class="wrapper-control-shop">
-                    <div class="meta-filter-shop">
-                        <div id="product-count-grid" class="count-text"></div>
-                        <div id="product-count-list" class="count-text"></div>
-                        <div id="applied-filters"></div>
-                        <button id="remove-all" class="remove-all-filters text-btn-uppercase" style="display: none;">REMOVE ALL <i class="icon icon-close"></i></button>
+            </div>
+            <ul class="tf-control-layout">
+                <li class="tf-view-layout-switch sw-layout-list list-layout active" data-value-layout="list">
+                    <div class="item">
                     </div>
-                    <div class="tf-list-layout wrapper-shop" id="listLayout">
-                        <!-- card product list 1 -->
-                        <div class="card-product style-list" data-availability="Out of stock" data-brand="adidas">
-                            <div class="card-product-wrapper">
-                                <a href="product-detail.html" class="product-img">
-                                    <img class="lazyload img-product" data-src="images/products/womens/women-19.jpg" src="images/products/womens/women-19.jpg" alt="image-product">
-                                    <img class="lazyload img-hover" data-src="images/products/womens/women-20.jpg" src="images/products/womens/women-20.jpg" alt="image-product">
-                                </a>
-                            </div>
-                            <div class="card-product-info">
-                                <a href="product-detail.html" class="title link">Double-button trench coat</a>
-                                <div class="price"><span class="old-price">$98.00</span> <span class="current-price">$219.99</span></div>
-                                <p class="description text-secondary text-line-clamp-2">The garments labelled as Committed are products that have been produced using sustainable fibres or processes, reducing their environmental impact.</p>
-                                <div class="variant-wrap-list">
-                                    <ul class="list-color-product">
-                                        <li class="list-color-item color-swatch active line">
-                                            <span class="d-none text-capitalize color-filter">Green</span>
-                                            <span class="swatch-value bg-light-green"></span>
-                                            <img class="lazyload" data-src="images/products/womens/women-19.jpg" src="images/products/womens/women-19.jpg" alt="image-product">
-                                        </li>
-                                        <li class="list-color-item color-swatch">
-                                            <span class="d-none text-capitalize color-filter">Grey</span>
-                                            <span class="swatch-value bg-grey-2"></span>
-                                            <img class="lazyload" data-src="images/products/womens/women-1.jpg" src="images/products/womens/women-1.jpg" alt="image-product">
-                                        </li>
-                                        <li class="list-color-item color-swatch line">
-                                            <span class="d-none text-capitalize color-filter">White</span>
-                                            <span class="swatch-value bg-white"></span>
-                                            <img class="lazyload" data-src="images/products/womens/women-8.jpg" src="images/products/womens/women-8.jpg" alt="image-product">
-                                        </li>
-                                    </ul>
-                                    <div class="size-box list-product-btn">
-                                        <span class="size-item box-icon">S</span>
-                                        <span class="size-item box-icon">M</span>
-                                        <span class="size-item box-icon active">L</span>
-                                        <span class="size-item box-icon">XL</span>
-                                        <span class="size-item box-icon disable">XXL</span>
-                                    </div>
-                                    <div class="list-product-btn">
-                                        <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add To cart</a>
-                                        <a href="javascript:void(0);" class="box-icon wishlist btn-icon-action">
-                                            <span class="icon icon-heart"></span>
-                                            <span class="tooltip">Wishlist</span>
-                                        </a>
-                                        <a href="#compare" data-bs-toggle="offcanvas" aria-controls="compare" class="box-icon compare btn-icon-action">
-                                            <span class="icon icon-gitDiff"></span>
-                                            <span class="tooltip">Compare</span>
-                                        </a>
-                                        <a href="#quickView" data-bs-toggle="modal" class="box-icon quickview tf-btn-loading">
-                                            <span class="icon icon-eye"></span>
-                                            <span class="tooltip">Quick View</span>
-                                        </a>
-                                    </div>
-                                </div>
-        
-                                
-                            </div>
-                        </div>
-                        <!-- card product list 2 -->
-                        <div class="card-product style-list" data-availability="Out of stock" data-brand="LV">
-                            <div class="card-product-wrapper">
-                                <a href="product-detail.html" class="product-img">
-                                    <img class="lazyload img-product" data-src="images/products/womens/women-29.jpg" src="images/products/womens/women-29.jpg" alt="image-product">
-                                    <img class="lazyload img-hover" data-src="images/products/womens/women-31.jpg" src="images/products/womens/women-31.jpg" alt="image-product">
-                                </a>
-                                <div class="on-sale-wrap"><span class="on-sale-item">-25%</span></div>
-                            </div>
-                            <div class="card-product-info">
-                                <a href="product-detail.html" class="title link">Polarized sunglasses</a>
-                                <span class="price current-price">$59.99</span>
-                                <p class="description text-secondary text-line-clamp-2">The garments labelled as Committed are products that have been produced using sustainable fibres or processes, reducing their environmental impact.</p>
-                                <div class="variant-wrap-list">
-                                    <ul class="list-color-product">
-                                        <li class="list-color-item color-swatch active">
-                                            <span class="d-none text-capitalize color-filter">Orange</span>
-                                            <span class="swatch-value bg-light-orange"></span>
-                                            <img class="lazyload" data-src="images/products/womens/women-29.jpg" src="images/products/womens/women-29.jpg" alt="image-product">
-                                        </li>
-                                        <li class="list-color-item color-swatch">
-                                            <span class="d-none text-capitalize color-filter">Orange</span>
-                                            <span class="swatch-value bg-orange"></span>
-                                            <img class="lazyload" data-src="images/products/womens/women-43.jpg" src="images/products/womens/women-43.jpg" alt="image-product">
-                                        </li>
-                                        <li class="list-color-item color-swatch">
-                                            <span class="d-none text-capitalize color-filter">Pink</span>
-                                            <span class="swatch-value bg-dark-pink"></span>
-                                            <img class="lazyload" data-src="images/products/womens/women-47.jpg" src="images/products/womens/women-47.jpg" alt="image-product">
-                                        </li>
-                                    </ul>
-                                    <div class="size-box list-product-btn">
-                                        <span class="size-item box-icon">S</span>
-                                        <span class="size-item box-icon">M</span>
-                                        <span class="size-item box-icon">L</span>
-                                        <span class="size-item box-icon">XL</span>
-                                        <span class="size-item box-icon disable">XXL</span>
-                                    </div>
-                                    <div class="list-product-btn">
-                                        <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add To cart</a>
-                                        <a href="javascript:void(0);" class="box-icon wishlist btn-icon-action">
-                                            <span class="icon icon-heart"></span>
-                                            <span class="tooltip">Wishlist</span>
-                                        </a>
-                                        <a href="#compare" data-bs-toggle="offcanvas" aria-controls="compare" class="box-icon compare btn-icon-action">
-                                            <span class="icon icon-gitDiff"></span>
-                                            <span class="tooltip">Compare</span>
-                                        </a>
-                                        <a href="#quickView" data-bs-toggle="modal" class="box-icon quickview tf-btn-loading">
-                                            <span class="icon icon-eye"></span>
-                                            <span class="tooltip">Quick View</span>
-                                        </a>
-                                    </div>
-                                </div>
-        
-                                
-                            </div>
-                        </div>
-                        <!-- card product list 3 -->
-                        <div class="card-product style-list" data-availability="In stock" data-brand="nike">
-                            <div class="card-product-wrapper">
-                                <a href="product-detail.html" class="product-img">
-                                    <img class="lazyload img-product" data-src="images/products/womens/women-63.jpg" src="images/products/womens/women-63.jpg" alt="image-product">
-                                    <img class="lazyload img-hover" data-src="images/products/womens/women-64.jpg" src="images/products/womens/women-64.jpg" alt="image-product">
-                                </a>
-                            </div>
-                            <div class="card-product-info">
-                                <a href="product-detail.html" class="title link">Ribbed cotton-blend top</a>
-                                <div class="price"><span class="old-price">$98.00</span><span class="current-price">$219.95</span></div>
-                                <p class="description text-secondary text-line-clamp-2">The garments labelled as Committed are products that have been produced using sustainable fibres or processes, reducing their environmental impact.</p>
-                                <div class="variant-wrap-list">
-                                    <ul class="list-color-product">
-                                        <li class="list-color-item color-swatch active line">
-                                            <span class="d-none text-capitalize color-filter">White</span>
-                                            <span class="swatch-value bg-white"></span>
-                                            <img class="lazyload" data-src="images/products/womens/women-63.jpg" src="images/products/womens/women-63.jpg" alt="image-product">
-                                        </li>
-                                        <li class="list-color-item color-swatch">
-                                            <span class="d-none text-capitalize color-filter">Grey</span>
-                                            <span class="swatch-value bg-grey-2"></span>
-                                            <img class="lazyload" data-src="images/products/womens/women-69.jpg" src="images/products/womens/women-69.jpg" alt="image-product">
-                                        </li>
-                                        <li class="list-color-item color-swatch">
-                                            <span class="d-none text-capitalize color-filter">Black</span>
-                                            <span class="swatch-value bg-main"></span>
-                                            <img class="lazyload" data-src="images/products/womens/women-70.jpg" src="images/products/womens/women-70.jpg" alt="image-product">
-                                        </li>
-                                    </ul>
-                                    <div class="size-box list-product-btn">
-                                        <span class="size-item box-icon">S</span>
-                                        <span class="size-item box-icon">M</span>
-                                        <span class="size-item box-icon">L</span>
-                                        <span class="size-item box-icon">XL</span>
-                                        <span class="size-item box-icon disable">XXL</span>
-                                    </div>
-                                    <div class="list-product-btn">
-                                        <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add To cart</a>
-                                        <a href="javascript:void(0);" class="box-icon wishlist btn-icon-action">
-                                            <span class="icon icon-heart"></span>
-                                            <span class="tooltip">Wishlist</span>
-                                        </a>
-                                        <a href="#compare" data-bs-toggle="offcanvas" aria-controls="compare" class="box-icon compare btn-icon-action">
-                                            <span class="icon icon-gitDiff"></span>
-                                            <span class="tooltip">Compare</span>
-                                        </a>
-                                        <a href="#quickView" data-bs-toggle="modal" class="box-icon quickview tf-btn-loading">
-                                            <span class="icon icon-eye"></span>
-                                            <span class="tooltip">Quick View</span>
-                                        </a>
-                                    </div>
-                                </div>
-        
-                                
-                            </div>
-                        </div>
-                        <!-- card product list 4 -->
-                        <div class="card-product style-list" data-availability="In stock" data-brand="gucci">   
-                            <div class="card-product-wrapper">
-                                <a href="product-detail.html" class="product-img">
-                                    <img class="lazyload img-product" data-src="images/products/womens/women-37.jpg" src="images/products/womens/women-37.jpg" alt="image-product">
-                                    <img class="lazyload img-hover" data-src="images/products/womens/women-38.jpg" src="images/products/womens/women-38.jpg" alt="image-product">
-                                </a>
-                                <div class="on-sale-wrap"><span class="on-sale-item">-22%</span></div>
-                            </div>
-                            <div class="card-product-info">
-                                <a href="product-detail.html" class="title link">V-neck cotton T-shirt</a>
-                                <span class="price current-price">$59.99</span>
-                                <p class="description text-secondary text-line-clamp-2">The garments labelled as Committed are products that have been produced using sustainable fibres or processes, reducing their environmental impact.</p>
-                                <div class="variant-wrap-list">
-                                    <ul class="list-color-product">
-                                        <li class="list-color-item color-swatch active">
-                                            <span class="d-none text-capitalize color-filter">Light Blue</span>
-                                            <span class="swatch-value bg-light-blue"></span>
-                                            <img class="lazyload" data-src="images/products/womens/women-37.jpg" src="images/products/womens/women-37.jpg" alt="image-product">
-                                        </li>
-                                        <li class="list-color-item color-swatch line">
-                                            <span class="d-none text-capitalize color-filter">White</span>
-                                            <span class="swatch-value bg-white"></span>
-                                            <img class="lazyload" data-src="images/products/womens/women-41.jpg" src="images/products/womens/women-41.jpg" alt="image-product">
-                                        </li>
-                                        
-                                    </ul>
-                                    <div class="size-box list-product-btn">
-                                        <span class="size-item box-icon">S</span>
-                                        <span class="size-item box-icon">M</span>
-                                        <span class="size-item box-icon">L</span>
-                                        <span class="size-item box-icon">XL</span>
-                                        <span class="size-item box-icon disable">XXL</span>
-                                    </div>
-                                    <div class="list-product-btn">
-                                        <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add To cart</a>
-                                        <a href="javascript:void(0);" class="box-icon wishlist btn-icon-action">
-                                            <span class="icon icon-heart"></span>
-                                            <span class="tooltip">Wishlist</span>
-                                        </a>
-                                        <a href="#compare" data-bs-toggle="offcanvas" aria-controls="compare" class="box-icon compare btn-icon-action">
-                                            <span class="icon icon-gitDiff"></span>
-                                            <span class="tooltip">Compare</span>
-                                        </a>
-                                        <a href="#quickView" data-bs-toggle="modal" class="box-icon quickview tf-btn-loading">
-                                            <span class="icon icon-eye"></span>
-                                            <span class="tooltip">Quick View</span>
-                                        </a>
-                                    </div>
-                                </div>
-        
-                                
-                            </div>
-                        </div>
-                        <!-- card product list 5 -->
-                        <div class="card-product style-list" data-availability="In stock" data-brand="hermes">
-                            <div class="card-product-wrapper">
-                                <a href="product-detail.html" class="product-img">
-                                    <img class="lazyload img-product" data-src="images/products/womens/women-133.jpg" src="images/products/womens/women-133.jpg" alt="image-product">
-                                    <img class="lazyload img-hover" data-src="images/products/womens/women-131.jpg" src="images/products/womens/women-131.jpg" alt="image-product">
-                                </a>
-                            </div>
-                            <div class="card-product-info">
-                                <a href="product-detail.html" class="title link">V-neck cotton T-shirt</a>
-                                <span class="price current-price">$59.99</span>
-                                <p class="description text-secondary text-line-clamp-2">The garments labelled as Committed are products that have been produced using sustainable fibres or processes, reducing their environmental impact.</p>
-                                <div class="variant-wrap-list">
-                                    <ul class="list-color-product">
-                                        <li class="list-color-item color-swatch active">
-                                            <span class="d-none text-capitalize color-filter">Green</span>
-                                            <span class="swatch-value bg-light-green"></span>
-                                            <img class="lazyload" data-src="images/products/womens/women-133.jpg" src="images/products/womens/women-133.jpg" alt="image-product">
-                                        </li>
-                                        <li class="list-color-item color-swatch">
-                                            <span class="d-none text-capitalize color-filter">Black</span>
-                                            <span class="swatch-value bg-main"></span>
-                                            <img class="lazyload" data-src="images/products/womens/women-124.jpg" src="images/products/womens/women-124.jpg" alt="image-product">
-                                        </li>
-                                        
-                                    </ul>
-                                    <div class="size-box list-product-btn">
-                                        <span class="size-item box-icon">S</span>
-                                        <span class="size-item box-icon">M</span>
-                                        <span class="size-item box-icon">L</span>
-                                        <span class="size-item box-icon">XL</span>
-                                        <span class="size-item box-icon disable">XXL</span>
-                                    </div>
-                                    <div class="list-product-btn">
-                                        <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add To cart</a>
-                                        <a href="javascript:void(0);" class="box-icon wishlist btn-icon-action">
-                                            <span class="icon icon-heart"></span>
-                                            <span class="tooltip">Wishlist</span>
-                                        </a>
-                                        <a href="#compare" data-bs-toggle="offcanvas" aria-controls="compare" class="box-icon compare btn-icon-action">
-                                            <span class="icon icon-gitDiff"></span>
-                                            <span class="tooltip">Compare</span>
-                                        </a>
-                                        <a href="#quickView" data-bs-toggle="modal" class="box-icon quickview tf-btn-loading">
-                                            <span class="icon icon-eye"></span>
-                                            <span class="tooltip">Quick View</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- card product list 6 -->
-                        <div class="card-product style-list" data-availability="In stock" data-brand="nike">
-                            <div class="card-product-wrapper">
-                                <a href="product-detail.html" class="product-img">
-                                    <img class="lazyload img-product" data-src="images/products/womens/women-167.jpg" src="images/products/womens/women-167.jpg" alt="image-product">
-                                    <img class="lazyload img-hover" data-src="images/products/womens/women-168.jpg" src="images/products/womens/women-168.jpg" alt="image-product">
-                                </a>
-                                <div class="on-sale-wrap"><span class="on-sale-item">-25%</span></div>
-                            </div>
-                            <div class="card-product-info">
-                                <a href="product-detail.html" class="title link">Cotton shopper bag</a>
-                                <span class="price current-price">$199.25</span>
-                                <p class="description text-secondary text-line-clamp-2">The garments labelled as Committed are products that have been produced using sustainable fibres or processes, reducing their environmental impact.</p>
-                                <div class="variant-wrap-list">
-                                    <ul class="list-color-product">
-                                        <li class="list-color-item color-swatch active line">
-                                            <span class="d-none text-capitalize color-filter">White</span>
-                                            <span class="swatch-value bg-white"></span>
-                                            <img class="lazyload" data-src="images/products/womens/women-167.jpg" src="images/products/womens/women-167.jpg" alt="image-product">
-                                        </li>
-                                        <li class="list-color-item color-swatch">
-                                            <span class="d-none text-capitalize color-filter">Beige</span>
-                                            <span class="swatch-value bg-beige"></span>
-                                            <img class="lazyload" data-src="images/products/womens/women-162.jpg" src="images/products/womens/women-162.jpg" alt="image-product">
-                                        </li>
-                                        
-                                    </ul>
-                            
-                                    <div class="list-product-btn">
-                                        <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add To cart</a>
-                                        <a href="javascript:void(0);" class="box-icon wishlist btn-icon-action">
-                                            <span class="icon icon-heart"></span>
-                                            <span class="tooltip">Wishlist</span>
-                                        </a>
-                                        <a href="#compare" data-bs-toggle="offcanvas" aria-controls="compare" class="box-icon compare btn-icon-action">
-                                            <span class="icon icon-gitDiff"></span>
-                                            <span class="tooltip">Compare</span>
-                                        </a>
-                                        <a href="#quickView" data-bs-toggle="modal" class="box-icon quickview tf-btn-loading">
-                                            <span class="icon icon-eye"></span>
-                                            <span class="tooltip">Quick View</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- pagination -->
-                        <ul class="wg-pagination">
-                            <li><a href="#" class="pagination-item text-button">1</a></li>
-                            <li class="active"><div class="pagination-item text-button">2</div></li>
-                            <li><a href="#" class="pagination-item text-button">3</a></li>
-                            <li><a href="#" class="pagination-item text-button"><i class="icon-arrRight"></i></a></li>
-                        </ul>
+                </li>
+            </ul>
+            <div class="tf-control-sorting">
+                <p class="d-none d-lg-block text-caption-1">Sort by:</p>
+                <div class="tf-dropdown-sort" data-bs-toggle="dropdown">
+                    <div class="btn-select">
+                        <span class="text-sort-value">Best rated</span>
+                        <span class="icon icon-arrow-down"></span>
                     </div>
-                    <div class="tf-grid-layout wrapper-shop tf-col-4" id="gridLayout">
-                        <!-- card product 1 -->
-                        <div class="card-product grid" data-availability="Out of stock" data-brand="adidas">
-                            <div class="card-product-wrapper">
-                                <a href="product-detail.html" class="product-img">
-                                    <img class="lazyload img-product" data-src="images/products/womens/women-19.jpg" src="images/products/womens/women-19.jpg" alt="image-product">
-                                    <img class="lazyload img-hover" data-src="images/products/womens/women-20.jpg" src="images/products/womens/women-20.jpg" alt="image-product">
-                                </a>
-                                <div class="list-product-btn">
-                                    <a href="javascript:void(0);" class="box-icon wishlist btn-icon-action">
-                                        <span class="icon icon-heart"></span>
-                                        <span class="tooltip">Wishlist</span>
-                                    </a>
-                                    <a href="#compare" data-bs-toggle="offcanvas" aria-controls="compare" class="box-icon compare btn-icon-action">
-                                        <span class="icon icon-gitDiff"></span>
-                                        <span class="tooltip">Compare</span>
-                                    </a>
-                                    <a href="#quickView" data-bs-toggle="modal" class="box-icon quickview tf-btn-loading">
-                                        <span class="icon icon-eye"></span>
-                                        <span class="tooltip">Quick View</span>
-                                    </a>
-                                </div>
-                                <div class="list-btn-main">
-                                    <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add To cart</a>
-                                </div> 
-                            </div>
-                            <div class="card-product-info">
-                                <a href="product-detail.html" class="title link">V-neck cotton T-shirt</a>
-                                <span class="price current-price">$59.99</span>
-                            </div>
+                    <div class="dropdown-menu">
+                        <div class="select-item" data-sort-value="best-rated">
+                            <span class="text-value-item">Best rated</span>
                         </div>
-                        <!-- card product 2 -->
-                        <div class="card-product grid" data-availability="In stock" data-brand="nike">
-                            <div class="card-product-wrapper">
-                                <a href="product-detail.html" class="product-img">
-                                    <img class="lazyload img-product" data-src="images/products/womens/women-176.jpg" src="images/products/womens/women-176.jpg" alt="image-product">
-                                    <img class="lazyload img-hover" data-src="images/products/womens/women-179.jpg" src="images/products/womens/women-179.jpg" alt="image-product">
-                                </a>
-                                <div class="on-sale-wrap"><span class="on-sale-item">-25%</span></div>
-                                <div class="marquee-product bg-main">
-                                    <div class="marquee-wrapper">
-                                        <div class="initial-child-container">
-                                            <div class="marquee-child-item">
-                                                <p class="font-2 text-btn-uppercase fw-6 text-white">Hot Sale 25% OFF</p>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <span class="icon icon-lightning text-critical"></span>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <p class="font-2 text-btn-uppercase fw-6 text-white">Hot Sale 25% OFF</p>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <span class="icon icon-lightning text-critical"></span>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <p class="font-2 text-btn-uppercase fw-6 text-white">Hot Sale 25% OFF</p>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <span class="icon icon-lightning text-critical"></span>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <p class="font-2 text-btn-uppercase fw-6 text-white">Hot Sale 25% OFF</p>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <span class="icon icon-lightning text-critical"></span>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <p class="font-2 text-btn-uppercase fw-6 text-white">Hot Sale 25% OFF</p>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <span class="icon icon-lightning text-critical"></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="marquee-wrapper">
-                                        <div class="initial-child-container">
-                                            <div class="marquee-child-item">
-                                                <p class="font-2 text-btn-uppercase fw-6 text-white">Hot Sale 25% OFF</p>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <span class="icon icon-lightning text-critical"></span>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <p class="font-2 text-btn-uppercase fw-6 text-white">Hot Sale 25% OFF</p>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <span class="icon icon-lightning text-critical"></span>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <p class="font-2 text-btn-uppercase fw-6 text-white">Hot Sale 25% OFF</p>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <span class="icon icon-lightning text-critical"></span>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <p class="font-2 text-btn-uppercase fw-6 text-white">Hot Sale 25% OFF</p>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <span class="icon icon-lightning text-critical"></span>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <p class="font-2 text-btn-uppercase fw-6 text-white">Hot Sale 25% OFF</p>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <span class="icon icon-lightning text-critical"></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="list-product-btn">
-                                    <a href="javascript:void(0);" class="box-icon wishlist btn-icon-action">
-                                        <span class="icon icon-heart"></span>
-                                        <span class="tooltip">Wishlist</span>
-                                    </a>
-                                    <a href="#compare" data-bs-toggle="offcanvas" aria-controls="compare" class="box-icon compare btn-icon-action">
-                                        <span class="icon icon-gitDiff"></span>
-                                        <span class="tooltip">Compare</span>
-                                    </a>
-                                    <a href="#quickView" data-bs-toggle="modal" class="box-icon quickview tf-btn-loading">
-                                        <span class="icon icon-eye"></span>
-                                        <span class="tooltip">Quick View</span>
-                                    </a>
-                                </div>
-                                <div class="list-btn-main">
-                                    <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add To cart</a>
-                                </div> 
-                            </div>
-                            <div class="card-product-info">
-                                <a href="product-detail.html" class="title link">Polarized sunglasses</a>
-                                <div class="price"><span class="old-price">$98.00</span> <span class="current-price">$79.99</span></div>
-                                <ul class="list-color-product">
-                                    <li class="list-color-item color-swatch active line">
-                                        <span class="d-none text-capitalize color-filter">Light Blue</span>
-                                        <span class="swatch-value bg-light-blue"></span>
-                                        <img class="lazyload" data-src="images/products/womens/women-176.jpg" src="images/products/womens/women-176.jpg" alt="image-product">
-                                    </li>
-                                    <li class="list-color-item color-swatch">
-                                        <span class="d-none text-capitalize color-filter">Light Blue</span>
-                                        <span class="swatch-value bg-light-blue-2"></span>
-                                        <img class="lazyload" data-src="images/products/womens/women-177.jpg" src="images/products/womens/women-177.jpg" alt="image-product">
-                                    </li>
-                                </ul>
-                            </div>
+                        <div class="select-item" data-sort-value="most-reviews">
+                            <span class="text-value-item">Most reviews</span>
                         </div>
-                        <!-- card product 3 -->
-                        <div class="card-product grid card-product-size" data-availability="In stock" data-brand="LV">
-                            <div class="card-product-wrapper">
-                                <a href="product-detail.html" class="product-img">
-                                    <img class="lazyload img-product" data-src="images/products/womens/women-29.jpg" src="images/products/womens/women-29.jpg" alt="image-product">
-                                    <img class="lazyload img-hover" data-src="images/products/womens/women-30.jpg" src="images/products/womens/women-30.jpg" alt="image-product">
-                                </a>
-                                <div class="variant-wrap size-list">
-                                    <ul class="variant-box">
-                                        <li class="size-item">S</li>
-                                        <li class="size-item">M</li>
-                                        <li class="size-item">L</li>
-                                        <li class="size-item">XL</li>
-                                    </ul>
-                                </div>
-                                <div class="variant-wrap countdown-wrap">
-                                    <div class="variant-box">
-                                        <div class="js-countdown" data-timer="1007500" data-labels="D :,H :,M :,S"></div>
-                                    </div>
-                                </div>
-                                <div class="list-product-btn">
-                                    <a href="javascript:void(0);" class="box-icon wishlist btn-icon-action">
-                                        <span class="icon icon-heart"></span>
-                                        <span class="tooltip">Wishlist</span>
-                                    </a>
-                                    <a href="#compare" data-bs-toggle="offcanvas" aria-controls="compare" class="box-icon compare btn-icon-action">
-                                        <span class="icon icon-gitDiff"></span>
-                                        <span class="tooltip">Compare</span>
-                                    </a>
-                                    <a href="#quickView" data-bs-toggle="modal" class="box-icon quickview tf-btn-loading">
-                                        <span class="icon icon-eye"></span>
-                                        <span class="tooltip">Quick View</span>
-                                    </a>
-                                </div>
-                                <div class="list-btn-main">
-                                    <a href="#quickAdd" data-bs-toggle="modal" class="btn-main-product">Quick Add</a>
-                                </div> 
-                            </div>
-                            <div class="card-product-info">
-                                <a href="product-detail.html" class="title link">Ramie shirt with pockets </a>
-                                <div class="price"><span class="old-price">$98.00</span> <span class="current-price">$89.99</span></div>
-                                <ul class="list-color-product">
-                                    <li class="list-color-item color-swatch active line">
-                                        <span class="d-none text-capitalize color-filter">Orange</span>
-                                        <span class="swatch-value bg-light-orange"></span>
-                                        <img class="lazyload" data-src="images/products/womens/women-29.jpg" src="images/products/womens/women-29.jpg" alt="image-product">
-                                    </li>
-                                    <li class="list-color-item color-swatch">
-                                        <span class="d-none text-capitalize color-filter">Grey</span>
-                                        <span class="swatch-value bg-light-grey"></span>
-                                        <img class="lazyload" data-src="images/products/womens/women-33.jpg" src="images/products/womens/women-33.jpg" alt="image-product">
-                                    </li>
-                                    
-                                </ul>
-                            </div>
+                        <div class="select-item" data-sort-value="experience">
+                            <span class="text-value-item">Most experience</span>
                         </div>
-                        <!-- card product 4 -->
-                        <div class="card-product grid" data-availability="Out of stock" data-brand="gucci">
-                            <div class="card-product-wrapper">
-                                <a href="product-detail.html" class="product-img">
-                                    <img class="lazyload img-product" data-src="images/products/womens/women-1.jpg" src="images/products/womens/women-1.jpg" alt="image-product">
-                                    <img class="lazyload img-hover" data-src="images/products/womens/women-2.jpg" src="images/products/womens/women-2.jpg" alt="image-product">
-                                </a>
-                                <div class="list-product-btn">
-                                    <a href="javascript:void(0);" class="box-icon wishlist btn-icon-action">
-                                        <span class="icon icon-heart"></span>
-                                        <span class="tooltip">Wishlist</span>
-                                    </a>
-                                    <a href="#compare" data-bs-toggle="offcanvas" aria-controls="compare" class="box-icon compare btn-icon-action">
-                                        <span class="icon icon-gitDiff"></span>
-                                        <span class="tooltip">Compare</span>
-                                    </a>
-                                    <a href="#quickView" data-bs-toggle="modal" class="box-icon quickview tf-btn-loading">
-                                        <span class="icon icon-eye"></span>
-                                        <span class="tooltip">Quick View</span>
-                                    </a>
-                                </div>
-                                <div class="list-btn-main">
-                                    <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add To cart</a>
-                                </div> 
-                            </div>
-                            <div class="card-product-info">
-                                <a href="product-detail.html" class="title link">Ribbed cotton-blend top</a>
-                                <span class="price current-price">$69.99</span>
-                                <ul class="list-color-product">
-                                    <li class="list-color-item color-swatch active line">
-                                        <span class="d-none text-capitalize color-filter">Grey</span>
-                                        <span class="swatch-value bg-dark-grey"></span>
-                                        <img class="lazyload" data-src="images/products/womens/women-1.jpg" src="images/products/womens/women-1.jpg" alt="image-product">
-                                    </li>
-                                    <li class="list-color-item color-swatch">
-                                        <span class="d-none text-capitalize color-filter">Pink</span>
-                                        <span class="swatch-value bg-light-pink"></span>
-                                        <img class="lazyload" data-src="images/products/womens/women-2.jpg" src="images/products/womens/women-2.jpg" alt="image-product">
-                                    </li>
-                                    <li class="list-color-item color-swatch">
-                                        <span class="d-none text-capitalize color-filter">Grey</span>
-                                        <span class="swatch-value bg-dark-grey-2"></span>
-                                        <img class="lazyload" data-src="images/products/womens/women-3.jpg" src="images/products/womens/women-3.jpg" alt="image-product">
-                                    </li>
-                                </ul>
-                            </div>
+                        <div class="select-item" data-sort-value="price-low-high">
+                            <span class="text-value-item">Price, low to high</span>
                         </div>
-                        <!-- card product 5 -->
-                        <div class="card-product grid card-product-size" data-availability="Out of stock" data-brand="hermes">
-                            <div class="card-product-wrapper">
-                                <a href="product-detail.html" class="product-img">
-                                    <img class="lazyload img-product" data-src="images/products/womens/women-8.jpg" src="images/products/womens/women-8.jpg" alt="image-product">
-                                    <img class="lazyload img-hover" data-src="images/products/womens/women-9.jpg" src="images/products/womens/women-9.jpg" alt="image-product">
-                                </a>
-                                <div class="variant-wrap size-list">
-                                    <ul class="variant-box">
-                                        <li class="size-item">S</li>
-                                        <li class="size-item">M</li>
-                                        <li class="size-item">L</li>
-                                        <li class="size-item">XL</li>
-                                    </ul>
-                                </div>
-                                <div class="list-product-btn">
-                                    <a href="javascript:void(0);" class="box-icon wishlist btn-icon-action">
-                                        <span class="icon icon-heart"></span>
-                                        <span class="tooltip">Wishlist</span>
-                                    </a>
-                                    <a href="#compare" data-bs-toggle="offcanvas" aria-controls="compare" class="box-icon compare btn-icon-action">
-                                        <span class="icon icon-gitDiff"></span>
-                                        <span class="tooltip">Compare</span>
-                                    </a>
-                                    <a href="#quickView" data-bs-toggle="modal" class="box-icon quickview tf-btn-loading">
-                                        <span class="icon icon-eye"></span>
-                                        <span class="tooltip">Quick View</span>
-                                    </a>
-                                </div>
-                                <div class="list-btn-main">
-                                    <a href="#quickAdd" data-bs-toggle="modal" class="btn-main-product">Quick Add</a>
-                                </div> 
-                            </div>
-                            <div class="card-product-info">
-                                <a href="product-detail.html" class="title link">Ribbed cotton-blend top</a>
-                                <span class="price current-price">$39.99</span>
-                            </div>
+                        <div class="select-item" data-sort-value="price-high-low">
+                            <span class="text-value-item">Price, high to low</span>
                         </div>
-                        <!-- card product 6 -->
-                        <div class="card-product grid" data-availability="In stock" data-brand="zalando">
-                            <div class="card-product-wrapper">
-                                <a href="product-detail.html" class="product-img">
-                                    <img class="lazyload img-product" data-src="images/products/womens/women-171.jpg" src="images/products/womens/women-171.jpg" alt="image-product">
-                                    <img class="lazyload img-hover" data-src="images/products/womens/women-172.jpg" src="images/products/womens/women-172.jpg" alt="image-product">
-                                </a>
-                                
-                                <div class="list-product-btn">
-                                    <a href="javascript:void(0);" class="box-icon wishlist btn-icon-action">
-                                        <span class="icon icon-heart"></span>
-                                        <span class="tooltip">Wishlist</span>
-                                    </a>
-                                    <a href="#compare" data-bs-toggle="offcanvas" aria-controls="compare" class="box-icon compare btn-icon-action">
-                                        <span class="icon icon-gitDiff"></span>
-                                        <span class="tooltip">Compare</span>
-                                    </a>
-                                    <a href="#quickView" data-bs-toggle="modal" class="box-icon quickview tf-btn-loading">
-                                        <span class="icon icon-eye"></span>
-                                        <span class="tooltip">Quick View</span>
-                                    </a>
-                                </div>
-                                <div class="list-btn-main">
-                                    <a href="#quickAdd" data-bs-toggle="modal" class="btn-main-product">Quick Add</a>
-                                </div> 
-                            </div>
-                            <div class="card-product-info">
-                                <a href="product-detail.html" class="title link">Faux-leather trousers</a>
-                                <span class="price current-price">$79.99</span>
-                                <ul class="list-color-product">
-                                    <li class="list-color-item color-swatch active">
-                                        <span class="d-none text-capitalize color-filter">Orange</span>
-                                        <span class="swatch-value bg-orange"></span>
-                                        <img class="lazyload" data-src="images/products/womens/women-171.jpg" src="images/products/womens/women-171.jpg" alt="image-product">
-                                    </li>
-                                    <li class="list-color-item color-swatch">
-                                        <span class="d-none text-capitalize color-filter">Pink</span>
-                                        <span class="swatch-value bg-dark-pink"></span>
-                                        <img class="lazyload" data-src="images/products/womens/women-172.jpg" src="images/products/womens/women-172.jpg" alt="image-product">
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- card product 7 -->
-                        <div class="card-product grid card-product-size" data-availability="In stock" data-brand="nike">
-                            <div class="card-product-wrapper">
-                                <a href="product-detail.html" class="product-img">
-                                    <img class="lazyload img-product" data-src="images/products/womens/women-83.jpg" src="images/products/womens/women-83.jpg" alt="image-product">
-                                    <img class="lazyload img-hover" data-src="images/products/womens/women-84.jpg" src="images/products/womens/women-84.jpg" alt="image-product">
-                                </a>
-                                <div class="on-sale-wrap"><span class="on-sale-item">-25%</span></div>
-                                <div class="variant-wrap size-list">
-                                    <ul class="variant-box">
-                                        <li class="size-item">S</li>
-                                        <li class="size-item">M</li>
-                                        <li class="size-item">L</li>
-                                        <li class="size-item">XL</li>
-                                    </ul>
-                                </div>
-                                <div class="list-product-btn">
-                                    <a href="javascript:void(0);" class="box-icon wishlist btn-icon-action">
-                                        <span class="icon icon-heart"></span>
-                                        <span class="tooltip">Wishlist</span>
-                                    </a>
-                                    <a href="#compare" data-bs-toggle="offcanvas" aria-controls="compare" class="box-icon compare btn-icon-action">
-                                        <span class="icon icon-gitDiff"></span>
-                                        <span class="tooltip">Compare</span>
-                                    </a>
-                                    <a href="#quickView" data-bs-toggle="modal" class="box-icon quickview tf-btn-loading">
-                                        <span class="icon icon-eye"></span>
-                                        <span class="tooltip">Quick View</span>
-                                    </a>
-                                </div>
-                                <div class="list-btn-main">
-                                    <a href="#quickAdd" data-bs-toggle="modal" class="btn-main-product">Quick Add</a>
-                                </div> 
-                            </div>
-                            <div class="card-product-info">
-                                <a href="product-detail.html" class="title link">Belt wrap dress</a>
-                                <div class="price"><span class="old-price">$98.00</span><span class="current-price">$129.99</span></div>
-                                <ul class="list-color-product">
-                                    <li class="list-color-item color-swatch active">
-                                        <span class="d-none text-capitalize color-filter">Green</span>
-                                        <span class="swatch-value bg-light-green"></span>
-                                        <img class="lazyload" data-src="images/products/womens/women-83.jpg" src="images/products/womens/women-83.jpg" alt="image-product">
-                                    </li>
-                                    <li class="list-color-item color-swatch">
-                                        <span class="d-none text-capitalize color-filter">Grey</span>
-                                        <span class="swatch-value bg-grey"></span>
-                                        <img class="lazyload" data-src="images/products/womens/women-94.jpg" src="images/products/womens/women-94.jpg" alt="image-product">
-                                    </li>
-                                    <li class="list-color-item color-swatch line">
-                                        <span class="d-none text-capitalize color-filter">White</span>
-                                        <span class="swatch-value bg-white"></span>
-                                        <img class="lazyload" data-src="images/products/womens/women-87.jpg" src="images/products/womens/women-87.jpg" alt="image-product">
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- card product 8 -->
-                        <div class="card-product grid card-product-size" data-availability="In stock" data-brand="LV">
-                            <div class="card-product-wrapper">
-                                <a href="product-detail.html" class="product-img">
-                                    <img class="lazyload img-product" data-src="images/products/womens/women-102.jpg" src="images/products/womens/women-102.jpg" alt="image-product">
-                                    <img class="lazyload img-hover" data-src="images/products/womens/women-103.jpg" src="images/products/womens/women-103.jpg" alt="image-product">
-                                </a>
-                                <div class="on-sale-wrap"><span class="on-sale-item">-25%</span></div>
-                                <div class="variant-wrap size-list">
-                                    <ul class="variant-box">
-                                        <li class="size-item">S</li>
-                                        <li class="size-item">M</li>
-                                        <li class="size-item">L</li>
-                                        <li class="size-item">XL</li>
-                                    </ul>
-                                </div>
-                                <div class="list-product-btn">
-                                    <a href="javascript:void(0);" class="box-icon wishlist btn-icon-action">
-                                        <span class="icon icon-heart"></span>
-                                        <span class="tooltip">Wishlist</span>
-                                    </a>
-                                    <a href="#compare" data-bs-toggle="offcanvas" aria-controls="compare" class="box-icon compare btn-icon-action">
-                                        <span class="icon icon-gitDiff"></span>
-                                        <span class="tooltip">Compare</span>
-                                    </a>
-                                    <a href="#quickView" data-bs-toggle="modal" class="box-icon quickview tf-btn-loading">
-                                        <span class="icon icon-eye"></span>
-                                        <span class="tooltip">Quick View</span>
-                                    </a>
-                                </div>
-                                <div class="list-btn-main">
-                                    <a href="#quickAdd" data-bs-toggle="modal" class="btn-main-product">Quick Add</a>
-                                </div> 
-                            </div>
-                            <div class="card-product-info">
-                                <a href="product-detail.html" class="title link">Double-button trench coat</a>
-                                <div class="price"><span class="old-price">$98.00</span><span class="current-price">$219.99</span></div>
-                                <ul class="list-color-product">
-                                    <li class="list-color-item color-swatch active">
-                                        <span class="d-none text-capitalize color-filter">Grey</span>
-                                        <span class="swatch-value bg-grey-2"></span>
-                                        <img class="lazyload" data-src="images/products/womens/women-102.jpg" src="images/products/womens/women-102.jpg" alt="image-product">
-                                    </li>
-                                    <li class="list-color-item color-swatch">
-                                        <span class="d-none text-capitalize color-filter">Orange</span>
-                                        <span class="swatch-value bg-light-orange"></span>
-                                        <img class="lazyload" data-src="images/products/womens/women-111.jpg" src="images/products/womens/women-111.jpg" alt="image-product">
-                                    </li>
-                                    <li class="list-color-item color-swatch line">
-                                        <span class="d-none text-capitalize color-filter">White</span>
-                                        <span class="swatch-value bg-white"></span>
-                                        <img class="lazyload" data-src="images/products/womens/women-104.jpg" src="images/products/womens/women-104.jpg" alt="image-product">
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- card product 9 -->
-                        <div class="card-product grid" data-availability="In stock" data-brand="hermes">
-                            <div class="card-product-wrapper">
-                                <a href="product-detail.html" class="product-img">
-                                    <img class="lazyload img-product" data-src="images/products/mens/men-11.jpg" src="images/products/mens/men-11.jpg" alt="image-product">
-                                    <img class="lazyload img-hover" data-src="images/products/mens/men-12.jpg" src="images/products/mens/men-12.jpg" alt="image-product">
-                                </a>
-                                <div class="list-product-btn">
-                                    <a href="javascript:void(0);" class="box-icon wishlist btn-icon-action">
-                                        <span class="icon icon-heart"></span>
-                                        <span class="tooltip">Wishlist</span>
-                                    </a>
-                                    <a href="#compare" data-bs-toggle="offcanvas" aria-controls="compare" class="box-icon compare btn-icon-action">
-                                        <span class="icon icon-gitDiff"></span>
-                                        <span class="tooltip">Compare</span>
-                                    </a>
-                                    <a href="#quickView" data-bs-toggle="modal" class="box-icon quickview tf-btn-loading">
-                                        <span class="icon icon-eye"></span>
-                                        <span class="tooltip">Quick View</span>
-                                    </a>
-                                </div>
-                                <div class="list-btn-main">
-                                    <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add To cart</a>
-                                </div> 
-                            </div>
-                            <div class="card-product-info">
-                                <a href="product-detail.html" class="title link">V-neck cotton T-shirt</a>
-                                <span class="price current-price">$59.99</span>
-                            </div>
-                        </div>
-                        <!-- card product 10 -->
-                        <div class="card-product grid"  data-availability="In stock" data-brand="gucci">
-                            <div class="card-product-wrapper">
-                                <a href="product-detail.html" class="product-img">
-                                    <img class="lazyload img-product" data-src="images/products/mens/men-13.jpg" src="images/products/mens/men-13.jpg" alt="image-product">
-                                    <img class="lazyload img-hover" data-src="images/products/mens/men-14.jpg" src="images/products/mens/men-14.jpg" alt="image-product">
-                                </a>
-                                <div class="on-sale-wrap"><span class="on-sale-item">-25%</span></div>
-                                <div class="marquee-product bg-main">
-                                    <div class="marquee-wrapper">
-                                        <div class="initial-child-container">
-                                            <div class="marquee-child-item">
-                                                <p class="font-2 text-btn-uppercase fw-6 text-white">Hot Sale 25% OFF</p>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <span class="icon icon-lightning text-critical"></span>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <p class="font-2 text-btn-uppercase fw-6 text-white">Hot Sale 25% OFF</p>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <span class="icon icon-lightning text-critical"></span>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <p class="font-2 text-btn-uppercase fw-6 text-white">Hot Sale 25% OFF</p>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <span class="icon icon-lightning text-critical"></span>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <p class="font-2 text-btn-uppercase fw-6 text-white">Hot Sale 25% OFF</p>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <span class="icon icon-lightning text-critical"></span>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <p class="font-2 text-btn-uppercase fw-6 text-white">Hot Sale 25% OFF</p>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <span class="icon icon-lightning text-critical"></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="marquee-wrapper">
-                                        <div class="initial-child-container">
-                                            <div class="marquee-child-item">
-                                                <p class="font-2 text-btn-uppercase fw-6 text-white">Hot Sale 25% OFF</p>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <span class="icon icon-lightning text-critical"></span>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <p class="font-2 text-btn-uppercase fw-6 text-white">Hot Sale 25% OFF</p>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <span class="icon icon-lightning text-critical"></span>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <p class="font-2 text-btn-uppercase fw-6 text-white">Hot Sale 25% OFF</p>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <span class="icon icon-lightning text-critical"></span>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <p class="font-2 text-btn-uppercase fw-6 text-white">Hot Sale 25% OFF</p>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <span class="icon icon-lightning text-critical"></span>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <p class="font-2 text-btn-uppercase fw-6 text-white">Hot Sale 25% OFF</p>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <span class="icon icon-lightning text-critical"></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="list-product-btn">
-                                    <a href="javascript:void(0);" class="box-icon wishlist btn-icon-action">
-                                        <span class="icon icon-heart"></span>
-                                        <span class="tooltip">Wishlist</span>
-                                    </a>
-                                    <a href="#compare" data-bs-toggle="offcanvas" aria-controls="compare" class="box-icon compare btn-icon-action">
-                                        <span class="icon icon-gitDiff"></span>
-                                        <span class="tooltip">Compare</span>
-                                    </a>
-                                    <a href="#quickView" data-bs-toggle="modal" class="box-icon quickview tf-btn-loading">
-                                        <span class="icon icon-eye"></span>
-                                        <span class="tooltip">Quick View</span>
-                                    </a>
-                                </div>
-                                <div class="list-btn-main">
-                                    <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add To cart</a>
-                                </div> 
-                            </div>
-                            <div class="card-product-info">
-                                <a href="product-detail.html" class="title link">Polarized sunglasses</a>
-                                <div class="price"><span class="old-price">$98.00</span> <span class="current-price">$79.99</span></div>
-                                <ul class="list-color-product">
-                                    <li class="list-color-item color-swatch active">
-                                        <span class="d-none text-capitalize color-filter">Beige</span>
-                                        <span class="swatch-value bg-beige"></span>
-                                        <img class="lazyload" data-src="images/products/mens/men-13.jpg" src="images/products/mens/men-13.jpg" alt="image-product">
-                                    </li>
-                                    <li class="list-color-item color-swatch">
-                                        <span class="d-none text-capitalize color-filter">Light Blue</span>
-                                        <span class="swatch-value bg-light-blue-2"></span>
-                                        <img class="lazyload" data-src="images/products/mens/men-12.jpg" src="images/products/mens/men-12.jpg" alt="image-product">
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- card product 11 -->
-                        <div class="card-product grid card-product-size" data-availability="In stock" data-brand="zalando">
-                            <div class="card-product-wrapper">
-                                <a href="product-detail.html" class="product-img">
-                                    <img class="lazyload img-product" data-src="images/products/mens/men-7.jpg" src="images/products/mens/men-7.jpg" alt="image-product">
-                                    <img class="lazyload img-hover" data-src="images/products/mens/men-8.jpg" src="images/products/mens/men-8.jpg" alt="image-product">
-                                </a>
-                                <div class="on-sale-wrap"><span class="on-sale-item">-25%</span></div>
-                                <div class="variant-wrap size-list">
-                                    <ul class="variant-box">
-                                        <li class="size-item">S</li>
-                                        <li class="size-item">M</li>
-                                        <li class="size-item">L</li>
-                                        <li class="size-item">XL</li>
-                                    </ul>
-                                </div>
-                                <div class="variant-wrap countdown-wrap">
-                                    <div class="variant-box">
-                                        <div class="js-countdown" data-timer="1007500" data-labels="D :,H :,M :,S"></div>
-                                    </div>
-                                </div>
-                                <div class="list-product-btn">
-                                    <a href="javascript:void(0);" class="box-icon wishlist btn-icon-action">
-                                        <span class="icon icon-heart"></span>
-                                        <span class="tooltip">Wishlist</span>
-                                    </a>
-                                    <a href="#compare" data-bs-toggle="offcanvas" aria-controls="compare" class="box-icon compare btn-icon-action">
-                                        <span class="icon icon-gitDiff"></span>
-                                        <span class="tooltip">Compare</span>
-                                    </a>
-                                    <a href="#quickView" data-bs-toggle="modal" class="box-icon quickview tf-btn-loading">
-                                        <span class="icon icon-eye"></span>
-                                        <span class="tooltip">Quick View</span>
-                                    </a>
-                                </div>
-                                <div class="list-btn-main">
-                                    <a href="#quickAdd" data-bs-toggle="modal" class="btn-main-product">Quick Add</a>
-                                </div> 
-                            </div>
-                            <div class="card-product-info">
-                                <a href="product-detail.html" class="title link">Ramie shirt with pockets </a>
-                                <div class="price"><span class="old-price">$98.00</span> <span class="current-price">$89.99</span></div>
-                                <ul class="list-color-product">
-                                    <li class="list-color-item color-swatch active line">
-                                        <span class="d-none text-capitalize color-filter">Green</span>
-                                        <span class="swatch-value bg-light-green"></span>
-                                        <img class="lazyload" data-src="images/products/mens/men-7.jpg" src="images/products/mens/men-7.jpg" alt="image-product">
-                                    </li>
-                                    <li class="list-color-item color-swatch">
-                                        <span class="d-none text-capitalize color-filter">Grey</span>
-                                        <span class="swatch-value bg-light-grey"></span>
-                                        <img class="lazyload" data-src="images/products/mens/men-11.jpg" src="images/products/mens/men-11.jpg" alt="image-product">
-                                    </li>
-                                    
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- card product 12 -->
-                        <div class="card-product grid" data-availability="In stock" data-brand="adidas">
-                            <div class="card-product-wrapper">
-                                <a href="product-detail.html" class="product-img">
-                                    <img class="lazyload img-product" data-src="images/products/mens/men-1.jpg" src="images/products/mens/men-1.jpg" alt="image-product">
-                                    <img class="lazyload img-hover" data-src="images/products/mens/men-3.jpg" src="images/products/mens/men-3.jpg" alt="image-product">
-                                </a>
-                                <div class="list-product-btn">
-                                    <a href="javascript:void(0);" class="box-icon wishlist btn-icon-action">
-                                        <span class="icon icon-heart"></span>
-                                        <span class="tooltip">Wishlist</span>
-                                    </a>
-                                    <a href="#compare" data-bs-toggle="offcanvas" aria-controls="compare" class="box-icon compare btn-icon-action">
-                                        <span class="icon icon-gitDiff"></span>
-                                        <span class="tooltip">Compare</span>
-                                    </a>
-                                    <a href="#quickView" data-bs-toggle="modal" class="box-icon quickview tf-btn-loading">
-                                        <span class="icon icon-eye"></span>
-                                        <span class="tooltip">Quick View</span>
-                                    </a>
-                                </div>
-                                <div class="list-btn-main">
-                                    <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add To cart</a>
-                                </div> 
-                            </div>
-                            <div class="card-product-info">
-                                <a href="product-detail.html" class="title link">Ribbed cotton-blend top</a>
-                                <span class="price current-price">$69.99</span>
-                                <ul class="list-color-product">
-                                    <li class="list-color-item color-swatch active line">
-                                        <span class="d-none text-capitalize color-filter">Light Blue</span>
-                                        <span class="swatch-value bg-light-blue"></span>
-                                        <img class="lazyload" data-src="images/products/mens/men-1.jpg" src="images/products/mens/men-1.jpg" alt="image-product">
-                                    </li>
-                                    <li class="list-color-item color-swatch">
-                                        <span class="d-none text-capitalize color-filter">Pink</span>
-                                        <span class="swatch-value bg-light-pink"></span>
-                                        <img class="lazyload" data-src="images/products/mens/men-13.jpg" src="images/products/mens/men-13.jpg" alt="image-product">
-                                    </li>
-                                    <li class="list-color-item color-swatch">
-                                        <span class="d-none text-capitalize color-filter">Grey</span>
-                                        <span class="swatch-value bg-dark-grey-2"></span>
-                                        <img class="lazyload" data-src="images/products/mens/men-9.jpg" src="images/products/mens/men-9.jpg" alt="image-product">
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- card product 13 -->
-                        <div class="card-product grid card-product-size" data-availability="In stock" data-brand="nike">
-                            <div class="card-product-wrapper">
-                                <a href="product-detail.html" class="product-img">
-                                    <img class="lazyload img-product" data-src="images/products/womens/women-37.jpg" src="images/products/womens/women-37.jpg" alt="image-product">
-                                    <img class="lazyload img-hover" data-src="images/products/womens/women-38.jpg" src="images/products/womens/women-38.jpg" alt="image-product">
-                                </a>
-                                <div class="variant-wrap size-list">
-                                    <ul class="variant-box">
-                                        <li class="size-item">XS</li>
-                                        <li class="size-item">L</li>
-                                        <li class="size-item">XL</li>
-                                        <li class="size-item">2XL</li>
-                                        <li class="size-item">3XL</li>
-                                    </ul>
-                                </div>
-                                <div class="list-product-btn">
-                                    <a href="javascript:void(0);" class="box-icon wishlist btn-icon-action">
-                                        <span class="icon icon-heart"></span>
-                                        <span class="tooltip">Wishlist</span>
-                                    </a>
-                                    <a href="#compare" data-bs-toggle="offcanvas" aria-controls="compare" class="box-icon compare btn-icon-action">
-                                        <span class="icon icon-gitDiff"></span>
-                                        <span class="tooltip">Compare</span>
-                                    </a>
-                                    <a href="#quickView" data-bs-toggle="modal" class="box-icon quickview tf-btn-loading">
-                                        <span class="icon icon-eye"></span>
-                                        <span class="tooltip">Quick View</span>
-                                    </a>
-                                </div>
-                                <div class="list-btn-main">
-                                    <a href="#quickAdd" data-bs-toggle="modal" class="btn-main-product">Quick Add</a>
-                                </div> 
-                            </div>
-                            <div class="card-product-info">
-                                <a href="product-detail.html" class="title link">Buttoned cotton shirt</a>
-                                <span class="price current-price">$89.99</span>
-                                <ul class="list-color-product">
-                                    <li class="list-color-item color-swatch active">
-                                        <span class="d-none text-capitalize color-filter">Light Blue</span>
-                                        <span class="swatch-value bg-light-blue"></span>
-                                        <img class="lazyload" data-src="images/products/womens/women-37.jpg" src="images/products/womens/women-37.jpg" alt="image-product">
-                                    </li>
-                                    <li class="list-color-item color-swatch line">
-                                        <span class="d-none text-capitalize color-filter">White</span>
-                                        <span class="swatch-value bg-white"></span>
-                                        <img class="lazyload" data-src="images/products/womens/women-41.jpg" src="images/products/womens/women-41.jpg" alt="image-product">
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- card product 14 -->
-                        <div class="card-product grid card-product-size" data-availability="In stock" data-brand="LV">
-                            <div class="card-product-wrapper">
-                                <a href="product-detail.html" class="product-img">
-                                    <img class="lazyload img-product" data-src="images/products/mens/men-15.jpg" src="images/products/mens/men-15.jpg" alt="image-product">
-                                    <img class="lazyload img-hover" data-src="images/products/mens/men-16.jpg" src="images/products/mens/men-16.jpg" alt="image-product">
-                                </a>
-                                <div class="variant-wrap size-list">
-                                    <ul class="variant-box">
-                                        <li class="size-item">XS</li>
-                                        <li class="size-item">M</li>
-                                        <li class="size-item">L</li>
-                                        <li class="size-item">XL</li>
-                                        <li class="size-item">2XL</li>
-                                        <li class="size-item">3XL</li>
-                                    </ul>
-                                </div>
-                                <div class="list-product-btn">
-                                    <a href="javascript:void(0);" class="box-icon wishlist btn-icon-action">
-                                        <span class="icon icon-heart"></span>
-                                        <span class="tooltip">Wishlist</span>
-                                    </a>
-                                    <a href="#compare" data-bs-toggle="offcanvas" aria-controls="compare" class="box-icon compare btn-icon-action">
-                                        <span class="icon icon-gitDiff"></span>
-                                        <span class="tooltip">Compare</span>
-                                    </a>
-                                    <a href="#quickView" data-bs-toggle="modal" class="box-icon quickview tf-btn-loading">
-                                        <span class="icon icon-eye"></span>
-                                        <span class="tooltip">Quick View</span>
-                                    </a>
-                                </div>
-                                <div class="list-btn-main">
-                                    <a href="#quickAdd" data-bs-toggle="modal" class="btn-main-product">Quick Add</a>
-                                </div> 
-                            </div>
-                            <div class="card-product-info">
-                                <a href="product-detail.html" class="title link">Chest pocket cotton over shirt</a>
-                                <span class="price current-price">$99.25</span>
-                                <ul class="list-color-product">
-                                    <li class="list-color-item color-swatch active">
-                                        <span class="d-none text-capitalize color-filter">Beige</span>
-                                        <span class="swatch-value bg-beige"></span>
-                                        <img class="lazyload" data-src="images/products/mens/men-15.jpg" src="images/products/mens/men-15.jpg" alt="image-product">
-                                    </li>
-                                    <li class="list-color-item color-swatch">
-                                        <span class="d-none text-capitalize color-filter">Black</span>
-                                        <span class="swatch-value bg-main"></span>
-                                        <img class="lazyload" data-src="images/products/mens/men-18.jpg" src="images/products/mens/men-18.jpg" alt="image-product">
-                                    </li>
-                                    <li class="list-color-item color-swatch">
-                                        <span class="d-none text-capitalize color-filter">Dark Blue</span>
-                                        <span class="swatch-value bg-dark-blue"></span>
-                                        <img class="lazyload" data-src="images/products/mens/men-17.jpg" src="images/products/mens/men-17.jpg" alt="image-product">
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- card product 15 -->
-                        <div class="card-product grid" data-availability="In stock" data-brand="gucci">
-                            <div class="card-product-wrapper">
-                                <a href="product-detail.html" class="product-img">
-                                    <img class="lazyload img-product" data-src="images/products/womens/women-167.jpg" src="images/products/womens/women-167.jpg" alt="image-product">
-                                    <img class="lazyload img-hover" data-src="images/products/womens/women-168.jpg" src="images/products/womens/women-168.jpg" alt="image-product">
-                                </a>
-                                <div class="list-product-btn">
-                                    <a href="javascript:void(0);" class="box-icon wishlist btn-icon-action">
-                                        <span class="icon icon-heart"></span>
-                                        <span class="tooltip">Wishlist</span>
-                                    </a>
-                                    <a href="#compare" data-bs-toggle="offcanvas" aria-controls="compare" class="box-icon compare btn-icon-action">
-                                        <span class="icon icon-gitDiff"></span>
-                                        <span class="tooltip">Compare</span>
-                                    </a>
-                                    <a href="#quickView" data-bs-toggle="modal" class="box-icon quickview tf-btn-loading">
-                                        <span class="icon icon-eye"></span>
-                                        <span class="tooltip">Quick View</span>
-                                    </a>
-                                </div>
-                                <div class="list-btn-main">
-                                    <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add To cart</a>
-                                </div> 
-                            </div>
-                            <div class="card-product-info">
-                                <a href="product-detail.html" class="title link">Cotton shopper bag</a>
-                                <span class="price current-price">$199.25</span>
-                                <ul class="list-color-product">
-                                    <li class="list-color-item color-swatch active line">
-                                        <span class="d-none text-capitalize color-filter">White</span>
-                                        <span class="swatch-value bg-white"></span>
-                                        <img class="lazyload" data-src="images/products/womens/women-167.jpg" src="images/products/womens/women-167.jpg" alt="image-product">
-                                    </li>
-                                    <li class="list-color-item color-swatch">
-                                        <span class="d-none text-capitalize color-filter">Beige</span>
-                                        <span class="swatch-value bg-beige"></span>
-                                        <img class="lazyload" data-src="images/products/womens/women-162.jpg" src="images/products/womens/women-162.jpg" alt="image-product">
-                                    </li>
-                                   
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- card product 16 -->
-                        <div class="card-product grid card-product-size" data-availability="In stock" data-brand="adidas">
-                            <div class="card-product-wrapper">
-                                <a href="product-detail.html" class="product-img">
-                                    <img class="lazyload img-product" data-src="images/products/mens/men-19.jpg" src="images/products/mens/men-19.jpg" alt="image-product">
-                                    <img class="lazyload img-hover" data-src="images/products/mens/men-20.jpg" src="images/products/mens/men-20.jpg" alt="image-product">
-                                </a>
-                                <div class="variant-wrap size-list">
-                                    <ul class="variant-box">
-                                        <li class="size-item">XS</li>
-                                        <li class="size-item">M</li>
-                                        <li class="size-item">L</li>
-                                        <li class="size-item">XL</li>
-                                        <li class="size-item">2XL</li>
-                                        <li class="size-item">3XL</li>
-                                    </ul>
-                                </div>
-                                <div class="list-product-btn">
-                                    <a href="javascript:void(0);" class="box-icon wishlist btn-icon-action">
-                                        <span class="icon icon-heart"></span>
-                                        <span class="tooltip">Wishlist</span>
-                                    </a>
-                                    <a href="#compare" data-bs-toggle="offcanvas" aria-controls="compare" class="box-icon compare btn-icon-action">
-                                        <span class="icon icon-gitDiff"></span>
-                                        <span class="tooltip">Compare</span>
-                                    </a>
-                                    <a href="#quickView" data-bs-toggle="modal" class="box-icon quickview tf-btn-loading">
-                                        <span class="icon icon-eye"></span>
-                                        <span class="tooltip">Quick View</span>
-                                    </a>
-                                </div>
-                                <div class="list-btn-main">
-                                    <a href="#quickAdd" data-bs-toggle="modal" class="btn-main-product">Quick Add</a>
-                                </div> 
-                            </div>
-                            <div class="card-product-info">
-                                <a href="product-detail.html" class="title link">Chest pocket cotton over shirt</a>
-                                <span class="price current-price">$250.00</span>
-                                
-                            </div>
-                        </div>
-                        <!-- pagination -->
-                        <ul class="wg-pagination justify-content-center">
-                            <li><a href="#" class="pagination-item text-button">1</a></li>
-                            <li class="active"><div class="pagination-item text-button">2</div></li>
-                            <li><a href="#" class="pagination-item text-button">3</a></li>
-                            <li><a href="#" class="pagination-item text-button"><i class="icon-arrRight"></i></a></li>
-                        </ul>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- /Section product -->
+        </div>
+        <div class="wrapper-control-shop">
+            <div class="meta-filter-shop">
+                <div id="beautician-count" class="count-text">Showing 6 beauticians</div>
+                <div id="applied-filters"></div>
+                <button id="remove-all" class="remove-all-filters text-btn-uppercase" style="display: none;">REMOVE ALL <i class="icon icon-close"></i></button>
+            </div>
+            <div class="tf-list-layout wrapper-shop" id="listLayout">
+                
+                <!-- Beautician card 1 -->
+                <div class="card-product style-list" data-rating="5" data-service="makeup" data-price="80">
+                    <div class="card-product-wrapper">
+                        <a href="beautician-profile.html" class="product-img">
+                            <img class="lazyload img-product" data-src="images/beautician/beautician1.png" src="images/beautician/beautician1.png" alt="Sarah Johnson">
+                           <!-- <img class="lazyload img-hover" data-src="images/beautician-1-hover.jpg" src="images/beautician-1-hover.jpg" alt="Sarah Johnson">-->
+                        </a>
+                      
+                    </div>
+                    <div class="card-product-info">
+                        <a href="beautician-profile.html" class="title link">Sarah Johnson</a>
+                        <div class="price">
+                            <span class="rating-badge">★★★★★</span>
+                            <span class="review-count">(248 reviews)</span>
+                        </div>
+                        <p class="description text-secondary text-line-clamp-2">Professional Makeup Artist & Skincare Specialist with 8 years of experience. Specializing in bridal makeup, party makeup, and facial treatments.</p>
+                        <div class="variant-wrap-list">
+                            <ul class="list-color-product">
+                                <li class="list-color-item beautician-list">
+                                    <span class="d-none text-capitalize color-filter">Bridal</span>
+                                    <span class="service-tag">Bridal Makeup</span>
+                                </li>
+                                <li class="list-color-item beautician-list">
+                                    <span class="d-none text-capitalize color-filter">Makeup</span>
+                                    <span class="service-tag">Makeup</span>
+                                </li>
+                                <li class="list-color-item beautician-list">
+                                    <span class="d-none text-capitalize color-filter">Skincare</span>
+                                    <span class="service-tag">Skincare</span>
+                                </li>
+                            </ul>
+                            <div class="size-box list-product-btn">
+                                <span class="price-info">From <strong>$80</strong>/hour</span>
+                                <span class="availability-badge">Available Today</span>
+                            </div>
+                            <div class="list-product-btn">
+                                <a href="beautician-profile.html" class="btn-main-product">View Profile</a>
+                                <a href="booking.html" class="box-icon wishlist btn-icon-action" title="Book Now">
+                                    <span class="icon icon-calendar"></span>
+                                    <span class="tooltip">Book Now</span>
+                                </a>
+                                <a href="javascript:void(0);" class="box-icon compare btn-icon-action" title="Reviews">
+                                    <span class="icon icon-star"></span>
+                                    <span class="tooltip">Reviews</span>
+                                </a>
+                                <a href="#" class="box-icon quickview tf-btn-loading" title="Details">
+                                    <span class="icon icon-eye"></span>
+                                    <span class="tooltip">Details</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Beautician card 2 -->
+                <div class="card-product style-list" data-rating="4.5" data-service="hair" data-price="60">
+                    <div class="card-product-wrapper">
+                        <a href="beautician-profile.html" class="product-img">
+                            <img class="lazyload img-product" data-src="images/beautician/beautician2.png" src="images/beautician/beautician2.png" alt="Maria Garcia">
+                           <!-- <img class="lazyload img-hover" data-src="images/beautician-2-hover.jpg" src="images/beautician-2-hover.jpg" alt="Maria Garcia">-->
+                        </a>
+                    </div>
+                    <div class="card-product-info">
+                        <a href="beautician-profile.html" class="title link">Maria Garcia</a>
+                        <div class="price">
+                            <span class="rating-badge">★★★★☆</span>
+                            <span class="review-count">(156 reviews)</span>
+                        </div>
+                        <p class="description text-secondary text-line-clamp-2">Hair Styling & Coloring Expert. 6 years of experience in trendy cuts, color treatments, and special occasion styling.</p>
+                        <div class="variant-wrap-list">
+                            <ul class="list-color-product">
+                                <li class="list-color-item beautician-list">
+                                    <span class="d-none text-capitalize color-filter">Hair</span>
+                                    <span class="service-tag">Hair Styling</span>
+                                </li>
+                                <li class="list-color-item beautician-list">
+                                    <span class="d-none text-capitalize color-filter">Coloring</span>
+                                    <span class="service-tag">Coloring</span>
+                                </li>
+                                <li class="list-color-item beautician-list">
+                                    <span class="d-none text-capitalize color-filter">Treatment</span>
+                                    <span class="service-tag">Treatment</span>
+                                </li>
+                            </ul>
+                            <div class="size-box list-product-btn">
+                                <span class="price-info">From <strong>$60</strong>/hour</span>
+                                <span class="availability-badge">Available Tomorrow</span>
+                            </div>
+                            <div class="list-product-btn">
+                                <a href="beautician-profile.html" class="btn-main-product">View Profile</a>
+                                <a href="booking.html" class="box-icon wishlist btn-icon-action" title="Book Now">
+                                    <span class="icon icon-calendar"></span>
+                                    <span class="tooltip">Book Now</span>
+                                </a>
+                                <a href="javascript:void(0);" class="box-icon compare btn-icon-action" title="Reviews">
+                                    <span class="icon icon-star"></span>
+                                    <span class="tooltip">Reviews</span>
+                                </a>
+                                <a href="#" class="box-icon quickview tf-btn-loading" title="Details">
+                                    <span class="icon icon-eye"></span>
+                                    <span class="tooltip">Details</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Beautician card 3 -->
+                <div class="card-product style-list" data-rating="5" data-service="skincare" data-price="100">
+                    <div class="card-product-wrapper">
+                        <a href="beautician-profile.html" class="product-img">
+                            <img class="lazyload img-product" data-src="images/beautician/beautician3.png" src="images/beautician/beautician3.png" alt="Emily Chen">
+                           <!-- <img class="lazyload img-hover" data-src="images/beautician-3-hover.jpg" src="images/beautician-3-hover.jpg" alt="Emily Chen">-->
+                        </a>
+                    </div>
+                    <div class="card-product-info">
+                        <a href="beautician-profile.html" class="title link">Emily Chen</a>
+                        <div class="price">
+                            <span class="rating-badge">★★★★★</span>
+                            <span class="review-count">(189 reviews)</span>
+                        </div>
+                        <p class="description text-secondary text-line-clamp-2">Certified Skincare Specialist. 5 years experience in facials, skincare analysis, and therapeutic treatments using premium products.</p>
+                        <div class="variant-wrap-list">
+                            <ul class="list-color-product">
+                                <li class="list-color-item beautician-list">
+                                    <span class="d-none text-capitalize color-filter">Facial</span>
+                                    <span class="service-tag">Facials</span>
+                                </li>
+                                <li class="list-color-item beautician-list">
+                                    <span class="d-none text-capitalize color-filter">Skincare</span>
+                                    <span class="service-tag">Skincare</span>
+                                </li>
+                                <li class="list-color-item beautician-list">
+                                    <span class="d-none text-capitalize color-filter">Treatment</span>
+                                    <span class="service-tag">Treatment</span>
+                                </li>
+                            </ul>
+                            <div class="size-box list-product-btn">
+                                <span class="price-info">From <strong>$100</strong>/hour</span>
+                                <span class="availability-badge">Available Today</span>
+                            </div>
+                            <div class="list-product-btn">
+                                <a href="beautician-profile.html" class="btn-main-product">View Profile</a>
+                               <a href="booking.html" class="box-icon wishlist btn-icon-action" title="Book Now">
+                                    <span class="icon icon-calendar"></span>
+                                    <span class="tooltip">Book Now</span>
+                                </a>
+                                <a href="javascript:void(0);" class="box-icon compare btn-icon-action" title="Reviews">
+                                    <span class="icon icon-star"></span>
+                                    <span class="tooltip">Reviews</span>
+                                </a>
+                                <a href="#" class="box-icon quickview tf-btn-loading" title="Details">
+                                    <span class="icon icon-eye"></span>
+                                    <span class="tooltip">Details</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Beautician card 4 -->
+                <div class="card-product style-list" data-rating="5" data-service="bridal" data-price="150">
+                    <div class="card-product-wrapper">
+                        <a href="beautician-profile.html" class="product-img">
+                            <img class="lazyload img-product" data-src="images/beautician/beautician4.png" src="images/beautician/beautician4.png" alt="Jessica Lee">
+                           <!-- <img class="lazyload img-hover" data-src="images/beautician-4-hover.jpg" src="images/beautician-4-hover.jpg" alt="Jessica Lee">-->
+                        </a>
+                       
+                    </div>
+                    <div class="card-product-info">
+                        <a href="beautician-profile.html" class="title link">Jessica Lee</a>
+                        <div class="price">
+                            <span class="rating-badge">★★★★★</span>
+                            <span class="review-count">(92 reviews)</span>
+                        </div>
+                        <p class="description text-secondary text-line-clamp-2">Bridal & Event Makeup Specialist. 7 years expertise in creating stunning bridal looks and event makeup with trial sessions included.</p>
+                        <div class="variant-wrap-list">
+                            <ul class="list-color-product">
+                                <li class="list-color-item beautician-list">
+                                    <span class="d-none text-capitalize color-filter">Bridal</span>
+                                    <span class="service-tag">Bridal</span>
+                                </li>
+                                <li class="list-color-item beautician-list">
+                                    <span class="d-none text-capitalize color-filter">Events</span>
+                                    <span class="service-tag">Events</span>
+                                </li>
+                                <li class="list-color-item beautician-list">
+                                    <span class="d-none text-capitalize color-filter">Makeup</span>
+                                    <span class="service-tag">Makeup</span>
+                                </li>
+                            </ul>
+                            <div class="size-box list-product-btn">
+                                <span class="price-info">From <strong>$150</strong>/hour</span>
+                                <span class="availability-badge">This Week</span>
+                            </div>
+                            <div class="list-product-btn">
+                                <a href="beautician-profile.html" class="btn-main-product">View Profile</a>
+                                <a href="booking.html" class="box-icon wishlist btn-icon-action" title="Book Now">
+                                    <span class="icon icon-calendar"></span>
+                                    <span class="tooltip">Book Now</span>
+                                </a>
+                                <a href="javascript:void(0);" class="box-icon compare btn-icon-action" title="Reviews">
+                                    <span class="icon icon-star"></span>
+                                    <span class="tooltip">Reviews</span>
+                                </a>
+                                <a href="#" class="box-icon quickview tf-btn-loading" title="Details">
+                                    <span class="icon icon-eye"></span>
+                                    <span class="tooltip">Details</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Beautician card 5 -->
+                <div class="card-product style-list" data-rating="5" data-service="makeup" data-price="70">
+                    <div class="card-product-wrapper">
+                        <a href="beautician-profile.html" class="product-img">
+                            <img class="lazyload img-product" data-src="images/beautician/beautician5.png" src="images/beautician/beautician5.png" alt="Priya Patel">
+                            <!--<img class="lazyload img-hover" data-src="images/beautician-5-hover.jpg" src="images/beautician-5-hover.jpg" alt="Priya Patel">-->
+                        </a>
+                    </div>
+                    <div class="card-product-info">
+                        <a href="beautician-profile.html" class="title link">Priya Patel</a>
+                        <div class="price">
+                            <span class="rating-badge">★★★★★</span>
+                            <span class="review-count">(203 reviews)</span>
+                        </div>
+                        <p class="description text-secondary text-line-clamp-2">Makeup & Nail Art Artist. 9 years of creativity in makeup artistry and nail designs for all occasions and styles.</p>
+                        <div class="variant-wrap-list">
+                            <ul class="list-color-product">
+                                <li class="list-color-item beautician-list">
+                                    <span class="d-none text-capitalize color-filter">Makeup</span>
+                                    <span class="service-tag">Makeup</span>
+                                </li>
+                                <li class="list-color-item beautician-list">
+                                    <span class="d-none text-capitalize color-filter">Nails</span>
+                                    <span class="service-tag">Nails</span>
+                                </li>
+                                <li class="list-color-item beautician-list">
+                                    <span class="d-none text-capitalize color-filter">Art</span>
+                                    <span class="service-tag">Art Design</span>
+                                </li>
+                            </ul>
+                            <div class="size-box list-product-btn">
+                                <span class="price-info">From <strong>$70</strong>/hour</span>
+                                <span class="availability-badge">Available Today</span>
+                            </div>
+                            <div class="list-product-btn">
+                                <a href="beautician-profile.html" class="btn-main-product">View Profile</a>
+                                <a href="booking.html" class="box-icon wishlist btn-icon-action" title="Book Now">
+                                    <span class="icon icon-calendar"></span>
+                                    <span class="tooltip">Book Now</span>
+                                </a>
+                                <a href="javascript:void(0);" class="box-icon compare btn-icon-action" title="Reviews">
+                                    <span class="icon icon-star"></span>
+                                    <span class="tooltip">Reviews</span>
+                                </a>
+                                <a href="#" class="box-icon quickview tf-btn-loading" title="Details">
+                                    <span class="icon icon-eye"></span>
+                                    <span class="tooltip">Details</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Beautician card 6 -->
+                <div class="card-product style-list" data-rating="4" data-service="hair" data-price="75">
+                    <div class="card-product-wrapper">
+                        <a href="beautician-profile.html" class="product-img">
+                            <img class="lazyload img-product" data-src="images/beautician/beautician6.png" src="images/beautician/beautician6.png" alt="Lisa Wong">
+                           <!-- <img class="lazyload img-hover" data-src="images/beautician-6-hover.jpg" src="images/beautician-6-hover.jpg" alt="Lisa Wong">-->
+                        </a>
+                    </div>
+                    <div class="card-product-info">
+                        <a href="beautician-profile.html" class="title link">Lisa Wong</a>
+                        <div class="price">
+                            <span class="rating-badge">★★★★☆</span>
+                            <span class="review-count">(128 reviews)</span>
+                        </div>
+                        <p class="description text-secondary text-line-clamp-2">Hair & Makeup Expert. 4 years experience combining hair styling with makeup artistry for complete transformations.</p>
+                        <div class="variant-wrap-list">
+                            <ul class="list-color-product">
+                                <li class="list-color-item beautician-list">
+                                    <span class="d-none text-capitalize color-filter">Hair</span>
+                                    <span class="service-tag">Hair</span>
+                                </li>
+                                <li class="list-color-item beautician-list">
+                                    <span class="d-none text-capitalize color-filter">Makeup</span>
+                                    <span class="service-tag">Makeup</span>
+                                </li>
+                                <li class="list-color-item beautician-list">
+                                    <span class="d-none text-capitalize color-filter">Styling</span>
+                                    <span class="service-tag">Styling</span>
+                                </li>
+                            </ul>
+                            <div class="size-box list-product-btn">
+                                <span class="price-info">From <strong>$75</strong>/hour</span>
+                                <span class="availability-badge">Tomorrow</span>
+                            </div>
+                            <div class="list-product-btn">
+                                <a href="beautician-profile.html" class="btn-main-product">View Profile</a>
+                                <a href="booking.html" class="box-icon wishlist btn-icon-action" title="Book Now">
+                                    <span class="icon icon-calendar"></span>
+                                    <span class="tooltip">Book Now</span>
+                                </a>
+                                <a href="javascript:void(0);" class="box-icon compare btn-icon-action" title="Reviews">
+                                    <span class="icon icon-star"></span>
+                                    <span class="tooltip">Reviews</span>
+                                </a>
+                                <a href="#" class="box-icon quickview tf-btn-loading" title="Details">
+                                    <span class="icon icon-eye"></span>
+                                    <span class="tooltip">Details</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- pagination -->
+                <ul class="wg-pagination">
+                    <li><a href="#" class="pagination-item text-button">1</a></li>
+                    <li class="active"><div class="pagination-item text-button">2</div></li>
+                    <li><a href="#" class="pagination-item text-button">3</a></li>
+                    <li><a href="#" class="pagination-item text-button"><i class="icon-arrRight"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /Section beautician list -->
+
+   
         
-       
+
         <!-- Footer -->
         <footer id="footer" class="footer">
             <div class="footer-wrap">
                 <div class="footer-body">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-4">
+                            <div class="col-lg-3">
                                 <div class="footer-infor">
                                     <div class="footer-logo">
                                         <a href="index.html">
-                                            <img src="images/logo/logo.svg" alt="">
+                                            <img src="images/logo/blushley-png-without-shade.png" alt="">
                                         </a>
                                     </div>
-                                    <div class="footer-address">
-                                        <p>549 Oak St.Crystal Lake, IL 60014</p>
-                                        <a href="contact.html" class="tf-btn-default fw-6">GET DIRECTION<i class="icon-arrowUpRight"></i></a>
-                                    </div>
-                                    <ul class="footer-info">
-                                        <li>
-                                            <i class="icon-mail"></i>
-                                            <p>themesflat@gmail.com</p>
-                                        </li>
-                                        <li>
-                                            <i class="icon-phone"></i>
-                                            <p>315-666-6688</p>
-                                        </li>
-                                    </ul>
-                                    <ul class="tf-social-icon">
-                                        <li><a href="#" class="social-facebook"><i class="icon icon-fb"></i></a></li>
-                                        <li><a href="#" class="social-twiter"><i class="icon icon-x"></i></a></li>
-                                        <li><a href="#" class="social-instagram"><i class="icon icon-instagram"></i></a></li>
-                                        <li><a href="#" class="social-tiktok"><i class="icon icon-tiktok"></i></a></li>
-                                        <li><a href="#" class="social-amazon"><i class="icon icon-amazon"></i></a></li>
-                                        <li><a href="#" class="social-pinterest"><i class="icon icon-pinterest"></i></a></li>
-                                    </ul>
+                                    <p>Premium beauty products and professional beautician services. Shop skincare,
+                                        makeup, and hair care essentials, or book appointments with our network of
+                                        experienced beauticians.</p>
+
                                 </div>
                             </div>
-                            <div class="col-lg-4">
-                                <div class="footer-menu">
+                            <div class="col-lg-3">
+                                <div class="footer-menu footer-menu-texts">
                                     <div class="footer-col-block">
                                         <div class="footer-heading text-button footer-heading-mobile">
-                                            Infomation
+                                            Information
                                         </div>
                                         <div class="tf-collapse-content">
                                             <ul class="footer-menu-list">
@@ -1622,7 +660,8 @@
                                                     <a href="#" class="footer-menu_item">Privacy Policy</a>
                                                 </li>
                                                 <li class="text-caption-1">
-                                                    <a href="term-of-use.html" class="footer-menu_item">Terms & Conditions</a>
+                                                    <a href="term-of-use.html" class="footer-menu_item">Terms &
+                                                        Conditions</a>
                                                 </li>
                                                 <li class="text-caption-1">
                                                     <a href="FAQs.html" class="footer-menu_item">Orders FAQs</a>
@@ -1633,33 +672,107 @@
                                             </ul>
                                         </div>
                                     </div>
+                                    <!--  <div class="footer-col-block">
+                                        <div class="footer-heading text-button footer-heading-mobile">
+                                          Sellers
+                                        </div>
+                                        <div class="tf-collapse-content">
+                                            <ul class="footer-menu-list">
+                                                <li class="text-caption-1">
+                                                    <a href="#" class="footer-menu_item">Shop All</a>
+                                                </li>
+                                                <li class="text-caption-1">
+                                                    <a href="#" class="footer-menu_item">Trending</a>
+                                                </li>
+                                                <li class="text-caption-1">
+                                                    <a href="#" class="footer-menu_item">Skincare</a>
+                                                </li>
+                                                <li class="text-caption-1">
+                                                    <a href="term-of-use.html" class="footer-menu_item">Makeup</a>
+                                                </li>
+                                                <li class="text-caption-1">
+                                                    <a href="FAQs.html" class="footer-menu_item">Beauty Tips</a>
+                                                </li>
+                                                <li class="text-caption-1">
+                                                    <a href="wish-list.html" class="footer-menu_item">Men's Grooming</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>-->
                                 </div>
                             </div>
-                            <div class="col-lg-4">
-                                <div class="footer-col-block">
+                            <div class="col-lg-3">
+                                <div class="footer-heading text-button footer-heading-mobile">
+                                    For Sellers
+                                </div>
+
+                                <div class="tf-collapse-content">
+                                    <ul class="footer-menu-list">
+                                        <li>
+                                            <h3 class="footer-seller-title">Sell Your Products With Us</h3>
+                                        </li>
+                                        <li>
+                                            <p class="footer-seller-description">
+                                                Join our marketplace and reach thousands of beauty enthusiasts.
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <a href="seller-registration.html" class="btn-seller-connect">
+                                                Connect Now
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3">
+                                <div class="footer-heading text-button footer-heading-mobile">
+                                    contact us
+                                </div>
+                                <div class="footer-address">
+                                    <p>549 Oak St.Crystal Lake, IL 60014</p>
+                                    <a href="contact.html" class="tf-btn-default fw-6">GET DIRECTION<i
+                                            class="icon-arrowUpRight"></i></a>
+                                </div>
+                                <ul class="footer-info">
+                                    <li>
+                                        <i class="icon-mail"></i>
+                                        <p>blushley@gmail.com</p>
+                                    </li>
+                                    <li>
+                                        <i class="icon-phone"></i>
+                                        <p>315-666-6688</p>
+                                    </li>
+                                </ul>
+
+                                <!-- <div class="footer-col-block">
                                     <div class="footer-heading text-button footer-heading-mobile">
                                         Newletter
                                     </div>
-                                    <div class="tf-collapse-content">
+                                 <div class="tf-collapse-content">
                                         <div class="footer-newsletter">
-                                            <p class="text-caption-1">Sign up for our newsletter and get 10% off your first purchase</p>
+                                            <p class="text-caption-1">Sign up for our newsletter and get 10% off your
+                                                first purchase</p>
                                             <div class="sib-form">
                                                 <div id="sib-form-container" class="sib-form-container">
                                                     <div id="error-message" class="sib-form-message-panel">
-                                                        <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+                                                        <div
+                                                            class="sib-form-message-panel__text sib-form-message-panel__text--center">
                                                             <span class="sib-form-message-panel__inner-text">
                                                                 Your subscription could not be saved. Please try again.
                                                             </span>
                                                         </div>
                                                     </div>
                                                     <div id="success-message" class="sib-form-message-panel">
-                                                        <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+                                                        <div
+                                                            class="sib-form-message-panel__text sib-form-message-panel__text--center">
                                                             <span class="sib-form-message-panel__inner-text">
                                                                 Your subscription has been successful.
                                                             </span>
                                                         </div>
                                                     </div>
-                                                    <div id="sib-container" class="sib-container--large sib-container--vertical">
+                                                    <div id="sib-container"
+                                                        class="sib-container--large sib-container--vertical">
                                                         <form id="sib-form" method="POST" class="form-newsletter"
                                                             action="https://3c02c1a1.sibforms.com/serve/MUIFAOAhSCDRnPhdPWLTpLBkaFR0CvSbJ_okYrjCbXQRLkZZU67Hn2jdn18hTWJuGupI4VUfB4deuJIyP5yRoHWVb9pIrENAMcal9Jtz8q_qN4dpHNMIG454DwSVNVmnLXuePoOCvDqN_Vvs0ga_kzg7ouD63HjCaukRz3LGCQsfnQJBN4-KS2D3DVitqvFsDHSqevjjqLk2xFO4"
                                                             data-type="subscription">
@@ -1682,11 +795,15 @@
                                                                             <label class="entry__label" for="EMAIL">
                                                                             </label>
                                                                             <div class="entry__field">
-                                                                                <input class="input radius-60" type="text" id="EMAIL" name="EMAIL" autocomplete="off"
-                                                                                    placeholder="Enter your e-mail..." data-required="true" required />
+                                                                                <input class="input radius-60"
+                                                                                    type="text" id="EMAIL" name="EMAIL"
+                                                                                    autocomplete="off"
+                                                                                    placeholder="Enter your e-mail..."
+                                                                                    data-required="true" required />
                                                                             </div>
                                                                         </div>
-                                                                        <label class="entry__error entry__error--primary"></label>
+                                                                        <label
+                                                                            class="entry__error entry__error--primary"></label>
                                                                         <label class="entry__specification">
                                                                         </label>
                                                                     </div>
@@ -1698,16 +815,19 @@
                                                                         <div class="form__label-row ">
                                                                             <div class="entry__choice">
                                                                                 <label>
-                                                                                    <input type="checkbox" class="input_replaced" value="1" id="OPT_IN"
-                                                                                        name="OPT_IN" />
-                                                                                    <span class="checkbox checkbox_tick_positive"></span>
+                                                                                    <input type="checkbox"
+                                                                                        class="input_replaced" value="1"
+                                                                                        id="OPT_IN" name="OPT_IN" />
+                                                                                    <span
+                                                                                        class="checkbox checkbox_tick_positive"></span>
                                                                                     <span>
                                                                                         <p></p>
                                                                                     </span>
                                                                                 </label>
                                                                             </div>
                                                                         </div>
-                                                                        <label class="entry__error entry__error--primary">
+                                                                        <label
+                                                                            class="entry__error entry__error--primary">
                                                                         </label>
                                                                         <label class="entry__specification">
                                                                         </label>
@@ -1728,7 +848,8 @@
                                                                     </button>
                                                                 </div>
                                                             </div>
-                                                            <input type="text" name="email_address_check" value="" class="input--hidden">
+                                                            <input type="text" name="email_address_check" value=""
+                                                                class="input--hidden">
                                                             <input type="hidden" name="locale" value="en">
                                                         </form>
                                                     </div>
@@ -1736,18 +857,21 @@
                                             </div>
                                             <div class="tf-cart-checkbox">
                                                 <div class="tf-checkbox-wrapp">
-                                                    <input class="" type="checkbox" id="footer-Form_agree" name="agree_checkbox">
+                                                    <input class="" type="checkbox" id="footer-Form_agree"
+                                                        name="agree_checkbox">
                                                     <div>
                                                         <i class="icon-check"></i>
                                                     </div>
                                                 </div>
                                                 <label class="text-caption-1" for="footer-Form_agree">
-                                                    By clicking subcribe, you agree to the <a class="fw-6 link" href="term-of-use.html">Terms of Service</a> and <a class="fw-6 link" href="#">Privacy Policy</a>.
+                                                    By clicking subcribe, you agree to the <a class="fw-6 link"
+                                                        href="term-of-use.html">Terms of Service</a> and <a
+                                                        class="fw-6 link" href="#">Privacy Policy</a>.
                                                 </label>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div>-->
                             </div>
                         </div>
                     </div>
@@ -1758,9 +882,25 @@
                             <div class="col-12">
                                 <div class="footer-bottom-wrap">
                                     <div class="left">
-                                        <p class="text-caption-1">©2024 Modave. All Rights Reserved.</p>
+                                        <p class="text-caption-1">©2025 Blushley. All Rights Reserved.</p>
                                         <div class="tf-cur justify-content-end">
-                                            <div class="tf-currencies">
+                                            <ul class="tf-social-icon">
+                                                <li><a href="#" class="social-facebook"><i class="icon icon-fb"></i></a>
+                                                </li>
+                                                <li><a href="#" class="social-twiter"><i class="icon icon-x"></i></a>
+                                                </li>
+                                                <li><a href="#" class="social-instagram"><i
+                                                            class="icon icon-instagram"></i></a>
+                                                </li>
+                                                <li><a href="#" class="social-tiktok"><i
+                                                            class="icon icon-tiktok"></i></a></li>
+                                                <li><a href="#" class="social-amazon"><i
+                                                            class="icon icon-amazon"></i></a></li>
+                                                <li><a href="#" class="social-pinterest"><i
+                                                            class="icon icon-pinterest"></i></a>
+                                                </li>
+                                            </ul>
+                                            <!-- <div class="tf-currencies">
                                                 <select class="image-select center style-default type-currencies">
                                                     <option selected data-thumbnail="images/country/us.svg">USD</option>
                                                     <option data-thumbnail="images/country/vn.svg">VND</option>
@@ -1771,7 +911,7 @@
                                                     <option>English</option>
                                                     <option>Vietnam</option>
                                                 </select>
-                                            </div>
+                                            </div>-->
                                         </div>
                                     </div>
                                     <div class="tf-payment">
@@ -1805,6 +945,8 @@
             </div>
         </footer>
         <!-- /Footer -->
+
+
         <!-- toolbar-bottom -->
         <div class="tf-toolbar-bottom">
             <div class="toolbar-item">
@@ -3207,7 +2349,7 @@
                             
                         </li>
                         <li class="nav-mb-item">
-                            <a href="https://themeforest.net/user/themesflat" class="mb-menu-link">Buy Theme</a>
+                            <a href="https://themeforest.net/user/blushley" class="mb-menu-link">Buy Theme</a>
                         </li>
                     </ul>
                 </div>
@@ -3239,7 +2381,7 @@
                     <ul class="mb-info">
                         <li>
                             <i class="icon icon-mail"></i>
-                            <p>themesflat@gmail.com</p>
+                            <p>blushley@gmail.com</p>
                         </li>
                         <li>
                             <i class="icon icon-phone"></i>
@@ -4331,5 +3473,5 @@
 </body>
 
 
-<!-- Mirrored from themesflat.co/html/modave/shop-default-list.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Oct 2025 04:04:41 GMT -->
+<!-- Mirrored from blushley.co/html/modave/shop-default-list.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Oct 2025 04:04:41 GMT -->
 </html>

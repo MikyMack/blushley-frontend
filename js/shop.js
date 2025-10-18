@@ -300,7 +300,7 @@
         `<span class="count">${visibleProductCountList}</span> Products Found`
       );
       updateLastVisibleItem();
-      if (visibleProductCountGrid >= 12 || visibleProductCountList >= 12) {
+      if (visibleProductCountGrid >= 6 || visibleProductCountList >= 6) {
         $(".wg-pagination,.tf-loading").show();
       } else {
         $(".wg-pagination,.tf-loading").hide();
