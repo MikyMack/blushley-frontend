@@ -1296,7 +1296,20 @@
             }, 100);
         }
     };*/
+var preloader = function () {
+    if ($("body").hasClass("preload-wrapper")) {
+        setTimeout(function () {
+            $(".preload-container-img").fadeOut("slow", function () {
+                $(this).remove();
+            });
+        }, 100);
+    }
+};
 
+// Call it on page load
+$(window).on('load', function() {
+    preloader();
+});
 
     /* Preloader
   -------------------------------------------------------------------------------------*/
