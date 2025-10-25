@@ -51,14 +51,6 @@
     </button>
 
 
-    <!-- preload -->
-    <div class="preload preload-container-img">
-        <div class="preload-logo-img">
-            <img src="images/logo/Blushley-png-logo.png" alt="Glow & Glamour Logo" class="logo-img">
-            <!--<div class="spinner"></div>-->
-        </div>
-    </div>
-    <!-- /preload -->
 
     <div id="wrapper">
         <!-- Top Bar-->
@@ -283,7 +275,7 @@
                                 <!-- Modal/Popup for full location list -->
                                 <div id="location-modal-1" class="location-modal" style="display: none;">
                                     <div class="modal-content">
-                                        <h4>Service Areas - Sarah Johnson</h4>
+                                        <h4>Service Areas - ID no. 1</h4>
                                         <ul class="full-location-list">
                                             <li>Indiranagar</li>
                                             <li>Koramangala</li>
@@ -318,7 +310,7 @@
                                         </li>
                                     </ul>
                                     <div class="size-box list-product-btn">
-                                        <span class="price-info">From <strong>$80</strong>/hour</span>
+                                        <!--  <span class="price-info">From <strong>$80</strong>/hour</span>-->
                                         <span class="availability-badge">Available Today</span>
                                     </div>
                                     <div class="list-product-btn">
@@ -3203,6 +3195,8 @@
     </div>
     <!-- /quickAdd -->
 
+
+
     <!-- Javascript -->
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -3238,51 +3232,329 @@
         var AUTOHIDE = Boolean(0);
     </script>
 
-    <script>// Open location modal when "+X more areas" is clicked
-document.querySelectorAll('.view-more-locations').forEach(btn => {
-    btn.addEventListener('click', function(e) {
-        e.preventDefault();
-        const beauticianId = this.dataset.beauticianId;
-        const modal = document.getElementById(`location-modal-${beauticianId}`);
-        if (modal) {
-            modal.style.display = 'flex';
-            document.body.style.overflow = 'hidden'; // Prevent background scrolling
-        }
-    });
-});
+  
 
-// Close modal when close button is clicked
-document.querySelectorAll('.close-modal').forEach(btn => {
-    btn.addEventListener('click', function() {
-        const modal = this.closest('.location-modal');
-        if (modal) {
-            modal.style.display = 'none';
-            document.body.style.overflow = ''; // Re-enable scrolling
-        }
-    });
-});
+    <!-- Review Popup Overlay -->
+    <div class="review-popup-overlay" id="reviewPopupOverlay"></div>
 
-// Close modal when clicking outside the modal content
-document.querySelectorAll('.location-modal').forEach(modal => {
-    modal.addEventListener('click', function(e) {
-        if (e.target === this) {
-            this.style.display = 'none';
-            document.body.style.overflow = '';
-        }
-    });
-});
+    <!-- Review Popup Container -->
+    <div class="review-popup-container" id="reviewPopupContainer">
+        <!-- Popup Header -->
+        <div class="review-popup-header">
+            <h2 class="review-popup-title">
+                <span>⭐</span>
+                Reviews & Ratings
+            </h2>
+            <button class="review-popup-close" id="closeReviewPopup">&times;</button>
+        </div>
 
-// Close modal with Escape key
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-        document.querySelectorAll('.location-modal').forEach(modal => {
-            if (modal.style.display === 'flex') {
-                modal.style.display = 'none';
-                document.body.style.overflow = '';
-            }
+        <!-- Popup Body -->
+        <div class="review-popup-body">
+            <!-- Beautician Info -->
+            <div class="beautician-info-section">
+                <img src="images/beautician/beautician1.png" alt="Beautician" class="beautician-avatar"
+                    id="beauticianAvatar">
+                <div class="beautician-details">
+                    <h3 id="beauticianName">ID no. :1</h3>
+                    <div class="beautician-rating">
+                        <span class="stars-display" id="beauticianStars">★★★★★</span>
+                        <span id="beauticianReviewCount">(248 reviews)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Write Review Button -->
+            <button class="write-review-btn" id="writeReviewBtn">
+                ✍️ Write a Review
+            </button>
+
+            <!-- Review Form Section (Hidden by default) -->
+            <div class="review-form-section" id="reviewFormSection">
+                <h3 class="form-title">Share Your Experience</h3>
+
+                <form class="review-form" id="reviewForm">
+                    <!-- Name -->
+                    <div class="form-group">
+                        <input type="text" class="form-input" placeholder="Your Name" name="reviewerName" required>
+                    </div>
+
+                    <!-- Rating -->
+                    <div class="form-group">
+                        <label class="rating-label">Rating</label>
+                        <div class="rating-stars">
+                            <input type="radio" id="star5" name="rating" value="5" required>
+                            <label for="star5">★</label>
+                            <input type="radio" id="star4" name="rating" value="4">
+                            <label for="star4">★</label>
+                            <input type="radio" id="star3" name="rating" value="3">
+                            <label for="star3">★</label>
+                            <input type="radio" id="star2" name="rating" value="2">
+                            <label for="star2">★</label>
+                            <input type="radio" id="star1" name="rating" value="1">
+                            <label for="star1">★</label>
+                        </div>
+                    </div>
+
+                    <!-- Review Text -->
+                    <div class="form-group full-width">
+                        <textarea class="form-textarea" placeholder="Share your experience..." name="reviewText"
+                            required></textarea>
+                    </div>
+
+                    <!-- Buttons -->
+                    <div class="form-group full-width">
+                        <div class="form-buttons">
+                            <button type="submit" class="btn-submit">Submit Review</button>
+                            <button type="button" class="btn-cancel" id="cancelReviewBtn">Cancel</button>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- Success Message -->
+                <div class="success-message" id="reviewSuccessMessage">
+                    ✅ Thank you! Your review has been submitted successfully.
+                </div>
+            </div>
+
+            <!-- Reviews List -->
+            <div class="reviews-list-section">
+                <h3 class="reviews-list-header">Customer Reviews</h3>
+                <div id="reviewsList">
+                    <!-- Sample Reviews -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">A</div>
+                                <div class="reviewer-details">
+                                    <h4>Ananya Sharma</h4>
+                                    <p class="review-date">2 days ago</p>
+                                </div>
+                            </div>
+                            <div class="review-stars">★★★★★</div>
+                        </div>
+                        <p class="review-text">Absolutely amazing service! She did my bridal makeup and I couldn't be
+                            happier. Very professional and talented. Highly recommend! 💕</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">P</div>
+                                <div class="reviewer-details">
+                                    <h4>Priya Reddy</h4>
+                                    <p class="review-date">1 week ago</p>
+                                </div>
+                            </div>
+                            <div class="review-stars">★★★★★</div>
+                        </div>
+                        <p class="review-text">Best beautician in Bangalore! She came home on time and was very
+                            professional. The makeup lasted the entire day. Will definitely book again.</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">M</div>
+                                <div class="reviewer-details">
+                                    <h4>Meera Krishna</h4>
+                                    <p class="review-date">2 weeks ago</p>
+                                </div>
+                            </div>
+                            <div class="review-stars">★★★★☆</div>
+                        </div>
+                        <p class="review-text">Very good service. She is skilled and knows what looks good. Only
+                            suggestion would be to bring more product options.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        // Open location modal when "+X more areas" is clicked
+        document.querySelectorAll('.view-more-locations').forEach(btn => {
+            btn.addEventListener('click', function (e) {
+                e.preventDefault();
+                const beauticianId = this.dataset.beauticianId;
+                const modal = document.getElementById(`location-modal-${beauticianId}`);
+                if (modal) {
+                    modal.style.display = 'flex';
+                    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+                }
+            });
         });
-    }
-});</script>
+
+        // Close modal when close button is clicked
+        document.querySelectorAll('.close-modal').forEach(btn => {
+            btn.addEventListener('click', function () {
+                const modal = this.closest('.location-modal');
+                if (modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = ''; // Re-enable scrolling
+                }
+            });
+        });
+
+        // Close modal when clicking outside the modal content
+        document.querySelectorAll('.location-modal').forEach(modal => {
+            modal.addEventListener('click', function (e) {
+                if (e.target === this) {
+                    this.style.display = 'none';
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.location-modal').forEach(modal => {
+                    if (modal.style.display === 'flex') {
+                        modal.style.display = 'none';
+                        document.body.style.overflow = '';
+                    }
+                });
+            }
+        });</script>
+
+        
+        <script>// Add this to your existing JavaScript file
+
+// Attach click event to all review buttons
+document.querySelectorAll('.box-icon.compare').forEach(button => {
+    button.addEventListener('click', function(e) {
+        e.preventDefault();
+        const beauticianCard = this.closest('.card-product');
+        const beauticianId = beauticianCard.dataset.beauticianId || '1';
+        openReviewPopup(beauticianId);
+    });
+});
+
+// Open Review Popup
+function openReviewPopup(beauticianId) {
+    document.getElementById('reviewPopupOverlay').classList.add('active');
+    document.getElementById('reviewPopupContainer').classList.add('active');
+    document.body.style.overflow = 'hidden'; // Prevent background scroll
+}
+
+// Close Review Popup
+function closeReviewPopup() {
+    document.getElementById('reviewPopupOverlay').classList.remove('active');
+    document.getElementById('reviewPopupContainer').classList.remove('active');
+    document.body.style.overflow = ''; // Restore scroll
+    
+    // Hide review form if open
+    document.getElementById('reviewFormSection').classList.remove('active');
+    document.getElementById('writeReviewBtn').style.display = 'block';
+}
+
+// Event Listeners
+document.getElementById('closeReviewPopup').addEventListener('click', closeReviewPopup);
+document.getElementById('reviewPopupOverlay').addEventListener('click', closeReviewPopup);
+
+// Write Review Button
+document.getElementById('writeReviewBtn').addEventListener('click', function() {
+    document.getElementById('reviewFormSection').classList.add('active');
+    this.style.display = 'none';
+    
+    // Scroll to form
+    document.getElementById('reviewFormSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+
+// Cancel Review Button
+document.getElementById('cancelReviewBtn').addEventListener('click', function() {
+    document.getElementById('reviewFormSection').classList.remove('active');
+    document.getElementById('writeReviewBtn').style.display = 'block';
+    document.getElementById('reviewForm').reset();
+    document.getElementById('reviewSuccessMessage').style.display = 'none';
+});
+
+// Star Rating Interaction
+const ratingStars = document.querySelectorAll('.rating-stars input[type="radio"]');
+ratingStars.forEach(star => {
+    star.addEventListener('change', function() {
+        const labels = document.querySelectorAll('.rating-stars label');
+        labels.forEach(label => {
+            label.style.color = '#ddd';
+        });
+        
+        let currentLabel = this.nextElementSibling;
+        while (currentLabel) {
+            currentLabel.style.color = '#FFB800';
+            currentLabel = currentLabel.nextElementSibling?.nextElementSibling;
+        }
+    });
+});
+
+// Submit Review Form
+document.getElementById('reviewForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const formData = new FormData(this);
+    const reviewData = {
+        name: formData.get('reviewerName'),
+        rating: formData.get('rating'),
+        text: formData.get('reviewText'),
+        date: 'Just now'
+    };
+    
+    // Add new review to list
+    addReviewToList(reviewData);
+    
+    // Show success message
+    document.getElementById('reviewSuccessMessage').style.display = 'block';
+    
+    // Reset form
+    this.reset();
+    
+    // Hide form after 2 seconds
+    setTimeout(() => {
+        document.getElementById('reviewFormSection').classList.remove('active');
+        document.getElementById('writeReviewBtn').style.display = 'block';
+        document.getElementById('reviewSuccessMessage').style.display = 'none';
+        
+        // Scroll to new review
+        document.getElementById('reviewsList').scrollIntoView({ behavior: 'smooth' });
+    }, 2000);
+});
+
+// Add Review to List
+function addReviewToList(reviewData) {
+    const reviewsList = document.getElementById('reviewsList');
+    const stars = '★'.repeat(reviewData.rating) + '☆'.repeat(5 - reviewData.rating);
+    const initial = reviewData.name.charAt(0).toUpperCase();
+    
+    const reviewCard = document.createElement('div');
+    reviewCard.className = 'review-card';
+    reviewCard.style.animation = 'slideDown 0.3s ease';
+    reviewCard.innerHTML = `
+        <div class="review-header">
+            <div class="reviewer-info">
+                <div class="reviewer-avatar">${initial}</div>
+                <div class="reviewer-details">
+                    <h4>${reviewData.name}</h4>
+                    <p class="review-date">${reviewData.date}</p>
+                </div>
+            </div>
+            <div class="review-stars">${stars}</div>
+        </div>
+        <p class="review-text">${reviewData.text}</p>
+    `;
+    
+    reviewsList.insertBefore(reviewCard, reviewsList.firstChild);
+}
+
+// Attach click event to all review buttons (THIS IS THE KEY PART!)
+document.querySelectorAll('.box-icon.compare').forEach(button => {
+    button.addEventListener('click', function(e) {
+        e.preventDefault();
+        const beauticianCard = this.closest('.card-product');
+        const beauticianId = beauticianCard.dataset.beauticianId || '1';
+        openReviewPopup(beauticianId);
+    });
+});
+</script>
 </body>
 
 

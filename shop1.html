@@ -2018,118 +2018,378 @@
         
     </div>
     
-    <!-- Filter -->
-    <div class="offcanvas offcanvas-start canvas-filter" id="filterShop">
-        <div class="canvas-wrapper">
-            <div class="canvas-header">
-                <h5>Filters</h5>
-                <span class="icon-close icon-close-popup" data-bs-dismiss="offcanvas" aria-label="Close"></span>
+   <!-- Filter -->
+<div class="offcanvas offcanvas-start canvas-filter" id="filterShop">
+    <div class="canvas-wrapper">
+        <div class="canvas-header">
+            <h5>Filters</h5>
+            <span class="icon-close icon-close-popup" data-bs-dismiss="offcanvas" aria-label="Close"></span>
+        </div>
+        <div class="canvas-body">
+            <!-- Product Categories -->
+            <div class="widget-facet facet-categories">
+                <h6 class="facet-title">Product Categories</h6>
+                <ul class="facet-content">
+                    <li><a href="#" class="categories-item">Skincare <span class="count-cate">(156)</span></a></li>
+                    <li><a href="#" class="categories-item">Makeup <span class="count-cate">(243)</span></a></li>
+                    <li><a href="#" class="categories-item">Haircare <span class="count-cate">(89)</span></a></li>
+                    <li><a href="#" class="categories-item">Fragrance <span class="count-cate">(67)</span></a></li>
+                    <li><a href="#" class="categories-item">Body Care <span class="count-cate">(134)</span></a></li>
+                    <li><a href="#" class="categories-item">Tools & Brushes <span class="count-cate">(78)</span></a></li>
+                    <li><a href="#" class="categories-item">Nails <span class="count-cate">(45)</span></a></li>
+                    <li><a href="#" class="categories-item">Gift Sets <span class="count-cate">(32)</span></a></li>
+                </ul>
             </div>
-            <div class="canvas-body">
-                <div class="widget-facet facet-categories">
-                    <h6 class="facet-title">Product Categories</h6>
-                    <ul class="facet-content">
-                        <li><a href="#" class="categories-item">Bags <span class="count-cate">(112)</span></a></li>
-                        <li><a href="#" class="categories-item">Booking <span class="count-cate">(32)</span> </a></li>
-                        <li><a href="#" class="categories-item">Skin care <span class="count-cate">(42)</span></a></li>
-                        <li><a href="#" class="categories-item active">Women <span class="count-cate">(65)</span></a></li>
-                        <li><a href="#" class="categories-item">Men <span class="count-cate">(13)</span></a></li>
-                        <li><a href="#" class="categories-item">Shoes <span class="count-cate">(52)</span></a></li>
-                        <li><a href="#" class="categories-item">Uncategorized <span class="count-cate">(14)</span></a></li>
-                    </ul>
+
+            <!-- Product Type -->
+            <div class="widget-facet facet-fieldset">
+                <h6 class="facet-title">Product Type</h6>
+                <div class="box-fieldset-item">
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="product-type" class="tf-check" id="face">
+                        <label for="face">Face <span class="count-brand">(187)</span></label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="product-type" class="tf-check" id="eyes">
+                        <label for="eyes">Eyes <span class="count-brand">(98)</span></label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="product-type" class="tf-check" id="lips">
+                        <label for="lips">Lips <span class="count-brand">(76)</span></label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="product-type" class="tf-check" id="cheeks">
+                        <label for="cheeks">Cheeks <span class="count-brand">(54)</span></label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="product-type" class="tf-check" id="body">
+                        <label for="body">Body <span class="count-brand">(134)</span></label>
+                    </fieldset>
                 </div>
-                <div class="widget-facet facet-price">
-                    <h6 class="facet-title">Price</h6>
-                    <div class="price-val-range" id="price-value-range" data-min="0" data-max="500"></div>
-                    <div class="box-price-product">
-                        <div class="box-price-item">
-                            <span class="title-price">Min price</span>
-                            <div class="price-val" id="price-min-value" data-currency="$"></div>
-                        </div>
-                        <div class="box-price-item">
-                            <span class="title-price">Max price</span>
-                            <div class="price-val" id="price-max-value" data-currency="$"></div>
-                        </div>
+            </div>
+
+            <!-- Price -->
+            <div class="widget-facet facet-price">
+                <h6 class="facet-title">Price</h6>
+                <div class="price-val-range" id="price-value-range" data-min="0" data-max="200"></div>
+                <div class="box-price-product">
+                    <div class="box-price-item">
+                        <span class="title-price">Min price</span>
+                        <div class="price-val" id="price-min-value" data-currency="₹"></div>
                     </div>
-                </div>
-                <div class="widget-facet facet-size">
-                    <h6 class="facet-title">Size</h6>
-                    <div class="facet-size-box size-box">
-                        <span class="size-item size-check">XS</span>
-                        <span class="size-item size-check">S</span>
-                        <span class="size-item size-check">M</span>
-                        <span class="size-item size-check">L</span>
-                        <span class="size-item size-check">XL</span>
-                        <span class="size-item size-check">2XL</span>
-                        <span class="size-item size-check">3XL</span>
-                        <span class="size-item size-check free-size">Free Size</span>
-                    </div>
-                </div>
-                <div class="widget-facet facet-color">
-                    <h6 class="facet-title">Colors</h6>
-                    <div class="facet-color-box">
-                        <div class="color-item color-check"><span class="color bg-light-pink-2"></span>Pink</div>
-                        <div class="color-item color-check"><span class="color bg-red"></span> Red</div>
-                        <div class="color-item color-check"><span class="color bg-beige-2"></span>Beige</div>
-                        <div class="color-item color-check"><span class="color bg-orange-2"></span>Orange</div>
-                        <div class="color-item color-check"><span class="color bg-light-green"></span>Green</div>
-                        <div class="color-item color-check"><span class="color bg-main"></span>Black</div>
-                        <div class="color-item color-check"><span class="color bg-white line-black"></span>White</div>
-                        <div class="color-item color-check"><span class="color bg-purple-3"></span>Purple</div>
-                        <div class="color-item color-check"><span class="color bg-grey"></span>Grey</div>
-                        <div class="color-item color-check"><span class="color bg-light-blue-5"></span>Light Blue</div>
-                        <div class="color-item color-check"><span class="color bg-dark-blue"></span>Dark Blue</div>            
-                    </div>
-                </div>
-                <div class="widget-facet facet-fieldset">
-                    <h6 class="facet-title">Availability</h6>
-                    <div class="box-fieldset-item">
-                        <fieldset class="fieldset-item">
-                            <input type="radio" name="availability" class="tf-check" id="inStock">
-                            <label for="inStock">In stock <span class="count-stock">(32)</span></label>
-                        </fieldset>
-                        <fieldset class="fieldset-item">
-                            <input type="radio" name="availability" class="tf-check" id="outStock">
-                            <label for="outStock">Out of stock <span class="count-stock">(2)</span></label>
-                        </fieldset>
-                    </div>
-                </div>
-                <div class="widget-facet facet-fieldset">
-                    <h6 class="facet-title">Brands</h6>
-                    <div class="box-fieldset-item">
-                        <fieldset class="fieldset-item">
-                            <input type="checkbox" name="brand" class="tf-check" id="nike">
-                            <label for="nike">Nike <span class="count-brand">(112)</span></label>
-                        </fieldset>
-                        <fieldset class="fieldset-item">
-                            <input type="checkbox" name="brand" class="tf-check" id="LV">
-                            <label for="LV">Louis Vuitton <span class="count-brand">(2)</span></label>
-                        </fieldset>
-                        <fieldset class="fieldset-item">
-                            <input type="checkbox" name="brand" class="tf-check" id="hermes">
-                            <label for="hermes">Hermes <span class="count-brand">(42)</span></label>
-                        </fieldset>
-                        <fieldset class="fieldset-item">
-                            <input type="checkbox" name="brand" class="tf-check" id="gucci">
-                            <label for="gucci">Gucci <span class="count-brand">(13)</span></label>
-                        </fieldset>
-                        <fieldset class="fieldset-item">
-                            <input type="checkbox" name="brand" class="tf-check" id="zalando">
-                            <label for="zalando">Zalando <span class="count-brand">(54)</span></label>
-                        </fieldset>
-                        <fieldset class="fieldset-item">
-                            <input type="checkbox" name="brand" class="tf-check" id="adidas">
-                            <label for="adidas">Adidas <span class="count-brand">(93)</span></label>
-                        </fieldset>
+                    <div class="box-price-item">
+                        <span class="title-price">Max price</span>
+                        <div class="price-val" id="price-max-value" data-currency="₹"></div>
                     </div>
                 </div>
             </div>
-            <div class="canvas-bottom">
-                <button id="reset-filter" class="tf-btn btn-reset">Reset Filters</button>
+
+            <!-- Skin Type -->
+            <div class="widget-facet facet-fieldset">
+                <h6 class="facet-title">Skin Type</h6>
+                <div class="box-fieldset-item">
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="skin-type" class="tf-check" id="oily">
+                        <label for="oily">Oily</label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="skin-type" class="tf-check" id="dry">
+                        <label for="dry">Dry</label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="skin-type" class="tf-check" id="combination">
+                        <label for="combination">Combination</label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="skin-type" class="tf-check" id="sensitive">
+                        <label for="sensitive">Sensitive</label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="skin-type" class="tf-check" id="normal">
+                        <label for="normal">Normal</label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="skin-type" class="tf-check" id="all-skin">
+                        <label for="all-skin">All Skin Types</label>
+                    </fieldset>
+                </div>
+            </div>
+
+            <!-- Skin Concerns -->
+            <div class="widget-facet facet-fieldset">
+                <h6 class="facet-title">Skin Concerns</h6>
+                <div class="box-fieldset-item">
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="concerns" class="tf-check" id="acne">
+                        <label for="acne">Acne & Blemishes</label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="concerns" class="tf-check" id="aging">
+                        <label for="aging">Anti-Aging</label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="concerns" class="tf-check" id="dark-spots">
+                        <label for="dark-spots">Dark Spots</label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="concerns" class="tf-check" id="dryness">
+                        <label for="dryness">Dryness</label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="concerns" class="tf-check" id="pores">
+                        <label for="pores">Large Pores</label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="concerns" class="tf-check" id="uneven-tone">
+                        <label for="uneven-tone">Uneven Skin Tone</label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="concerns" class="tf-check" id="redness">
+                        <label for="redness">Redness</label>
+                    </fieldset>
+                </div>
+            </div>
+
+            <!-- Formulation -->
+            <div class="widget-facet facet-fieldset">
+                <h6 class="facet-title">Formulation</h6>
+                <div class="box-fieldset-item">
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="formulation" class="tf-check" id="cream">
+                        <label for="cream">Cream</label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="formulation" class="tf-check" id="gel">
+                        <label for="gel">Gel</label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="formulation" class="tf-check" id="liquid">
+                        <label for="liquid">Liquid</label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="formulation" class="tf-check" id="powder">
+                        <label for="powder">Powder</label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="formulation" class="tf-check" id="serum">
+                        <label for="serum">Serum</label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="formulation" class="tf-check" id="oil">
+                        <label for="oil">Oil</label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="formulation" class="tf-check" id="balm">
+                        <label for="balm">Balm</label>
+                    </fieldset>
+                </div>
+            </div>
+
+            <!-- Benefits -->
+            <div class="widget-facet facet-fieldset">
+                <h6 class="facet-title">Benefits</h6>
+                <div class="box-fieldset-item">
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="benefits" class="tf-check" id="hydrating">
+                        <label for="hydrating">Hydrating</label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="benefits" class="tf-check" id="brightening">
+                        <label for="brightening">Brightening</label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="benefits" class="tf-check" id="spf">
+                        <label for="spf">SPF Protection</label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="benefits" class="tf-check" id="cruelty-free">
+                        <label for="cruelty-free">Cruelty-Free</label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="benefits" class="tf-check" id="vegan">
+                        <label for="vegan">Vegan</label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="benefits" class="tf-check" id="organic">
+                        <label for="organic">Organic/Natural</label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="benefits" class="tf-check" id="fragrance-free">
+                        <label for="fragrance-free">Fragrance-Free</label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="benefits" class="tf-check" id="hypoallergenic">
+                        <label for="hypoallergenic">Hypoallergenic</label>
+                    </fieldset>
+                </div>
+            </div>
+
+            <!-- Key Ingredients -->
+            <div class="widget-facet facet-fieldset">
+                <h6 class="facet-title">Key Ingredients</h6>
+                <div class="box-fieldset-item">
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="ingredients" class="tf-check" id="hyaluronic">
+                        <label for="hyaluronic">Hyaluronic Acid</label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="ingredients" class="tf-check" id="vitamin-c">
+                        <label for="vitamin-c">Vitamin C</label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="ingredients" class="tf-check" id="retinol">
+                        <label for="retinol">Retinol</label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="ingredients" class="tf-check" id="niacinamide">
+                        <label for="niacinamide">Niacinamide</label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="ingredients" class="tf-check" id="salicylic">
+                        <label for="salicylic">Salicylic Acid</label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="ingredients" class="tf-check" id="ceramides">
+                        <label for="ceramides">Ceramides</label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="ingredients" class="tf-check" id="peptides">
+                        <label for="peptides">Peptides</label>
+                    </fieldset>
+                </div>
+            </div>
+
+            <!-- Finish (for makeup) -->
+            <div class="widget-facet facet-fieldset">
+                <h6 class="facet-title">Finish</h6>
+                <div class="box-fieldset-item">
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="finish" class="tf-check" id="matte">
+                        <label for="matte">Matte</label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="finish" class="tf-check" id="dewy">
+                        <label for="dewy">Dewy</label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="finish" class="tf-check" id="satin">
+                        <label for="satin">Satin</label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="finish" class="tf-check" id="shimmer">
+                        <label for="shimmer">Shimmer</label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="finish" class="tf-check" id="gloss">
+                        <label for="gloss">Gloss</label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="finish" class="tf-check" id="natural">
+                        <label for="natural">Natural</label>
+                    </fieldset>
+                </div>
+            </div>
+
+            <!-- Coverage (for makeup) -->
+            <div class="widget-facet facet-fieldset">
+                <h6 class="facet-title">Coverage</h6>
+                <div class="box-fieldset-item">
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="coverage" class="tf-check" id="sheer">
+                        <label for="sheer">Sheer</label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="coverage" class="tf-check" id="light">
+                        <label for="light">Light</label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="coverage" class="tf-check" id="medium">
+                        <label for="medium">Medium</label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="coverage" class="tf-check" id="full">
+                        <label for="full">Full</label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="coverage" class="tf-check" id="buildable">
+                        <label for="buildable">Buildable</label>
+                    </fieldset>
+                </div>
+            </div>
+
+            <!-- Shade Range -->
+            <div class="widget-facet facet-color">
+                <h6 class="facet-title">Shade Range</h6>
+                <div class="facet-color-box">
+                    <div class="color-item color-check"><span class="color" style="background: #F5E6D3;"></span>Fair</div>
+                    <div class="color-item color-check"><span class="color" style="background: #E8C9A1;"></span>Light</div>
+                    <div class="color-item color-check"><span class="color" style="background: #D4A574;"></span>Medium</div>
+                    <div class="color-item color-check"><span class="color" style="background: #B8845C;"></span>Tan</div>
+                    <div class="color-item color-check"><span class="color" style="background: #9C6644;"></span>Deep</div>
+                    <div class="color-item color-check"><span class="color" style="background: #6B4423;"></span>Dark</div>
+                </div>
+            </div>
+
+            <!-- Brands -->
+            <div class="widget-facet facet-fieldset">
+                <h6 class="facet-title">Brands</h6>
+                <div class="box-fieldset-item">
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="brand" class="tf-check" id="cerave">
+                        <label for="cerave">CeraVe <span class="count-brand">(87)</span></label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="brand" class="tf-check" id="ordinary">
+                        <label for="ordinary">The Ordinary <span class="count-brand">(124)</span></label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="brand" class="tf-check" id="nyx">
+                        <label for="nyx">NYX <span class="count-brand">(156)</span></label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="brand" class="tf-check" id="fenty">
+                        <label for="fenty">Fenty Beauty <span class="count-brand">(93)</span></label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="brand" class="tf-check" id="maybelline">
+                        <label for="maybelline">Maybelline <span class="count-brand">(189)</span></label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="brand" class="tf-check" id="loreal">
+                        <label for="loreal">L'Oréal <span class="count-brand">(143)</span></label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="brand" class="tf-check" id="neutrogena">
+                        <label for="neutrogena">Neutrogena <span class="count-brand">(67)</span></label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="checkbox" name="brand" class="tf-check" id="clinique">
+                        <label for="clinique">Clinique <span class="count-brand">(78)</span></label>
+                    </fieldset>
+                </div>
+            </div>
+
+            <!-- Availability -->
+            <div class="widget-facet facet-fieldset">
+                <h6 class="facet-title">Availability</h6>
+                <div class="box-fieldset-item">
+                    <fieldset class="fieldset-item">
+                        <input type="radio" name="availability" class="tf-check" id="inStock">
+                        <label for="inStock">In stock <span class="count-stock">(654)</span></label>
+                    </fieldset>
+                    <fieldset class="fieldset-item">
+                        <input type="radio" name="availability" class="tf-check" id="outStock">
+                        <label for="outStock">Out of stock <span class="count-stock">(28)</span></label>
+                    </fieldset>
+                </div>
             </div>
         </div>
+        <div class="canvas-bottom">
+            <button id="reset-filter" class="tf-btn btn-reset">Reset Filters</button>
+        </div>
     </div>
-    <!-- /Filter -->
+</div>
+<!-- /Filter -->
 
         <!-- search -->
     <div class="modal fade modal-search" id="search">
@@ -2826,7 +3086,7 @@
                                                 <div
                                                     class="d-flex align-items-center justify-content-between flex-wrap gap-12">
 
-                                                    <div class="text-button">1 X $60.00</div>
+                                                    <div class="text-button">1 X ₹60.00</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -2845,7 +3105,7 @@
                                                 <div
                                                     class="d-flex align-items-center justify-content-between flex-wrap gap-12">
 
-                                                    <div class="text-button">1 X $60.00</div>
+                                                    <div class="text-button">1 X ₹60.00</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -2865,7 +3125,7 @@
                                                 <div
                                                     class="d-flex align-items-center justify-content-between flex-wrap gap-12">
 
-                                                    <div class="text-button">1 X $60.00</div>
+                                                    <div class="text-button">1 X ₹60.00</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -2885,7 +3145,7 @@
                                                 <div
                                                     class="d-flex align-items-center justify-content-between flex-wrap gap-12">
 
-                                                    <div class="text-button">1 X $60.00</div>
+                                                    <div class="text-button">1 X ₹60.00</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -2905,7 +3165,7 @@
                                                 <div
                                                     class="d-flex align-items-center justify-content-between flex-wrap gap-12">
 
-                                                    <div class="text-button">1 X $60.00</div>
+                                                    <div class="text-button">1 X ₹60.00</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -3262,7 +3522,7 @@
                                             </div>
                                             <div class="d-flex align-items-center justify-content-between flex-wrap gap-12">
                                                 <div class="text-secondary-2">XL/Blue</div>
-                                                <div class="text-button">1 X $60.00</div>
+                                                <div class="text-button">1 X ₹60.00</div>
                                             </div>
                                         </div>
                                     </div>
@@ -3277,7 +3537,7 @@
                                             </div>
                                             <div class="d-flex align-items-center justify-content-between flex-wrap gap-12">
                                                 <div class="text-secondary-2">XL/Blue</div>
-                                                <div class="text-button">1 X $60.00</div>
+                                                <div class="text-button">1 X ₹60.00</div>
                                             </div>
                                         </div>
                                     </div>
@@ -3292,7 +3552,7 @@
                                             </div>
                                             <div class="d-flex align-items-center justify-content-between flex-wrap gap-12">
                                                 <div class="text-secondary-2">XL/Blue</div>
-                                                <div class="text-button">1 X $60.00</div>
+                                                <div class="text-button">1 X ₹60.00</div>
                                             </div>
                                         </div>
                                     </div>
@@ -3307,7 +3567,7 @@
                                             </div>
                                             <div class="d-flex align-items-center justify-content-between flex-wrap gap-12">
                                                 <div class="text-secondary-2">XL/Blue</div>
-                                                <div class="text-button">1 X $60.00</div>
+                                                <div class="text-button">1 X ₹60.00</div>
                                             </div>
                                         </div>
                                     </div>
@@ -3322,7 +3582,7 @@
                                             </div>
                                             <div class="d-flex align-items-center justify-content-between flex-wrap gap-12">
                                                 <div class="text-secondary-2">XL/Blue</div>
-                                                <div class="text-button">1 X $60.00</div>
+                                                <div class="text-button">1 X ₹60.00</div>
                                             </div>
                                         </div>
                                     </div>

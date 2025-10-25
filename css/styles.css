@@ -1303,7 +1303,7 @@ a:hover {
 
 .flat-spacing {
   padding-top: 80px;
-  padding-bottom: 80px;
+ /* padding-bottom: 80px;*/
 }
 
 .flat-spacing-2 {
@@ -3902,7 +3902,7 @@ footer.has-pb {
 .tf-slideshow .wrap-pagination {
   position: absolute;
   z-index: 10;
-  bottom: 15px;
+  bottom: 40px;
   left: 0;
   right: 0;
 }
@@ -3983,7 +3983,7 @@ footer.has-pb {
 .slider-default .box-content {
   left: 15px;
   right: 15px;
-  bottom: 50px;
+  bottom: 80px;
 }
 .slider-default.default-2 .box-content {
   left: 0;
@@ -16798,7 +16798,7 @@ ul.list-text.type-number {
     gap: 13px;
   }
   .tf-slideshow .wrap-slider {
-    height: 700px;
+    height: 550px;
   }
   .wrapper-shop.tf-col-7 {
     column-gap: 15px;
@@ -18767,297 +18767,6 @@ ul.list-text.type-number {
   margin-top: 100px;
 }
 
-/* Review Form Section Styles */
-
-.review-form-section {
-  background: #fffbf5;
-  padding: 40px 0;
-}
-.review-form-container {
-  max-width: 1100px;
-  margin: 0 auto !important;
-  padding: 0 20px;
-  text-align: center;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
-/* Trigger Button Styles */
-#formTrigger {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.form-trigger-text {
-  color: #666;
-  font-size: 15px;
-  margin: 0 0 15px 0;
-  text-align: center;
-  width: 100%;
-}
-
-.trigger-button {
-  padding: 12px 30px;
-  background: linear-gradient(135deg, #8b6f47 0%, #9b7f57 100%);
-  color: white;
-  font-size: 15px;
-  font-weight: 600;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(139, 111, 71, 0.3);
-}
-
-.trigger-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(139, 111, 71, 0.4);
-}
-
-.trigger-button:active {
-  transform: translateY(0);
-}
-
-/* Form Container */
-#formContainer {
-  display: none;
-  margin-top: 30px;
-  animation: slideDown 0.3s ease;
-}
-
-.form-wrapper {
-  background: #fafafa;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.form-wrapper-inner {
-  text-align: left;
-}
-
-.form-title {
-  font-size: 20px;
-  font-weight: 600;
-  color: #333;
-  margin: 0 0 20px 0;
-}
-
-/* Form Elements */
-.review-form {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-.form-group {
-  margin-bottom: 15px;
-}
-
-.form-group.full-width {
-  grid-column: 1 / -1;
-}
-
-.form-input,
-.form-select,
-.form-textarea {
-  width: 100%;
-  padding: 14px 16px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-size: 15px;
-  font-family: inherit;
-  transition: all 0.3s ease;
-  box-sizing: border-box;
-}
-
-.form-input:focus,
-.form-select:focus,
-.form-textarea:focus {
-  border-color: #8b6f47;
-  box-shadow: 0 0 0 3px rgba(139, 111, 71, 0.1);
-  outline: none;
-}
-
-.form-input::placeholder,
-.form-textarea::placeholder {
-  color: #999;
-}
-
-.form-select {
-  background-color: white;
-  cursor: pointer;
-}
-
-.form-textarea {
-  resize: vertical;
-  font-family: inherit;
-}
-
-/* Rating Stars */
-.rating-label {
-  display: block;
-  font-weight: 600;
-  color: #333;
-  margin-bottom: 10px;
-  font-size: 13px;
-}
-
-.rating-stars {
-  display: flex;
-  gap: 8px;
-}
-
-.rating-stars input[type="radio"] {
-  display: none;
-}
-
-.rating-stars label {
-  font-size: 24px;
-  cursor: pointer;
-  color: #ddd;
-  transition: color 0.2s;
-  display: inline-block;
-}
-
-.rating-stars label:hover {
-  color: #ffb800;
-}
-
-/* Checkbox */
-.form-checkbox-label {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  cursor: pointer;
-  font-size: 13px;
-  color: #555;
-}
-
-.form-checkbox-label input[type="checkbox"] {
-  width: 16px;
-  height: 16px;
-  cursor: pointer;
-  accent-color: #8b6f47;
-}
-
-/* Buttons */
-.form-buttons {
-  display: flex;
-  gap: 10px;
-}
-
-.btn-submit,
-.btn-cancel {
-  flex: 1;
-  padding: 11px;
-  font-size: 14px;
-  font-weight: 600;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border: none;
-}
-
-.btn-submit {
-  background: linear-gradient(135deg, #8b6f47 0%, #9b7f57 100%);
-  color: white;
-}
-
-.btn-submit:hover {
-  transform: translateY(-2px);
-}
-
-.btn-submit:active {
-  transform: translateY(0);
-}
-
-.btn-cancel {
-  background: #f0f0f0;
-  color: #333;
-  border: 1px solid #ddd;
-}
-
-.btn-cancel:hover {
-  background: #e5e5e5;
-}
-
-.btn-cancel:active {
-  background: #f0f0f0;
-}
-
-/* Success Message */
-.success-message {
-  display: none;
-  margin-top: 15px;
-  padding: 12px;
-  background: #d4edda;
-  color: #155724;
-  border-radius: 6px;
-  border: 1px solid #c3e6cb;
-  text-align: center;
-  font-weight: 500;
-  font-size: 14px;
-  animation: fadeIn 0.3s ease;
-}
-
-/* Animations */
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .review-form-container {
-    padding: 0 15px;
-  }
-
-  .form-wrapper {
-    padding: 20px;
-  }
-
-  .form-title {
-    font-size: 18px;
-    margin-bottom: 15px;
-  }
-
-  .trigger-button {
-    padding: 10px 25px;
-    font-size: 14px;
-  }
-
-  .form-buttons {
-    flex-direction: column;
-  }
-
-  .btn-submit,
-  .btn-cancel {
-    width: 100%;
-  }
-}
 
 /**********About us extra code********/
 
@@ -20035,11 +19744,17 @@ ul.list-text.type-number {
 
 @media (max-width:560px) {
     .page-title-shop {
-        min-height: 300px;
+        min-height: 360px;
     }
   
 }
 
+@media (min-width:561px) and (max-width:768px) {
+    .page-title-shop {
+        min-height: 450px;
+    }
+  
+}
 /**beautician services page extra css***/
 
 /* Minimal style additions for beautician-specific elements */
@@ -21055,3 +20770,1008 @@ ul.list-text.type-number {
         height: 75px;
     }
 }
+
+
+/* Review Form Section Styles */
+
+
+.review-form-container {
+  max-width: 1100px;
+  margin: 0 auto !important;
+  padding: 0 20px;
+  text-align: center;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+
+
+/* Form Container */
+#formContainer {
+  display: none;
+  margin-top: 30px;
+  margin-bottom:80px;
+  animation: slideDown 0.3s ease;
+}
+
+.form-wrapper {
+  background: #fafafa;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.form-wrapper-inner {
+  text-align: left;
+}
+
+.form-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 20px 0;
+}
+
+/* Form Elements */
+.review-form {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: #8b6f47;
+  box-shadow: 0 0 0 3px rgba(139, 111, 71, 0.1);
+  outline: none;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: #999;
+}
+
+.form-select {
+  background-color: white;
+  cursor: pointer;
+}
+
+.form-textarea {
+  resize: vertical;
+  font-family: inherit;
+}
+
+/* Rating Stars */
+.rating-label {
+  display: block;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.rating-stars {
+  display: flex;
+  gap: 8px;
+
+  
+}
+
+.rating-stars input[type="radio"] {
+  display: none;
+}
+
+.rating-stars label {
+  font-size: 24px;
+  cursor: pointer;
+  color: #ddd;
+  transition: color 0.2s;
+  display: inline-block;
+}
+
+.rating-stars label:hover {
+  color: #ffb800;
+}
+
+/* Checkbox */
+.form-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #555;
+}
+
+.form-checkbox-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #8b6f47;
+}
+
+/* Buttons */
+.form-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-submit,
+.btn-cancel {
+  flex: 1;
+  padding: 11px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn-submit {
+  background: linear-gradient(135deg, #8b6f47 0%, #9b7f57 100%);
+  color: white;
+}
+
+.btn-submit:hover {
+  transform: translateY(-2px);
+}
+
+.btn-submit:active {
+  transform: translateY(0);
+}
+
+.btn-cancel {
+  background: #f0f0f0;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.btn-cancel:hover {
+  background: #e5e5e5;
+}
+
+.btn-cancel:active {
+  background: #f0f0f0;
+}
+
+/* Success Message */
+.success-message {
+  display: none;
+  margin-top: 15px;
+  padding: 12px;
+  background: #d4edda;
+  color: #155724;
+  border-radius: 6px;
+  border: 1px solid #c3e6cb;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Animations */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .review-form-container {
+    padding: 0 15px;
+  }
+
+  .form-wrapper {
+    padding: 20px;
+  }
+
+  .form-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .trigger-button {
+    padding: 10px 25px;
+    font-size: 14px;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+  }
+
+  .btn-submit,
+  .btn-cancel {
+    width: 100%;
+  }
+}
+
+
+/* ===================================
+   REVIEW CTA BANNER SECTION
+   =================================== */
+
+/* Review CTA Banner - Unique naming */
+.review-cta-banner {
+    background: var(--white);
+    border: 2px solid var(--line);
+    border-radius: 20px;
+    padding: 35px 40px;
+    margin: 40px auto;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    box-shadow: var(--shadow-soft);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.review-cta-banner:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-medium);
+    border-color: var(--secondary);
+}
+
+/* Animated decorations */
+.review-cta-banner::before {
+    content: '✨';
+    position: absolute;
+    top: 15px;
+    left: 30px;
+    font-size: 32px;
+    opacity: 0.3;
+    animation: review-sparkle 2.5s ease-in-out infinite;
+}
+
+.review-cta-banner::after {
+    content: '⭐';
+    position: absolute;
+    bottom: 15px;
+    right: 30px;
+    font-size: 32px;
+    opacity: 0.3;
+    animation: review-sparkle 2.5s ease-in-out infinite 1.2s;
+}
+
+@keyframes review-sparkle {
+    0%, 100% { 
+        transform: scale(1) rotate(0deg);
+        opacity: 0.25;
+    }
+    50% { 
+        transform: scale(1.15) rotate(15deg);
+        opacity: 0.5;
+    }
+}
+
+.review-cta-content {
+    flex: 1;
+    z-index: 1;
+}
+
+.review-cta-heading {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--main);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.review-cta-icon {
+    font-size: 32px;
+    animation: review-bounce 2s ease-in-out infinite;
+}
+
+@keyframes review-bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+.review-cta-description {
+    font-size: 16px;
+    color: var(--text-light);
+    line-height: 1.5;
+    margin: 0;
+}
+
+.review-cta-btn {
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    padding: 18px 45px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    white-space: nowrap;
+}
+
+.review-cta-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.6s;
+}
+
+.review-cta-btn:hover::before {
+    left: 100%;
+}
+
+.review-cta-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: var(--shadow-medium);
+    background: var(--secondary);
+}
+
+.review-cta-btn:active {
+    transform: translateY(-1px) scale(1.02);
+}
+
+/* ===================================
+   REVIEW FORM CONTAINER
+   =================================== */
+
+/* Form Container - Hidden by default */
+#formContainer {
+    display: none;
+    margin-top: 30px;
+    animation: reviewFormSlideDown 0.3s ease;
+}
+
+@keyframes reviewFormSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-wrapper {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-soft);
+    max-width: 900px;
+    margin: 0 auto;
+    border: 1px solid var(--line);
+}
+
+.form-wrapper-inner {
+    text-align: left;
+}
+
+.form-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--main);
+    margin: 0 0 25px 0;
+}
+
+/* ===================================
+   FORM ELEMENTS
+   =================================== */
+
+.review-form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 0;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    background: var(--white);
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px var(--rgba-primary);
+    outline: none;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: #999;
+}
+
+.form-select {
+    cursor: pointer;
+}
+
+.form-textarea {
+    resize: vertical;
+    font-family: inherit;
+    min-height: 120px;
+}
+
+/* ===================================
+   RATING STARS
+   =================================== */
+
+.rating-label {
+    display: block;
+    font-weight: 600;
+    color: var(--main);
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.rating-stars {
+    display: flex;
+    gap: 8px;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.rating-stars input[type="radio"] {
+    display: none;
+}
+
+.rating-stars label {
+    font-size: 32px;
+    cursor: pointer;
+    color: #ddd;
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+.rating-stars label:hover,
+.rating-stars label:hover ~ label,
+.rating-stars input:checked ~ label {
+    color: #FFB800;
+    transform: scale(1.1);
+}
+
+/* ===================================
+   CHECKBOX
+   =================================== */
+
+.form-checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+.form-checkbox-label input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: var(--primary);
+}
+
+/* ===================================
+   FORM BUTTONS
+   =================================== */
+
+.form-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-submit,
+.btn-cancel {
+    flex: 1;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn-submit {
+    background: var(--primary);
+    color: var(--white);
+    box-shadow: var(--shadow-soft);
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+    background: var(--secondary);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+.btn-cancel {
+    background: var(--surface);
+    color: var(--main);
+    border: 1px solid var(--line);
+}
+
+.btn-cancel:hover {
+    background: var(--line);
+}
+
+.btn-cancel:active {
+    background: var(--surface);
+}
+
+/* ===================================
+   SUCCESS MESSAGE
+   =================================== */
+
+.success-message {
+    display: none;
+    margin-top: 20px;
+    padding: 18px;
+    background: var(--cream);
+    color: var(--main);
+    border-radius: 10px;
+    border: 2px solid var(--primary);
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+
+@media (max-width: 768px) {
+    /* Banner responsive */
+    .review-cta-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 25px;
+        margin: 30px 15px;
+    }
+
+    .review-cta-heading {
+        font-size: 22px;
+        justify-content: center;
+    }
+
+    .review-cta-description {
+        font-size: 15px;
+    }
+
+    .review-cta-btn {
+        width: 100%;
+        padding: 16px 35px;
+    }
+
+    /* Form responsive */
+    .form-wrapper {
+        padding: 30px 20px;
+    }
+
+    .form-title {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .review-form {
+        grid-template-columns: 1fr;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+    }
+
+    .btn-submit,
+    .btn-cancel {
+        width: 100%;
+    }
+
+    .rating-stars label {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .review-cta-heading {
+        font-size: 20px;
+    }
+
+    .review-cta-icon {
+        font-size: 28px;
+    }
+
+    .review-cta-description {
+        font-size: 14px;
+    }
+
+    .form-wrapper {
+        padding: 25px 15px;
+    }
+}
+
+
+/**********Beautician services page : Review popup styles***********/
+
+
+   
+        /* Overlay */
+        .review-popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 9998;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .review-popup-overlay.active {
+            display: block;
+        }
+
+        /* Popup Container */
+        .review-popup-container {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 800px;
+            max-height: 85vh;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            z-index: 9999;
+            overflow: hidden;
+            animation: slideUp 0.3s ease;
+        }
+
+        .review-popup-container.active {
+            display: block;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translate(-50%, -45%);
+            }
+            to {
+                opacity: 1;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        /* Popup Header */
+        .review-popup-header {
+            background: linear-gradient(135deg, #8b6f47 0%, #9b7f57 100%);
+            color: white;
+            padding: 20px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .review-popup-title {
+            font-size: 22px;
+            font-weight: 600;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .review-popup-close {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            font-size: 24px;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .review-popup-close:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: rotate(90deg);
+        }
+
+        /* Popup Body */
+        .review-popup-body {
+            padding: 25px;
+            max-height: calc(85vh - 180px);
+            overflow-y: auto;
+        }
+
+        /* Beautician Info Section */
+        .beautician-info-section {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            background: #fafafa;
+            border-radius: 12px;
+            margin-bottom: 25px;
+        }
+
+        .beautician-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #8b6f47;
+        }
+
+        .beautician-details h3 {
+            margin: 0 0 8px 0;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .beautician-rating {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+        }
+
+        .stars-display {
+            color: #FFB800;
+            font-size: 18px;
+        }
+
+        /* Write Review Button */
+        .write-review-btn {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #8b6f47 0%, #9b7f57 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 25px;
+        }
+
+        .write-review-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(139, 111, 71, 0.3);
+        }
+
+        /* Review Form Section (Hidden by default) */
+        .review-form-section {
+            display: none;
+            background: #fafafa;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            border: 2px solid #8b6f47;
+        }
+
+        .review-form-section.active {
+            display: block;
+            animation: slideDown 0.3s ease;
+        }
+
+        /* Reviews List */
+        .reviews-list-section {
+            margin-top: 20px;
+        }
+
+        .reviews-list-header {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ddd;
+        }
+
+        /* Individual Review Card */
+        .review-card {
+            background: #fafafa;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            transition: all 0.3s ease;
+        }
+
+        .review-card:hover {
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-color: #8b6f47;
+        }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .reviewer-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .reviewer-avatar {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #8b6f47 0%, #9b7f57 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .reviewer-details h4 {
+            margin: 0 0 4px 0;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .review-date {
+            font-size: 13px;
+            color: #999;
+        }
+
+        .review-stars {
+            color: #FFB800;
+            font-size: 16px;
+        }
+
+        .review-text {
+            margin: 12px 0 0 0;
+            color: #555;
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        /* No Reviews State */
+        .no-reviews {
+            text-align: center;
+            padding: 40px 20px;
+            color: #999;
+        }
+
+        .no-reviews-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+            opacity: 0.3;
+        }
+
+        /* Scrollbar Styling */
+        .review-popup-body::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .review-popup-body::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        .review-popup-body::-webkit-scrollbar-thumb {
+            background: #8b6f47;
+            border-radius: 10px;
+        }
+
+        .review-popup-body::-webkit-scrollbar-thumb:hover {
+            background: #9b7f57;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .review-popup-container {
+                width: 95%;
+                max-height: 90vh;
+            }
+
+            .review-popup-title {
+                font-size: 18px;
+            }
+
+            .beautician-info-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .review-popup-body {
+                padding: 20px 15px;
+            }
+        }
