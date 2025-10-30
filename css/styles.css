@@ -1303,7 +1303,7 @@ a:hover {
 
 .flat-spacing {
   padding-top: 80px;
- /* padding-bottom: 80px;*/
+  margin-bottom: 80px;
 }
 
 .flat-spacing-2 {
@@ -1590,10 +1590,10 @@ a:hover {
   cursor: pointer;
   overflow: hidden;
   z-index: 100;
-  background-color: var(--main);
+  background-color: var(--white);
   border: 0;
-  bottom: 92px;
-  right: 20px;
+  bottom: 200px;
+  right: 22px;
   padding: 0;
   display: flex;
   align-items: center;
@@ -1603,17 +1603,30 @@ a:hover {
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+    border: 2px solid var(--line);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+
+}
+
+#scroll-top svg path {
+  stroke: var(--primary);
+  transition: stroke 0.3s ease;
 }
 #scroll-top.show {
   opacity: 1;
   visibility: visible;
 }
+
 #scroll-top.type-1 {
   bottom: 140px;
 }
 #scroll-top:hover {
-  transform: translateY(-5px);
-  background-color: var(--primary);
+  transform: translateY(-3px);
+  background: var(--primary);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+#scroll-top:hover svg path {
+  stroke:white;
 }
 
 /* Preload 
@@ -3981,9 +3994,10 @@ footer.has-pb {
 }
 
 .slider-default .box-content {
-  left: 15px;
+  left: 80px;
   right: 15px;
   bottom: 80px;
+ 
 }
 .slider-default.default-2 .box-content {
   left: 0;
@@ -15452,8 +15466,8 @@ ul.list-text.type-number {
     background-attachment: fixed;
   }
   #scroll-top {
-    bottom: 40px;
-    right: 40px;
+    bottom: 30px;
+    right: 20px;
   }
   #scroll-top.type-1 {
     bottom: 113px;
@@ -16055,6 +16069,17 @@ ul.list-text.type-number {
     font-size: 40px;
   }
 }
+@media (min-width: 769px) and (max-width:1100px){
+.slider-default .box-content {
+    left: 80px;
+    
+   /* right: 80px;*/
+   top: 90px;
+   margin:50px auto;
+
+  }
+
+}
 @media (min-width: 1200px) {
   .section-image-zoom.type-space-2 .thumbs-slider {
     max-width: 600px;
@@ -16298,11 +16323,7 @@ ul.list-text.type-number {
     padding-left: 60px;
     padding-right: 40px;
   }
-  .slider-default .box-content {
-    left: 80px;
-    right: 80px;
-    bottom: 80px;
-  }
+  
   .slider-default .box-content.type-2 {
     left: 60px;
     right: 60px;
@@ -17244,9 +17265,9 @@ ul.list-text.type-number {
   .btn-style-6 {
     padding: 8px 10px;
   }
-  footer {
+  /*footer {
     padding-bottom: 67px;
-  }
+  }*/
   footer .footer-menu {
     margin-bottom: 30px;
   }
@@ -19928,7 +19949,7 @@ ul.list-text.type-number {
 }
 
 /* Location Modal */
-.location-modal {
+.beautician-location-modal {
     position: fixed;
     top: 0;
     left: 0;
@@ -19951,7 +19972,7 @@ ul.list-text.type-number {
     }
 }
 
-.modal-content {
+.beautician-modal-content {
     background: white;
     padding: 30px;
     border-radius: 12px;
@@ -19975,7 +19996,7 @@ ul.list-text.type-number {
     }
 }
 
-.modal-content h4 {
+.beautician-modal-content h4 {
     margin: 0 0 20px 0;
     font-size: 22px;
     color: #333;
@@ -19984,7 +20005,7 @@ ul.list-text.type-number {
 }
 
 /* Location List */
-.full-location-list {
+.beautician-full-location-list {
     list-style: none;
     padding: 0;
     margin: 20px 0;
@@ -19993,7 +20014,7 @@ ul.list-text.type-number {
     gap: 10px;
 }
 
-.full-location-list li {
+.beautician-full-location-list li {
     padding: 10px 15px;
     background: #f8f3ee;
     border-radius: 8px;
@@ -20003,13 +20024,13 @@ ul.list-text.type-number {
     transition: all 0.3s ease;
 }
 
-.full-location-list li:hover {
+.beautician-full-location-list li:hover {
     background: #e8ddd0;
     transform: translateY(-2px);
 }
 
 /* Close Button */
-.close-modal {
+.beautician-close-modal {
     width: 100%;
     padding: 12px;
     background-color: #c9a582;
@@ -20022,23 +20043,76 @@ ul.list-text.type-number {
     transition: background-color 0.3s ease;
 }
 
-.close-modal:hover {
+.beautician-close-modal:hover {
     background-color: #a08366;
 }
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
-    .modal-content {
+    .beautician-modal-content {
         width: 95%;
         padding: 20px;
     }
 
-    .full-location-list {
+    .beautician-full-location-list {
         grid-template-columns: 1fr;
     }
 
-    .modal-content h4 {
+    .beautician-modal-content h4 {
         font-size: 18px;
+    }
+}
+
+/* Mobile Responsive for Beautician Cards */
+@media (max-width: 767px) {
+    .card-product.style-list {
+        flex-direction: column !important;
+    }
+    
+    .card-product.style-list .card-product-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-bottom: 15px;
+    }
+    
+    .card-product.style-list .card-product-info {
+        width: 100% !important;
+        padding-left: 0 !important;
+    }
+    
+    .card-product.style-list .product-img {
+        width: 100%;
+        padding-bottom: 120%; /* Aspect ratio */
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+    }
+    
+    .card-product.style-list .product-img img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    /* Adjust buttons for mobile */
+    .list-product-btn {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .btn-main-product {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    /* Location info mobile adjustment */
+    .location-info {
+        width: 100%;
+        flex-wrap: wrap;
     }
 }
 /***********home page section -bridal collections***********/
@@ -21797,10 +21871,12 @@ ul.list-text.type-number {
                 padding: 20px 15px;
             }
         }
-    }
-}
+    
 
 
+/**************Beautician services page : Book service modal styles***********/
+
+        /* Modal Overlay */
 
 
 .sbm-modal-overlay {
@@ -22190,3 +22266,1236 @@ ul.list-text.type-number {
         .btn-main-product:hover {
             transform: translateY(-2px);
         }
+
+        /* Service Type Selection */
+.sbm-service-type-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.sbm-service-type-option {
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.sbm-service-type-option:hover {
+    border: 2px solid #e0e0e0;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+}
+
+.sbm-service-type-option.active {
+   border-color: var(--primary);
+    background: var(--gradient-light);
+    box-shadow: 0 4px 12px rgba(175, 158, 73, 0.3);
+}
+
+.sbm-service-type-option.active::after {
+    content: "✓";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--primary);
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.sbm-service-type-icon {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.sbm-service-type-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.sbm-service-type-desc {
+    font-size: 13px;
+    color: #7f8c8d;
+}
+
+/* Home Service Note */
+.sbm-home-service-note {
+    background: #fff8e1;
+    border: 1px solid #ffd54f;
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #f57c00;
+}
+
+.sbm-note-icon {
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+/* Service badges for availability */
+.sbm-service-badge {
+    display: inline-block;
+    font-size: 10px;
+    padding: 3px 8px;
+    border-radius: 12px;
+    margin-left: 8px;
+    font-weight: 600;
+}
+
+.sbm-service-badge.salon-only {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.sbm-service-badge.home-available {
+    background: #e8f5e9;
+    color: #388e3c;
+}
+
+.sbm-service-item.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    position: relative;
+}
+
+.sbm-service-item.disabled::after {
+    content: "Not available for home service";
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+.sbm-service-item.disabled:hover::after {
+    opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .sbm-service-type-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.sbm-map-container {
+    margin-top: 8px;
+}
+
+.sbm-map-wrapper {
+    margin-top: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+}
+
+.sbm-map-wrapper:hover {
+    border-color: var(--primary);
+}
+
+#map {
+    width: 100%;
+    height: 300px;
+    cursor: crosshair;
+}
+
+.sbm-coordinates {
+    margin-top: 12px;
+    padding: 12px 15px;
+    background-color: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #333;
+}
+
+.sbm-coordinates span {
+    color: #666;
+}
+
+/* Service card disabled state enhancement */
+.sbm-service-card.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: #f9fafb;
+}
+
+.sbm-service-card.disabled:hover {
+    transform: none;
+    border-color: #e0e0e0;
+    box-shadow: none;
+}
+
+@media (max-width: 768px) {
+    #map {
+        height: 250px;
+    }
+}
+        /************Nav links for services *************/
+
+        /* Make Salon at Home & Book a Salon stand out */
+/* Base styling for the special links - NO color change */
+/* Base styling for the special links - NO color change */
+.salon-at-home-link .item-link,
+.book-salon-link .item-link {
+  font-weight: 700 !important;
+  font-size: 16px !important;
+  color: #8B4049 !important;
+  white-space: nowrap;
+  position: relative;
+  display: inline-block;
+}
+
+/* Golden glitter particles - smaller dots (4x smaller) */
+.salon-at-home-link .item-link::before,
+.book-salon-link .item-link::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 1.5px;  /* 4 times smaller */
+  height: 1.5px;
+  background: #FFD700;
+  border-radius: 50%;
+  box-shadow: 
+    /* Row 1 */
+    -25px 2px 0 0.4px #FFD700,
+    -18px 5px 0 0.5px #FFC700,
+    -10px 3px 0 0.25px #FFD700,
+    -3px 6px 0 0.4px #dccc5f,
+    5px 4px 0 0.5px #FFD700,
+    12px 2px 0 0.25px #FFC700,
+    20px 5px 0 0.4px #FFD700,
+    28px 3px 0 0.5px #FFDF00,
+    /* Row 2 */
+    -22px -3px 0 0.25px #FFD700,
+    -15px -1px 0 0.4px #FFC700,
+    -7px -4px 0 0.5px #FFD700,
+    2px -2px 0 0.25px #FFDF00,
+    10px -3px 0 0.4px #FFD700,
+    18px -1px 0 0.5px #FFC700,
+    25px -4px 0 0.25px #FFD700,
+    /* Row 3 */
+    -20px 8px 0 0.4px #FFDF00,
+    -12px 10px 0 0.25px #FFD700,
+    -4px 9px 0 0.5px #FFC700,
+    8px 11px 0 0.4px #FFD700,
+    16px 9px 0 0.25px #FFDF00,
+    24px 10px 0 0.5px #FFD700;
+  animation: glitterRise 3s infinite ease-out;
+  opacity: 0;
+}
+
+/* Different timing for second link */
+.book-salon-link .item-link::before {
+  animation-delay: 1.5s;
+}
+
+@keyframes glitterRise {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(0.3);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(-10px) scale(1);
+  }
+  25% {
+    opacity: 0.9;
+    transform: translateY(-25px) scale(0.9);
+  }
+  40% {
+    opacity: 0.7;
+    transform: translateY(-40px) scale(0.7);
+  }
+  60% {
+    opacity: 0.4;
+    transform: translateY(-60px) scale(0.5);
+  }
+  80% {
+    opacity: 0.15;
+    transform: translateY(-80px) scale(0.3);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100px) scale(0.1);
+  }
+}
+
+/* NO hover color change */
+.salon-at-home-link .item-link:hover,
+.book-salon-link .item-link:hover {
+  color: #8B4049 !important;
+}
+
+#bookingModal {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+#bookingModal.sbm-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/************Beautician profile page ************/
+
+.beautician-profile-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Profile Header Section */
+        .beautician-profile-header {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .beautician-profile-main {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .beautician-profile-info h1 {
+            font-size: 32px;
+            color: #8b7355;
+            margin-bottom: 10px;
+        }
+
+        .beautician-profile-id {
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .beautician-profile-rating {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .beautician-profile-stars {
+            color: #ffa500;
+            font-size: 18px;
+        }
+
+        .beautician-profile-review-count {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .beautician-profile-bio {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            font-size: 15px;
+        }
+
+        .beautician-profile-experience {
+            background: #f9f4ef;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            border-left: 4px solid #a8907d;
+        }
+
+        .beautician-profile-experience strong {
+            color: #8b7355;
+        }
+
+        /* Location Section */
+        .beautician-location-section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .beautician-section-title {
+            font-size: 24px;
+            color: #8b7355;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .beautician-location-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .beautician-location-tag {
+            background: #f9f4ef;
+            padding: 12px 18px;
+            border-radius: 8px;
+            text-align: center;
+            color: #8b7355;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        /* Skills Section */
+        .beautician-skills-section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .beautician-skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .beautician-skill-card {
+            background: linear-gradient(135deg, #a8907d 0%, #c4b5a0 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+            transition: transform 0.3s;
+        }
+
+        .beautician-skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Services Section */
+        .beautician-services-section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .beautician-services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .beautician-service-card {
+            border: 2px solid #e8e0d8;
+            padding: 25px;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .beautician-service-card:hover {
+            border-color: #a8907d;
+            box-shadow: 0 4px 12px rgba(168, 144, 125, 0.15);
+        }
+
+        .beautician-service-card h3 {
+            color: #8b7355;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .beautician-service-card p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .beautician-service-price {
+            color: #8b7355;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        /* Portfolio Section */
+        .beautician-portfolio-section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .beautician-portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .beautician-portfolio-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            height: 300px;
+            background: #f0f0f0;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .beautician-portfolio-item:hover {
+            transform: scale(1.05);
+        }
+
+        .beautician-portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .beautician-portfolio-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            padding: 20px 15px 15px;
+            font-size: 14px;
+        }
+
+        /* Booking Section */
+        .beautician-booking-section {
+            background: linear-gradient(135deg, #a8907d 0%, #c4b5a0 100%);
+            border-radius: 12px;
+            padding: 40px 30px;
+            text-align: center;
+            color: #fff;
+            box-shadow: 0 8px 30px rgba(168, 144, 125, 0.4);
+            position: sticky;
+            top: 20px;
+            height: fit-content;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .beautician-booking-section h2 {
+            font-size: 26px;
+            margin-bottom: 10px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .beautician-booking-section p {
+            margin-bottom: 30px;
+            font-size: 14px;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+
+        .beautician-book-button {
+            background: white;
+            color: #8b7355;
+            border: none;
+            padding: 16px 40px;
+            font-size: 15px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            width: 100%;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: center;
+            display: block;
+        }
+
+        .beautician-book-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(0,0,0,0.2);
+            background: #f8f8f8;
+        }
+
+        .beautician-availability {
+            display: inline-block;
+            background: #4caf50;
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .beautician-booking-info {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-size: 13px;
+        }
+
+        .beautician-booking-info p {
+            margin: 8px 0;
+            opacity: 1;
+        }
+
+        .beautician-booking-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .beautician-profile-header {
+                grid-template-columns: 1fr;
+            }
+
+            .beautician-booking-section {
+                position: relative;
+                top: 0;
+            }
+
+            .beautician-services-grid,
+            .beautician-portfolio-grid,
+            .beautician-skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .beautician-services-grid,
+            .beautician-portfolio-grid,
+            .beautician-skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        /***********Home page slider responsive code****************/
+
+        /* Reduce main heading size for all slides */
+.slider-default .box-title-slider .heading.title-display {
+    font-size: 70px; 
+    line-height: 1.1;
+}
+/* Add to your existing CSS file */
+@media (max-width: 767px) {
+  /* Make slider height appropriate for mobile */
+
+  /* Hide <br> tags on mobile */
+
+    .slider-default .box-title-slider .heading.title-display br {
+        display: none;
+    }
+
+  .tf-slideshow .wrap-slider {
+    min-height: 550px;
+    height: 580px;
+  }
+  
+  .wrap-slider img {
+    object-position: center center;
+    height: 100%;
+  }
+  
+  /* Position content with background overlay */
+  .slider-default .box-content {
+     left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0 15px 60px 15px;
+    background: linear-gradient(to top, rgba(0,0,0,0.4) 0%, transparent 100%);
+  }
+  
+  .slider-default .content-slider {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 20px 16px;
+    border-radius: 16px;
+    gap: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Ensure dark text color */
+  .slider-effect-fade .swiper-slide.swiper-slide-active .fade-item {
+    color: #7B1E1E !important;
+  }
+  
+  /* Adjust font sizes for mobile */
+  .box-title-slider .subheading {
+    font-size: 11px;
+    line-height:1.4;
+  }
+  
+.slider-default .box-title-slider .heading.title-display  {
+    font-size: 22px;
+    line-height: 1.3;
+  }
+  
+  /* Reduce button size and font for mobile */
+ /* .box-btn-slider .tf-btn {
+    padding: 10px 18px;
+    font-size: 13px;
+    height: 50px;
+    width: 100%;
+    max-width: 180px;
+  }*/
+   .box-btn-slider .tf-btn .text {
+    font-size: 13px;
+  }
+  .box-btn-slider .tf-btn .icon {
+    font-size: 16px;
+  }
+
+  
+  /* Reduce button size for mobile */
+  .slider-effect-fade .box-btn-slider .tf-btn {
+    padding: 10px 16px;
+    font-size: 13px; 
+    min-width: auto;
+   
+  }
+  
+ 
+  
+  .box-btn-slider .tf-btn .icon {
+    font-size: 14px; /* Reduced from 16px */
+    margin-left: 4px; /* Reduce space between text and icon */
+  }
+  
+  .swiper-slide:nth-child(1) .wrap-slider img {
+    object-position: 75% center;
+  }
+  
+  /* Second slide - show center */
+  .swiper-slide:nth-child(2) .wrap-slider img {
+    object-position:90% center;
+  }
+  
+  /* Third slide - show more of left */
+  .swiper-slide:nth-child(3) .wrap-slider img {
+    object-position: 15% center;
+  }
+ 
+  
+
+}
+
+
+
+
+
+/* Tablet optimization */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .slider-default .box-title-slider .heading.title-display {
+        font-size: 36px;
+        line-height: 1.15;
+    }
+}
+
+/********Salon page styles fixex *****/
+
+.wg-pagination  {
+    display: flex !important;
+
+  
+}
+
+.salon-pagination{
+
+    margin:50px 0px;
+    
+}
+
+
+/* Contact Icons Styling */
+.edug-contact-icons {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    opacity: 0;
+transform: translateY(20px);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  
+    
+       
+   
+}
+
+.edug-contact-icons.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all; 
+  
+}
+
+.edug-contact-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--white);
+    color: var(--main);
+    font-size: 24px;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.edug-contact-icon:hover {
+    transform: translateY(-3px); /* CHANGE: was scale(1.1) */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12); /* CHANGE: softer shadow */
+    background: var(--surface);
+}
+
+.edug-contact-icon[data-tooltip] {
+  position: relative; /* Needed for tooltip positioning */
+  overflow: visible;
+}
+.edug-contact-icon[data-tooltip]::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  right: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--primary);
+  color:white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  white-space: nowrap;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: inherit;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, right 0.2s ease;
+}
+
+
+.edug-contact-icon[data-tooltip]:hover::before {
+    opacity: 1;
+  right: 55px; /* small movement for smoothness */
+}
+
+/* Icon colors */
+.edug-contact-icon:nth-child(1) {
+    background: var(--white);
+    color: var(--primary);
+}
+
+.edug-contact-icon:nth-child(1):hover {
+      color: #b89850; /* CHANGE: was #128C7E */
+    background: var(--surface);
+}
+.edug-contact-icon:nth-child(2) {
+    background: var(--white);
+    color: var(--primary);
+}
+
+.edug-contact-icon:nth-child(2):hover {
+    color: #b89850;
+    background: var(--surface);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .edug-contact-icons {
+        bottom: 260px;
+        right: 20px;
+    }
+    
+    .edug-contact-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+}
+
+/*******Login page extra********/
+
+.divider-or {
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+}
+
+.divider-or::before,
+.divider-or::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 45%;
+    height: 1px;
+    background-color: #ddd;
+}
+
+.divider-or::before {
+    left: 0;
+}
+
+.divider-or::after {
+    right: 0;
+}
+
+.divider-or span {
+    background: #fff;
+    padding: 0 15px;
+    color: #999;
+    font-size: 14px;
+}
+
+.tf-btn.btn-google {
+    background: #fff;
+    border: 1px solid #ddd;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.tf-btn.btn-google:hover {
+    background: var(--gradient-maroon);
+    border-color: #ccc;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.tf-btn.btn-google svg {
+    flex-shrink: 0;
+}
+
+.ln-signin {
+  background: linear-gradient(135deg, #f5e6d3 0%, #d4a574 100%);
+  
+        padding:100px;
+        border-radius:20px;
+}
+
+/**************toolbar in mobile *******/
+
+ /* Mobile Navigation Wrapper */
+    .mobile-nav-wrapper {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 60;
+        transition: transform 0.3s ease-in-out;
+        display: none;
+    }
+
+    .mobile-nav-wrapper.hide {
+        transform: translateY(100%);
+    }
+
+    .mobile-nav-wrapper.show {
+        transform: translateY(0);
+    }
+
+    /* Floating Top Toolbar */
+    .tf-toolbar-top {
+        display: flex;
+        padding: 10px 0;
+        overflow-x: auto;
+        overflow-y: hidden;
+        background: var(--gradient-maroon);
+        margin: 0 15px 10px 15px;
+        border-radius: 25px;
+        box-shadow: 0 -2px 10px rgba(0, 36, 71, 0.2);
+         margin: 0 15px 100px 15px;
+    }
+
+    .tf-toolbar-top .toolbar-item {
+        flex: 1 0 25%;
+        position: relative;
+    }
+
+    .tf-toolbar-top .toolbar-item a {
+        width: 100%;
+        padding-right: 10px;
+        padding-left: 10px;
+        height: 40px;
+        gap: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-decoration: none;
+    }
+
+    .tf-toolbar-top .toolbar-item a .toolbar-icon {
+        position: relative;
+    }
+
+    .tf-toolbar-top .toolbar-item a .toolbar-icon svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .tf-toolbar-top .toolbar-item a .toolbar-icon svg path {
+        stroke: #fff;
+        fill: none;
+    }
+
+    .tf-toolbar-top .toolbar-item a .toolbar-icon .toolbar-count {
+        position: absolute;
+        top: -4px;
+        right: -8px;
+        width: 16px;
+        height: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--primary);
+        border-radius: 50%;
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 18px;
+        color: var(--white);
+    }
+
+    .tf-toolbar-top .toolbar-item a .toolbar-label {
+        font-size: 11px;
+        font-weight: 500;
+        line-height: 16px;
+        color: #fff;
+        transition: all 0.3s ease;
+    }
+
+    .tf-toolbar-top .toolbar-item a:hover .toolbar-label {
+        font-weight: 600;
+    }
+
+    /* Override bottom toolbar to be visible */
+    .tf-toolbar-bottom {
+        display: flex !important;
+    }
+
+    /* Show only on mobile devices */
+    @media (max-width: 520px) {
+        .mobile-nav-wrapper {
+            display: block;
+        }
+    }
+
+    @media (min-width: 521px) {
+        .mobile-nav-wrapper {
+            display: none !important;
+        }
+    }
+
+    /*******Extra code for Search menu in navbar  ***********/
+
+    /* Search Filter Section - Unique Namespaced Styles */
+/* Search Bar with Filter Button Layout */
+.modal-search .search-bar-wrapper {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.modal-search .search-bar-wrapper .form-search {
+    flex: 1;
+}
+
+/* Search Filter Toggle Button */
+.modal-search .search-filter-toggle-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    background-color: var(--white, #ffffff);
+    border: 1px solid var(--line, #e0e0e0);
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--main, #333);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    height: fit-content;
+}
+
+.modal-search .search-filter-toggle-btn:hover {
+    border-color: var(--main, #181818);
+    background-color: var(--surface, #f8f9fa);
+}
+
+.modal-search .search-filter-toggle-btn.active {
+    background-color: var(--main, #181818);
+    color: var(--white, #ffffff);
+    border-color: var(--main, #181818);
+}
+
+.modal-search .search-filter-toggle-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+.modal-search .search-filter-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px;
+    height: 20px;
+    padding: 0 6px;
+    background-color: var(--main, #181818);
+    color: var(--white, #ffffff);
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.modal-search .search-filter-toggle-btn.active .search-filter-count {
+    background-color: var(--white, #ffffff);
+    color: var(--main, #181818);
+}
+
+/* Responsive: Stack on mobile */
+@media (max-width: 576px) {
+    .modal-search .search-bar-wrapper {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .modal-search .search-filter-toggle-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Rest of filter section styles remain the same */
+.modal-search .search-filter-section {
+    padding: 20px;
+    background-color: var(--surface, #f8f9fa);
+    border-radius: 8px;
+    margin-top: 20px;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-search .search-filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.modal-search .search-filter-title {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.modal-search .search-clear-filters {
+    padding: 6px 14px;
+    background-color: var(--main, #181818);
+    color: var(--white, #ffffff);
+    border: none;
+    border-radius: 20px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.modal-search .search-clear-filters:hover {
+    opacity: 0.8;
+}
+
+.modal-search .search-filter-group {
+    margin-bottom: 20px;
+}
+
+.modal-search .search-filter-group:last-child {
+    margin-bottom: 0;
+}
+
+.modal-search .search-filter-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    color: var(--main, #333);
+}
+
+.modal-search .search-filter-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.modal-search .search-filter-chip {
+    padding: 8px 16px;
+    background-color: var(--white, #ffffff);
+    border: 1px solid var(--line, #e0e0e0);
+    border-radius: 20px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--main, #666);
+    user-select: none;
+}
+
+.modal-search .search-filter-chip:hover {
+    border-color: var(--main, #181818);
+    color: var(--main, #181818);
+}
+
+.modal-search .search-filter-chip.active {
+    background-color: var(--main, #181818);
+    color: var(--white, #ffffff);
+    border-color: var(--main, #181818);
+}
