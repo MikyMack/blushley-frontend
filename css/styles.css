@@ -3101,7 +3101,7 @@ footer .footer-wrap {
   background-color: #f5efe7;
 }
 footer .footer-body {
-  padding: 50px 0;
+  padding: 20px 0;
 }
 footer .footer-bottom-wrap {
   padding-top: 14px;
@@ -23863,4 +23863,58 @@ transform: translateY(20px);
 .nav-acc-link:hover::after {
   opacity: 1;
   right: 16px;
+}
+
+/* CONTACT SECTION */
+.contact-us-map {
+  display: flex;
+  justify-content: center;      /* Centers the info box */
+  align-items: center;          /* Centers vertically */
+  background-color: #fffaf5;    /* Soft warm background */
+  border-radius: 12px;
+  padding: 40px 60px;           /* Inner padding */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  max-width: 900px;             /* Limit width */
+  margin: 40px auto;            /* Center horizontally */
+}
+
+.contact-us-map .right {
+  width: 100%;
+  max-width: 600px;             /* Prevents from being too wide */
+}
+
+.contact-us-map h4 {
+  font-size: 28px;
+  margin-bottom: 24px;
+  color: #222;
+}
+
+.contact-us-map .text-title {
+  font-weight: 600;
+  color: #000;
+}
+
+.contact-us-map .text-secondary {
+  color: #6c5a3c; /* Golden-brown tone */
+  line-height: 1.6;
+}
+
+.contact-us-map .mb_20 {
+  margin-bottom: 18px;
+}
+
+.contact-us-map p {
+  margin: 0;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .contact-us-map {
+    flex-direction: column;
+    padding: 25px 20px;
+  }
+
+  .contact-us-map .right {
+    max-width: 100%;
+  }
 }
