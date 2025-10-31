@@ -1439,3 +1439,147 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+/****************For toolbar menu******* */
+
+
+// JavaScript to show/hide mobile toolbar on scroll
+    (function () {
+        let lastScrollTop = 0;
+        const mobileNav = document.getElementById('mobileNavWrapper');
+        const scrollThreshold = 5;
+        
+        // Get hero section height dynamically for mobile
+        const heroSection = document.querySelector('.tf-slideshow') || document.querySelector('.slider-default');
+        let heroHeight = heroSection ? heroSection.offsetHeight : 400; // Default to 400 for mobile
+        
+        // Adjust hero height for mobile - typically 50-70% of desktop height
+        if (window.innerWidth <= 520) {
+            heroHeight = heroHeight * 0.5; // Adjust this multiplier as needed (0.5 = 50%, 0.6 = 60%, etc.)
+        }
+        
+        let scrollTimer = null;
+
+        // Hide toolbar initially
+        mobileNav.classList.add('hide');
+        mobileNav.classList.remove('show');
+
+        window.addEventListener('scroll', function () {
+            if (scrollTimer !== null) {
+                clearTimeout(scrollTimer);
+            }
+
+            scrollTimer = setTimeout(function () {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                if (Math.abs(scrollTop - lastScrollTop) < scrollThreshold) {
+                    return;
+                }
+
+                // If we're in the hero section, always hide
+                if (scrollTop <= heroHeight) {
+                    mobileNav.classList.remove('show');
+                    mobileNav.classList.add('hide');
+                }
+                // If scrolling down (and past hero), hide
+                else if (scrollTop > lastScrollTop) {
+                    mobileNav.classList.remove('show');
+                    mobileNav.classList.add('hide');
+                }
+                // If scrolling up (and past hero), show
+                else {
+                    mobileNav.classList.remove('hide');
+                    mobileNav.classList.add('show');
+                }
+
+                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+            }, 10);
+        }, false);
+    })();
+
+/*******Js for filter in search menu******* */
+
+// Filter functionality
+const activeFilters = {
+    category: [],
+    brand: []
+};
+
+let filterSectionVisible = false;
+
+function toggleFilterSection() {
+    const filterSection = document.getElementById('searchFilterSection');
+    const toggleBtn = document.querySelector('.search-filter-toggle-btn');
+    
+    filterSectionVisible = !filterSectionVisible;
+    
+    if (filterSectionVisible) {
+        filterSection.style.display = 'block';
+        toggleBtn.classList.add('active');
+    } else {
+        filterSection.style.display = 'none';
+        toggleBtn.classList.remove('active');
+    }
+}
+
+function toggleFilter(element) {
+    const filterType = element.getAttribute('data-filter');
+    const filterValue = element.getAttribute('data-value');
+    
+    element.classList.toggle('active');
+    
+    if (element.classList.contains('active')) {
+        if (!activeFilters[filterType].includes(filterValue)) {
+            activeFilters[filterType].push(filterValue);
+        }
+    } else {
+        activeFilters[filterType] = activeFilters[filterType].filter(v => v !== filterValue);
+    }
+    
+    updateFilterCount();
+    updateClearButton();
+    applyFilters();
+}
+
+function updateFilterCount() {
+    const filterCount = document.querySelector('.search-filter-count');
+    const totalFilters = activeFilters.category.length + activeFilters.brand.length;
+    
+    if (totalFilters > 0) {
+        filterCount.style.display = 'inline-flex';
+        filterCount.textContent = totalFilters;
+    } else {
+        filterCount.style.display = 'none';
+    }
+}
+
+function updateClearButton() {
+    const clearBtn = document.querySelector('.search-clear-filters');
+    const totalFilters = activeFilters.category.length + activeFilters.brand.length;
+    
+    if (totalFilters > 0) {
+        clearBtn.style.display = 'block';
+    } else {
+        clearBtn.style.display = 'none';
+    }
+}
+
+function clearAllFilters() {
+    activeFilters.category = [];
+    activeFilters.brand = [];
+    
+    document.querySelectorAll('.search-filter-chip.active').forEach(chip => {
+        chip.classList.remove('active');
+    });
+    
+    updateFilterCount();
+    updateClearButton();
+    applyFilters();
+}
+
+function applyFilters() {
+    console.log('Applied filters:', activeFilters);
+    // Add your filter logic here
+    // Example: filter products based on activeFilters.category and activeFilters.brand
+}

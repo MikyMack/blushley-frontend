@@ -63,6 +63,14 @@
       availability: null,
       brands: [],
       sale: false,
+      // ADD THESE NEW PROPERTIES:
+      categories: [],
+      productTypes: [],
+      skinTypes: [],
+      skinConcerns: [],
+      formulations: [],
+      benefits: [],
+      shades: []
     };
 
     priceSlider.noUiSlider.on("update", function (values) {
@@ -118,6 +126,104 @@
       updateMetaFilter();
     });
 
+    // Category filter
+    $('.categories-item').click(function (e) {
+      e.preventDefault();
+      const category = $(this).text().trim().replace(/\s*\(\d+\)$/, "");
+      const index = filters.categories.indexOf(category);
+
+      if (index === -1) {
+        filters.categories.push(category);
+        $(this).addClass('active');
+      } else {
+        filters.categories.splice(index, 1);
+        $(this).removeClass('active');
+      }
+      applyFilters();
+      updateMetaFilter();
+    });
+
+    // Product Type filter
+    $('input[name="product-type"]').change(function () {
+      const typeLabel = $(this).next("label").text().trim().replace(/\s*\(\d+\)$/, "");
+
+      if ($(this).is(":checked")) {
+        filters.productTypes.push(typeLabel);
+      } else {
+        filters.productTypes = filters.productTypes.filter(t => t !== typeLabel);
+      }
+      applyFilters();
+      updateMetaFilter();
+    });
+
+    // Skin Type filter
+    $('input[name="skin-type"]').change(function () {
+      const skinType = $(this).next("label").text().trim();
+
+      if ($(this).is(":checked")) {
+        filters.skinTypes.push(skinType);
+      } else {
+        filters.skinTypes = filters.skinTypes.filter(t => t !== skinType);
+      }
+      applyFilters();
+      updateMetaFilter();
+    });
+
+    // Skin Concerns filter
+    $('input[name="concerns"]').change(function () {
+      const concern = $(this).next("label").text().trim();
+
+      if ($(this).is(":checked")) {
+        filters.skinConcerns.push(concern);
+      } else {
+        filters.skinConcerns = filters.skinConcerns.filter(c => c !== concern);
+      }
+      applyFilters();
+      updateMetaFilter();
+    });
+
+    // Formulation filter
+    $('input[name="formulation"]').change(function () {
+      const formulation = $(this).next("label").text().trim();
+
+      if ($(this).is(":checked")) {
+        filters.formulations.push(formulation);
+      } else {
+        filters.formulations = filters.formulations.filter(f => f !== formulation);
+      }
+      applyFilters();
+      updateMetaFilter();
+    });
+
+    // Benefits filter
+    $('input[name="benefits"]').change(function () {
+      const benefit = $(this).next("label").text().trim();
+
+      if ($(this).is(":checked")) {
+        filters.benefits.push(benefit);
+      } else {
+        filters.benefits = filters.benefits.filter(b => b !== benefit);
+      }
+      applyFilters();
+      updateMetaFilter();
+    });
+
+    // Shade Range filter
+    $('.facet-color .color-check').click(function () {
+      const shade = $(this).text().trim();
+      const index = filters.shades.indexOf(shade);
+
+      if (index === -1) {
+        filters.shades.push(shade);
+        $(this).addClass('active');
+      } else {
+        filters.shades.splice(index, 1);
+        $(this).removeClass('active');
+      }
+      applyFilters();
+      updateMetaFilter();
+    });
+
     function updateMetaFilter() {
       const appliedFilters = $("#applied-filters");
       const metaFilterShop = $(".meta-filter-shop");
@@ -162,7 +268,54 @@
           );
         });
       }
+      // Add category tags
+      filters.categories.forEach((cat) => {
+        appliedFilters.append(
+          `<span class="filter-tag">${cat} <span class="remove-tag icon-close" data-filter="category" data-value="${cat}"></span></span>`
+        );
+      });
 
+      // Add product type tags
+      filters.productTypes.forEach((type) => {
+        appliedFilters.append(
+          `<span class="filter-tag">${type} <span class="remove-tag icon-close" data-filter="productType" data-value="${type}"></span></span>`
+        );
+      });
+
+      // Add skin type tags
+      filters.skinTypes.forEach((type) => {
+        appliedFilters.append(
+          `<span class="filter-tag">${type} <span class="remove-tag icon-close" data-filter="skinType" data-value="${type}"></span></span>`
+        );
+      });
+
+      // Add skin concern tags
+      filters.skinConcerns.forEach((concern) => {
+        appliedFilters.append(
+          `<span class="filter-tag">${concern} <span class="remove-tag icon-close" data-filter="skinConcern" data-value="${concern}"></span></span>`
+        );
+      });
+
+      // Add formulation tags
+      filters.formulations.forEach((form) => {
+        appliedFilters.append(
+          `<span class="filter-tag">${form} <span class="remove-tag icon-close" data-filter="formulation" data-value="${form}"></span></span>`
+        );
+      });
+
+      // Add benefit tags
+      filters.benefits.forEach((benefit) => {
+        appliedFilters.append(
+          `<span class="filter-tag">${benefit} <span class="remove-tag icon-close" data-filter="benefit" data-value="${benefit}"></span></span>`
+        );
+      });
+
+      // Add shade tags
+      filters.shades.forEach((shade) => {
+        appliedFilters.append(
+          `<span class="filter-tag">${shade} <span class="remove-tag icon-close" data-filter="shade" data-value="${shade}"></span></span>`
+        );
+      });
       if (filters.sale) {
         appliedFilters.append(
           `<span class="filter-tag on-sale d-none">On Sale <span class="remove-tag icon-close" data-filter="sale"></span></span>`
@@ -208,6 +361,55 @@
         $(".shop-sale-text").removeClass("active");
       }
 
+      if (filterType === "category") {
+        filters.categories = filters.categories.filter(c => c !== filterValue);
+        $('.categories-item').removeClass('active');
+      }
+      if (filterType === "productType") {
+        filters.productTypes = filters.productTypes.filter(t => t !== filterValue);
+        $('input[name="product-type"]').each(function () {
+          if ($(this).next('label').text().trim().replace(/\s*\(\d+\)$/, "") === filterValue) {
+            $(this).prop("checked", false);
+          }
+        });
+      }
+      if (filterType === "skinType") {
+        filters.skinTypes = filters.skinTypes.filter(t => t !== filterValue);
+        $('input[name="skin-type"]').each(function () {
+          if ($(this).next('label').text().trim() === filterValue) {
+            $(this).prop("checked", false);
+          }
+        });
+      }
+      if (filterType === "skinConcern") {
+        filters.skinConcerns = filters.skinConcerns.filter(c => c !== filterValue);
+        $('input[name="concerns"]').each(function () {
+          if ($(this).next('label').text().trim() === filterValue) {
+            $(this).prop("checked", false);
+          }
+        });
+      }
+      if (filterType === "formulation") {
+        filters.formulations = filters.formulations.filter(f => f !== filterValue);
+        $('input[name="formulation"]').each(function () {
+          if ($(this).next('label').text().trim() === filterValue) {
+            $(this).prop("checked", false);
+          }
+        });
+      }
+      if (filterType === "benefit") {
+        filters.benefits = filters.benefits.filter(b => b !== filterValue);
+        $('input[name="benefits"]').each(function () {
+          if ($(this).next('label').text().trim() === filterValue) {
+            $(this).prop("checked", false);
+          }
+        });
+      }
+      if (filterType === "shade") {
+        filters.shades = filters.shades.filter(s => s !== filterValue);
+        $('.facet-color .color-check').removeClass('active');
+      }
+
       applyFilters();
       updateMetaFilter();
     });
@@ -220,12 +422,26 @@
       filters.minPrice = minPrice;
       filters.maxPrice = maxPrice;
       filters.sale = false;
+      filters.categories = [];
+      filters.productTypes = [];
+      filters.skinTypes = [];
+      filters.skinConcerns = [];
+      filters.formulations = [];
+      filters.benefits = [];
+      filters.shades = [];
 
       $(".shop-sale-text").removeClass("active");
       $('input[name="brand"]').prop("checked", false);
       $('input[name="availability"]').prop("checked", false);
       $(".size-check, .color-check").removeClass("active");
       priceSlider.noUiSlider.set([minPrice, maxPrice]);
+      $('.categories-item').removeClass('active');
+      $('input[name="product-type"]').prop("checked", false);
+      $('input[name="skin-type"]').prop("checked", false);
+      $('input[name="concerns"]').prop("checked", false);
+      $('input[name="formulation"]').prop("checked", false);
+      $('input[name="benefits"]').prop("checked", false);
+      $('.facet-color .color-check').removeClass('active');
 
       applyFilters();
       updateMetaFilter();
@@ -282,6 +498,62 @@
           }
         }
 
+        // Filter by categories
+        if (filters.categories.length > 0) {
+          const productCategory = product.attr("data-category");
+          if (!filters.categories.includes(productCategory)) {
+            showProduct = false;
+          }
+        }
+
+        // Filter by product types
+        if (filters.productTypes.length > 0) {
+          const productType = product.attr("data-product-type");
+          if (!filters.productTypes.includes(productType)) {
+            showProduct = false;
+          }
+        }
+
+        // Filter by skin types
+        if (filters.skinTypes.length > 0) {
+          const skinType = product.attr("data-skin-type");
+          if (!filters.skinTypes.includes(skinType)) {
+            showProduct = false;
+          }
+        }
+
+        // Filter by skin concerns
+        if (filters.skinConcerns.length > 0) {
+          const concerns = product.attr("data-concerns");
+          if (!concerns || !filters.skinConcerns.some(c => concerns.includes(c))) {
+            showProduct = false;
+          }
+        }
+
+        // Filter by formulation
+        if (filters.formulations.length > 0) {
+          const formulation = product.attr("data-formulation");
+          if (!filters.formulations.includes(formulation)) {
+            showProduct = false;
+          }
+        }
+
+        // Filter by benefits
+        if (filters.benefits.length > 0) {
+          const benefits = product.attr("data-benefits");
+          if (!benefits || !filters.benefits.some(b => benefits.includes(b))) {
+            showProduct = false;
+          }
+        }
+
+        // Filter by shades
+        if (filters.shades.length > 0) {
+          const shade = product.attr("data-shade");
+          if (!filters.shades.includes(shade)) {
+            showProduct = false;
+          }
+        }
+
         product.toggle(showProduct);
 
         if (showProduct) {
@@ -319,7 +591,7 @@
   };
 
   /* Filter Sort
-  -------------------------------------------------------------------------------------*/  
+  -------------------------------------------------------------------------------------*/
   var filterSort = function () {
     let isListActive = $(".sw-layout-list").hasClass("active");
     let originalProductsList = $("#listLayout .card-product").clone();
@@ -445,7 +717,7 @@
   };
 
   /* Switch Layout 
-  -------------------------------------------------------------------------------------*/   
+  -------------------------------------------------------------------------------------*/
   var swLayoutShop = function () {
     let isListActive = $(".sw-layout-list").hasClass("active");
     let userSelectedLayout = null;
@@ -577,7 +849,7 @@
   };
 
   /* Handle Sidebar Filter 
-  -------------------------------------------------------------------------------------*/ 
+  -------------------------------------------------------------------------------------*/
   var handleSidebarFilter = function () {
     $(".filterShop").click(function () {
       if ($(window).width() <= 1200) {
@@ -590,7 +862,7 @@
   };
 
   /* Handle Dropdown Filter 
-  -------------------------------------------------------------------------------------*/   
+  -------------------------------------------------------------------------------------*/
   var handleDropdownFilter = function () {
     if (".wrapper-filter-dropdown".length > 0) {
       $(".filterDropdown").click(function (event) {
