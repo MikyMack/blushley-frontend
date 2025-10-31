@@ -1303,7 +1303,7 @@ a:hover {
 
 .flat-spacing {
   padding-top: 80px;
-  padding-bottom: 80px;
+  margin-bottom: 80px;
 }
 
 .flat-spacing-2 {
@@ -1590,10 +1590,10 @@ a:hover {
   cursor: pointer;
   overflow: hidden;
   z-index: 100;
-  background-color: var(--main);
+  background-color: var(--white);
   border: 0;
-  bottom: 92px;
-  right: 20px;
+  bottom: 200px;
+  right: 22px;
   padding: 0;
   display: flex;
   align-items: center;
@@ -1603,17 +1603,30 @@ a:hover {
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+    border: 2px solid var(--line);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+
+}
+
+#scroll-top svg path {
+  stroke: var(--primary);
+  transition: stroke 0.3s ease;
 }
 #scroll-top.show {
   opacity: 1;
   visibility: visible;
 }
+
 #scroll-top.type-1 {
   bottom: 140px;
 }
 #scroll-top:hover {
-  transform: translateY(-5px);
-  background-color: var(--primary);
+  transform: translateY(-3px);
+  background: var(--primary);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+#scroll-top:hover svg path {
+  stroke:white;
 }
 
 /* Preload 
@@ -3902,7 +3915,7 @@ footer.has-pb {
 .tf-slideshow .wrap-pagination {
   position: absolute;
   z-index: 10;
-  bottom: 15px;
+  bottom: 40px;
   left: 0;
   right: 0;
 }
@@ -3981,9 +3994,10 @@ footer.has-pb {
 }
 
 .slider-default .box-content {
-  left: 15px;
+  left: 80px;
   right: 15px;
-  bottom: 50px;
+  bottom: 80px;
+ 
 }
 .slider-default.default-2 .box-content {
   left: 0;
@@ -15452,8 +15466,8 @@ ul.list-text.type-number {
     background-attachment: fixed;
   }
   #scroll-top {
-    bottom: 40px;
-    right: 40px;
+    bottom: 30px;
+    right: 20px;
   }
   #scroll-top.type-1 {
     bottom: 113px;
@@ -16055,6 +16069,17 @@ ul.list-text.type-number {
     font-size: 40px;
   }
 }
+@media (min-width: 769px) and (max-width:1100px){
+.slider-default .box-content {
+    left: 80px;
+    
+   /* right: 80px;*/
+   top: 90px;
+   margin:50px auto;
+
+  }
+
+}
 @media (min-width: 1200px) {
   .section-image-zoom.type-space-2 .thumbs-slider {
     max-width: 600px;
@@ -16298,11 +16323,7 @@ ul.list-text.type-number {
     padding-left: 60px;
     padding-right: 40px;
   }
-  .slider-default .box-content {
-    left: 80px;
-    right: 80px;
-    bottom: 80px;
-  }
+  
   .slider-default .box-content.type-2 {
     left: 60px;
     right: 60px;
@@ -16810,7 +16831,7 @@ ul.list-text.type-number {
     gap: 13px;
   }
   .tf-slideshow .wrap-slider {
-    height: 700px;
+    height: 550px;
   }
   .wrapper-shop.tf-col-7 {
     column-gap: 15px;
@@ -17244,9 +17265,9 @@ ul.list-text.type-number {
   .btn-style-6 {
     padding: 8px 10px;
   }
-  footer {
+  /*footer {
     padding-bottom: 67px;
-  }
+  }*/
   footer .footer-menu {
     margin-bottom: 30px;
   }
@@ -18784,297 +18805,6 @@ ul.list-text.type-number {
   margin-top: 100px;
 }
 
-/* Review Form Section Styles */
-
-.review-form-section {
-  background: #fffbf5;
-  padding: 40px 0;
-}
-.review-form-container {
-  max-width: 1100px;
-  margin: 0 auto !important;
-  padding: 0 20px;
-  text-align: center;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
-/* Trigger Button Styles */
-#formTrigger {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.form-trigger-text {
-  color: #666;
-  font-size: 15px;
-  margin: 0 0 15px 0;
-  text-align: center;
-  width: 100%;
-}
-
-.trigger-button {
-  padding: 12px 30px;
-  background: linear-gradient(135deg, #8b6f47 0%, #9b7f57 100%);
-  color: white;
-  font-size: 15px;
-  font-weight: 600;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(139, 111, 71, 0.3);
-}
-
-.trigger-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(139, 111, 71, 0.4);
-}
-
-.trigger-button:active {
-  transform: translateY(0);
-}
-
-/* Form Container */
-#formContainer {
-  display: none;
-  margin-top: 30px;
-  animation: slideDown 0.3s ease;
-}
-
-.form-wrapper {
-  background: #fafafa;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.form-wrapper-inner {
-  text-align: left;
-}
-
-.form-title {
-  font-size: 20px;
-  font-weight: 600;
-  color: #333;
-  margin: 0 0 20px 0;
-}
-
-/* Form Elements */
-.review-form {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-.form-group {
-  margin-bottom: 15px;
-}
-
-.form-group.full-width {
-  grid-column: 1 / -1;
-}
-
-.form-input,
-.form-select,
-.form-textarea {
-  width: 100%;
-  padding: 14px 16px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-size: 15px;
-  font-family: inherit;
-  transition: all 0.3s ease;
-  box-sizing: border-box;
-}
-
-.form-input:focus,
-.form-select:focus,
-.form-textarea:focus {
-  border-color: #8b6f47;
-  box-shadow: 0 0 0 3px rgba(139, 111, 71, 0.1);
-  outline: none;
-}
-
-.form-input::placeholder,
-.form-textarea::placeholder {
-  color: #999;
-}
-
-.form-select {
-  background-color: white;
-  cursor: pointer;
-}
-
-.form-textarea {
-  resize: vertical;
-  font-family: inherit;
-}
-
-/* Rating Stars */
-.rating-label {
-  display: block;
-  font-weight: 600;
-  color: #333;
-  margin-bottom: 10px;
-  font-size: 13px;
-}
-
-.rating-stars {
-  display: flex;
-  gap: 8px;
-}
-
-.rating-stars input[type="radio"] {
-  display: none;
-}
-
-.rating-stars label {
-  font-size: 24px;
-  cursor: pointer;
-  color: #ddd;
-  transition: color 0.2s;
-  display: inline-block;
-}
-
-.rating-stars label:hover {
-  color: #ffb800;
-}
-
-/* Checkbox */
-.form-checkbox-label {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  cursor: pointer;
-  font-size: 13px;
-  color: #555;
-}
-
-.form-checkbox-label input[type="checkbox"] {
-  width: 16px;
-  height: 16px;
-  cursor: pointer;
-  accent-color: #8b6f47;
-}
-
-/* Buttons */
-.form-buttons {
-  display: flex;
-  gap: 10px;
-}
-
-.btn-submit,
-.btn-cancel {
-  flex: 1;
-  padding: 11px;
-  font-size: 14px;
-  font-weight: 600;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border: none;
-}
-
-.btn-submit {
-  background: linear-gradient(135deg, #8b6f47 0%, #9b7f57 100%);
-  color: white;
-}
-
-.btn-submit:hover {
-  transform: translateY(-2px);
-}
-
-.btn-submit:active {
-  transform: translateY(0);
-}
-
-.btn-cancel {
-  background: #f0f0f0;
-  color: #333;
-  border: 1px solid #ddd;
-}
-
-.btn-cancel:hover {
-  background: #e5e5e5;
-}
-
-.btn-cancel:active {
-  background: #f0f0f0;
-}
-
-/* Success Message */
-.success-message {
-  display: none;
-  margin-top: 15px;
-  padding: 12px;
-  background: #d4edda;
-  color: #155724;
-  border-radius: 6px;
-  border: 1px solid #c3e6cb;
-  text-align: center;
-  font-weight: 500;
-  font-size: 14px;
-  animation: fadeIn 0.3s ease;
-}
-
-/* Animations */
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .review-form-container {
-    padding: 0 15px;
-  }
-
-  .form-wrapper {
-    padding: 20px;
-  }
-
-  .form-title {
-    font-size: 18px;
-    margin-bottom: 15px;
-  }
-
-  .trigger-button {
-    padding: 10px 25px;
-    font-size: 14px;
-  }
-
-  .form-buttons {
-    flex-direction: column;
-  }
-
-  .btn-submit,
-  .btn-cancel {
-    width: 100%;
-  }
-}
 
 /**********About us extra code********/
 
@@ -20052,11 +19782,17 @@ ul.list-text.type-number {
 
 @media (max-width:560px) {
     .page-title-shop {
-        min-height: 300px;
+        min-height: 360px;
     }
   
 }
 
+@media (min-width:561px) and (max-width:768px) {
+    .page-title-shop {
+        min-height: 450px;
+    }
+  
+}
 /**beautician services page extra css***/
 
 /* Minimal style additions for beautician-specific elements */
@@ -20213,7 +19949,7 @@ ul.list-text.type-number {
 }
 
 /* Location Modal */
-.location-modal {
+.beautician-location-modal {
     position: fixed;
     top: 0;
     left: 0;
@@ -20236,7 +19972,7 @@ ul.list-text.type-number {
     }
 }
 
-.modal-content {
+.beautician-modal-content {
     background: white;
     padding: 30px;
     border-radius: 12px;
@@ -20260,7 +19996,7 @@ ul.list-text.type-number {
     }
 }
 
-.modal-content h4 {
+.beautician-modal-content h4 {
     margin: 0 0 20px 0;
     font-size: 22px;
     color: #333;
@@ -20269,7 +20005,7 @@ ul.list-text.type-number {
 }
 
 /* Location List */
-.full-location-list {
+.beautician-full-location-list {
     list-style: none;
     padding: 0;
     margin: 20px 0;
@@ -20278,7 +20014,7 @@ ul.list-text.type-number {
     gap: 10px;
 }
 
-.full-location-list li {
+.beautician-full-location-list li {
     padding: 10px 15px;
     background: #f8f3ee;
     border-radius: 8px;
@@ -20288,13 +20024,13 @@ ul.list-text.type-number {
     transition: all 0.3s ease;
 }
 
-.full-location-list li:hover {
+.beautician-full-location-list li:hover {
     background: #e8ddd0;
     transform: translateY(-2px);
 }
 
 /* Close Button */
-.close-modal {
+.beautician-close-modal {
     width: 100%;
     padding: 12px;
     background-color: #c9a582;
@@ -20307,23 +20043,76 @@ ul.list-text.type-number {
     transition: background-color 0.3s ease;
 }
 
-.close-modal:hover {
+.beautician-close-modal:hover {
     background-color: #a08366;
 }
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
-    .modal-content {
+    .beautician-modal-content {
         width: 95%;
         padding: 20px;
     }
 
-    .full-location-list {
+    .beautician-full-location-list {
         grid-template-columns: 1fr;
     }
 
-    .modal-content h4 {
+    .beautician-modal-content h4 {
         font-size: 18px;
+    }
+}
+
+/* Mobile Responsive for Beautician Cards */
+@media (max-width: 767px) {
+    .card-product.style-list {
+        flex-direction: column !important;
+    }
+    
+    .card-product.style-list .card-product-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-bottom: 15px;
+    }
+    
+    .card-product.style-list .card-product-info {
+        width: 100% !important;
+        padding-left: 0 !important;
+    }
+    
+    .card-product.style-list .product-img {
+        width: 100%;
+        padding-bottom: 120%; /* Aspect ratio */
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+    }
+    
+    .card-product.style-list .product-img img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    /* Adjust buttons for mobile */
+    .list-product-btn {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .btn-main-product {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    /* Location info mobile adjustment */
+    .location-info {
+        width: 100%;
+        flex-wrap: wrap;
     }
 }
 /***********home page section -bridal collections***********/
@@ -21079,6 +20868,1015 @@ ul.list-text.type-number {
 }
 
 
+/* Review Form Section Styles */
+
+
+.review-form-container {
+  max-width: 1100px;
+  margin: 0 auto !important;
+  padding: 0 20px;
+  text-align: center;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+
+
+/* Form Container */
+#formContainer {
+  display: none;
+  margin-top: 30px;
+  margin-bottom:80px;
+  animation: slideDown 0.3s ease;
+}
+
+.form-wrapper {
+  background: #fafafa;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.form-wrapper-inner {
+  text-align: left;
+}
+
+.form-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 20px 0;
+}
+
+/* Form Elements */
+.review-form {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: #8b6f47;
+  box-shadow: 0 0 0 3px rgba(139, 111, 71, 0.1);
+  outline: none;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: #999;
+}
+
+.form-select {
+  background-color: white;
+  cursor: pointer;
+}
+
+.form-textarea {
+  resize: vertical;
+  font-family: inherit;
+}
+
+/* Rating Stars */
+.rating-label {
+  display: block;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.rating-stars {
+  display: flex;
+  gap: 8px;
+
+  
+}
+
+.rating-stars input[type="radio"] {
+  display: none;
+}
+
+.rating-stars label {
+  font-size: 24px;
+  cursor: pointer;
+  color: #ddd;
+  transition: color 0.2s;
+  display: inline-block;
+}
+
+.rating-stars label:hover {
+  color: #ffb800;
+}
+
+/* Checkbox */
+.form-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #555;
+}
+
+.form-checkbox-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #8b6f47;
+}
+
+/* Buttons */
+.form-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-submit,
+.btn-cancel {
+  flex: 1;
+  padding: 11px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn-submit {
+  background: linear-gradient(135deg, #8b6f47 0%, #9b7f57 100%);
+  color: white;
+}
+
+.btn-submit:hover {
+  transform: translateY(-2px);
+}
+
+.btn-submit:active {
+  transform: translateY(0);
+}
+
+.btn-cancel {
+  background: #f0f0f0;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.btn-cancel:hover {
+  background: #e5e5e5;
+}
+
+.btn-cancel:active {
+  background: #f0f0f0;
+}
+
+/* Success Message */
+.success-message {
+  display: none;
+  margin-top: 15px;
+  padding: 12px;
+  background: #d4edda;
+  color: #155724;
+  border-radius: 6px;
+  border: 1px solid #c3e6cb;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Animations */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .review-form-container {
+    padding: 0 15px;
+  }
+
+  .form-wrapper {
+    padding: 20px;
+  }
+
+  .form-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .trigger-button {
+    padding: 10px 25px;
+    font-size: 14px;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+  }
+
+  .btn-submit,
+  .btn-cancel {
+    width: 100%;
+  }
+}
+
+
+/* ===================================
+   REVIEW CTA BANNER SECTION
+   =================================== */
+
+/* Review CTA Banner - Unique naming */
+.review-cta-banner {
+    background: var(--white);
+    border: 2px solid var(--line);
+    border-radius: 20px;
+    padding: 35px 40px;
+    margin: 40px auto;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    box-shadow: var(--shadow-soft);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.review-cta-banner:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-medium);
+    border-color: var(--secondary);
+}
+
+/* Animated decorations */
+.review-cta-banner::before {
+    content: '✨';
+    position: absolute;
+    top: 15px;
+    left: 30px;
+    font-size: 32px;
+    opacity: 0.3;
+    animation: review-sparkle 2.5s ease-in-out infinite;
+}
+
+.review-cta-banner::after {
+    content: '⭐';
+    position: absolute;
+    bottom: 15px;
+    right: 30px;
+    font-size: 32px;
+    opacity: 0.3;
+    animation: review-sparkle 2.5s ease-in-out infinite 1.2s;
+}
+
+@keyframes review-sparkle {
+    0%, 100% { 
+        transform: scale(1) rotate(0deg);
+        opacity: 0.25;
+    }
+    50% { 
+        transform: scale(1.15) rotate(15deg);
+        opacity: 0.5;
+    }
+}
+
+.review-cta-content {
+    flex: 1;
+    z-index: 1;
+}
+
+.review-cta-heading {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--main);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.review-cta-icon {
+    font-size: 32px;
+    animation: review-bounce 2s ease-in-out infinite;
+}
+
+@keyframes review-bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+.review-cta-description {
+    font-size: 16px;
+    color: var(--text-light);
+    line-height: 1.5;
+    margin: 0;
+}
+
+.review-cta-btn {
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    padding: 18px 45px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    white-space: nowrap;
+}
+
+.review-cta-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.6s;
+}
+
+.review-cta-btn:hover::before {
+    left: 100%;
+}
+
+.review-cta-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: var(--shadow-medium);
+    background: var(--secondary);
+}
+
+.review-cta-btn:active {
+    transform: translateY(-1px) scale(1.02);
+}
+
+/* ===================================
+   REVIEW FORM CONTAINER
+   =================================== */
+
+/* Form Container - Hidden by default */
+#formContainer {
+    display: none;
+    margin-top: 30px;
+    animation: reviewFormSlideDown 0.3s ease;
+}
+
+@keyframes reviewFormSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-wrapper {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-soft);
+    max-width: 900px;
+    margin: 0 auto;
+    border: 1px solid var(--line);
+}
+
+.form-wrapper-inner {
+    text-align: left;
+}
+
+.form-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--main);
+    margin: 0 0 25px 0;
+}
+
+/* ===================================
+   FORM ELEMENTS
+   =================================== */
+
+.review-form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 0;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    background: var(--white);
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px var(--rgba-primary);
+    outline: none;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: #999;
+}
+
+.form-select {
+    cursor: pointer;
+}
+
+.form-textarea {
+    resize: vertical;
+    font-family: inherit;
+    min-height: 120px;
+}
+
+/* ===================================
+   RATING STARS
+   =================================== */
+
+.rating-label {
+    display: block;
+    font-weight: 600;
+    color: var(--main);
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.rating-stars {
+    display: flex;
+    gap: 8px;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.rating-stars input[type="radio"] {
+    display: none;
+}
+
+.rating-stars label {
+    font-size: 32px;
+    cursor: pointer;
+    color: #ddd;
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+.rating-stars label:hover,
+.rating-stars label:hover ~ label,
+.rating-stars input:checked ~ label {
+    color: #FFB800;
+    transform: scale(1.1);
+}
+
+/* ===================================
+   CHECKBOX
+   =================================== */
+
+.form-checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+.form-checkbox-label input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: var(--primary);
+}
+
+/* ===================================
+   FORM BUTTONS
+   =================================== */
+
+.form-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-submit,
+.btn-cancel {
+    flex: 1;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn-submit {
+    background: var(--primary);
+    color: var(--white);
+    box-shadow: var(--shadow-soft);
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+    background: var(--secondary);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+.btn-cancel {
+    background: var(--surface);
+    color: var(--main);
+    border: 1px solid var(--line);
+}
+
+.btn-cancel:hover {
+    background: var(--line);
+}
+
+.btn-cancel:active {
+    background: var(--surface);
+}
+
+/* ===================================
+   SUCCESS MESSAGE
+   =================================== */
+
+.success-message {
+    display: none;
+    margin-top: 20px;
+    padding: 18px;
+    background: var(--cream);
+    color: var(--main);
+    border-radius: 10px;
+    border: 2px solid var(--primary);
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+
+@media (max-width: 768px) {
+    /* Banner responsive */
+    .review-cta-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 25px;
+        margin: 30px 15px;
+    }
+
+    .review-cta-heading {
+        font-size: 22px;
+        justify-content: center;
+    }
+
+    .review-cta-description {
+        font-size: 15px;
+    }
+
+    .review-cta-btn {
+        width: 100%;
+        padding: 16px 35px;
+    }
+
+    /* Form responsive */
+    .form-wrapper {
+        padding: 30px 20px;
+    }
+
+    .form-title {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .review-form {
+        grid-template-columns: 1fr;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+    }
+
+    .btn-submit,
+    .btn-cancel {
+        width: 100%;
+    }
+
+    .rating-stars label {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .review-cta-heading {
+        font-size: 20px;
+    }
+
+    .review-cta-icon {
+        font-size: 28px;
+    }
+
+    .review-cta-description {
+        font-size: 14px;
+    }
+
+    .form-wrapper {
+        padding: 25px 15px;
+    }
+}
+
+
+/**********Beautician services page : Review popup styles***********/
+
+
+   
+        /* Overlay */
+        .review-popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 9998;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .review-popup-overlay.active {
+            display: block;
+        }
+
+        /* Popup Container */
+        .review-popup-container {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 800px;
+            max-height: 85vh;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            z-index: 9999;
+            overflow: hidden;
+            animation: slideUp 0.3s ease;
+        }
+
+        .review-popup-container.active {
+            display: block;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translate(-50%, -45%);
+            }
+            to {
+                opacity: 1;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        /* Popup Header */
+        .review-popup-header {
+            background: linear-gradient(135deg, #8b6f47 0%, #9b7f57 100%);
+            color: white;
+            padding: 20px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .review-popup-title {
+            font-size: 22px;
+            font-weight: 600;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .review-popup-close {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            font-size: 24px;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .review-popup-close:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: rotate(90deg);
+        }
+
+        /* Popup Body */
+        .review-popup-body {
+            padding: 25px;
+            max-height: calc(85vh - 180px);
+            overflow-y: auto;
+        }
+
+        /* Beautician Info Section */
+        .beautician-info-section {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            background: #fafafa;
+            border-radius: 12px;
+            margin-bottom: 25px;
+        }
+
+        .beautician-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #8b6f47;
+        }
+
+        .beautician-details h3 {
+            margin: 0 0 8px 0;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .beautician-rating {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+        }
+
+        .stars-display {
+            color: #FFB800;
+            font-size: 18px;
+        }
+
+        /* Write Review Button */
+        .write-review-btn {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #8b6f47 0%, #9b7f57 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 25px;
+        }
+
+        .write-review-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(139, 111, 71, 0.3);
+        }
+
+        /* Review Form Section (Hidden by default) */
+        .review-form-section {
+            display: none;
+            background: #fafafa;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            border: 2px solid #8b6f47;
+        }
+
+        .review-form-section.active {
+            display: block;
+            animation: slideDown 0.3s ease;
+        }
+
+        /* Reviews List */
+        .reviews-list-section {
+            margin-top: 20px;
+        }
+
+        .reviews-list-header {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ddd;
+        }
+
+        /* Individual Review Card */
+        .review-card {
+            background: #fafafa;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            transition: all 0.3s ease;
+        }
+
+        .review-card:hover {
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-color: #8b6f47;
+        }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .reviewer-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .reviewer-avatar {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #8b6f47 0%, #9b7f57 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .reviewer-details h4 {
+            margin: 0 0 4px 0;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .review-date {
+            font-size: 13px;
+            color: #999;
+        }
+
+        .review-stars {
+            color: #FFB800;
+            font-size: 16px;
+        }
+
+        .review-text {
+            margin: 12px 0 0 0;
+            color: #555;
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        /* No Reviews State */
+        .no-reviews {
+            text-align: center;
+            padding: 40px 20px;
+            color: #999;
+        }
+
+        .no-reviews-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+            opacity: 0.3;
+        }
+
+        /* Scrollbar Styling */
+        .review-popup-body::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .review-popup-body::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        .review-popup-body::-webkit-scrollbar-thumb {
+            background: #8b6f47;
+            border-radius: 10px;
+        }
+
+        .review-popup-body::-webkit-scrollbar-thumb:hover {
+            background: #9b7f57;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .review-popup-container {
+                width: 95%;
+                max-height: 90vh;
+            }
+
+            .review-popup-title {
+                font-size: 18px;
+            }
+
+            .beautician-info-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .review-popup-body {
+                padding: 20px 15px;
+            }
+        }
+    
+
+
+/**************Beautician services page : Book service modal styles***********/
+
+        /* Modal Overlay */
 
 
 .sbm-modal-overlay {
@@ -21468,3 +22266,1601 @@ ul.list-text.type-number {
         .btn-main-product:hover {
             transform: translateY(-2px);
         }
+
+        /* Service Type Selection */
+.sbm-service-type-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.sbm-service-type-option {
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.sbm-service-type-option:hover {
+    border: 2px solid #e0e0e0;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+}
+
+.sbm-service-type-option.active {
+   border-color: var(--primary);
+    background: var(--gradient-light);
+    box-shadow: 0 4px 12px rgba(175, 158, 73, 0.3);
+}
+
+.sbm-service-type-option.active::after {
+    content: "✓";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--primary);
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.sbm-service-type-icon {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.sbm-service-type-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.sbm-service-type-desc {
+    font-size: 13px;
+    color: #7f8c8d;
+}
+
+/* Home Service Note */
+.sbm-home-service-note {
+    background: #fff8e1;
+    border: 1px solid #ffd54f;
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #f57c00;
+}
+
+.sbm-note-icon {
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+/* Service badges for availability */
+.sbm-service-badge {
+    display: inline-block;
+    font-size: 10px;
+    padding: 3px 8px;
+    border-radius: 12px;
+    margin-left: 8px;
+    font-weight: 600;
+}
+
+.sbm-service-badge.salon-only {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.sbm-service-badge.home-available {
+    background: #e8f5e9;
+    color: #388e3c;
+}
+
+.sbm-service-item.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    position: relative;
+}
+
+.sbm-service-item.disabled::after {
+    content: "Not available for home service";
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+.sbm-service-item.disabled:hover::after {
+    opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .sbm-service-type-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.sbm-map-container {
+    margin-top: 8px;
+}
+
+.sbm-map-wrapper {
+    margin-top: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+}
+
+.sbm-map-wrapper:hover {
+    border-color: var(--primary);
+}
+
+#map {
+    width: 100%;
+    height: 300px;
+    cursor: crosshair;
+}
+
+.sbm-coordinates {
+    margin-top: 12px;
+    padding: 12px 15px;
+    background-color: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #333;
+}
+
+.sbm-coordinates span {
+    color: #666;
+}
+
+/* Service card disabled state enhancement */
+.sbm-service-card.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: #f9fafb;
+}
+
+.sbm-service-card.disabled:hover {
+    transform: none;
+    border-color: #e0e0e0;
+    box-shadow: none;
+}
+
+@media (max-width: 768px) {
+    #map {
+        height: 250px;
+    }
+}
+        /************Nav links for services *************/
+
+        /* Make Salon at Home & Book a Salon stand out */
+/* Base styling for the special links - NO color change */
+/* Base styling for the special links - NO color change */
+.salon-at-home-link .item-link,
+.book-salon-link .item-link {
+  font-weight: 700 !important;
+  font-size: 16px !important;
+  color: #8B4049 !important;
+  white-space: nowrap;
+  position: relative;
+  display: inline-block;
+}
+
+/* Golden glitter particles - smaller dots (4x smaller) */
+.salon-at-home-link .item-link::before,
+.book-salon-link .item-link::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 1.5px;  /* 4 times smaller */
+  height: 1.5px;
+  background: #FFD700;
+  border-radius: 50%;
+  box-shadow: 
+    /* Row 1 */
+    -25px 2px 0 0.4px #FFD700,
+    -18px 5px 0 0.5px #FFC700,
+    -10px 3px 0 0.25px #FFD700,
+    -3px 6px 0 0.4px #dccc5f,
+    5px 4px 0 0.5px #FFD700,
+    12px 2px 0 0.25px #FFC700,
+    20px 5px 0 0.4px #FFD700,
+    28px 3px 0 0.5px #FFDF00,
+    /* Row 2 */
+    -22px -3px 0 0.25px #FFD700,
+    -15px -1px 0 0.4px #FFC700,
+    -7px -4px 0 0.5px #FFD700,
+    2px -2px 0 0.25px #FFDF00,
+    10px -3px 0 0.4px #FFD700,
+    18px -1px 0 0.5px #FFC700,
+    25px -4px 0 0.25px #FFD700,
+    /* Row 3 */
+    -20px 8px 0 0.4px #FFDF00,
+    -12px 10px 0 0.25px #FFD700,
+    -4px 9px 0 0.5px #FFC700,
+    8px 11px 0 0.4px #FFD700,
+    16px 9px 0 0.25px #FFDF00,
+    24px 10px 0 0.5px #FFD700;
+  animation: glitterRise 3s infinite ease-out;
+  opacity: 0;
+}
+
+/* Different timing for second link */
+.book-salon-link .item-link::before {
+  animation-delay: 1.5s;
+}
+
+@keyframes glitterRise {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(0.3);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(-10px) scale(1);
+  }
+  25% {
+    opacity: 0.9;
+    transform: translateY(-25px) scale(0.9);
+  }
+  40% {
+    opacity: 0.7;
+    transform: translateY(-40px) scale(0.7);
+  }
+  60% {
+    opacity: 0.4;
+    transform: translateY(-60px) scale(0.5);
+  }
+  80% {
+    opacity: 0.15;
+    transform: translateY(-80px) scale(0.3);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100px) scale(0.1);
+  }
+}
+
+/* NO hover color change */
+.salon-at-home-link .item-link:hover,
+.book-salon-link .item-link:hover {
+  color: #8B4049 !important;
+}
+
+#bookingModal {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+#bookingModal.sbm-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/************Beautician profile page ************/
+
+.beautician-profile-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Profile Header Section */
+        .beautician-profile-header {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .beautician-profile-main {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .beautician-profile-info h1 {
+            font-size: 32px;
+            color: #8b7355;
+            margin-bottom: 10px;
+        }
+
+        .beautician-profile-id {
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .beautician-profile-rating {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .beautician-profile-stars {
+            color: #ffa500;
+            font-size: 18px;
+        }
+
+        .beautician-profile-review-count {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .beautician-profile-bio {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            font-size: 15px;
+        }
+
+        .beautician-profile-experience {
+            background: #f9f4ef;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            border-left: 4px solid #a8907d;
+        }
+
+        .beautician-profile-experience strong {
+            color: #8b7355;
+        }
+
+        /* Location Section */
+        .beautician-location-section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .beautician-section-title {
+            font-size: 24px;
+            color: #8b7355;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .beautician-location-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .beautician-location-tag {
+            background: #f9f4ef;
+            padding: 12px 18px;
+            border-radius: 8px;
+            text-align: center;
+            color: #8b7355;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        /* Skills Section */
+        .beautician-skills-section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .beautician-skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .beautician-skill-card {
+            background: linear-gradient(135deg, #a8907d 0%, #c4b5a0 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+            transition: transform 0.3s;
+        }
+
+        .beautician-skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Services Section */
+        .beautician-services-section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .beautician-services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .beautician-service-card {
+            border: 2px solid #e8e0d8;
+            padding: 25px;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .beautician-service-card:hover {
+            border-color: #a8907d;
+            box-shadow: 0 4px 12px rgba(168, 144, 125, 0.15);
+        }
+
+        .beautician-service-card h3 {
+            color: #8b7355;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .beautician-service-card p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .beautician-service-price {
+            color: #8b7355;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        /* Portfolio Section */
+        .beautician-portfolio-section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .beautician-portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .beautician-portfolio-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            height: 300px;
+            background: #f0f0f0;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .beautician-portfolio-item:hover {
+            transform: scale(1.05);
+        }
+
+        .beautician-portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .beautician-portfolio-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            padding: 20px 15px 15px;
+            font-size: 14px;
+        }
+
+        /* Booking Section */
+        .beautician-booking-section {
+            background: linear-gradient(135deg, #a8907d 0%, #c4b5a0 100%);
+            border-radius: 12px;
+            padding: 40px 30px;
+            text-align: center;
+            color: #fff;
+            box-shadow: 0 8px 30px rgba(168, 144, 125, 0.4);
+            position: sticky;
+            top: 20px;
+            height: fit-content;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .beautician-booking-section h2 {
+            font-size: 26px;
+            margin-bottom: 10px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .beautician-booking-section p {
+            margin-bottom: 30px;
+            font-size: 14px;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+
+        .beautician-book-button {
+            background: white;
+            color: #8b7355;
+            border: none;
+            padding: 16px 40px;
+            font-size: 15px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            width: 100%;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: center;
+            display: block;
+        }
+
+        .beautician-book-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(0,0,0,0.2);
+            background: #f8f8f8;
+        }
+
+        .beautician-availability {
+            display: inline-block;
+            background: #4caf50;
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .beautician-booking-info {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-size: 13px;
+        }
+
+        .beautician-booking-info p {
+            margin: 8px 0;
+            opacity: 1;
+        }
+
+        .beautician-booking-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .beautician-profile-header {
+                grid-template-columns: 1fr;
+            }
+
+            .beautician-booking-section {
+                position: relative;
+                top: 0;
+            }
+
+            .beautician-services-grid,
+            .beautician-portfolio-grid,
+            .beautician-skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .beautician-services-grid,
+            .beautician-portfolio-grid,
+            .beautician-skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        /***********Home page slider responsive code****************/
+
+        /* Reduce main heading size for all slides */
+.slider-default .box-title-slider .heading.title-display {
+    font-size: 70px; 
+    line-height: 1.1;
+}
+/* Add to your existing CSS file */
+@media (max-width: 767px) {
+  /* Make slider height appropriate for mobile */
+
+  /* Hide <br> tags on mobile */
+
+    .slider-default .box-title-slider .heading.title-display br {
+        display: none;
+    }
+
+  .tf-slideshow .wrap-slider {
+    min-height: 550px;
+    height: 580px;
+  }
+  
+  .wrap-slider img {
+    object-position: center center;
+    height: 100%;
+  }
+  
+  /* Position content with background overlay */
+  .slider-default .box-content {
+     left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0 15px 60px 15px;
+    background: linear-gradient(to top, rgba(0,0,0,0.4) 0%, transparent 100%);
+  }
+  
+  .slider-default .content-slider {
+    background: rgba(255, 255, 255, 0.5);
+  
+    padding: 20px 16px;
+    border-radius: 16px;
+    gap: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Ensure dark text color */
+  .slider-effect-fade .swiper-slide.swiper-slide-active .fade-item {
+    color: #7B1E1E !important;
+  }
+  
+  /* Adjust font sizes for mobile */
+  .box-title-slider .subheading {
+    font-size: 11px;
+    line-height:1.4;
+  }
+  
+.slider-default .box-title-slider .heading.title-display  {
+    font-size: 22px;
+    line-height: 1.3;
+  }
+  
+  /* Reduce button size and font for mobile */
+ /* .box-btn-slider .tf-btn {
+    padding: 10px 18px;
+    font-size: 13px;
+    height: 50px;
+    width: 100%;
+    max-width: 180px;
+  }*/
+   .box-btn-slider .tf-btn .text {
+    font-size: 13px;
+  }
+  .box-btn-slider .tf-btn .icon {
+    font-size: 16px;
+  }
+
+  
+  /* Reduce button size for mobile */
+  .slider-effect-fade .box-btn-slider .tf-btn {
+    padding: 10px 16px;
+    font-size: 13px; 
+    min-width: auto;
+   
+  }
+  
+ 
+  
+  .box-btn-slider .tf-btn .icon {
+    font-size: 14px; /* Reduced from 16px */
+    margin-left: 4px; /* Reduce space between text and icon */
+  }
+  
+  .swiper-slide:nth-child(1) .wrap-slider img {
+    object-position: 75% center;
+  }
+  
+  /* Second slide - show center */
+  .swiper-slide:nth-child(2) .wrap-slider img {
+    object-position:90% center;
+  }
+  
+  /* Third slide - show more of left */
+  .swiper-slide:nth-child(3) .wrap-slider img {
+    object-position: 15% center;
+  }
+ 
+  
+
+}
+
+
+
+
+
+/* Tablet optimization */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .slider-default .box-title-slider .heading.title-display {
+        font-size: 36px;
+        line-height: 1.15;
+    }
+}
+
+/********Salon page styles fixex *****/
+
+.wg-pagination  {
+    display: flex !important;
+
+  
+}
+
+.salon-pagination{
+
+    margin:50px 0px;
+    
+}
+
+
+/* Contact Icons Styling */
+.edug-contact-icons {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    opacity: 0;
+transform: translateY(20px);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  
+    
+       
+   
+}
+
+.edug-contact-icons.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all; 
+  
+}
+
+.edug-contact-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--white);
+    color: var(--main);
+    font-size: 24px;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.edug-contact-icon:hover {
+    transform: translateY(-3px); /* CHANGE: was scale(1.1) */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12); /* CHANGE: softer shadow */
+    background: var(--surface);
+}
+
+.edug-contact-icon[data-tooltip] {
+  position: relative; /* Needed for tooltip positioning */
+  overflow: visible;
+}
+.edug-contact-icon[data-tooltip]::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  right: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--primary);
+  color:white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  white-space: nowrap;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: inherit;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, right 0.2s ease;
+}
+
+
+.edug-contact-icon[data-tooltip]:hover::before {
+    opacity: 1;
+  right: 55px; /* small movement for smoothness */
+}
+
+/* Icon colors */
+.edug-contact-icon:nth-child(1) {
+    background: var(--white);
+    color: var(--primary);
+}
+
+.edug-contact-icon:nth-child(1):hover {
+      color: #b89850; /* CHANGE: was #128C7E */
+    background: var(--surface);
+}
+.edug-contact-icon:nth-child(2) {
+    background: var(--white);
+    color: var(--primary);
+}
+
+.edug-contact-icon:nth-child(2):hover {
+    color: #b89850;
+    background: var(--surface);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .edug-contact-icons {
+        bottom: 260px;
+        right: 20px;
+    }
+    
+    .edug-contact-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+}
+
+/*******Login page extra********/
+
+.divider-or {
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+}
+
+.divider-or::before,
+.divider-or::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 45%;
+    height: 1px;
+    background-color: #ddd;
+}
+
+.divider-or::before {
+    left: 0;
+}
+
+.divider-or::after {
+    right: 0;
+}
+
+.divider-or span {
+    background: #fff;
+    padding: 0 15px;
+    color: #999;
+    font-size: 14px;
+}
+
+.tf-btn.btn-google {
+    background: #fff;
+    border: 1px solid #ddd;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.tf-btn.btn-google:hover {
+    background: var(--gradient-maroon);
+    border-color: #ccc;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.tf-btn.btn-google svg {
+    flex-shrink: 0;
+}
+
+.ln-signin {
+  background: linear-gradient(135deg, #f5e6d3 0%, #d4a574 100%);
+  
+        padding:100px;
+        border-radius:20px;
+}
+
+/**************toolbar in mobile *******/
+
+ /* Mobile Navigation Wrapper */
+    .mobile-nav-wrapper {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 60;
+        transition: transform 0.3s ease-in-out;
+        display: none;
+    }
+
+    .mobile-nav-wrapper.hide {
+        transform: translateY(100%);
+    }
+
+    .mobile-nav-wrapper.show {
+        transform: translateY(0);
+    }
+
+    /* Floating Top Toolbar */
+    .tf-toolbar-top {
+        display: flex;
+        padding: 10px 0;
+        overflow-x: auto;
+        overflow-y: hidden;
+        background: var(--gradient-maroon);
+        margin: 0 15px 10px 15px;
+        border-radius: 25px;
+        box-shadow: 0 -2px 10px rgba(0, 36, 71, 0.2);
+         margin: 0 15px 100px 15px;
+    }
+
+    .tf-toolbar-top .toolbar-item {
+        flex: 1 0 25%;
+        position: relative;
+    }
+
+    .tf-toolbar-top .toolbar-item a {
+        width: 100%;
+        padding-right: 10px;
+        padding-left: 10px;
+        height: 40px;
+        gap: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-decoration: none;
+    }
+
+    .tf-toolbar-top .toolbar-item a .toolbar-icon {
+        position: relative;
+    }
+
+    .tf-toolbar-top .toolbar-item a .toolbar-icon svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .tf-toolbar-top .toolbar-item a .toolbar-icon svg path {
+        stroke: #fff;
+        fill: none;
+    }
+
+    .tf-toolbar-top .toolbar-item a .toolbar-icon .toolbar-count {
+        position: absolute;
+        top: -4px;
+        right: -8px;
+        width: 16px;
+        height: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--primary);
+        border-radius: 50%;
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 18px;
+        color: var(--white);
+    }
+
+    .tf-toolbar-top .toolbar-item a .toolbar-label {
+        font-size: 11px;
+        font-weight: 500;
+        line-height: 16px;
+        color: #fff;
+        transition: all 0.3s ease;
+    }
+
+    .tf-toolbar-top .toolbar-item a:hover .toolbar-label {
+        font-weight: 600;
+    }
+
+    /* Override bottom toolbar to be visible */
+    .tf-toolbar-bottom {
+        display: flex !important;
+    }
+
+    /* Show only on mobile devices */
+    @media (max-width: 520px) {
+        .mobile-nav-wrapper {
+            display: block;
+        }
+    }
+
+    @media (min-width: 521px) {
+        .mobile-nav-wrapper {
+            display: none !important;
+        }
+    }
+
+    /*******Extra code for Search menu in navbar  ***********/
+
+    /* Search Filter Section - Unique Namespaced Styles */
+/* Search Bar with Filter Button Layout */
+.modal-search .search-bar-wrapper {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.modal-search .search-bar-wrapper .form-search {
+    flex: 1;
+}
+
+/* Search Filter Toggle Button */
+.modal-search .search-filter-toggle-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    background-color: var(--white, #ffffff);
+    border: 1px solid var(--line, #e0e0e0);
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--main, #333);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    height: fit-content;
+}
+
+.modal-search .search-filter-toggle-btn:hover {
+    border-color: var(--main, #181818);
+    background-color: var(--surface, #f8f9fa);
+}
+
+.modal-search .search-filter-toggle-btn.active {
+    background-color: var(--main, #181818);
+    color: var(--white, #ffffff);
+    border-color: var(--main, #181818);
+}
+
+.modal-search .search-filter-toggle-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+.modal-search .search-filter-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px;
+    height: 20px;
+    padding: 0 6px;
+    background-color: var(--main, #181818);
+    color: var(--white, #ffffff);
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.modal-search .search-filter-toggle-btn.active .search-filter-count {
+    background-color: var(--white, #ffffff);
+    color: var(--main, #181818);
+}
+
+/* Responsive: Stack on mobile */
+@media (max-width: 576px) {
+    .modal-search .search-bar-wrapper {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .modal-search .search-filter-toggle-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Rest of filter section styles remain the same */
+.modal-search .search-filter-section {
+    padding: 20px;
+    background-color: var(--surface, #f8f9fa);
+    border-radius: 8px;
+    margin-top: 20px;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-search .search-filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.modal-search .search-filter-title {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.modal-search .search-clear-filters {
+    padding: 6px 14px;
+    background-color: var(--main, #181818);
+    color: var(--white, #ffffff);
+    border: none;
+    border-radius: 20px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.modal-search .search-clear-filters:hover {
+    opacity: 0.8;
+}
+
+.modal-search .search-filter-group {
+    margin-bottom: 20px;
+}
+
+.modal-search .search-filter-group:last-child {
+    margin-bottom: 0;
+}
+
+.modal-search .search-filter-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    color: var(--main, #333);
+}
+
+.modal-search .search-filter-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.modal-search .search-filter-chip {
+    padding: 8px 16px;
+    background-color: var(--white, #ffffff);
+    border: 1px solid var(--line, #e0e0e0);
+    border-radius: 20px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--main, #666);
+    user-select: none;
+}
+
+.modal-search .search-filter-chip:hover {
+    border-color: var(--main, #181818);
+    color: var(--main, #181818);
+}
+
+.modal-search .search-filter-chip.active {
+    background-color: var(--main, #181818);
+    color: var(--white, #ffffff);
+    border-color: var(--main, #181818);
+}
+
+
+/***** Booking history page *********/
+
+/* My Bookings Button */
+        .sbm-my-bookings-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sbm-my-bookings-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(201, 169, 97, 0.3);
+        }
+
+        /* Container */
+        .sbm-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Filter Tabs */
+        .sbm-filter-tabs {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .sbm-tab-btn {
+            padding: 12px 24px;
+            background: white;
+            border: 2px solid var(--line);
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+        }
+
+        .sbm-tab-btn:hover {
+            border-color: var(--primary);
+        }
+
+        .sbm-tab-btn.sbm-active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        /* Booking Cards */
+        .sbm-bookings-grid {
+            display: grid;
+            gap: 20px;
+        }
+
+        .sbm-booking-card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .sbm-booking-card:hover {
+            box-shadow: 0 8px 24px rgba(201, 169, 97, 0.15);
+            border-color: var(--primary);
+        }
+
+        .sbm-booking-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 16px;
+        }
+
+        .sbm-salon-info h3 {
+            font-size: 20px;
+            color: var(--text-dark);
+            margin-bottom: 6px;
+        }
+
+        .sbm-booking-id {
+            font-size: 13px;
+            color: var(--text-light);
+        }
+
+        .sbm-status-badge {
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .sbm-status-upcoming {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .sbm-status-completed {
+            background: #e3f2fd;
+            color: #1565c0;
+        }
+
+        .sbm-status-cancelled {
+            background: #ffebee;
+            color: #c62828;
+        }
+
+        .sbm-booking-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 16px;
+            padding: 16px;
+            background: var(--surface);
+            border-radius: 8px;
+        }
+
+        .sbm-detail-item {
+            display: flex;
+            align-items: start;
+            gap: 10px;
+        }
+
+        .sbm-detail-icon {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 16px;
+        }
+
+        .sbm-detail-content h4 {
+            font-size: 12px;
+            color: var(--text-light);
+            margin-bottom: 4px;
+            text-transform: uppercase;
+        }
+
+        .sbm-detail-content p {
+            font-size: 14px;
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .sbm-services-list {
+            margin-bottom: 16px;
+        }
+
+        .sbm-services-list h4 {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 8px;
+        }
+
+        .sbm-service-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .sbm-service-tag {
+            padding: 6px 12px;
+            background: rgba(201, 169, 97, 0.1);
+            color: var(--primary);
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .sbm-booking-actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .sbm-action-btn {
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .sbm-btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .sbm-btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(201, 169, 97, 0.3);
+        }
+
+        .sbm-btn-secondary {
+            background: white;
+            color: var(--text-dark);
+            border: 2px solid var(--line);
+        }
+
+        .sbm-btn-secondary:hover {
+            border-color: var(--primary);
+        }
+
+        .sbm-btn-danger {
+            background: white;
+            color: #c62828;
+            border: 2px solid #ffebee;
+        }
+
+        .sbm-btn-danger:hover {
+            background: #ffebee;
+        }
+
+        /* Empty State */
+        .sbm-empty-state {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .sbm-empty-icon {
+            font-size: 64px;
+            margin-bottom: 16px;
+            opacity: 0.3;
+        }
+
+        .sbm-empty-state h3 {
+            font-size: 20px;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+
+        .sbm-empty-state p {
+            color: var(--text-light);
+            margin-bottom: 24px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .sbm-bookings-title {
+                font-size: 24px;
+            }
+
+            .sbm-booking-details {
+                grid-template-columns: 1fr;
+            }
+
+            .sbm-booking-header {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .sbm-filter-tabs {
+                overflow-x: auto;
+                flex-wrap: nowrap;
+            }
+        }
+
+        /* Loading Animation */
+        .sbm-loading {
+            text-align: center;
+            padding: 40px;
+        }
+
+        .sbm-spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid var(--line);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: sbm-spin 1s linear infinite;
+        }
+
+        @keyframes sbm-spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /*********navbar extra code **************/
+.dropdown-account.dropdown-login {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
+}
+
+.dropdown-account .sub-top {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.nav-acc-link {
+  display: block;
+  padding: 12px 20px;
+  color: #5c4033;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-acc-link::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(to bottom, #d4a574, #8b4513);
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+}
+
+.nav-acc-link:hover {
+  background: var(--gradient-maroon);
+  color: #ffffff;
+  padding-left: 24px;
+  box-shadow: 0 4px 12px rgba(139, 69, 19, 0.25);
+  transform: translateX(4px);
+}
+
+.nav-acc-link:hover::before {
+  transform: scaleY(1);
+}
+
+.nav-acc-link:active {
+  transform: translateX(4px) scale(0.98);
+}
+
+/* Optional: Add icons before text */
+.nav-acc-link:nth-child(1)::after {
+  content: '→';
+  position: absolute;
+  right: 20px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.nav-acc-link:hover::after {
+  opacity: 1;
+  right: 16px;
+}
