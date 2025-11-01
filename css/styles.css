@@ -24082,8 +24082,15 @@ transform: translateY(20px);
             transition: var(--transition);
             width: 100%;
             font-size: 1rem;
+            display: flex;
+            justify-content: center;
         }
-
+.form-footer p{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
         .btn-primary:hover {
             background-color: var(--secondary-color);
         }
