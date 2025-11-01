@@ -29,6 +29,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="180x180" href="images/logo/apple-touch-icon.png">
     <!-- Add Lineicons CSS -->
     <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
+  
 </head>
 
 <body class="preload-wrapper">
@@ -1576,9 +1577,9 @@
                                             </p>
                                         </li>
                                         <li>
-                                            <a href="#" class="btn-seller-connect">
-                                               Register Now
-                                            </a>
+                                                  <button class="btn-seller-connect" id="openSellerModal">
+                                            Register Now
+                                        </button>
                                         </li>
                                     </ul>
                                 </div>
@@ -1777,6 +1778,156 @@
             </div>
         </footer>
         <!-- /Footer -->
+  <!-- Seller Registration Modal -->
+    <div class="modal-overlay" id="sellerModal">
+        <div class="auth-modal">
+            <div class="modal-header">
+                <h2 class="modal-title" id="sellerModalTitle">Sell With BLUSHLEY</h2>
+                <button class="close-modal" id="closeSellerModal">&times;</button>
+            </div>
+            
+            <div class="modal-body">
+                <!-- Auth Tabs -->
+                <div class="auth-tabs">
+                    <button class="auth-tab active" data-tab="seller-register">Register</button>
+                    <button class="auth-tab" data-tab="seller-login">Login</button>
+                </div>
+
+                <!-- Seller Register Form -->
+                <form class="auth-form active" id="sellerRegisterForm">
+                    <div class="form-group">
+                        <label class="form-label" for="sellerFullName">Full Name</label>
+                        <input type="text" class="form-input" id="sellerFullName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="sellerPhoneNumber">Phone Number</label>
+                        <input type="tel" class="form-input" id="sellerPhoneNumber" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="sellerEmail">Email Address</label>
+                        <input type="email" class="form-input" id="sellerEmail" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="sellerLocation">Business Location</label>
+                        <input type="text" class="form-input" id="sellerLocation" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="sellerProofType">Proof Type</label>
+                        <select class="form-select" id="sellerProofType" required>
+                            <option value="">Select proof type</option>
+                            <option value="Aadhaar Card">Aadhaar Card</option>
+                            <option value="PAN Card">PAN Card</option>
+                            <option value="Driving License">Driving License</option>
+                            <option value="Passport">Passport</option>
+                            <option value="Voter ID">Voter ID</option>
+                            <option value="Business Registration">Business Registration</option>
+                            <option value="GST Certificate">GST Certificate</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="sellerProofNumber">Proof Number</label>
+                        <input type="text" class="form-input" id="sellerProofNumber" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="sellerBusinessName">Business Name</label>
+                        <input type="text" class="form-input" id="sellerBusinessName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="sellerBusinessType">Business Type</label>
+                        <select class="form-select" id="sellerBusinessType" required>
+                            <option value="">Select business type</option>
+                            <option value="Individual">Individual</option>
+                            <option value="Partnership">Partnership</option>
+                            <option value="Private Limited">Private Limited</option>
+                            <option value="LLP">LLP</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Product Categories</label>
+                        <div class="skills-container" id="productCategoriesContainer">
+                            <!-- Product categories will be added here dynamically -->
+                        </div>
+                        <div class="add-skill-input">
+                            <input type="text" class="form-input" id="newProductCategory" placeholder="Add a product category">
+                            <button type="button" class="btn-secondary" id="addProductCategoryBtn">Add</button>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Business Description</label>
+                        <textarea class="form-input" id="sellerBusinessDescription" rows="3" placeholder="Tell us about your business"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Business Logo</label>
+                        <div class="file-input-wrapper">
+                            <input type="file" class="file-input" id="sellerLogo" accept="image/*">
+                            <label class="file-input-label" for="sellerLogo">
+                                <i class="fas fa-upload"></i> Choose Business Logo
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">Register as Seller</button>
+                    
+                    <div class="form-footer">
+                        <p>Already have a seller account? <button type="button" class="switch-form" data-switch-to="seller-login">Login here</button></p>
+                    </div>
+                </form>
+
+                <!-- Seller Login Form -->
+                <form class="auth-form" id="sellerLoginForm">
+                    <div class="form-group">
+                        <label class="form-label" for="sellerLoginEmail">Email Address</label>
+                        <input type="email" class="form-input" id="sellerLoginEmail" required>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">Send OTP</button>
+                    
+                    <div class="form-footer">
+                        <p>Don't have a seller account? <button type="button" class="switch-form" data-switch-to="seller-register">Register here</button></p>
+                    </div>
+                </form>
+
+                <!-- OTP Verification -->
+                <div class="otp-section" id="sellerOtpSection">
+                    <h3>Enter OTP</h3>
+                    <p>We've sent a 6-digit OTP to your email</p>
+                    
+                    <div class="otp-inputs">
+                        <input type="text" class="otp-input" maxlength="1" data-index="0">
+                        <input type="text" class="otp-input" maxlength="1" data-index="1">
+                        <input type="text" class="otp-input" maxlength="1" data-index="2">
+                        <input type="text" class="otp-input" maxlength="1" data-index="3">
+                        <input type="text" class="otp-input" maxlength="1" data-index="4">
+                        <input type="text" class="otp-input" maxlength="1" data-index="5">
+                    </div>
+                    
+                    <button class="btn-primary" id="verifySellerOtpBtn"><a href="sales-dashboard.html">Verify OTP</a></button>
+                    <button class="resend-otp" id="resendSellerOtpBtn">Resend OTP</button>
+                </div>
+
+                <!-- Success Message -->
+                <div class="success-message" id="sellerSuccessMessage">
+                    <div class="success-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Registration Successful!</h3>
+                    <p>Your seller account has been created successfully. Our team will review your application and contact you shortly.</p>
+                    <button class="btn-primary" id="goToSellerLoginBtn">Go to Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
         <div class="mobile-nav-wrapper show" id="mobileNavWrapper">
             <!-- Floating Top Toolbar -->

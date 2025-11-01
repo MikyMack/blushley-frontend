@@ -173,18 +173,18 @@
 
 
         <!-- Hero Banner -->
-        <section class="beautician-hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1 class="hero-title">Grow Your Beauty Business</h1>
-                    <p class="hero-subtitle">
-                        Connect with premium clients, manage bookings, and expand your reach. Join professionals who are
-                        already earning more.
-                    </p>
-                    <a href="#register" class="btn-hero">Register Now</a>
-                </div>
+       <section class="beautician-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Grow Your Beauty Business</h1>
+                <p class="hero-subtitle">
+                    Connect with premium clients, manage bookings, and expand your reach. Join professionals who are
+                    already earning more.
+                </p>
+                <button class="btn-hero" id="openAuthModal">Register Now</button>
             </div>
-        </section>
+        </div>
+    </section>
 
         <!-- Why Join Section -->
         <section class="why-join-section">
@@ -373,20 +373,20 @@
 
         <!-- Final CTA -->
         <section class="why-join-section">
-            <div class="container">
-                <div class="cta-final">
-                    <h3 class="cta-final-title">Ready to Take Control?</h3>
-                    <p class="cta-final-text">
-                        Stop relying on referrals alone. Build a sustainable beauty business with steady bookings and
-                        growing income.
-                    </p>
-                    <div class="cta-buttons">
-                        <a href="#register" class="btn-primary-cta">Register Now</a>
-                        <a href="#login" class="btn-secondary-cta">Already Registered? Login</a>
-                    </div>
+        <div class="container">
+            <div class="cta-final">
+                <h3 class="cta-final-title">Ready to Take Control?</h3>
+                <p class="cta-final-text">
+                    Stop relying on referrals alone. Build a sustainable beauty business with steady bookings and
+                    growing income.
+                </p>
+                <div class="cta-buttons">
+                    <button class="btn-primary-cta" id="openAuthModal2">Register Now</button>
+                    <button class="btn-secondary-cta" id="openAuthModal3">Already Registered? Login</button>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
 
 
@@ -421,27 +421,28 @@
                                                 <li class="text-caption-1">
                                                     <a href="about-us.html" class="footer-menu_item">About Us</a>
                                                 </li>
-                                                <li class="text-caption-1">
-                                                    <a href="#" class="footer-menu_item">Our Stories</a>
-                                                </li>
-                                                <li class="text-caption-1">
-                                                    <a href="#" class="footer-menu_item">Size Guide</a>
-                                                </li>
+
                                                 <li class="text-caption-1">
                                                     <a href="contact.html" class="footer-menu_item">Contact us</a>
                                                 </li>
-                                                <li class="text-caption-1">
+                                                <!-- <li class="text-caption-1">
                                                     <a href="#" class="footer-menu_item">Career</a>
-                                                </li>
+                                                </li>-->
                                                 <li class="text-caption-1">
                                                     <a href="my-account.html" class="footer-menu_item">My Account</a>
                                                 </li>
+                                                <li class="text-caption-1">
+                                                    <a href="#" class="footer-menu_item">Terms &
+                                                        Conditions</a>
+                                                </li>
+                                             
+
                                             </ul>
                                         </div>
                                     </div>
                                     <div class="footer-col-block">
                                         <div class="footer-heading text-button footer-heading-mobile">
-                                            Customer Services
+                                             Services
                                         </div>
                                         <div class="tf-collapse-content">
                                             <ul class="footer-menu-list">
@@ -451,18 +452,16 @@
                                                 <li class="text-caption-1">
                                                     <a href="#" class="footer-menu_item">Return & Refund</a>
                                                 </li>
-                                                <li class="text-caption-1">
-                                                    <a href="#" class="footer-menu_item">Privacy Policy</a>
-                                                </li>
-                                                <li class="text-caption-1">
-                                                    <a href="term-of-use.html" class="footer-menu_item">Terms &
-                                                        Conditions</a>
-                                                </li>
-                                                <li class="text-caption-1">
+
+
+                                                <!-- <li class="text-caption-1">
                                                     <a href="FAQs.html" class="footer-menu_item">Orders FAQs</a>
-                                                </li>
+                                                </li>-->
                                                 <li class="text-caption-1">
                                                     <a href="wish-list.html" class="footer-menu_item">My Wishlist</a>
+                                                </li>
+                                                   <li class="text-caption-1">
+                                                    <a href="#" class="footer-menu_item">Privacy Policy</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -497,7 +496,30 @@
                                 </div>
                             </div>
                             <div class="col-lg-3">
-                                <div class="footer-heading text-button footer-heading-mobile">
+
+                                 <div class="footer-heading text-button footer-heading-mobile">
+                                    contact us
+                                </div>
+                                <div class="footer-address">
+                                    <p>Trivandrum, Kerala</p>
+
+                                </div>
+                                <ul class="footer-info">
+                                    <li>
+                                        <i class="icon-mail"></i>
+                                        <p>blushley@gmail.com</p>
+                                    </li>
+                                    <li>
+                                        <i class="icon-phone"></i>
+                                        <p>315-666-6688</p>
+                                    </li>
+                                </ul>
+
+                               
+                            </div>
+
+                            <div class="col-lg-3">
+                                 <div class="footer-heading text-button footer-heading-mobile">
                                     For Sellers
                                 </div>
 
@@ -512,34 +534,13 @@
                                             </p>
                                         </li>
                                         <li>
-                                            <a href="#" class="btn-seller-connect">
-                                                Connect Now
-                                            </a>
+                                                  <button class="btn-seller-connect" id="openSellerModal">
+                                            Register Now
+                                        </button>
                                         </li>
                                     </ul>
                                 </div>
-                            </div>
-
-                            <div class="col-lg-3">
-                                <div class="footer-heading text-button footer-heading-mobile">
-                                    contact us
-                                </div>
-                                <div class="footer-address">
-                                    <p>549 Oak St.Crystal Lake, IL 60014</p>
-                                    <a href="contact.html" class="tf-btn-default fw-6">GET DIRECTION<i
-                                            class="icon-arrowUpRight"></i></a>
-                                </div>
-                                <ul class="footer-info">
-                                    <li>
-                                        <i class="icon-mail"></i>
-                                        <p>blushley@gmail.com</p>
-                                    </li>
-                                    <li>
-                                        <i class="icon-phone"></i>
-                                        <p>315-666-6688</p>
-                                    </li>
-                                </ul>
-
+                               
                                 <!-- <div class="footer-col-block">
                                     <div class="footer-heading text-button footer-heading-mobile">
                                         Newletter
@@ -687,13 +688,7 @@
                                                 <li><a href="#" class="social-instagram"><i
                                                             class="icon icon-instagram"></i></a>
                                                 </li>
-                                                <li><a href="#" class="social-tiktok"><i
-                                                            class="icon icon-tiktok"></i></a></li>
-                                                <li><a href="#" class="social-amazon"><i
-                                                            class="icon icon-amazon"></i></a></li>
-                                                <li><a href="#" class="social-pinterest"><i
-                                                            class="icon icon-pinterest"></i></a>
-                                                </li>
+
                                             </ul>
                                             <!-- <div class="tf-currencies">
                                                 <select class="image-select center style-default type-currencies">
@@ -739,7 +734,157 @@
                 </div>
             </div>
         </footer>
-<!-- /Footer -->
+        <!-- /Footer -->
+  <!-- Seller Registration Modal -->
+    <div class="modal-overlay" id="sellerModal">
+        <div class="auth-modal">
+            <div class="modal-header">
+                <h2 class="modal-title" id="sellerModalTitle">Sell With BLUSHLEY</h2>
+                <button class="close-modal" id="closeSellerModal">&times;</button>
+            </div>
+            
+            <div class="modal-body">
+                <!-- Auth Tabs -->
+                <div class="auth-tabs">
+                    <button class="auth-tab active" data-tab="seller-register">Register</button>
+                    <button class="auth-tab" data-tab="seller-login">Login</button>
+                </div>
+
+                <!-- Seller Register Form -->
+                <form class="auth-form active" id="sellerRegisterForm">
+                    <div class="form-group">
+                        <label class="form-label" for="sellerFullName">Full Name</label>
+                        <input type="text" class="form-input" id="sellerFullName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="sellerPhoneNumber">Phone Number</label>
+                        <input type="tel" class="form-input" id="sellerPhoneNumber" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="sellerEmail">Email Address</label>
+                        <input type="email" class="form-input" id="sellerEmail" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="sellerLocation">Business Location</label>
+                        <input type="text" class="form-input" id="sellerLocation" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="sellerProofType">Proof Type</label>
+                        <select class="form-select" id="sellerProofType" required>
+                            <option value="">Select proof type</option>
+                            <option value="Aadhaar Card">Aadhaar Card</option>
+                            <option value="PAN Card">PAN Card</option>
+                            <option value="Driving License">Driving License</option>
+                            <option value="Passport">Passport</option>
+                            <option value="Voter ID">Voter ID</option>
+                            <option value="Business Registration">Business Registration</option>
+                            <option value="GST Certificate">GST Certificate</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="sellerProofNumber">Proof Number</label>
+                        <input type="text" class="form-input" id="sellerProofNumber" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="sellerBusinessName">Business Name</label>
+                        <input type="text" class="form-input" id="sellerBusinessName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="sellerBusinessType">Business Type</label>
+                        <select class="form-select" id="sellerBusinessType" required>
+                            <option value="">Select business type</option>
+                            <option value="Individual">Individual</option>
+                            <option value="Partnership">Partnership</option>
+                            <option value="Private Limited">Private Limited</option>
+                            <option value="LLP">LLP</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Product Categories</label>
+                        <div class="skills-container" id="productCategoriesContainer">
+                            <!-- Product categories will be added here dynamically -->
+                        </div>
+                        <div class="add-skill-input">
+                            <input type="text" class="form-input" id="newProductCategory" placeholder="Add a product category">
+                            <button type="button" class="btn-secondary" id="addProductCategoryBtn">Add</button>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Business Description</label>
+                        <textarea class="form-input" id="sellerBusinessDescription" rows="3" placeholder="Tell us about your business"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Business Logo</label>
+                        <div class="file-input-wrapper">
+                            <input type="file" class="file-input" id="sellerLogo" accept="image/*">
+                            <label class="file-input-label" for="sellerLogo">
+                                <i class="fas fa-upload"></i> Choose Business Logo
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">Register as Seller</button>
+                    
+                    <div class="form-footer">
+                        <p>Already have a seller account? <button type="button" class="switch-form" data-switch-to="seller-login">Login here</button></p>
+                    </div>
+                </form>
+
+                <!-- Seller Login Form -->
+                <form class="auth-form" id="sellerLoginForm">
+                    <div class="form-group">
+                        <label class="form-label" for="sellerLoginEmail">Email Address</label>
+                        <input type="email" class="form-input" id="sellerLoginEmail" required>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">Send OTP</button>
+                    
+                    <div class="form-footer">
+                        <p>Don't have a seller account? <button type="button" class="switch-form" data-switch-to="seller-register">Register here</button></p>
+                    </div>
+                </form>
+
+                <!-- OTP Verification -->
+                <div class="otp-section" id="sellerOtpSection">
+                    <h3>Enter OTP</h3>
+                    <p>We've sent a 6-digit OTP to your email</p>
+                    
+                    <div class="otp-inputs">
+                        <input type="text" class="otp-input" maxlength="1" data-index="0">
+                        <input type="text" class="otp-input" maxlength="1" data-index="1">
+                        <input type="text" class="otp-input" maxlength="1" data-index="2">
+                        <input type="text" class="otp-input" maxlength="1" data-index="3">
+                        <input type="text" class="otp-input" maxlength="1" data-index="4">
+                        <input type="text" class="otp-input" maxlength="1" data-index="5">
+                    </div>
+                    
+                    <button class="btn-primary" id="verifySellerOtpBtn"><a href="sales-dashboard.html">Verify OTP</a></button>
+                    <button class="resend-otp" id="resendSellerOtpBtn">Resend OTP</button>
+                </div>
+
+                <!-- Success Message -->
+                <div class="success-message" id="sellerSuccessMessage">
+                    <div class="success-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Registration Successful!</h3>
+                    <p>Your seller account has been created successfully. Our team will review your application and contact you shortly.</p>
+                    <button class="btn-primary" id="goToSellerLoginBtn">Go to Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
        
          <div class="mobile-nav-wrapper show" id="mobileNavWrapper">
@@ -1743,6 +1888,143 @@
     </div>
     <!-- /mobile menu -->
 
+    <!-- Auth Modal -->
+    <div class="modal-overlay" id="authModal">
+        <div class="auth-modal">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modalTitle">Welcome to BLUSHLEY</h2>
+                <button class="close-modal" id="closeModal">&times;</button>
+            </div>
+            
+            <div class="modal-body">
+                <!-- Auth Tabs -->
+                <div class="auth-tabs">
+                    <button class="auth-tab active" data-tab="register">Register</button>
+                    <button class="auth-tab" data-tab="login">Login</button>
+                </div>
+
+                <!-- Register Form -->
+                <form class="auth-form active" id="registerForm">
+                    <div class="form-group">
+                        <label class="form-label" for="fullName">Full Name</label>
+                        <input type="text" class="form-input" id="fullName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="phoneNumber">Phone Number</label>
+                        <input type="tel" class="form-input" id="phoneNumber" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="email">Email Address</label>
+                        <input type="email" class="form-input" id="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="location">Location</label>
+                        <input type="text" class="form-input" id="location" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="proofType">Proof Type</label>
+                        <select class="form-select" id="proofType" required>
+                            <option value="">Select proof type</option>
+                            <option value="Aadhaar Card">Aadhaar Card</option>
+                            <option value="PAN Card">PAN Card</option>
+                            <option value="Driving License">Driving License</option>
+                            <option value="Passport">Passport</option>
+                            <option value="Voter ID">Voter ID</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="proofNumber">Proof Number</label>
+                        <input type="text" class="form-input" id="proofNumber" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Profile Picture</label>
+                        <div class="file-input-wrapper">
+                            <input type="file" class="file-input" id="profilePicture" accept="image/*">
+                            <label class="file-input-label" for="profilePicture">
+                                <i class="fas fa-upload"></i> Choose Profile Picture
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Skills</label>
+                        <div class="skills-container" id="skillsContainer">
+                            <!-- Skills will be added here dynamically -->
+                        </div>
+                        <div class="add-skill-input">
+                            <input type="text" class="form-input" id="newSkill" placeholder="Add a skill">
+                            <button type="button" class="btn-secondary" id="addSkillBtn">Add</button>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Preferred Locations</label>
+                        <div class="skills-container" id="locationsContainer">
+                            <!-- Locations will be added here dynamically -->
+                        </div>
+                        <div class="add-skill-input">
+                            <input type="text" class="form-input" id="newLocation" placeholder="Add a location">
+                            <button type="button" class="btn-secondary" id="addLocationBtn">Add</button>
+                        </div>
+                    </div>
+                    
+                    <button style="display: flex; text-align: center; justify-content: center;" type="submit" class="btn-primary">Register</button>
+                    
+                    <div  class="form-footer">
+                        <p style="display: flex; justify-content: center; align-items: center; text-align: center; flex-direction: column;">Already have an account? <button  type="button" class="switch-form" data-switch-to="login">Login here</button></p>
+                    </div>
+                </form>
+
+                <!-- Login Form -->
+                <form class="auth-form" id="loginForm">
+                    <div class="form-group">
+                        <label class="form-label" for="loginEmail">Email Address</label>
+                        <input type="email" class="form-input" id="loginEmail" required>
+                    </div>
+                    
+                    <button style="display: flex; justify-content: center;" type="submit" class="btn-primary">Send OTP</button>
+                    
+                    <div style="display: flex; justify-content: center; align-items: center;" class="form-footer">
+                        <p>Don't have an account? <button type="button" class="switch-form" data-switch-to="register">Register here</button></p>
+                    </div>
+                </form>
+
+                <!-- OTP Verification -->
+                <div class="otp-section" id="otpSection">
+                    <h3>Enter OTP</h3>
+                    <p>We've sent a 6-digit OTP to your email</p>
+                    
+                    <div class="otp-inputs">
+                        <input type="text" class="otp-input" maxlength="1" data-index="0">
+                        <input type="text" class="otp-input" maxlength="1" data-index="1">
+                        <input type="text" class="otp-input" maxlength="1" data-index="2">
+                        <input type="text" class="otp-input" maxlength="1" data-index="3">
+                        <input type="text" class="otp-input" maxlength="1" data-index="4">
+                        <input type="text" class="otp-input" maxlength="1" data-index="5">
+                    </div>
+                    
+                   <a href="freelance-dashboard.html"> <button class="btn-primary" id="verifyOtpBtn">Verify OTP</button></a>
+                    <button class="resend-otp" id="resendOtpBtn">Resend OTP</button>
+                </div>
+
+                <!-- Success Message -->
+                <div class="success-message" id="successMessage">
+                    <div class="success-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Registration Successful!</h3>
+                    <p>Your account has been created successfully. You can now login to access your dashboard.</p>
+                    <button class="btn-primary" id="goToLoginBtn">Go to Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- quickView -->
     <div class="modal fullRight fade modal-quick-view" id="quickView">
@@ -3023,7 +3305,260 @@
 
         var AUTOHIDE = Boolean(0);
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Modal Elements
+            const authModal = document.getElementById('authModal');
+            const openAuthModalBtn = document.getElementById('openAuthModal');
+            const openAuthModalBtn2 = document.getElementById('openAuthModal2');
+            const openAuthModalBtn3 = document.getElementById('openAuthModal3');
+            const closeModalBtn = document.getElementById('closeModal');
+            const modalTitle = document.getElementById('modalTitle');
 
+            // Form Elements
+            const authTabs = document.querySelectorAll('.auth-tab');
+            const authForms = document.querySelectorAll('.auth-form');
+            const switchFormBtns = document.querySelectorAll('.switch-form');
+            const registerForm = document.getElementById('registerForm');
+            const loginForm = document.getElementById('loginForm');
+            const otpSection = document.getElementById('otpSection');
+            const successMessage = document.getElementById('successMessage');
+
+            // OTP Elements
+            const otpInputs = document.querySelectorAll('.otp-input');
+            const verifyOtpBtn = document.getElementById('verifyOtpBtn');
+            const resendOtpBtn = document.getElementById('resendOtpBtn');
+            const goToLoginBtn = document.getElementById('goToLoginBtn');
+
+            // Skills and Locations
+            const skillsContainer = document.getElementById('skillsContainer');
+            const locationsContainer = document.getElementById('locationsContainer');
+            const addSkillBtn = document.getElementById('addSkillBtn');
+            const addLocationBtn = document.getElementById('addLocationBtn');
+            const newSkillInput = document.getElementById('newSkill');
+            const newLocationInput = document.getElementById('newLocation');
+
+            // Open Modal from all buttons
+            function openModal(defaultTab = 'register') {
+                authModal.classList.add('active');
+                showForm(defaultTab);
+            }
+
+            // Button 1 - Hero Section "Register Now"
+            openAuthModalBtn.addEventListener('click', function() {
+                openModal('register');
+            });
+
+            // Button 2 - CTA Section "Register Now"
+            openAuthModalBtn2.addEventListener('click', function() {
+                openModal('register');
+            });
+
+            // Button 3 - CTA Section "Already Registered? Login"
+            openAuthModalBtn3.addEventListener('click', function() {
+                openModal('login');
+            });
+
+            // Close Modal
+            closeModalBtn.addEventListener('click', function() {
+                authModal.classList.remove('active');
+                resetForms();
+            });
+
+            // Close modal when clicking outside
+            authModal.addEventListener('click', function(e) {
+                if (e.target === authModal) {
+                    authModal.classList.remove('active');
+                    resetForms();
+                }
+            });
+
+            // Switch between tabs
+            authTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const tabName = this.getAttribute('data-tab');
+                    showForm(tabName);
+                });
+            });
+
+            // Switch between forms using footer links
+            switchFormBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const formToShow = this.getAttribute('data-switch-to');
+                    showForm(formToShow);
+                });
+            });
+
+            // Show specific form
+            function showForm(formName) {
+                // Update tabs
+                authTabs.forEach(tab => {
+                    tab.classList.remove('active');
+                    if (tab.getAttribute('data-tab') === formName) {
+                        tab.classList.add('active');
+                    }
+                });
+
+                // Update forms
+                authForms.forEach(form => {
+                    form.classList.remove('active');
+                });
+
+                // Update modal title
+                if (formName === 'register') {
+                    modalTitle.textContent = 'Create Your Account';
+                    registerForm.classList.add('active');
+                } else {
+                    modalTitle.textContent = 'Welcome Back';
+                    loginForm.classList.add('active');
+                }
+
+                // Hide OTP and success messages
+                otpSection.classList.remove('active');
+                successMessage.classList.remove('active');
+            }
+
+            // Register Form Submission
+            registerForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form data
+                const formData = {
+                    fullName: document.getElementById('fullName').value,
+                    phoneNumber: document.getElementById('phoneNumber').value,
+                    email: document.getElementById('email').value,
+                    location: document.getElementById('location').value,
+                    proofType: document.getElementById('proofType').value,
+                    proofNumber: document.getElementById('proofNumber').value,
+                    skills: Array.from(skillsContainer.querySelectorAll('.skill-tag')).map(tag => tag.textContent.replace(' ×', '')),
+                    preferredLocations: Array.from(locationsContainer.querySelectorAll('.skill-tag')).map(tag => tag.textContent.replace(' ×', ''))
+                };
+
+                // In a real app, you would send this data to your backend
+                console.log('Registration data:', formData);
+
+                // Show success message
+                registerForm.classList.remove('active');
+                successMessage.classList.add('active');
+                modalTitle.textContent = 'Registration Successful';
+            });
+
+            // Login Form Submission
+            loginForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const email = document.getElementById('loginEmail').value;
+                
+                // In a real app, you would send OTP to the email
+                console.log('Sending OTP to:', email);
+                
+                // Show OTP section
+                loginForm.classList.remove('active');
+                otpSection.classList.add('active');
+                modalTitle.textContent = 'Verify Your Email';
+            });
+
+            // OTP Input Handling
+            otpInputs.forEach((input, index) => {
+                input.addEventListener('input', function() {
+                    if (this.value.length === 1 && index < otpInputs.length - 1) {
+                        otpInputs[index + 1].focus();
+                    }
+                });
+
+                input.addEventListener('keydown', function(e) {
+                    if (e.key === 'Backspace' && this.value.length === 0 && index > 0) {
+                        otpInputs[index - 1].focus();
+                    }
+                });
+            });
+
+            // Verify OTP
+            verifyOtpBtn.addEventListener('click', function() {
+                let otp = '';
+                otpInputs.forEach(input => {
+                    otp += input.value;
+                });
+
+                if (otp.length === 6) {
+                    // In a real app, you would verify OTP with backend
+                    console.log('Verifying OTP:', otp);
+                    
+                    // For demo purposes, assume OTP is correct
+                    alert('Login successful! Redirecting to dashboard...');
+                    authModal.classList.remove('active');
+                    resetForms();
+                    
+                    // Here you would redirect to the actual dashboard
+                    // window.location.href = 'dashboard.html';
+                } else {
+                    alert('Please enter complete 6-digit OTP');
+                }
+            });
+
+            // Resend OTP
+            resendOtpBtn.addEventListener('click', function() {
+                // In a real app, you would resend OTP
+                console.log('Resending OTP...');
+                alert('OTP has been resent to your email');
+                
+                // Clear OTP inputs
+                otpInputs.forEach(input => {
+                    input.value = '';
+                });
+                otpInputs[0].focus();
+            });
+
+            // Go to Login from Success
+            goToLoginBtn.addEventListener('click', function() {
+                showForm('login');
+            });
+
+            // Add Skill
+            addSkillBtn.addEventListener('click', function() {
+                const skill = newSkillInput.value.trim();
+                if (skill) {
+                    const skillTag = document.createElement('div');
+                    skillTag.className = 'skill-tag';
+                    skillTag.innerHTML = `${skill} <i class="fas fa-times"></i>`;
+                    
+                    skillTag.querySelector('i').addEventListener('click', function() {
+                        skillTag.remove();
+                    });
+                    
+                    skillsContainer.appendChild(skillTag);
+                    newSkillInput.value = '';
+                }
+            });
+
+            // Add Location
+            addLocationBtn.addEventListener('click', function() {
+                const location = newLocationInput.value.trim();
+                if (location) {
+                    const locationTag = document.createElement('div');
+                    locationTag.className = 'skill-tag';
+                    locationTag.innerHTML = `${location} <i class="fas fa-times"></i>`;
+                    
+                    locationTag.querySelector('i').addEventListener('click', function() {
+                        locationTag.remove();
+                    });
+                    
+                    locationsContainer.appendChild(locationTag);
+                    newLocationInput.value = '';
+                }
+            });
+
+            // Reset all forms
+            function resetForms() {
+                registerForm.reset();
+                loginForm.reset();
+                otpInputs.forEach(input => input.value = '');
+                skillsContainer.innerHTML = '';
+                locationsContainer.innerHTML = '';
+                showForm('register');
+            }
+        });
+    </script>
      <script>  if (document.querySelector("#sib-form")) { const script = document.createElement('script');script.src = 'js/sibforms.js';script.defer = true;document.body.appendChild(script);}</script>
 </body>
 
