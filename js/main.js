@@ -1583,3 +1583,227 @@ function applyFilters() {
     // Add your filter logic here
     // Example: filter products based on activeFilters.category and activeFilters.brand
 }
+
+
+
+ document.addEventListener('DOMContentLoaded', function() {
+            // Modal Elements
+            const sellerModal = document.getElementById('sellerModal');
+            const openSellerModalBtn = document.getElementById('openSellerModal');
+            const closeSellerModalBtn = document.getElementById('closeSellerModal');
+            const sellerModalTitle = document.getElementById('sellerModalTitle');
+
+            // Form Elements
+            const sellerAuthTabs = document.querySelectorAll('.auth-tab');
+            const sellerAuthForms = document.querySelectorAll('.auth-form');
+            const sellerSwitchFormBtns = document.querySelectorAll('.switch-form');
+            const sellerRegisterForm = document.getElementById('sellerRegisterForm');
+            const sellerLoginForm = document.getElementById('sellerLoginForm');
+            const sellerOtpSection = document.getElementById('sellerOtpSection');
+            const sellerSuccessMessage = document.getElementById('sellerSuccessMessage');
+
+            // OTP Elements
+            const sellerOtpInputs = document.querySelectorAll('.otp-input');
+            const verifySellerOtpBtn = document.getElementById('verifySellerOtpBtn');
+            const resendSellerOtpBtn = document.getElementById('resendSellerOtpBtn');
+            const goToSellerLoginBtn = document.getElementById('goToSellerLoginBtn');
+
+            // Product Categories
+            const productCategoriesContainer = document.getElementById('productCategoriesContainer');
+            const addProductCategoryBtn = document.getElementById('addProductCategoryBtn');
+            const newProductCategoryInput = document.getElementById('newProductCategory');
+
+            // Open Modal from footer button
+            openSellerModalBtn.addEventListener('click', function() {
+                openSellerModal('seller-register');
+            });
+
+            // Close Modal
+            closeSellerModalBtn.addEventListener('click', function() {
+                sellerModal.classList.remove('active');
+                resetSellerForms();
+            });
+
+            // Close modal when clicking outside
+            sellerModal.addEventListener('click', function(e) {
+                if (e.target === sellerModal) {
+                    sellerModal.classList.remove('active');
+                    resetSellerForms();
+                }
+            });
+
+            // Switch between tabs
+            sellerAuthTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const tabName = this.getAttribute('data-tab');
+                    showSellerForm(tabName);
+                });
+            });
+
+            // Switch between forms using footer links
+            sellerSwitchFormBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const formToShow = this.getAttribute('data-switch-to');
+                    showSellerForm(formToShow);
+                });
+            });
+
+            // Show specific form
+            function showSellerForm(formName) {
+                // Update tabs
+                sellerAuthTabs.forEach(tab => {
+                    tab.classList.remove('active');
+                    if (tab.getAttribute('data-tab') === formName) {
+                        tab.classList.add('active');
+                    }
+                });
+
+                // Update forms
+                sellerAuthForms.forEach(form => {
+                    form.classList.remove('active');
+                });
+
+                // Update modal title
+                if (formName === 'seller-register') {
+                    sellerModalTitle.textContent = 'Sell With BLUSHLEY';
+                    sellerRegisterForm.classList.add('active');
+                } else {
+                    sellerModalTitle.textContent = 'Seller Login';
+                    sellerLoginForm.classList.add('active');
+                }
+
+                // Hide OTP and success messages
+                sellerOtpSection.classList.remove('active');
+                sellerSuccessMessage.classList.remove('active');
+            }
+
+            // Open Seller Modal
+            function openSellerModal(defaultTab = 'seller-register') {
+                sellerModal.classList.add('active');
+                showSellerForm(defaultTab);
+            }
+
+            // Seller Register Form Submission
+            sellerRegisterForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form data
+                const formData = {
+                    fullName: document.getElementById('sellerFullName').value,
+                    phoneNumber: document.getElementById('sellerPhoneNumber').value,
+                    email: document.getElementById('sellerEmail').value,
+                    location: document.getElementById('sellerLocation').value,
+                    proofType: document.getElementById('sellerProofType').value,
+                    proofNumber: document.getElementById('sellerProofNumber').value,
+                    businessName: document.getElementById('sellerBusinessName').value,
+                    businessType: document.getElementById('sellerBusinessType').value,
+                    productCategories: Array.from(productCategoriesContainer.querySelectorAll('.skill-tag')).map(tag => tag.textContent.replace(' ×', '')),
+                    businessDescription: document.getElementById('sellerBusinessDescription').value
+                };
+
+                // In a real app, you would send this data to your backend
+                console.log('Seller registration data:', formData);
+
+                // Show success message
+                sellerRegisterForm.classList.remove('active');
+                sellerSuccessMessage.classList.add('active');
+                sellerModalTitle.textContent = 'Registration Successful';
+            });
+
+            // Seller Login Form Submission
+            sellerLoginForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const email = document.getElementById('sellerLoginEmail').value;
+                
+                // In a real app, you would send OTP to the email
+                console.log('Sending OTP to seller:', email);
+                
+                // Show OTP section
+                sellerLoginForm.classList.remove('active');
+                sellerOtpSection.classList.add('active');
+                sellerModalTitle.textContent = 'Verify Your Email';
+            });
+
+            // OTP Input Handling
+            sellerOtpInputs.forEach((input, index) => {
+                input.addEventListener('input', function() {
+                    if (this.value.length === 1 && index < sellerOtpInputs.length - 1) {
+                        sellerOtpInputs[index + 1].focus();
+                    }
+                });
+
+                input.addEventListener('keydown', function(e) {
+                    if (e.key === 'Backspace' && this.value.length === 0 && index > 0) {
+                        sellerOtpInputs[index - 1].focus();
+                    }
+                });
+            });
+
+            // Verify OTP
+            verifySellerOtpBtn.addEventListener('click', function() {
+                let otp = '';
+                sellerOtpInputs.forEach(input => {
+                    otp += input.value;
+                });
+
+                if (otp.length === 6) {
+                    // In a real app, you would verify OTP with backend
+                    console.log('Verifying seller OTP:', otp);
+                    
+                    // For demo purposes, assume OTP is correct
+                    alert('Login successful! Redirecting to seller dashboard...');
+                    sellerModal.classList.remove('active');
+                    resetSellerForms();
+                    
+                    // Here you would redirect to the actual seller dashboard
+                    // window.location.href = 'seller-dashboard.html';
+                } else {
+                    alert('Please enter complete 6-digit OTP');
+                }
+            });
+
+            // Resend OTP
+            resendSellerOtpBtn.addEventListener('click', function() {
+                // In a real app, you would resend OTP
+                console.log('Resending OTP to seller...');
+                alert('OTP has been resent to your email');
+                
+                // Clear OTP inputs
+                sellerOtpInputs.forEach(input => {
+                    input.value = '';
+                });
+                sellerOtpInputs[0].focus();
+            });
+
+            // Go to Login from Success
+            goToSellerLoginBtn.addEventListener('click', function() {
+                showSellerForm('seller-login');
+            });
+
+            // Add Product Category
+            addProductCategoryBtn.addEventListener('click', function() {
+                const category = newProductCategoryInput.value.trim();
+                if (category) {
+                    const categoryTag = document.createElement('div');
+                    categoryTag.className = 'skill-tag';
+                    categoryTag.innerHTML = `${category} <i class="fas fa-times"></i>`;
+                    
+                    categoryTag.querySelector('i').addEventListener('click', function() {
+                        categoryTag.remove();
+                    });
+                    
+                    productCategoriesContainer.appendChild(categoryTag);
+                    newProductCategoryInput.value = '';
+                }
+            });
+
+            // Reset all forms
+            function resetSellerForms() {
+                sellerRegisterForm.reset();
+                sellerLoginForm.reset();
+                sellerOtpInputs.forEach(input => input.value = '');
+                productCategoriesContainer.innerHTML = '';
+                showSellerForm('seller-register');
+            }
+        });
