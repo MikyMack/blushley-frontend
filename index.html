@@ -448,7 +448,8 @@
                                         src="images/banner/bridal-collection2.png" alt="banner">
                                 </a>
                                 <div class="content">
-                                    <h3 class="title wow fadeInUp"><a href="shop-collection.html"
+                                    <h3 class="title wow fadeInUp">
+                                        <a href="shop-collection.html"
                                             class="link text-white">Bridal Beauty Services</a></h3>
                                     <p class="desc text-white wow fadeInUp">Expert bridal makeup and hair styling - book
                                         salon or at-home services</p>
@@ -832,7 +833,7 @@
 
 
                                     <div class="list-btn-main">
-                                        <a href="shop1.html" data-bs-toggle="modal" class="btn-main-product">Shop Now
+                                        <a href="shop1.html" class="btn-main-product">Shop Now
                                         </a>
                                     </div>
                                 </div>
@@ -855,7 +856,7 @@
 
 
                                     <div class="list-btn-main">
-                                        <a href="shop1.html" data-bs-toggle="modal" class="btn-main-product">Shop Now
+                                        <a href="shop1.html"  class="btn-main-product">Shop Now
                                         </a>
                                     </div>
                                 </div>
@@ -890,7 +891,7 @@
                                     <div class="on-sale-wrap"><span class="on-sale-item">-25%</span></div>
 
                                     <div class="list-btn-main">
-                                        <a href="shop1.html" data-bs-toggle="modal" class="btn-main-product">Shop Now
+                                        <a href="shop1.html" class="btn-main-product">Shop Now
                                         </a>
                                     </div>
                                 </div>
@@ -930,7 +931,7 @@
                                     <div class="on-sale-wrap"><span class="on-sale-item">-25%</span></div>
 
                                     <div class="list-btn-main">
-                                        <a href="shop1.html" data-bs-toggle="modal" class="btn-main-product">Shop Now
+                                        <a href="shop1.html" class="btn-main-product">Shop Now
                                         </a>
                                     </div>
                                 </div>
@@ -1104,7 +1105,7 @@
                                 <!-- Rating -->
                                 <div class="form-group full-width">
                                     <label class="rating-label">Rating</label>
-                                    <div class="rating-stars">
+                                    <div class="rating-stars home-rating-stars">
                                         <input type="radio" id="star5" name="rating" value="5" required>
                                         <label for="star5">★</label>
 
@@ -1909,31 +1910,95 @@
 
         </div>
 
+     
         <!-- search -->
         <div class="modal fade modal-search" id="search">
+            
             <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
+                
+                <div class="modal-content">    
                     <div class="d-flex justify-content-between align-items-center">
-                        <h5>Search</h5>
-                        <span class="icon-close icon-close-popup" data-bs-dismiss="modal"></span>
-                    </div>
-                    <form class="form-search">
-                        <fieldset class="text">
-                            <input type="text" placeholder="Searching..." class="" name="text" tabindex="0" value=""
-                                aria-required="true" required="">
-                        </fieldset>
-                        <button class="" type="submit">
-                            <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    <h5>Search</h5>
+                    <span class="icon-close icon-close-popup" data-bs-dismiss="modal"></span>
+                </div>        
+
+                    <div class="search-bar-wrapper">
+                        <form class="form-search" onsubmit="handleSearch(event)">
+                            <fieldset class="text">
+                                <input type="text" placeholder="Searching..." class="" name="text" tabindex="0" value=""
+                                    aria-required="true" required="">
+                            </fieldset>
+                            <button class="" type="submit">
+                                <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+                                        stroke="#181818" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                    </path>
+                                    <path d="M21.35 21.0004L17 16.6504" stroke="#181818" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </button>
+                        </form>
+
+                        <!-- Filter Toggle Button beside search -->
+                        <button class="search-filter-toggle-btn" onclick="toggleFilterSection()">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
-                                    stroke="#181818" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                </path>
-                                <path d="M21.35 21.0004L17 16.6504" stroke="#181818" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M22 3H2L10 12.46V19L14 21V12.46L22 3Z" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
+                            <span>Filters</span>
+                            <span class="search-filter-count" style="display: none;">0</span>
                         </button>
-                    </form>
+                    </div>
+
+                    <!-- Filters Section (Hidden by default) - Place this right after the search-bar-wrapper -->
+                    <div class="search-filter-section" id="searchFilterSection" style="display: none;">
+                        <div class="search-filter-header">
+                            <h6 class="search-filter-title">Filters</h6>
+                            <button class="search-clear-filters" onclick="clearAllFilters()"
+                                style="display: none;">Clear All</button>
+                        </div>
+
+                        <div class="search-filter-group">
+                            <label class="search-filter-label">Categories</label>
+                            <div class="search-filter-options" id="categoryFilters">
+                                <span class="search-filter-chip" data-filter="category" data-value="skincare"
+                                    onclick="toggleFilter(this)">Skincare</span>
+                                <span class="search-filter-chip" data-filter="category" data-value="serum"
+                                    onclick="toggleFilter(this)">Serum</span>
+                                <span class="search-filter-chip" data-filter="category" data-value="moisturizer"
+                                    onclick="toggleFilter(this)">Moisturizer</span>
+                                <span class="search-filter-chip" data-filter="category" data-value="cleanser"
+                                    onclick="toggleFilter(this)">Cleanser</span>
+                                <span class="search-filter-chip" data-filter="category" data-value="mask"
+                                    onclick="toggleFilter(this)">Face Mask</span>
+                                <span class="search-filter-chip" data-filter="category" data-value="sunscreen"
+                                    onclick="toggleFilter(this)">Sunscreen</span>
+                            </div>
+                        </div>
+
+                        <div class="search-filter-group">
+                            <label class="search-filter-label">Brands</label>
+                            <div class="search-filter-options" id="brandFilters">
+                                <span class="search-filter-chip" data-filter="brand" data-value="alphah"
+                                    onclick="toggleFilter(this)">AlphaH</span>
+                                <span class="search-filter-chip" data-filter="brand" data-value="ordinary"
+                                    onclick="toggleFilter(this)">The Ordinary</span>
+                                <span class="search-filter-chip" data-filter="brand" data-value="cerave"
+                                    onclick="toggleFilter(this)">CeraVe</span>
+                                <span class="search-filter-chip" data-filter="brand" data-value="neutrogena"
+                                    onclick="toggleFilter(this)">Neutrogena</span>
+                                <span class="search-filter-chip" data-filter="brand" data-value="loreal"
+                                    onclick="toggleFilter(this)">L'Oréal</span>
+                                <span class="search-filter-chip" data-filter="brand" data-value="garnier"
+                                    onclick="toggleFilter(this)">Garnier</span>
+                            </div>
+                        </div>
+                    </div>
+
                     <div>
                         <h5 class="mb_16">Feature keywords Today</h5>
                         <ul class="list-tags">
@@ -1958,8 +2023,6 @@
                                             src="images/products/beauty-cosmetic/beauty10.jpg" alt="image-product">
                                     </a>
 
-
-
                                 </div>
                                 <div class="card-product-info">
                                     <a href="product-detail.html" class="title link">mock product</a>
@@ -1976,8 +2039,6 @@
                                             data-src="images/products/beauty-cosmetic/beauty10.jpg"
                                             src="images/products/beauty-cosmetic/beauty10.jpg" alt="image-product">
                                     </a>
-
-
 
                                 </div>
                                 <div class="card-product-info">
@@ -2203,10 +2264,6 @@
 
                                 </div>
                             </div>
-
-
-
-
                         </div>
                     </div>
                     <!-- Load Item -->
