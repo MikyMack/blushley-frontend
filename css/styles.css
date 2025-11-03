@@ -121,6 +121,8 @@
   /* Main - Lighter, softer dark */
   --main: #4A3C3C;
 
+  --light-maroon:linear-gradient(135deg, #a8907d 0%, #c4b5a0 100%);
+
   /* Secondary - Warmer, lighter tones */
   --secondary: #a68a6a;
   --secondary-2: #c9b798;
@@ -6444,6 +6446,129 @@ input.style-line-bottom::placeholder {
   margin-bottom: 16px;
 }
 
+/* Mobile Optimizations - Add this to the end of your existing CSS */
+@media (max-width: 767px) {
+  .modal-shopping-cart .modal-content {
+    max-width: 100% !important;
+    flex-direction: column;
+  }
+  
+  /* Hide recommendations section on mobile */
+  .modal-shopping-cart .tf-minicart-recommendations {
+    display: none;
+  }
+  
+  /* Adjust header padding */
+  .modal-shopping-cart .header {
+    padding: 16px 16px 12px;
+  }
+  
+  .modal-shopping-cart .header .title {
+    font-size: 18px;
+  }
+  
+  /* Optimize cart items for mobile */
+  .modal-shopping-cart .tf-mini-cart-item {
+    margin: 0 16px;
+    padding: 12px 0;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  
+  /* Smaller images on mobile */
+  .modal-shopping-cart .tf-mini-cart-item .tf-mini-cart-image {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+  }
+  
+  .modal-shopping-cart .tf-mini-cart-item .tf-mini-cart-image img {
+    height: 60px;
+  }
+  
+  /* Stack product info vertically */
+  .modal-shopping-cart .tf-mini-cart-item .tf-mini-cart-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .modal-shopping-cart .tf-mini-cart-item .tf-mini-cart-info .mb_12 {
+    margin-bottom: 4px !important;
+  }
+  
+  /* Adjust text sizes */
+  .modal-shopping-cart .tf-mini-cart-item .text-title {
+    font-size: 14px;
+    line-height: 1.3;
+  }
+  
+  .modal-shopping-cart .tf-mini-cart-item .text-button {
+    font-size: 13px;
+  }
+  
+  /* Bottom section adjustments */
+  .modal-shopping-cart .tf-mini-cart-bottom-wrap {
+    padding: 16px;
+  }
+  
+  .modal-shopping-cart .tf-mini-cart-bottom-wrap .tf-cart-totals-discounts {
+    margin-bottom: 8px;
+  }
+  
+  .modal-shopping-cart .tf-mini-cart-bottom-wrap .tf-cart-checkbox {
+    margin-bottom: 16px;
+  }
+  
+  .modal-shopping-cart .tf-mini-cart-bottom-wrap .tf-mini-cart-view-checkout {
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  
+  /* Tool section */
+  .modal-shopping-cart .tf-mini-cart-tool {
+    padding: 0 16px;
+    height: 50px;
+  }
+  
+  .modal-shopping-cart .tf-mini-cart-tool .tf-mini-cart-tool-btn {
+    font-size: 14px;
+    gap: 8px;
+  }
+  
+  /* Improve scrolling area */
+  .modal-shopping-cart .tf-mini-cart-wrap .tf-mini-cart-main {
+    max-height: calc(100vh - 400px);
+    min-height: 200px;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 768px) and (max-width: 991px) {
+  .modal-shopping-cart .modal-content {
+    max-width: 600px !important;
+  }
+  
+  .modal-shopping-cart .tf-minicart-recommendations {
+    width: 180px;
+    padding: 20px 16px;
+  }
+  
+  .modal-shopping-cart .tf-mini-cart-item {
+    gap: 16px;
+  }
+  
+  .modal-shopping-cart .tf-mini-cart-item .tf-mini-cart-image {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .modal-shopping-cart .tf-mini-cart-item .tf-mini-cart-image img {
+    height: 80px;
+  }
+}
+
 .modal-wishlist .modal-content {
   max-width: 540px !important;
   cursor: default !important;
@@ -8842,10 +8967,13 @@ input.style-line-bottom::placeholder {
   transition: all 0.4s ease;
 }
 .card-product .box-icon:hover {
-  background-color: var(--main) !important;
+  background: var(--gradient-maroon) !important;
   color: var(--white) !important;
   border-color: var(--main) !important;
 }
+.card-product .box-icon .icon:hover{
+  color: var(--white) !important;
+} 
 .card-product .box-icon:hover .tooltip {
   opacity: 1;
   visibility: visible;
@@ -9032,6 +9160,11 @@ input.style-line-bottom::placeholder {
   max-width: 272px;
   width: 100%;
   border: 1px solid var(--line);
+  background:linear-gradient(135deg, #a8907d 0%, #c4b5a0 100%);
+}
+.card-product.style-list .list-product-btn .btn-main-product:hover {
+  
+  background:var(--gradient-maroon);
 }
 .card-product.style-list .list-product-btn .box-icon {
   border: 1px solid var(--line);
@@ -19790,14 +19923,14 @@ ul.list-text.type-number {
 
 @media (max-width:560px) {
     .page-title-shop {
-        min-height: 360px;
+        min-height: 300px;
     }
   
 }
 
 @media (min-width:561px) and (max-width:768px) {
     .page-title-shop {
-        min-height: 450px;
+        min-height: 400px;
     }
   
 }
@@ -20072,23 +20205,25 @@ ul.list-text.type-number {
 }
 
 /* Mobile Responsive for Beautician Cards */
+/* Mobile Responsive for Beautician Cards - FIXED */
 @media (max-width: 767px) {
-    .card-product.style-list {
+    /* Card Layout */
+    .bs-card-product.style-list {
         flex-direction: column !important;
     }
     
-    .card-product.style-list .card-product-wrapper {
+    .bs-card-product .bs-card-product-wrapper {
         width: 100% !important;
         max-width: 100% !important;
         margin-bottom: 15px;
     }
     
-    .card-product.style-list .card-product-info {
+    .bs-card-product .bs-card-product-info {
         width: 100% !important;
         padding-left: 0 !important;
     }
     
-    .card-product.style-list .product-img {
+    .bs-card-product .bs-product-img {
         width: 100%;
         padding-bottom: 120%; /* Aspect ratio */
         position: relative;
@@ -20096,7 +20231,7 @@ ul.list-text.type-number {
         border-radius: 8px;
     }
     
-    .card-product.style-list .product-img img {
+    .bs-card-product .bs-product-img img {
         position: absolute;
         top: 0;
         left: 0;
@@ -20105,24 +20240,119 @@ ul.list-text.type-number {
         object-fit: cover;
     }
     
-    /* Adjust buttons for mobile */
-    .list-product-btn {
-        flex-wrap: wrap;
-        justify-content: center;
+    /* Button Container - Make it visible and properly aligned */
+    .bs-card-product .list-product-btn {
+        display: grid !important;
+       grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin-top: 15px;
+        width: 100%;
     }
     
-    .btn-main-product {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 10px;
+    /* Main Button - Full Width */
+    .bs-card-product .bs-btn-main-product,
+    .bs-card-product .btn-main-product {
+        grid-column: 1 / -1;
+    text-align: center;
+    display: block !important;
+    padding: 12px 20px;
     }
+    
+    /* Icon Buttons - Side by Side */
+    .bs-card-product .bs-btn-icon-action,
+    .bs-card-product .btn-icon-action {
+        display: flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 12px;
+    gap: 6px;
+    background: linear-gradient(135deg, #a8907d 0%, #c4b5a0 100%);
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    color: white;
+    font-size: 13px;
+        
+    }
+    
+    .bs-card-product .bs-btn-icon-action:hover,
+    .bs-card-product .btn-icon-action:hover {
+        border-color: #c9a561;
+        background: #fff;
+    }
+
+    .bs-card-product .bs-btn-icon-action::after,
+.bs-card-product .btn-icon-action::after {
+    content: attr(title);
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+}
+    
+    /* Icon styling */
+    .bs-card-product .bs-btn-icon-action .icon,
+    .bs-card-product .btn-icon-action .icon {
+        font-size: 18px;
+        display: inline-block;
+    }
+    
+    /* Make tooltip text visible on mobile */
+    .bs-card-product .bs-tooltip,
+    .bs-card-product .bs-tool-tip,
+    .bs-card-product .tooltip {
+        position: absolute;
+        opacity: 0;
+        visibility:hidden;
+        display: none !important;
+       
+    }
+    
+   
+    .bs-card-product .bs-icon-star {
+    color: white !important;
+}
+.bs-card-product .icon-calendar {
+    color: white !important;
+}
+
+    
     
     /* Location info mobile adjustment */
-    .location-info {
+    .bs-card-product .location-info {
         width: 100%;
         flex-wrap: wrap;
     }
+    
+    /* Service tags */
+    .bs-card-product .list-color-product {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 15px;
+    }
+    
+    /* Box icon specific styling */
+    .bs-card-product .bs-box-icon {
+        display: flex !important;
+        visibility: visible !important;
+    }
 }
+
+/* Additional fix for very small screens */
+@media (max-width: 768px) {
+    .bs-card-product .bs-btn-icon-action,
+    .bs-card-product .btn-icon-action {
+        min-width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .bs-card-product .list-product-btn {
+        flex-direction: column;
+    }
+}
+
 /***********home page section -bridal collections***********/
 /* Golden Button Style */
 .btn-golden {
@@ -20309,7 +20539,7 @@ ul.list-text.type-number {
     width: 50px;
     height: 50px;
     border: 4px solid #f3f3f3;
-    border-top: 4px solid #7B1E1E; 
+    border-top: 4px solid var(--burgundy); 
     border-radius: 50%;
     animation: spin 1s linear infinite;
 }
@@ -21224,7 +21454,7 @@ ul.list-text.type-number {
 }
 
 .review-cta-btn {
-    background: var(--primary);
+    background: var(--gradient-maroon);
     color: var(--white);
     border: none;
     padding: 18px 45px;
@@ -21644,8 +21874,7 @@ ul.list-text.type-number {
 
         /* Popup Header */
         .review-popup-header {
-            background: linear-gradient(135deg, #8b6f47 0%, #9b7f57 100%);
-            color: white;
+            background: var(--light-maroon);
             padding: 20px 25px;
             display: flex;
             justify-content: space-between;
@@ -21739,7 +21968,7 @@ ul.list-text.type-number {
         .write-review-btn {
             width: 100%;
             padding: 16px;
-            background: linear-gradient(135deg, #8b6f47 0%, #9b7f57 100%);
+            background: var(--light-maroon);
             color: white;
             border: none;
             border-radius: 10px;
@@ -21819,7 +22048,7 @@ ul.list-text.type-number {
             width: 45px;
             height: 45px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #8b6f47 0%, #9b7f57 100%);
+            background:var(--light-maroon);
             color: white;
             display: flex;
             align-items: center;
@@ -21959,7 +22188,7 @@ ul.list-text.type-number {
             width: 45px;
             height: 45px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #8b6f47 0%, #9b7f57 100%);
+            background: var(--light-maroon);
             color: white;
             display: flex;
             align-items: center;
@@ -22426,6 +22655,7 @@ ul.list-text.type-number {
 
         .btn-main-product:hover {
             transform: translateY(-2px);
+            background:var(--gradient-maroon)
         }
 
         /* Service Type Selection */
@@ -23082,14 +23312,11 @@ ul.list-text.type-number {
     }
 
   .tf-slideshow .wrap-slider {
-    min-height: 550px;
+    min-height: 400px;
     height: 580px;
   }
   
-  .wrap-slider img {
-    object-position: center center;
-    height: 100%;
-  }
+
   
   /* Position content with background overlay */
   .slider-default .box-content {
@@ -23156,18 +23383,23 @@ ul.list-text.type-number {
     margin-left: 4px; /* Reduce space between text and icon */
   }
   
+  .tf-slideshow .wrap-slider img {
+    object-fit: cover !important;
+  }
+  
+  /* First slide positioning */
   .swiper-slide:nth-child(1) .wrap-slider img {
-    object-position: 75% center;
+    object-position: 90% center !important;
   }
   
-  /* Second slide - show center */
+  /* Second slide positioning */
   .swiper-slide:nth-child(2) .wrap-slider img {
-    object-position:90% center;
+    object-position: 20% center !important;
   }
   
-  /* Third slide - show more of left */
+  /* Third slide positioning  shop now*/
   .swiper-slide:nth-child(3) .wrap-slider img {
-    object-position: 15% center;
+    object-position: 20% center !important;
   }
  
   
@@ -23474,13 +23706,13 @@ transform: translateY(20px);
     }
 
     /* Show only on mobile devices */
-    @media (max-width: 520px) {
+    @media (max-width: 768px) {
         .mobile-nav-wrapper {
             display: block;
         }
     }
 
-    @media (min-width: 521px) {
+    @media (min-width: 769px) {
         .mobile-nav-wrapper {
             display: none !important;
         }
@@ -24168,4 +24400,9 @@ transform: translateY(20px);
     min-width: auto;
   }
 }
+
+
+/********** Beautician service  page styles overridden for mobile ***********/
+
+
 
