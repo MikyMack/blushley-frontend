@@ -19934,7 +19934,32 @@ ul.list-text.type-number {
     }
   
 }
+
 /**beautician services page extra css***/
+
+/* Fixed Image Frame - Override any existing styles */
+.bs-card-product .bs-product-img,
+.bs-card-product .product-img {
+    width: 100%;
+    max-width: 280px;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    display: block;
+    background: #f5f5f5;
+}
+
+.bs-card-product .bs-product-img img,
+.bs-card-product .product-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
 
 /* Minimal style additions for beautician-specific elements */
 .card-product-info {
@@ -20204,9 +20229,41 @@ ul.list-text.type-number {
     }
 }
 
-/* Mobile Responsive for Beautician Cards */
+/* Tablet/Medium screens fix */
+@media (min-width: 468px) and (max-width: 768px) {
+    .bs-card-product.style-list {
+        flex-direction: row !important;
+    }
+    
+    .bs-card-product .bs-card-product-wrapper {
+        width: 35% !important;
+        max-width: 250px !important;
+        flex-shrink: 0;
+    }
+    
+    .bs-card-product .bs-card-product-info {
+        width: 65% !important;
+        padding-left: 20px !important;
+    }
+    
+    .bs-card-product .bs-product-img,
+    .bs-card-product .product-img {
+        width: 100%;
+        height: 320px;
+        max-width: 100%;
+    }
+    
+    .bs-card-product .bs-product-img img,
+    .bs-card-product .product-img img {
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+
 /* Mobile Responsive for Beautician Cards - FIXED */
-@media (max-width: 767px) {
+
+@media (max-width: 468px) {
     /* Card Layout */
     .bs-card-product.style-list {
         flex-direction: column !important;
@@ -20223,23 +20280,26 @@ ul.list-text.type-number {
         padding-left: 0 !important;
     }
     
-    .bs-card-product .bs-product-img {
-        width: 100%;
-        padding-bottom: 120%; /* Aspect ratio */
-        position: relative;
-        overflow: hidden;
-        border-radius: 8px;
-    }
-    
-    .bs-card-product .bs-product-img img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    
+.bs-card-product .bs-product-img,
+.bs-card-product .product-img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.bs-card-product .bs-product-img img,
+.bs-card-product .product-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
     /* Button Container - Make it visible and properly aligned */
     .bs-card-product .list-product-btn {
         display: grid !important;
@@ -20352,6 +20412,7 @@ ul.list-text.type-number {
         flex-direction: column;
     }
 }
+
 
 /***********home page section -bridal collections***********/
 /* Golden Button Style */
@@ -23399,7 +23460,7 @@ ul.list-text.type-number {
   
   /* Third slide positioning  shop now*/
   .swiper-slide:nth-child(3) .wrap-slider img {
-    object-position: 20% center !important;
+    object-position: 90% center !important;
   }
  
   
