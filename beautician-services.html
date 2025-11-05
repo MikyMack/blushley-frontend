@@ -145,12 +145,10 @@
                                 </a>
                                 <div class="dropdown-account dropdown-login">
                                     <div class="sub-top">
-                                        <a href="login.html" class="tf-btn btn-reset">Login</a>
-                                        <p class="text-center text-secondary-2">Don’t have an account? <a
-                                                href="register.html">Register</a></p>
-                                    </div>
-                                    <div class="sub-bot">
-                                        <span class="body-text-">Support</span>
+                                        <a href="login.html" class="nav-acc-link">My Account</a>
+                                          <a href="my-account-orders.html" class="nav-acc-link"> Orders</a>
+                                            <a href="booking-history.html" class="nav-acc-link">My Bookings</a>
+                                     
                                     </div>
                                 </div>
                             </li>
@@ -252,15 +250,15 @@
                     <div class="tf-list-layout wrapper-shop" id="listLayout">
 
                         <!-- Beautician card 1 -->
-                        <div class="card-product style-list" data-rating="5" data-service="makeup" data-price="80"
+                        <div class="card-product style-list bs-card-product" data-rating="5" data-service="makeup" data-price="80"
                             data-location="indiranagar,koramangala">
-                            <div class="card-product-wrapper">
-                                <a href="beautician-profile.html" class="product-img">
+                            <div class="card-product-wrapper  bs-card-product-wrapper">
+                                <a href="beautician-profile.html" class="product-img bs-product-img">
                                     <img class="lazyload img-product" data-src="images/beautician/beautician1.png"
                                         src="images/beautician/beautician1.png" alt="Sarah Johnson">
                                 </a>
                             </div>
-                            <div class="card-product-info">
+                            <div class="card-product-info bs-card-product-info>
                                 <a href="beautician-profile.html" class="title link">ID no. :1</a>
                                 <div class="price">
                                     <span class="rating-badge">★★★★★</span>
@@ -315,20 +313,21 @@
                                         </li>
                                     </ul>
                                     <div class="size-box list-product-btn">
-                                        <!--  <span class="price-info">From <strong>$80</strong>/hour</span>-->
+                                        <!--  <span class="price-info">From <strong>₹80</strong>/hour</span>-->
                                         <span class="availability-badge">Available Today</span>
                                     </div>
                                     <div class="list-product-btn">
                                         <a href="beautician-profile.html" class="btn-main-product">View Profile</a>
-                                        <a href="booking.html" class="box-icon wishlist btn-icon-action"
+                                        <a onclick="openBookingModal()" class="box-icon btn-icon-action"
                                             title="Book Now">
                                             <span class="icon icon-calendar"></span>
-                                            <span class="tooltip">Book Now</span>
+                                            <span class="tooltip" >Book Now</span>
+                                           
                                         </a>
-                                        <a href="javascript:void(0);" class="box-icon compare btn-icon-action"
+                                        <a href="javascript:void(0);" class="box-icon compare btn-icon-action bs-box-icon"
                                             title="Reviews">
-                                            <span class="icon icon-star"></span>
-                                            <span class="tooltip">Reviews</span>
+                                            <span class="icon icon-star bs-icon-star"></span>
+                                            <span class="tooltip bs-tool-tip">Reviews</span>
                                         </a>
                                    
                                     </div>
@@ -336,15 +335,15 @@
                             </div>
                         </div>
                         <!-- Beautician card 2 -->
-                        <div class="card-product style-list" data-rating="4.5" data-service="hair" data-price="60">
-                            <div class="card-product-wrapper">
-                                <a href="beautician-profile.html" class="product-img">
+                       <div class="card-product style-list bs-card-product" data-rating="4.5" data-service="hair" data-price="60">
+                            <div class="card-product-wrapper bs-card-product-wrapper">
+                                <a href="beautician-profile.html" class="product-img bs-product-img">
                                     <img class="lazyload img-product" data-src="images/beautician/beautician2.png"
                                         src="images/beautician/beautician2.png" alt="Maria Garcia">
-                                    <!-- <img class="lazyload img-hover" data-src="images/beautician-2-hover.jpg" src="images/beautician-2-hover.jpg" alt="Maria Garcia">-->
+                                   
                                 </a>
                             </div>
-                            <div class="card-product-info">
+                            <div class="card-product-info bs-card-product-info">
                                 <a href="beautician-profile.html" class="title link">Maria Garcia</a>
                                 <div class="price">
                                     <span class="rating-badge">★★★★☆</span>
@@ -369,20 +368,20 @@
                                         </li>
                                     </ul>
                                     <div class="size-box list-product-btn">
-                                        <span class="price-info">From <strong>$60</strong>/hour</span>
+                                        <span class="price-info">From <strong>₹60</strong>/hour</span>
                                         <span class="availability-badge">Available Tomorrow</span>
                                     </div>
                                     <div class="list-product-btn">
-                                        <a href="beautician-profile.html" class="btn-main-product">View Profile</a>
-                                        <a href="booking.html" class="box-icon wishlist btn-icon-action"
+                                        <a href="beautician-profile.html" class="btn-main-product bs-btn-main-product" >View Profile</a>
+                                        <a href="booking.html" class="box-icon wishlist btn-icon-action bs-btn-icon-action"
                                             title="Book Now">
                                             <span class="icon icon-calendar"></span>
-                                            <span class="tooltip">Book Now</span>
+                                            <span class="tooltip bs-tooltip">Book Now</span>
                                         </a>
-                                        <a href="javascript:void(0);" class="box-icon compare btn-icon-action"
+                                        <a href="javascript:void(0);" class="box-icon compare btn-icon-action bs-box-icon"
                                             title="Reviews">
-                                            <span class="icon icon-star"></span>
-                                            <span class="tooltip">Reviews</span>
+                                            <span class="icon icon-star bs-icon-star"></span>
+                                            <span class="tooltip bs-tool-tip">Reviews</span>
                                         </a>
                                         
                                     </div>
@@ -391,15 +390,15 @@
                         </div>
 
                         <!-- Beautician card 3 -->
-                        <div class="card-product style-list" data-rating="5" data-service="skincare" data-price="100">
-                            <div class="card-product-wrapper">
-                                <a href="beautician-profile.html" class="product-img">
+                        <div class="card-product style-list bs-card-product" data-rating="5" data-service="skincare" data-price="100">
+                            <div class="card-product-wrapper bs-card-product-wrapper">
+                                <a href="beautician-profile.html" class="product-img bs-product-img">
                                     <img class="lazyload img-product" data-src="images/beautician/beautician3.png"
                                         src="images/beautician/beautician3.png" alt="Emily Chen">
                                     <!-- <img class="lazyload img-hover" data-src="images/beautician-3-hover.jpg" src="images/beautician-3-hover.jpg" alt="Emily Chen">-->
                                 </a>
                             </div>
-                            <div class="card-product-info">
+                            <div class="card-product-info bs-card-product-info">
                                 <a href="beautician-profile.html" class="title link">Emily Chen</a>
                                 <div class="price">
                                     <span class="rating-badge">★★★★★</span>
@@ -424,20 +423,20 @@
                                         </li>
                                     </ul>
                                     <div class="size-box list-product-btn">
-                                        <span class="price-info">From <strong>$100</strong>/hour</span>
+                                        <span class="price-info">From <strong>₹100</strong>/hour</span>
                                         <span class="availability-badge">Available Today</span>
                                     </div>
                                     <div class="list-product-btn">
-                                        <a href="beautician-profile.html" class="btn-main-product">View Profile</a>
-                                        <a href="booking.html" class="box-icon wishlist btn-icon-action"
+                                        <a href="beautician-profile.html" class="btn-main-product bs-btn-main-product">View Profile</a>
+                                        <a href="booking.html" class="box-icon wishlist btn-icon-action bs-btn-icon-action"
                                             title="Book Now">
                                             <span class="icon icon-calendar"></span>
                                             <span class="tooltip">Book Now</span>
                                         </a>
-                                        <a href="javascript:void(0);" class="box-icon compare btn-icon-action"
+                                        <a href="javascript:void(0);" class="box-icon compare btn-icon-action bs-box-icon"
                                             title="Reviews">
-                                            <span class="icon icon-star"></span>
-                                            <span class="tooltip">Reviews</span>
+                                            <span class="icon icon-star bs-icon-star"></span>
+                                            <span class="tooltip bs-tool-tip">Reviews</span>
                                         </a>
                                        
                                     </div>
@@ -445,180 +444,7 @@
                             </div>
                         </div>
 
-                        <!-- Beautician card 4 -->
-                        <div class="card-product style-list" data-rating="5" data-service="bridal" data-price="150">
-                            <div class="card-product-wrapper">
-                                <a href="beautician-profile.html" class="product-img">
-                                    <img class="lazyload img-product" data-src="images/beautician/beautician4.png"
-                                        src="images/beautician/beautician4.png" alt="Jessica Lee">
-                                    <!-- <img class="lazyload img-hover" data-src="images/beautician-4-hover.jpg" src="images/beautician-4-hover.jpg" alt="Jessica Lee">-->
-                                </a>
-
-                            </div>
-                            <div class="card-product-info">
-                                <a href="beautician-profile.html" class="title link">Jessica Lee</a>
-                                <div class="price">
-                                    <span class="rating-badge">★★★★★</span>
-                                    <span class="review-count">(92 reviews)</span>
-                                </div>
-                                <p class="description text-secondary text-line-clamp-2">Bridal & Event Makeup
-                                    Specialist. 7 years expertise in creating stunning bridal looks and event makeup
-                                    with trial sessions included.</p>
-                                <div class="variant-wrap-list">
-                                    <ul class="list-color-product">
-                                        <li class="list-color-item beautician-list">
-                                            <span class="d-none text-capitalize color-filter">Bridal</span>
-                                            <span class="service-tag">Bridal</span>
-                                        </li>
-                                        <li class="list-color-item beautician-list">
-                                            <span class="d-none text-capitalize color-filter">Events</span>
-                                            <span class="service-tag">Events</span>
-                                        </li>
-                                        <li class="list-color-item beautician-list">
-                                            <span class="d-none text-capitalize color-filter">Makeup</span>
-                                            <span class="service-tag">Makeup</span>
-                                        </li>
-                                    </ul>
-                                    <div class="size-box list-product-btn">
-                                        <span class="price-info">From <strong>$150</strong>/hour</span>
-                                        <span class="availability-badge">This Week</span>
-                                    </div>
-                                    <div class="list-product-btn">
-                                        <a href="beautician-profile.html" class="btn-main-product">View Profile</a>
-                                        <a href="booking.html" class="box-icon wishlist btn-icon-action"
-                                            title="Book Now">
-                                            <span class="icon icon-calendar"></span>
-                                            <span class="tooltip">Book Now</span>
-                                        </a>
-                                        <a href="javascript:void(0);" class="box-icon compare btn-icon-action"
-                                            title="Reviews">
-                                            <span class="icon icon-star"></span>
-                                            <span class="tooltip">Reviews</span>
-                                        </a>
-                                        <a href="#" class="box-icon quickview tf-btn-loading" title="Details">
-                                            <span class="icon icon-eye"></span>
-                                            <span class="tooltip">Details</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Beautician card 5 -->
-                        <div class="card-product style-list" data-rating="5" data-service="makeup" data-price="70">
-                            <div class="card-product-wrapper">
-                                <a href="beautician-profile.html" class="product-img">
-                                    <img class="lazyload img-product" data-src="images/beautician/beautician5.png"
-                                        src="images/beautician/beautician5.png" alt="Priya Patel">
-                                    <!--<img class="lazyload img-hover" data-src="images/beautician-5-hover.jpg" src="images/beautician-5-hover.jpg" alt="Priya Patel">-->
-                                </a>
-                            </div>
-                            <div class="card-product-info">
-                                <a href="beautician-profile.html" class="title link">Priya Patel</a>
-                                <div class="price">
-                                    <span class="rating-badge">★★★★★</span>
-                                    <span class="review-count">(203 reviews)</span>
-                                </div>
-                                <p class="description text-secondary text-line-clamp-2">Makeup & Nail Art Artist. 9
-                                    years of creativity in makeup artistry and nail designs for all occasions and
-                                    styles.</p>
-                                <div class="variant-wrap-list">
-                                    <ul class="list-color-product">
-                                        <li class="list-color-item beautician-list">
-                                            <span class="d-none text-capitalize color-filter">Makeup</span>
-                                            <span class="service-tag">Makeup</span>
-                                        </li>
-                                        <li class="list-color-item beautician-list">
-                                            <span class="d-none text-capitalize color-filter">Nails</span>
-                                            <span class="service-tag">Nails</span>
-                                        </li>
-                                        <li class="list-color-item beautician-list">
-                                            <span class="d-none text-capitalize color-filter">Art</span>
-                                            <span class="service-tag">Art Design</span>
-                                        </li>
-                                    </ul>
-                                    <div class="size-box list-product-btn">
-                                        <span class="price-info">From <strong>$70</strong>/hour</span>
-                                        <span class="availability-badge">Available Today</span>
-                                    </div>
-                                    <div class="list-product-btn">
-                                        <a href="beautician-profile.html" class="btn-main-product">View Profile</a>
-                                        <a href="booking.html" class="box-icon wishlist btn-icon-action"
-                                            title="Book Now">
-                                            <span class="icon icon-calendar"></span>
-                                            <span class="tooltip">Book Now</span>
-                                        </a>
-                                        <a href="javascript:void(0);" class="box-icon compare btn-icon-action"
-                                            title="Reviews">
-                                            <span class="icon icon-star"></span>
-                                            <span class="tooltip">Reviews</span>
-                                        </a>
-                                        <a href="#" class="box-icon quickview tf-btn-loading" title="Details">
-                                            <span class="icon icon-eye"></span>
-                                            <span class="tooltip">Details</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Beautician card 6 -->
-                        <div class="card-product style-list" data-rating="4" data-service="hair" data-price="75">
-                            <div class="card-product-wrapper">
-                                <a href="beautician-profile.html" class="product-img">
-                                    <img class="lazyload img-product" data-src="images/beautician/beautician6.png"
-                                        src="images/beautician/beautician6.png" alt="Lisa Wong">
-                                    <!-- <img class="lazyload img-hover" data-src="images/beautician-6-hover.jpg" src="images/beautician-6-hover.jpg" alt="Lisa Wong">-->
-                                </a>
-                            </div>
-                            <div class="card-product-info">
-                                <a href="beautician-profile.html" class="title link">Lisa Wong</a>
-                                <div class="price">
-                                    <span class="rating-badge">★★★★☆</span>
-                                    <span class="review-count">(128 reviews)</span>
-                                </div>
-                                <p class="description text-secondary text-line-clamp-2">Hair & Makeup Expert. 4 years
-                                    experience combining hair styling with makeup artistry for complete transformations.
-                                </p>
-                                <div class="variant-wrap-list">
-                                    <ul class="list-color-product">
-                                        <li class="list-color-item beautician-list">
-                                            <span class="d-none text-capitalize color-filter">Hair</span>
-                                            <span class="service-tag">Hair</span>
-                                        </li>
-                                        <li class="list-color-item beautician-list">
-                                            <span class="d-none text-capitalize color-filter">Makeup</span>
-                                            <span class="service-tag">Makeup</span>
-                                        </li>
-                                        <li class="list-color-item beautician-list">
-                                            <span class="d-none text-capitalize color-filter">Styling</span>
-                                            <span class="service-tag">Styling</span>
-                                        </li>
-                                    </ul>
-                                    <div class="size-box list-product-btn">
-                                        <span class="price-info">From <strong>$75</strong>/hour</span>
-                                        <span class="availability-badge">Tomorrow</span>
-                                    </div>
-                                    <div class="list-product-btn">
-                                        <a href="beautician-profile.html" class="btn-main-product">View Profile</a>
-                                        <a href="booking.html" class="box-icon wishlist btn-icon-action"
-                                            title="Book Now">
-                                            <span class="icon icon-calendar"></span>
-                                            <span class="tooltip">Book Now</span>
-                                        </a>
-                                        <a href="javascript:void(0);" class="box-icon compare btn-icon-action"
-                                            title="Reviews">
-                                            <span class="icon icon-star"></span>
-                                            <span class="tooltip">Reviews</span>
-                                        </a>
-                                        <a href="#" class="box-icon quickview tf-btn-loading" title="Details">
-                                            <span class="icon icon-eye"></span>
-                                            <span class="tooltip">Details</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                       
 
                         <!-- pagination -->
                         <ul class="wg-pagination">
@@ -680,6 +506,110 @@
             </div>
         </section>
         <!-- /Beautician CTA Banner -->
+
+          <!-- Booking Modal -->
+        <div class="sbm-modal-overlay" id="bookingModal">
+            <div class="sbm-modal-container">
+                <div class="sbm-modal-header">
+                    <div class="sbm-modal-title">Book Your Appointment</div>
+                    <div class="sbm-modal-subtitle">Beautician ID: #BT001</div>
+                    <button class="sbm-close-btn" onclick="closeBookingModal()">×</button>
+                </div>
+
+                <div class="sbm-modal-body">
+                    <!-- Services Section -->
+                    <div class="sbm-section">
+                        <div class="sbm-section-title">
+                            <div class="sbm-section-icon">✂</div>
+                            Select Services
+                        </div>
+                        <div class="sbm-services-grid" id="servicesGrid">
+                            <!-- Services will be populated here -->
+                        </div>
+                    </div>
+
+                    <!-- Date Selection -->
+                    <div class="sbm-section">
+                        <div class="sbm-section-title">
+                            <div class="sbm-section-icon">📅</div>
+                            Choose Date
+                        </div>
+                        <div class="sbm-date-selector" id="dateSelector">
+                            <!-- Dates will be populated here -->
+                        </div>
+                    </div>
+
+                    <!-- Time Slots -->
+                    <div class="sbm-section">
+                        <div class="sbm-section-title">
+                            <div class="sbm-section-icon">🕐</div>
+                            Available Time Slots
+                        </div>
+                        <div class="sbm-slots-container" id="slotsContainer">
+                            <!-- Slots will be populated here -->
+                        </div>
+                    </div>
+
+                    <!-- User Details -->
+                    <div class="sbm-section">
+                        <div class="sbm-section-title">
+                            <div class="sbm-section-icon">👤</div>
+                            Your Details
+                        </div>
+                        <div class="sbm-form-row">
+                            <div class="sbm-form-group">
+                                <label class="sbm-form-label">Full Name *</label>
+                                <input type="text" class="sbm-form-input" id="userName" placeholder="Enter your name" required>
+                            </div>
+                            <div class="sbm-form-group">
+                                <label class="sbm-form-label">Phone Number *</label>
+                                <input type="tel" class="sbm-form-input" id="userPhone" placeholder="+91 XXXXX XXXXX" required>
+                            </div>
+                        </div>
+                        <div class="sbm-form-group">
+                            <label class="sbm-form-label">Email Address</label>
+                            <input type="email" class="sbm-form-input" id="userEmail" placeholder="your.email@example.com">
+                        </div>
+                         <div class="sbm-section-title">
+                                <div class="sbm-section-icon">📍</div>
+                                Service Address
+                            </div>
+                            
+                            <div class="sbm-form-group">
+                                <label class="sbm-form-label">Landmark / Additional Details</label>
+                                <input type="text" class="sbm-form-input" id="addressDetails"
+                                    placeholder="Nearby landmark or additional directions">
+                            </div>
+                            <div class="sbm-form-group">
+                                <label class="sbm-form-label">Complete Address *</label>
+                                <input type="text" class="sbm-form-input" id="userAddress"
+                                    placeholder="Enter your complete address (House/Flat No, Street, Area)">
+                            </div>
+                             <div class="sbm-form-group">
+                                <label for="customerAddress" class="sbm-form-label">Google Maps Link</label>
+                                <input type="text" id="customerAddress" name="customerAddress"
+                                    placeholder="Enter your address or paste Google Maps link" class="sbm-form-input" />
+                                <small style="color: #777;">
+                                    Example: https://maps.app.goo.gl/abcd1234
+                                </small>
+                            </div>
+                            
+                        
+                        <div class="sbm-form-group">
+                            <label class="sbm-form-label">Special Requests (Optional)</label>
+                            <textarea class="sbm-form-textarea" id="userNotes" placeholder="Any specific requirements or preferences..."></textarea>
+                        </div>
+                    </div>
+                </div>               
+
+                <div class="sbm-modal-footer">
+                    <div class="sbm-total-price">
+                        Total: <span class="sbm-price-amount" id="totalPrice">₹0</span>
+                    </div>
+                    <button class="sbm-submit-btn" onclick="submitBooking()">Confirm Booking</button>
+                </div>
+            </div>
+        </div>
 
 
 
@@ -1036,63 +966,42 @@
 </div>
 
 
-       
-         <div class="mobile-nav-wrapper show" id="mobileNavWrapper">
+        <div class="mobile-nav-wrapper show" id="mobileNavWrapper">
             <!-- Floating Top Toolbar -->
             <div class="tf-toolbar-top">
                 <div class="toolbar-item">
-                    <a href="shopping-cart.html">
+                    <a href="beautician-services.html">
                         <div class="toolbar-icon">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9 2L7 6H2L3 8H21L22 6H17L15 2H9Z" stroke="white" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" />
                                 <path
-                                    d="M3 8L4 20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20L21 8H3Z"
+                                    d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z"
                                     stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </div>
-                        <div class="toolbar-label">Cart</div>
-                    </a>
-                </div>
-                <div class="toolbar-item">
-                    <a href="my-account-orders.html">
-                        <div class="toolbar-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect x="3" y="3" width="18" height="18" rx="2" stroke="white" stroke-width="2" />
-                                <path d="M9 3V6M15 3V6M3 9H21" stroke="white" stroke-width="2" stroke-linecap="round" />
-                            </svg>
-                        </div>
-                        <div class="toolbar-label">Orders</div>
-                    </a>
-                </div>
-                <div class="toolbar-item">
-                    <a href="#search" data-bs-toggle="modal">
-                        <div class="toolbar-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="11" cy="11" r="8" stroke="white" stroke-width="2" />
-                                <path d="M21 21L16.65 16.65" stroke="white" stroke-width="2" stroke-linecap="round" />
-                            </svg>
-                        </div>
-                        <div class="toolbar-label">Search</div>
-                    </a>
-                </div>
-                <div class="toolbar-item">
-                    <a href="#wishlist" data-bs-toggle="modal">
-                        <div class="toolbar-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M20.84 4.61C20.33 4.1 19.72 3.69 19.05 3.42C18.39 3.14 17.67 3 16.95 3C16.23 3 15.51 3.14 14.84 3.42C14.18 3.69 13.57 4.1 13.06 4.61L12 5.67L10.94 4.61C9.91 3.58 8.51 3 7.05 3C5.59 3 4.19 3.58 3.16 4.61C2.13 5.64 1.55 7.04 1.55 8.5C1.55 9.96 2.13 11.36 3.16 12.39L4.22 13.45L12 21.23L19.78 13.45L20.84 12.39C21.35 11.88 21.76 11.27 22.03 10.61C22.31 9.94 22.45 9.22 22.45 8.5C22.45 7.78 22.31 7.06 22.03 6.39C21.76 5.73 21.35 5.12 20.84 4.61Z"
-                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                <path d="M9 22V12H15V22" stroke="white" stroke-width="2" stroke-linecap="round"
                                     stroke-linejoin="round" />
                             </svg>
                         </div>
-                        <div class="toolbar-label">Wishlist</div>
+                        <div class="toolbar-label">Salon at Home</div>
                     </a>
                 </div>
+
+                <div class="toolbar-item">
+                    <a href="salon-service.html">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 8L3 3H21L22 8" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M2 8C2 9.1 2.9 10 4 10C5.1 10 6 9.1 6 8C6 9.1 6.9 10 8 10C9.1 10 10 9.1 10 8C10 9.1 10.9 10 12 10C13.1 10 14 9.1 14 8C14 9.1 14.9 10 16 10C17.1 10 18 9.1 18 8C18 9.1 18.9 10 20 10C21.1 10 22 9.1 22 8"
+                                stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M4 10V21H20V10" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M10 21V15H14V21" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <div class="toolbar-label">Book a Salon</div>
+                    </a>
+                </div>
+
             </div>
 
             <!-- toolbar-bottom -->
@@ -1122,7 +1031,7 @@
                     </a>
                 </div>
                 <div class="toolbar-item">
-                    <a href="login.html" >
+                    <a href="login.html">
                         <div class="toolbar-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
                                 fill="none" stroke="#4D4E4F" stroke-width="2" stroke-linecap="round"
@@ -1136,37 +1045,40 @@
                     </a>
                 </div>
                 <div class="toolbar-item">
-                    <a href="contact-02.html" >
+                    <a href="my-account-orders.html">
                         <div class="toolbar-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="none" stroke="#4D4E4F" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path
-                                    d="M22 16.92V21a2 2 0 0 1-2.18 2A19.88 19.88 0 0 1 3 5.18 2 2 0 0 1 5 3h4.09a2 2 0 0 1 2 1.72c.12.81.3 1.61.55 2.38a2 2 0 0 1-.45 2.11L10.41 10a16 16 0 0 0 6.59 6.59l.79-.79a2 2 0 0 1 2.11-.45c.77.25 1.57.43 2.38.55a2 2 0 0 1 1.72 2.02z">
-                                </path>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="3" y="3" width="18" height="18" rx="2" stroke="#4D4E4F" stroke-width="2" />
+                                <path d="M9 3V6M15 3V6M3 9H21" stroke="#4D4E4F" stroke-width="2"
+                                    stroke-linecap="round" />
                             </svg>
-
                         </div>
-                        <div class="toolbar-label">Contact</div>
+                        <div class="toolbar-label">Orders</div>
                     </a>
                 </div>
-                <!-- <div class="toolbar-item">
-                <a href="#shoppingCart" data-bs-toggle="modal">
-                    <div class="toolbar-icon">
-                        <svg class="icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M13.75 8.23389V4.48389C13.75 3.48932 13.3549 2.5355 12.6517 1.83224C11.9484 1.12897 10.9946 0.733887 10 0.733887C9.00544 0.733887 8.05161 1.12897 7.34835 1.83224C6.64509 2.5355 6.25 3.48932 6.25 4.48389V8.23389M3.4375 6.35889H16.5625L17.5 17.6089H2.5L3.4375 6.35889Z"
-                                stroke="#4D4E4F" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </div>
-                    <div class="toolbar-label">Cart</div>
-                </a>
-            </div>-->
+                <div class="toolbar-item">
+                    <a href="#wishlist" data-bs-toggle="modal">
+                        <div class="toolbar-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M20.84 4.61C20.33 4.1 19.72 3.69 19.05 3.42C18.39 3.14 17.67 3 16.95 3C16.23 3 15.51 3.14 14.84 3.42C14.18 3.69 13.57 4.1 13.06 4.61L12 5.67L10.94 4.61C9.91 3.58 8.51 3 7.05 3C5.59 3 4.19 3.58 3.16 4.61C2.13 5.64 1.55 7.04 1.55 8.5C1.55 9.96 2.13 11.36 3.16 12.39L4.22 13.45L12 21.23L19.78 13.45L20.84 12.39C21.35 11.88 21.76 11.27 22.03 10.61C22.31 9.94 22.45 9.22 22.45 8.5C22.45 7.78 22.31 7.06 22.03 6.39C21.76 5.73 21.35 5.12 20.84 4.61Z"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="toolbar-label">Wishlist</div>
+                    </a>
+                </div>
+
             </div>
             <!-- /toolbar-bottom -->
-    </div>
 
+
+        </div>
+        <!-- /mobile-nav-wrapper -->
+  
     <!-- Filter -->
 <div class="offcanvas offcanvas-start canvas-filter" id="filterShop">
   <div class="canvas-wrapper">
@@ -1288,305 +1200,371 @@
 
     <!-- /Filter -->
 
-    <!-- search -->
-    <div class="modal fade modal-search" id="search">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="d-flex justify-content-between align-items-center">
+  
+        <!-- search -->
+        <div class="modal fade modal-search" id="search">
+            
+            <div class="modal-dialog modal-dialog-centered">
+                
+                <div class="modal-content">    
+                    <div class="d-flex justify-content-between align-items-center">
                     <h5>Search</h5>
                     <span class="icon-close icon-close-popup" data-bs-dismiss="modal"></span>
-                </div>
-                <form class="form-search">
-                    <fieldset class="text">
-                        <input type="text" placeholder="Searching..." class="" name="text" tabindex="0" value=""
-                            aria-required="true" required="">
-                    </fieldset>
-                    <button class="" type="submit">
-                        <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
-                                stroke="#181818" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                            <path d="M21.35 21.0004L17 16.6504" stroke="#181818" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round"></path>
-                        </svg>
-                    </button>
-                </form>
-                <div>
-                    <h5 class="mb_16">Feature keywords Today</h5>
-                    <ul class="list-tags">
-                        <li><a href="#" class="radius-60 link">anti ageing</a></li>
-                        <li><a href="#" class="radius-60 link">organic</a></li>
-                        <li><a href="#" class="radius-60 link">night serum</a></li>
-                        <li><a href="#" class="radius-60 link">vegan</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h6 class="mb_16">Recently viewed products</h6>
-                    <div class="tf-grid-layout tf-col-2 lg-col-3 xl-col-4 loadmore-item" data-display="4"
-                        data-count="4">
-                        <div class="fl-item card-product card-product-size">
-                            <div class="card-product-wrapper">
-                                <a href="product-detail.html" class="product-img">
-                                    <img class="lazyload img-product"
-                                        data-src="images/products/beauty-cosmetic/beauty8.jpg"
-                                        src="images/products/beauty-cosmetic/beauty8.jpg" alt="image-product">
-                                    <img class="lazyload img-hover"
-                                        data-src="images/products/beauty-cosmetic/beauty10.jpg"
-                                        src="images/products/beauty-cosmetic/beauty10.jpg" alt="image-product">
-                                </a>
+                </div>        
 
+                    <div class="search-bar-wrapper">
+                        <form class="form-search" onsubmit="handleSearch(event)">
+                            <fieldset class="text">
+                                <input type="text" placeholder="Searching..." class="" name="text" tabindex="0" value=""
+                                    aria-required="true" required="">
+                            </fieldset>
+                            <button class="" type="submit">
+                                <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+                                        stroke="#181818" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                    </path>
+                                    <path d="M21.35 21.0004L17 16.6504" stroke="#181818" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </button>
+                        </form>
 
-
-                            </div>
-                            <div class="card-product-info">
-                                <a href="product-detail.html" class="title link">mock product</a>
-                                <span class="price current-price">$39.99</span>
-                            </div>
-                        </div>
-                        <div class="fl-item card-product">
-                            <div class="card-product-wrapper">
-                                <a href="product-detail.html" class="product-img">
-                                    <img class="lazyload img-product"
-                                        data-src="images/products/beauty-cosmetic/beauty8.jpg"
-                                        src="images/products/beauty-cosmetic/beauty8.jpg" alt="image-product">
-                                    <img class="lazyload img-hover"
-                                        data-src="images/products/beauty-cosmetic/beauty10.jpg"
-                                        src="images/products/beauty-cosmetic/beauty10.jpg" alt="image-product">
-                                </a>
-
-
-
-                            </div>
-                            <div class="card-product-info">
-                                <a href="product-detail.html" class="title link">mock product</a>
-                                <span class="price current-price">$79.99</span>
-
-                            </div>
-                        </div>
-                        <div class="fl-item card-product card-product-size">
-                            <div class="card-product-wrapper">
-                                <a href="product-detail.html" class="product-img">
-                                    <img class="lazyload img-product"
-                                        data-src="images/products/beauty-cosmetic/beauty8.jpg"
-                                        src="images/products/beauty-cosmetic/beauty8.jpg" alt="image-product">
-                                    <img class="lazyload img-hover"
-                                        data-src="images/products/beauty-cosmetic/beauty10.jpg"
-                                        src="images/products/beauty-cosmetic/beauty10.jpg" alt="image-product">
-                                </a>
-                                <div class="on-sale-wrap"><span class="on-sale-item">-25%</span></div>
-
-                            </div>
-                            <div class="card-product-info">
-                                <a href="product-detail.html" class="title link">mock product</a>
-                                <div class="price"><span class="old-price">$98.00</span><span
-                                        class="current-price">$129.99</span></div>
-
-                            </div>
-                        </div>
-                        <div class="fl-item card-product card-product-size">
-                            <div class="card-product-wrapper">
-                                <a href="product-detail.html" class="product-img">
-                                    <img class="lazyload img-product"
-                                        data-src="images/products/beauty-cosmetic/beauty8.jpg"
-                                        src="images/products/beauty-cosmetic/beauty8.jpg" alt="image-product">
-                                    <img class="lazyload img-hover"
-                                        data-src="images/products/beauty-cosmetic/beauty10.jpg"
-                                        src="images/products/beauty-cosmetic/beauty10.jpg" alt="image-product">
-                                </a>
-                                <div class="on-sale-wrap"><span class="on-sale-item">-25%</span></div>
-
-                            </div>
-                            <div class="card-product-info">
-                                <a href="product-detail.html" class="title link">mock product</a>
-                                <div class="price"><span class="old-price">$98.00</span><span
-                                        class="current-price">$219.99</span></div>
-
-                            </div>
-                        </div>
-                        <div class="fl-item card-product">
-                            <div class="card-product-wrapper">
-                                <a href="product-detail.html" class="product-img">
-                                    <img class="lazyload img-product"
-                                        data-src="images/products/beauty-cosmetic/beauty8.jpg"
-                                        src="images/products/beauty-cosmetic/beauty8.jpg" alt="image-product">
-                                    <img class="lazyload img-hover"
-                                        data-src="images/products/beauty-cosmetic/beauty10.jpg"
-                                        src="images/products/beauty-cosmetic/beauty10.jpg" alt="image-product">
-                                </a>
-
-                                <div class="list-btn-main">
-                                    <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add To
-                                        cart</a>
-                                </div>
-                            </div>
-                            <div class="card-product-info">
-                                <a href="product-detail.html" class="title link">mock product</a>
-                                <span class="price current-price">$59.99</span>
-                            </div>
-                        </div>
-                        <div class="fl-item card-product">
-                            <div class="card-product-wrapper">
-                                <a href="product-detail.html" class="product-img">
-                                    <img class="lazyload img-product"
-                                        data-src="images/products/beauty-cosmetic/beauty8.jpg"
-                                        src="images/products/beauty-cosmetic/beauty8.jpg" alt="image-product">
-                                    <img class="lazyload img-hover"
-                                        data-src="images/products/beauty-cosmetic/beauty10.jpg"
-                                        src="images/products/beauty-cosmetic/beauty10.jpg" alt="image-product">
-                                </a>
-                                <div class="on-sale-wrap"><span class="on-sale-item">-25%</span></div>
-                                <div class="marquee-product bg-main">
-                                    <div class="marquee-wrapper">
-                                        <div class="initial-child-container">
-                                            <div class="marquee-child-item">
-                                                <p class="font-2 text-btn-uppercase fw-6 text-white">Hot Sale 25% OFF
-                                                </p>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <span class="icon icon-lightning text-critical"></span>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <p class="font-2 text-btn-uppercase fw-6 text-white">Hot Sale 25% OFF
-                                                </p>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <span class="icon icon-lightning text-critical"></span>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <p class="font-2 text-btn-uppercase fw-6 text-white">Hot Sale 25% OFF
-                                                </p>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <span class="icon icon-lightning text-critical"></span>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <p class="font-2 text-btn-uppercase fw-6 text-white">Hot Sale 25% OFF
-                                                </p>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <span class="icon icon-lightning text-critical"></span>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <p class="font-2 text-btn-uppercase fw-6 text-white">Hot Sale 25% OFF
-                                                </p>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <span class="icon icon-lightning text-critical"></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="marquee-wrapper">
-                                        <div class="initial-child-container">
-                                            <div class="marquee-child-item">
-                                                <p class="font-2 text-btn-uppercase fw-6 text-white">Hot Sale 25% OFF
-                                                </p>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <span class="icon icon-lightning text-critical"></span>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <p class="font-2 text-btn-uppercase fw-6 text-white">Hot Sale 25% OFF
-                                                </p>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <span class="icon icon-lightning text-critical"></span>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <p class="font-2 text-btn-uppercase fw-6 text-white">Hot Sale 25% OFF
-                                                </p>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <span class="icon icon-lightning text-critical"></span>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <p class="font-2 text-btn-uppercase fw-6 text-white">Hot Sale 25% OFF
-                                                </p>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <span class="icon icon-lightning text-critical"></span>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <p class="font-2 text-btn-uppercase fw-6 text-white">Hot Sale 25% OFF
-                                                </p>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <span class="icon icon-lightning text-critical"></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="list-btn-main">
-                                    <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add To
-                                        cart</a>
-                                </div>
-                            </div>
-                            <div class="card-product-info">
-                                <a href="product-detail.html" class="title link">mock product</a>
-                                <div class="price"><span class="old-price">$98.00</span> <span
-                                        class="current-price">$79.99</span></div>
-
-                            </div>
-                        </div>
-                        <div class="fl-item card-product card-product-size">
-                            <div class="card-product-wrapper">
-                                <a href="product-detail.html" class="product-img">
-                                    <img class="lazyload img-product"
-                                        data-src="images/products/beauty-cosmetic/beauty8.jpg"
-                                        src="images/products/beauty-cosmetic/beauty8.jpg" alt="image-product">
-                                    <img class="lazyload img-hover"
-                                        data-src="images/products/beauty-cosmetic/beauty10.jpg"
-                                        src="images/products/beauty-cosmetic/beauty10.jpg" alt="image-product">
-                                </a>
-                                <div class="on-sale-wrap"><span class="on-sale-item">-25%</span></div>
-
-                            </div>
-                            <div class="card-product-info">
-                                <a href="product-detail.html" class="title link">mock product</a>
-                                <div class="price"><span class="old-price">$98.00</span> <span
-                                        class="current-price">$89.99</span></div>
-
-                            </div>
-                        </div>
-                        <div class="fl-item card-product">
-                            <div class="card-product-wrapper">
-                                <a href="product-detail.html" class="product-img">
-                                    <img class="lazyload img-product"
-                                        data-src="images/products/beauty-cosmetic/beauty8.jpg"
-                                        src="images/products/beauty-cosmetic/beauty8.jpg" alt="image-product">
-                                    <img class="lazyload img-hover"
-                                        data-src="images/products/beauty-cosmetic/beauty10.jpg"
-                                        src="images/products/beauty-cosmetic/beauty10.jpg" alt="image-product">
-                                </a>
-
-                                <div class="list-btn-main">
-                                    <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add To
-                                        cart</a>
-                                </div>
-                            </div>
-                            <div class="card-product-info">
-                                <a href="product-detail.html" class="title link">mock product</a>
-                                <span class="price current-price">$69.99</span>
-
-                            </div>
-                        </div>
-
-
-
-
+                        <!-- Filter Toggle Button beside search -->
+                        <button class="search-filter-toggle-btn" onclick="toggleFilterSection()">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22 3H2L10 12.46V19L14 21V12.46L22 3Z" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <span>Filters</span>
+                            <span class="search-filter-count" style="display: none;">0</span>
+                        </button>
                     </div>
-                </div>
-                <!-- Load Item -->
-                <div class="wd-load view-more-button text-center">
-                    <button class="tf-loading btn-loadmore tf-btn btn-reset"><span
-                            class="text text-btn text-btn-uppercase">Load more</span></button>
+
+                    <!-- Filters Section (Hidden by default) - Place this right after the search-bar-wrapper -->
+                    <div class="search-filter-section" id="searchFilterSection" style="display: none;">
+                        <div class="search-filter-header">
+                            <h6 class="search-filter-title">Filters</h6>
+                            <button class="search-clear-filters" onclick="clearAllFilters()"
+                                style="display: none;">Clear All</button>
+                        </div>
+
+                        <div class="search-filter-group">
+                            <label class="search-filter-label">Categories</label>
+                            <div class="search-filter-options" id="categoryFilters">
+                                <span class="search-filter-chip" data-filter="category" data-value="skincare"
+                                    onclick="toggleFilter(this)">Skincare</span>
+                                <span class="search-filter-chip" data-filter="category" data-value="serum"
+                                    onclick="toggleFilter(this)">Serum</span>
+                                <span class="search-filter-chip" data-filter="category" data-value="moisturizer"
+                                    onclick="toggleFilter(this)">Moisturizer</span>
+                                <span class="search-filter-chip" data-filter="category" data-value="cleanser"
+                                    onclick="toggleFilter(this)">Cleanser</span>
+                                <span class="search-filter-chip" data-filter="category" data-value="mask"
+                                    onclick="toggleFilter(this)">Face Mask</span>
+                                <span class="search-filter-chip" data-filter="category" data-value="sunscreen"
+                                    onclick="toggleFilter(this)">Sunscreen</span>
+                            </div>
+                        </div>
+
+                        <div class="search-filter-group">
+                            <label class="search-filter-label">Brands</label>
+                            <div class="search-filter-options" id="brandFilters">
+                                <span class="search-filter-chip" data-filter="brand" data-value="alphah"
+                                    onclick="toggleFilter(this)">AlphaH</span>
+                                <span class="search-filter-chip" data-filter="brand" data-value="ordinary"
+                                    onclick="toggleFilter(this)">The Ordinary</span>
+                                <span class="search-filter-chip" data-filter="brand" data-value="cerave"
+                                    onclick="toggleFilter(this)">CeraVe</span>
+                                <span class="search-filter-chip" data-filter="brand" data-value="neutrogena"
+                                    onclick="toggleFilter(this)">Neutrogena</span>
+                                <span class="search-filter-chip" data-filter="brand" data-value="loreal"
+                                    onclick="toggleFilter(this)">L'Oréal</span>
+                                <span class="search-filter-chip" data-filter="brand" data-value="garnier"
+                                    onclick="toggleFilter(this)">Garnier</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h5 class="mb_16">Feature keywords Today</h5>
+                        <ul class="list-tags">
+                            <li><a href="#" class="radius-60 link">anti ageing</a></li>
+                            <li><a href="#" class="radius-60 link">organic</a></li>
+                            <li><a href="#" class="radius-60 link">night serum</a></li>
+                            <li><a href="#" class="radius-60 link">vegan</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h6 class="mb_16">Recently viewed products</h6>
+                        <div class="tf-grid-layout tf-col-2 lg-col-3 xl-col-4 loadmore-item" data-display="4"
+                            data-count="4">
+                            <div class="fl-item card-product card-product-size">
+                                <div class="card-product-wrapper">
+                                    <a href="product-detail.html" class="product-img">
+                                        <img class="lazyload img-product"
+                                            data-src="images/products/beauty-cosmetic/beauty8.jpg"
+                                            src="images/products/beauty-cosmetic/beauty8.jpg" alt="image-product">
+                                        <img class="lazyload img-hover"
+                                            data-src="images/products/beauty-cosmetic/beauty10.jpg"
+                                            src="images/products/beauty-cosmetic/beauty10.jpg" alt="image-product">
+                                    </a>
+
+                                </div>
+                                <div class="card-product-info">
+                                    <a href="product-detail.html" class="title link">mock product</a>
+                                    <span class="price current-price">₹39.99</span>
+                                </div>
+                            </div>
+                            <div class="fl-item card-product">
+                                <div class="card-product-wrapper">
+                                    <a href="product-detail.html" class="product-img">
+                                        <img class="lazyload img-product"
+                                            data-src="images/products/beauty-cosmetic/beauty8.jpg"
+                                            src="images/products/beauty-cosmetic/beauty8.jpg" alt="image-product">
+                                        <img class="lazyload img-hover"
+                                            data-src="images/products/beauty-cosmetic/beauty10.jpg"
+                                            src="images/products/beauty-cosmetic/beauty10.jpg" alt="image-product">
+                                    </a>
+
+                                </div>
+                                <div class="card-product-info">
+                                    <a href="product-detail.html" class="title link">mock product</a>
+                                    <span class="price current-price">₹79.99</span>
+
+                                </div>
+                            </div>
+                            <div class="fl-item card-product card-product-size">
+                                <div class="card-product-wrapper">
+                                    <a href="product-detail.html" class="product-img">
+                                        <img class="lazyload img-product"
+                                            data-src="images/products/beauty-cosmetic/beauty8.jpg"
+                                            src="images/products/beauty-cosmetic/beauty8.jpg" alt="image-product">
+                                        <img class="lazyload img-hover"
+                                            data-src="images/products/beauty-cosmetic/beauty10.jpg"
+                                            src="images/products/beauty-cosmetic/beauty10.jpg" alt="image-product">
+                                    </a>
+                                    <div class="on-sale-wrap"><span class="on-sale-item">-25%</span></div>
+
+                                </div>
+                                <div class="card-product-info">
+                                    <a href="product-detail.html" class="title link">mock product</a>
+                                    <div class="price"><span class="old-price">₹98.00</span><span
+                                            class="current-price">₹129.99</span></div>
+
+                                </div>
+                            </div>
+                            <div class="fl-item card-product card-product-size">
+                                <div class="card-product-wrapper">
+                                    <a href="product-detail.html" class="product-img">
+                                        <img class="lazyload img-product"
+                                            data-src="images/products/beauty-cosmetic/beauty8.jpg"
+                                            src="images/products/beauty-cosmetic/beauty8.jpg" alt="image-product">
+                                        <img class="lazyload img-hover"
+                                            data-src="images/products/beauty-cosmetic/beauty10.jpg"
+                                            src="images/products/beauty-cosmetic/beauty10.jpg" alt="image-product">
+                                    </a>
+                                    <div class="on-sale-wrap"><span class="on-sale-item">-25%</span></div>
+
+                                </div>
+                                <div class="card-product-info">
+                                    <a href="product-detail.html" class="title link">mock product</a>
+                                    <div class="price"><span class="old-price">₹98.00</span><span
+                                            class="current-price">₹219.99</span></div>
+
+                                </div>
+                            </div>
+                            <div class="fl-item card-product">
+                                <div class="card-product-wrapper">
+                                    <a href="product-detail.html" class="product-img">
+                                        <img class="lazyload img-product"
+                                            data-src="images/products/beauty-cosmetic/beauty8.jpg"
+                                            src="images/products/beauty-cosmetic/beauty8.jpg" alt="image-product">
+                                        <img class="lazyload img-hover"
+                                            data-src="images/products/beauty-cosmetic/beauty10.jpg"
+                                            src="images/products/beauty-cosmetic/beauty10.jpg" alt="image-product">
+                                    </a>
+
+                                    <div class="list-btn-main">
+                                        <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add To
+                                            cart</a>
+                                    </div>
+                                </div>
+                                <div class="card-product-info">
+                                    <a href="product-detail.html" class="title link">mock product</a>
+                                    <span class="price current-price">₹59.99</span>
+                                </div>
+                            </div>
+                            <div class="fl-item card-product">
+                                <div class="card-product-wrapper">
+                                    <a href="product-detail.html" class="product-img">
+                                        <img class="lazyload img-product"
+                                            data-src="images/products/beauty-cosmetic/beauty8.jpg"
+                                            src="images/products/beauty-cosmetic/beauty8.jpg" alt="image-product">
+                                        <img class="lazyload img-hover"
+                                            data-src="images/products/beauty-cosmetic/beauty10.jpg"
+                                            src="images/products/beauty-cosmetic/beauty10.jpg" alt="image-product">
+                                    </a>
+                                    <div class="on-sale-wrap"><span class="on-sale-item">-25%</span></div>
+                                    <div class="marquee-product bg-main">
+                                        <div class="marquee-wrapper">
+                                            <div class="initial-child-container">
+                                                <div class="marquee-child-item">
+                                                    <p class="font-2 text-btn-uppercase fw-6 text-white">Hot Sale 25%
+                                                        OFF
+                                                    </p>
+                                                </div>
+                                                <div class="marquee-child-item">
+                                                    <span class="icon icon-lightning text-critical"></span>
+                                                </div>
+                                                <div class="marquee-child-item">
+                                                    <p class="font-2 text-btn-uppercase fw-6 text-white">Hot Sale 25%
+                                                        OFF
+                                                    </p>
+                                                </div>
+                                                <div class="marquee-child-item">
+                                                    <span class="icon icon-lightning text-critical"></span>
+                                                </div>
+                                                <div class="marquee-child-item">
+                                                    <p class="font-2 text-btn-uppercase fw-6 text-white">Hot Sale 25%
+                                                        OFF
+                                                    </p>
+                                                </div>
+                                                <div class="marquee-child-item">
+                                                    <span class="icon icon-lightning text-critical"></span>
+                                                </div>
+                                                <div class="marquee-child-item">
+                                                    <p class="font-2 text-btn-uppercase fw-6 text-white">Hot Sale 25%
+                                                        OFF
+                                                    </p>
+                                                </div>
+                                                <div class="marquee-child-item">
+                                                    <span class="icon icon-lightning text-critical"></span>
+                                                </div>
+                                                <div class="marquee-child-item">
+                                                    <p class="font-2 text-btn-uppercase fw-6 text-white">Hot Sale 25%
+                                                        OFF
+                                                    </p>
+                                                </div>
+                                                <div class="marquee-child-item">
+                                                    <span class="icon icon-lightning text-critical"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="marquee-wrapper">
+                                            <div class="initial-child-container">
+                                                <div class="marquee-child-item">
+                                                    <p class="font-2 text-btn-uppercase fw-6 text-white">Hot Sale 25%
+                                                        OFF
+                                                    </p>
+                                                </div>
+                                                <div class="marquee-child-item">
+                                                    <span class="icon icon-lightning text-critical"></span>
+                                                </div>
+                                                <div class="marquee-child-item">
+                                                    <p class="font-2 text-btn-uppercase fw-6 text-white">Hot Sale 25%
+                                                        OFF
+                                                    </p>
+                                                </div>
+                                                <div class="marquee-child-item">
+                                                    <span class="icon icon-lightning text-critical"></span>
+                                                </div>
+                                                <div class="marquee-child-item">
+                                                    <p class="font-2 text-btn-uppercase fw-6 text-white">Hot Sale 25%
+                                                        OFF
+                                                    </p>
+                                                </div>
+                                                <div class="marquee-child-item">
+                                                    <span class="icon icon-lightning text-critical"></span>
+                                                </div>
+                                                <div class="marquee-child-item">
+                                                    <p class="font-2 text-btn-uppercase fw-6 text-white">Hot Sale 25%
+                                                        OFF
+                                                    </p>
+                                                </div>
+                                                <div class="marquee-child-item">
+                                                    <span class="icon icon-lightning text-critical"></span>
+                                                </div>
+                                                <div class="marquee-child-item">
+                                                    <p class="font-2 text-btn-uppercase fw-6 text-white">Hot Sale 25%
+                                                        OFF
+                                                    </p>
+                                                </div>
+                                                <div class="marquee-child-item">
+                                                    <span class="icon icon-lightning text-critical"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="list-btn-main">
+                                        <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add To
+                                            cart</a>
+                                    </div>
+                                </div>
+                                <div class="card-product-info">
+                                    <a href="product-detail.html" class="title link">mock product</a>
+                                    <div class="price"><span class="old-price">₹98.00</span> <span
+                                            class="current-price">₹79.99</span></div>
+
+                                </div>
+                            </div>
+                            <div class="fl-item card-product card-product-size">
+                                <div class="card-product-wrapper">
+                                    <a href="product-detail.html" class="product-img">
+                                        <img class="lazyload img-product"
+                                            data-src="images/products/beauty-cosmetic/beauty8.jpg"
+                                            src="images/products/beauty-cosmetic/beauty8.jpg" alt="image-product">
+                                        <img class="lazyload img-hover"
+                                            data-src="images/products/beauty-cosmetic/beauty10.jpg"
+                                            src="images/products/beauty-cosmetic/beauty10.jpg" alt="image-product">
+                                    </a>
+                                    <div class="on-sale-wrap"><span class="on-sale-item">-25%</span></div>
+
+                                </div>
+                                <div class="card-product-info">
+                                    <a href="product-detail.html" class="title link">mock product</a>
+                                    <div class="price"><span class="old-price">₹98.00</span> <span
+                                            class="current-price">₹89.99</span></div>
+
+                                </div>
+                            </div>
+                            <div class="fl-item card-product">
+                                <div class="card-product-wrapper">
+                                    <a href="product-detail.html" class="product-img">
+                                        <img class="lazyload img-product"
+                                            data-src="images/products/beauty-cosmetic/beauty8.jpg"
+                                            src="images/products/beauty-cosmetic/beauty8.jpg" alt="image-product">
+                                        <img class="lazyload img-hover"
+                                            data-src="images/products/beauty-cosmetic/beauty10.jpg"
+                                            src="images/products/beauty-cosmetic/beauty10.jpg" alt="image-product">
+                                    </a>
+
+                                    <div class="list-btn-main">
+                                        <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add To
+                                            cart</a>
+                                    </div>
+                                </div>
+                                <div class="card-product-info">
+                                    <a href="product-detail.html" class="title link">mock product</a>
+                                    <span class="price current-price">₹69.99</span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Load Item -->
+                    <div class="wd-load view-more-button text-center">
+                        <button class="tf-loading btn-loadmore tf-btn btn-reset"><span
+                                class="text text-btn text-btn-uppercase">Load more</span></button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- /search -->
-
+        <!-- /search -->
 
         <!-- mobile menu -->
     <div class="offcanvas offcanvas-start canvas-mb" id="mobileMenu">
@@ -1776,8 +1754,8 @@
                             </div>
                             <div class="tf-product-info-desc">
                                 <div class="tf-product-info-price">
-                                    <h5 class="price-on-sale font-2">$79.99</h5>
-                                    <div class="compare-at-price font-2">$98.99</div>
+                                    <h5 class="price-on-sale font-2">₹79.99</h5>
+                                    <div class="compare-at-price font-2">₹98.99</div>
                                     <div class="badges-on-sale text-btn-uppercase">
                                         -25%
                                     </div>
@@ -1861,7 +1839,7 @@
                                 <div class="tf-product-info-by-btn mb_10">
                                     <a class="btn-style-2 flex-grow-1 text-btn-uppercase fw-6 show-shopping-cart"><span>Add
                                             to cart -&nbsp;</span><span
-                                            class="tf-qty-price total-price">$79.99</span></a>
+                                            class="tf-qty-price total-price">₹79.99</span></a>
                                     <a href="#compare" data-bs-toggle="offcanvas" aria-controls="compare"
                                         class="box-icon hover-tooltip compare btn-icon-action show-compare">
                                         <span class="icon icon-gitDiff"></span>
@@ -1903,7 +1881,7 @@
                                         <a class="link text-line-clamp-1" href="product-detail.html">mock product</a>
                                     </div>
                                     <div class="cart-item-bot">
-                                        <div class="text-button price">$59.99</div>
+                                        <div class="text-button price">₹59.99</div>
                                         <a class="link text-button" href="#">Add to cart</a>
                                     </div>
                                 </div>
@@ -1918,7 +1896,7 @@
                                         <a class="link text-line-clamp-1" href="product-detail.html">mock product</a>
                                     </div>
                                     <div class="cart-item-bot">
-                                        <div class="text-button price">$59.99</div>
+                                        <div class="text-button price">₹59.99</div>
                                         <a class="link text-button" href="#">Add to cart</a>
                                     </div>
                                 </div>
@@ -1933,7 +1911,7 @@
                                         <a class="link text-line-clamp-1" href="product-detail.html">mock product</a>
                                     </div>
                                     <div class="cart-item-bot">
-                                        <div class="text-button price">$59.99</div>
+                                        <div class="text-button price">₹59.99</div>
                                         <a class="link text-button" href="#">Add to cart</a>
                                     </div>
                                 </div>
@@ -1948,7 +1926,7 @@
                                         <a class="link text-line-clamp-1" href="product-detail.html">mock product</a>
                                     </div>
                                     <div class="cart-item-bot">
-                                        <div class="text-button price">$59.99</div>
+                                        <div class="text-button price">₹59.99</div>
                                         <a class="link text-button" href="#">Add to cart</a>
                                     </div>
                                 </div>
@@ -1963,7 +1941,7 @@
                                         <a class="link text-line-clamp-1" href="product-detail.html">mock product</a>
                                     </div>
                                     <div class="cart-item-bot">
-                                        <div class="text-button price">$59.99</div>
+                                        <div class="text-button price">₹59.99</div>
                                         <a class="link text-button" href="#">Add to cart</a>
                                     </div>
                                 </div>
@@ -1978,7 +1956,7 @@
                                         <a class="link text-line-clamp-1" href="product-detail.html">mock product</a>
                                     </div>
                                     <div class="cart-item-bot">
-                                        <div class="text-button price">$59.99</div>
+                                        <div class="text-button price">₹59.99</div>
                                         <a class="link text-button" href="#">Add to cart</a>
                                     </div>
                                 </div>
@@ -2022,7 +2000,7 @@
                                                 <div
                                                     class="d-flex align-items-center justify-content-between flex-wrap gap-12">
 
-                                                    <div class="text-button">1 X $60.00</div>
+                                                    <div class="text-button">1 X ₹60.00</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -2041,7 +2019,7 @@
                                                 <div
                                                     class="d-flex align-items-center justify-content-between flex-wrap gap-12">
 
-                                                    <div class="text-button">1 X $60.00</div>
+                                                    <div class="text-button">1 X ₹60.00</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -2061,7 +2039,7 @@
                                                 <div
                                                     class="d-flex align-items-center justify-content-between flex-wrap gap-12">
 
-                                                    <div class="text-button">1 X $60.00</div>
+                                                    <div class="text-button">1 X ₹60.00</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -2081,7 +2059,7 @@
                                                 <div
                                                     class="d-flex align-items-center justify-content-between flex-wrap gap-12">
 
-                                                    <div class="text-button">1 X $60.00</div>
+                                                    <div class="text-button">1 X ₹60.00</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -2101,7 +2079,7 @@
                                                 <div
                                                     class="d-flex align-items-center justify-content-between flex-wrap gap-12">
 
-                                                    <div class="text-button">1 X $60.00</div>
+                                                    <div class="text-button">1 X ₹60.00</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -2112,7 +2090,7 @@
                             </div>
                             <div class="tf-mini-cart-bottom">
                                 <div class="tf-mini-cart-tool">
-                                    <div class="tf-mini-cart-tool-btn btn-add-note">
+                                 <!--<div class="tf-mini-cart-tool-btn btn-add-note">
                                         <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <g clip-path="url(#clip0_6133_36620)">
@@ -2173,12 +2151,12 @@
                                                 stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
                                         <div class="text-caption-1">Coupon</div>
-                                    </div>
+                                    </div>-->
                                 </div>
                                 <div class="tf-mini-cart-bottom-wrap">
                                     <div class="tf-cart-totals-discounts">
                                         <h5>Subtotal</h5>
-                                        <h5 class="tf-totals-total-value">$186,99</h5>
+                                        <h5 class="tf-totals-total-value">₹186,99</h5>
                                     </div>
                                     <div class="tf-cart-checkbox">
                                         <div class="tf-checkbox-wrapp">
@@ -2373,7 +2351,7 @@
                                             <div class="tf-gift-wrap-infos">
                                                 <p>Do you want a gift wrap?</p>
                                                 Only
-                                                <span class="price fw-6">$5.00</span>
+                                                <span class="price fw-6">₹5.00</span>
                                             </div>
                                         </div>
                                         <div class="tf-cart-tool-btns tf-mini-cart-tool-wrap">
@@ -2461,7 +2439,7 @@
                                             <div
                                                 class="d-flex align-items-center justify-content-between flex-wrap gap-12">
                                                 <div class="text-secondary-2">XL/Blue</div>
-                                                <div class="text-button">1 X $60.00</div>
+                                                <div class="text-button">1 X ₹60.00</div>
                                             </div>
                                         </div>
                                     </div>
@@ -2480,7 +2458,7 @@
                                             <div
                                                 class="d-flex align-items-center justify-content-between flex-wrap gap-12">
                                                 <div class="text-secondary-2">XL/Blue</div>
-                                                <div class="text-button">1 X $60.00</div>
+                                                <div class="text-button">1 X ₹60.00</div>
                                             </div>
                                         </div>
                                     </div>
@@ -2499,7 +2477,7 @@
                                             <div
                                                 class="d-flex align-items-center justify-content-between flex-wrap gap-12">
                                                 <div class="text-secondary-2">XL/Blue</div>
-                                                <div class="text-button">1 X $60.00</div>
+                                                <div class="text-button">1 X ₹60.00</div>
                                             </div>
                                         </div>
                                     </div>
@@ -2518,7 +2496,7 @@
                                             <div
                                                 class="d-flex align-items-center justify-content-between flex-wrap gap-12">
                                                 <div class="text-secondary-2">XL/Blue</div>
-                                                <div class="text-button">1 X $60.00</div>
+                                                <div class="text-button">1 X ₹60.00</div>
                                             </div>
                                         </div>
                                     </div>
@@ -2537,7 +2515,7 @@
                                             <div
                                                 class="d-flex align-items-center justify-content-between flex-wrap gap-12">
                                                 <div class="text-secondary-2">XL/Blue</div>
-                                                <div class="text-button">1 X $60.00</div>
+                                                <div class="text-button">1 X ₹60.00</div>
                                             </div>
                                         </div>
                                     </div>
@@ -2747,7 +2725,7 @@
                                                 <a class="link text-line-clamp-2" href="product-detail.html">V-neck
                                                     cotton T-shirt</a>
                                             </div>
-                                            <div class="text-button">$59.99</div>
+                                            <div class="text-button">₹59.99</div>
                                         </div>
                                     </div>
                                     <div class="tf-compare-item file-delete">
@@ -2788,7 +2766,7 @@
                                                 <a class="link text-line-clamp-2" href="product-detail.html">Ramie shirt
                                                     with pockets </a>
                                             </div>
-                                            <div class="text-button">$72.00</div>
+                                            <div class="text-button">₹72.00</div>
                                         </div>
                                     </div>
                                     <div class="tf-compare-item file-delete">
@@ -2829,7 +2807,7 @@
                                                 <a class="link text-line-clamp-2" href="product-detail.html">Ribbed
                                                     cotton-blend top</a>
                                             </div>
-                                            <div class="text-button">$65.00</div>
+                                            <div class="text-button">₹65.00</div>
                                         </div>
                                     </div>
                                 </div>
@@ -2868,8 +2846,8 @@
                             <div class="content">
                                 <a href="product-detail.html">Ribbed Tank Top</a>
                                 <div class="tf-product-info-price">
-                                    <h5 class="price-on-sale font-2">$79.99</h5>
-                                    <div class="compare-at-price font-2">$98.99</div>
+                                    <h5 class="price-on-sale font-2">₹79.99</h5>
+                                    <div class="compare-at-price font-2">₹98.99</div>
                                     <div class="badges-on-sale text-btn-uppercase">
                                         -25%
                                     </div>
@@ -2937,7 +2915,7 @@
                                 <div class="tf-product-info-by-btn mb_10">
                                     <a class="btn-style-2 flex-grow-1 text-btn-uppercase fw-6 show-shopping-cart"><span>Add
                                             to cart -&nbsp;</span><span
-                                            class="tf-qty-price total-price">$79.99</span></a>
+                                            class="tf-qty-price total-price">₹79.99</span></a>
                                     <a href="#compare" data-bs-toggle="offcanvas" aria-controls="compare"
                                         class="box-icon hover-tooltip compare btn-icon-action show-compare">
                                         <span class="icon icon-gitDiff"></span>
@@ -3009,6 +2987,7 @@
                 <span>⭐</span>
                 Reviews & Ratings
             </h2>
+            
             <button class="review-popup-close" id="closeReviewPopup">&times;</button>
         </div>
 
@@ -3150,7 +3129,7 @@
         });
 
         // Close modal when close button is clicked
-        document.querySelectorAll('.close-modal').forEach(btn => {
+        document.querySelectorAll('.beautician-close-modal').forEach(btn => {
             btn.addEventListener('click', function () {
                 const modal = this.closest('.beautician-location-modal'); // Updated
                 if (modal) {
@@ -3320,6 +3299,226 @@
             });
         });
     </script>
+    <script>
+            const services = [
+                { id: 1, name: "Bridal Makeup", price: 15000, duration: "3 hours" },
+                { id: 2, name: "Party Makeup", price: 3500, duration: "1.5 hours" },
+                { id: 3, name: "Facial Treatment", price: 2000, duration: "1 hour" },
+                { id: 4, name: "Hair Styling", price: 1500, duration: "1 hour" },
+                { id: 5, name: "Pre-Bridal Package", price: 25000, duration: "Multiple sessions" },
+                { id: 6, name: "Saree Draping", price: 1000, duration: "30 min" },
+                { id: 7, name: "Airbrush Makeup", price: 5000, duration: "2 hours" },
+                { id: 8, name: "HD Makeup", price: 4000, duration: "2 hours" }
+            ];
+
+            const timeSlots = [
+                "09:00 AM", "10:00 AM", "11:00 AM", "12:00 PM",
+                "02:00 PM", "03:00 PM", "04:00 PM", "05:00 PM",
+                "06:00 PM", "07:00 PM"
+            ];
+
+            let selectedServices = [];
+            let selectedDate = null;
+            let selectedSlot = null;
+
+            function openBookingModal() {
+                const modal = document.getElementById('bookingModal');
+                if (modal) {
+                    modal.classList.add('sbm-active');
+                    document.body.style.overflow = 'hidden';
+                    initializeModal();
+                }
+            }
+
+            function closeBookingModal() {
+                const modal = document.getElementById('bookingModal');
+                if (modal) {
+                    modal.classList.remove('sbm-active');
+                    document.body.style.overflow = '';
+                    resetModal();
+                }
+            }
+
+            function initializeModal() {
+                populateServices();
+                populateDates();
+                populateSlots();
+            }
+
+            function populateServices() {
+                const grid = document.getElementById('servicesGrid');
+                if (!grid) return;
+                
+                grid.innerHTML = services.map(service => `
+                    <div class="sbm-service-card" onclick="toggleService(${service.id})">
+                        <div class="sbm-service-name">${service.name}</div>
+                        <div class="sbm-service-price">₹${service.price}</div>
+                        <div class="sbm-service-duration">${service.duration}</div>
+                        <div class="sbm-badge-available">Available</div>
+                    </div>
+                `).join('');
+            }
+
+            function populateDates() {
+                const container = document.getElementById('dateSelector');
+                if (!container) return;
+                
+                const dates = [];
+                const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+                
+                for (let i = 0; i < 7; i++) {
+                    const date = new Date();
+                    date.setDate(date.getDate() + i);
+                    dates.push({
+                        day: days[date.getDay()],
+                        date: date.getDate(),
+                        month: date.getMonth() + 1,
+                        full: date
+                    });
+                }
+
+                container.innerHTML = dates.map((d, i) => `
+                    <button class="sbm-date-btn ${i === 0 ? 'sbm-selected' : ''}" onclick="selectDate(${i})">
+                        <div class="sbm-date-day">${d.day}</div>
+                        <div class="sbm-date-num">${d.date}/${d.month}</div>
+                    </button>
+                `).join('');
+
+                selectedDate = 0;
+            }
+
+            function populateSlots() {
+                const container = document.getElementById('slotsContainer');
+                if (!container) return;
+                
+                const bookedSlots = [2, 5, 8]; // Demo: some slots are booked
+                
+                container.innerHTML = timeSlots.map((slot, i) => `
+                    <button class="sbm-slot-btn" onclick="selectSlot(${i})" ${bookedSlots.includes(i) ? 'disabled' : ''}>
+                        ${slot}
+                    </button>
+                `).join('');
+            }
+
+            function toggleService(serviceId) {
+                const index = selectedServices.indexOf(serviceId);
+                const cards = document.querySelectorAll('.sbm-service-card');
+                
+                if (index > -1) {
+                    selectedServices.splice(index, 1);
+                    cards[serviceId - 1].classList.remove('sbm-selected');
+                } else {
+                    selectedServices.push(serviceId);
+                    cards[serviceId - 1].classList.add('sbm-selected');
+                }
+                
+                updateTotal();
+            }
+
+            function selectDate(index) {
+                selectedDate = index;
+                const buttons = document.querySelectorAll('.sbm-date-btn');
+                buttons.forEach((btn, i) => {
+                    btn.classList.toggle('sbm-selected', i === index);
+                });
+            }
+
+            function selectSlot(index) {
+                selectedSlot = index;
+                const buttons = document.querySelectorAll('.sbm-slot-btn');
+                buttons.forEach((btn, i) => {
+                    btn.classList.toggle('sbm-selected', i === index);
+                });
+            }
+
+            function updateTotal() {
+                const totalElement = document.getElementById('totalPrice');
+                if (!totalElement) return;
+                
+                const total = selectedServices.reduce((sum, id) => {
+                    const service = services.find(s => s.id === id);
+                    return sum + service.price;
+                }, 0);
+                
+                totalElement.textContent = `₹${total}`;
+            }
+
+            function submitBooking() {
+                const name = document.getElementById('userName').value;
+                const phone = document.getElementById('userPhone').value;
+                
+                if (!name || !phone) {
+                    alert('Please fill in all required fields');
+                    return;
+                }
+                
+                if (selectedServices.length === 0) {
+                    alert('Please select at least one service');
+                    return;
+                }
+                
+                if (selectedSlot === null) {
+                    alert('Please select a time slot');
+                    return;
+                }
+                
+                const bookingData = {
+                    name,
+                    phone,
+                    email: document.getElementById('userEmail').value,
+                    services: selectedServices.map(id => services.find(s => s.id === id).name),
+                    date: selectedDate,
+                    slot: timeSlots[selectedSlot],
+                    notes: document.getElementById('userNotes').value,
+                    total: document.getElementById('totalPrice').textContent
+                };
+                
+                console.log('Booking submitted:', bookingData);
+                alert('Booking confirmed! We will send you a confirmation message shortly.');
+                closeBookingModal();
+            }
+
+            function resetModal() {
+                selectedServices = [];
+                selectedDate = null;
+                selectedSlot = null;
+                
+                const userName = document.getElementById('userName');
+                const userPhone = document.getElementById('userPhone');
+                const userEmail = document.getElementById('userEmail');
+                const userNotes = document.getElementById('userNotes');
+                
+                if (userName) userName.value = '';
+                if (userPhone) userPhone.value = '';
+                if (userEmail) userEmail.value = '';
+                if (userNotes) userNotes.value = '';
+                
+                updateTotal();
+            }
+
+            // Initialize when DOM is loaded
+            document.addEventListener('DOMContentLoaded', function() {
+                // Close modal on overlay click
+                const modal = document.getElementById('bookingModal');
+                if (modal) {
+                    modal.addEventListener('click', function(e) {
+                        if (e.target === this) {
+                            closeBookingModal();
+                        }
+                    });
+                }
+
+                // Close modal on Escape key
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape') {
+                        const modal = document.getElementById('bookingModal');
+                        if (modal && modal.classList.contains('sbm-active')) {
+                            closeBookingModal();
+                        }
+                    }
+                });
+            });
+        </script>
 
       <script>  if (document.querySelector("#sib-form")) { const script = document.createElement('script');script.src = 'js/sibforms.js';script.defer = true;document.body.appendChild(script);}</script>
 </body>
