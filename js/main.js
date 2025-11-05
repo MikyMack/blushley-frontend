@@ -1807,3 +1807,134 @@ function applyFilters() {
                 showSellerForm('seller-register');
             }
         });
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+    // Seller Modal Elements
+    const openSellerModalBtn = document.getElementById('openSellerModal');
+    const closeSellerModalBtn = document.getElementById('closeSellerModal');
+    const sellerModal = document.getElementById('sellerModal');
+    
+    // Salon Modal Elements
+    const openSalonModalBtn = document.getElementById('openSalonModal');
+    const closeSalonModalBtn = document.getElementById('closeSalonModal');
+    const salonModal = document.getElementById('salonModal');
+    
+    // Open Seller Modal
+    openSellerModalBtn.addEventListener('click', function() {
+        sellerModal.style.display = 'flex';
+    });
+    
+    // Close Seller Modal
+    closeSellerModalBtn.addEventListener('click', function() {
+        sellerModal.style.display = 'none';
+    });
+    
+    // Open Salon Modal
+    openSalonModalBtn.addEventListener('click', function() {
+        salonModal.style.display = 'flex';
+    });
+    
+    // Close Salon Modal
+    closeSalonModalBtn.addEventListener('click', function() {
+        salonModal.style.display = 'none';
+    });
+    
+    // Close modals when clicking outside
+    window.addEventListener('click', function(event) {
+        if (event.target === sellerModal) {
+            sellerModal.style.display = 'none';
+        }
+        if (event.target === salonModal) {
+            salonModal.style.display = 'none';
+        }
+    });
+    
+    // Seller form tab switching
+    const sellerTabs = document.querySelectorAll('.auth-tabs .auth-tab');
+    sellerTabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+            const tabName = this.getAttribute('data-tab');
+            
+            // Update active tab
+            sellerTabs.forEach(t => t.classList.remove('active'));
+            this.classList.add('active');
+            
+            // Show corresponding form
+            document.querySelectorAll('#sellerModal .auth-form').forEach(form => {
+                form.classList.remove('active');
+            });
+            document.getElementById(tabName === 'seller-register' ? 'sellerRegisterForm' : 'sellerLoginForm').classList.add('active');
+        });
+    });
+    
+    // Switch between register and login forms
+    const switchFormButtons = document.querySelectorAll('.switch-form');
+    switchFormButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const targetForm = this.getAttribute('data-switch-to');
+            
+            // Update active tab
+            sellerTabs.forEach(tab => {
+                tab.classList.toggle('active', tab.getAttribute('data-tab') === targetForm);
+            });
+            
+            // Show corresponding form
+            document.querySelectorAll('#sellerModal .auth-form').forEach(form => {
+                form.classList.remove('active');
+            });
+            document.getElementById(targetForm === 'seller-register' ? 'sellerRegisterForm' : 'sellerLoginForm').classList.add('active');
+        });
+    });
+    
+    // Add product category functionality
+    const addProductCategoryBtn = document.getElementById('addProductCategoryBtn');
+    const newProductCategoryInput = document.getElementById('newProductCategory');
+    const productCategoriesContainer = document.getElementById('productCategoriesContainer');
+    
+    addProductCategoryBtn.addEventListener('click', function() {
+        const category = newProductCategoryInput.value.trim();
+        if (category) {
+            const categoryElement = document.createElement('div');
+            categoryElement.className = 'skill-item';
+            categoryElement.innerHTML = `
+                <span>${category}</span>
+                <button type="button" class="remove-skill">&times;</button>
+            `;
+            productCategoriesContainer.appendChild(categoryElement);
+            newProductCategoryInput.value = '';
+            
+            // Add remove functionality
+            categoryElement.querySelector('.remove-skill').addEventListener('click', function() {
+                categoryElement.remove();
+            });
+        }
+    });
+    
+    // OTP input functionality
+    const otpInputs = document.querySelectorAll('.otp-input');
+    otpInputs.forEach(input => {
+        input.addEventListener('input', function() {
+            const index = parseInt(this.getAttribute('data-index'));
+            if (this.value.length === 1 && index < 5) {
+                otpInputs[index + 1].focus();
+            }
+        });
+        
+        input.addEventListener('keydown', function(e) {
+            const index = parseInt(this.getAttribute('data-index'));
+            if (e.key === 'Backspace' && this.value.length === 0 && index > 0) {
+                otpInputs[index - 1].focus();
+            }
+        });
+    });
+    
+    // Salon login form submission
+    const salonLoginForm = document.getElementById('salonLoginForm');
+    salonLoginForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        // Add your salon login logic here
+        console.log('Salon login submitted');
+        // Redirect to salon dashboard or show success message
+    });
+});
