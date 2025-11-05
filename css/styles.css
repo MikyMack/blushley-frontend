@@ -24318,6 +24318,8 @@ transform: translateY(20px);
 }
 
 
+ /********** Authentication Modal Styles **********/
+
   /* Modal Styles */
         .modal-overlay {
             position: fixed;
@@ -24349,7 +24351,7 @@ transform: translateY(20px);
 
         .modal-header {
             padding: 25px;
-            border-bottom: 1px solid var(--gray-light);
+            border-bottom: 1px solid var(--success);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -24382,7 +24384,7 @@ transform: translateY(20px);
         .auth-tabs {
             display: flex;
             margin-bottom: 25px;
-            border-bottom: 1px solid var(--gray-light);
+            border-bottom: 1px solid var(--success);
         }
 
         .auth-tab {
@@ -24400,8 +24402,8 @@ transform: translateY(20px);
         }
 
         .auth-tab.active {
-            color: var(--primary-color);
-            border-bottom-color: var(--primary-color);
+            color: var(--primary);
+            border-bottom-color: var(--primary);
         }
 
         /* Form Styles */
@@ -24427,32 +24429,32 @@ transform: translateY(20px);
         .form-input {
             width: 100%;
             padding: 12px 15px;
-            border: 1px solid var(--gray-light);
+            border: 1px solid var(--success);
             border-radius: 8px;
             font-size: 15px;
             transition: var(--transition);
-            background-color: var(--light-color);
+            background-color: var(--gold-light);
         }
 
         .form-input:focus {
             outline: none;
-            border-color: var(--primary-color);
+            border-color: var(--primary);
             box-shadow: 0 0 0 3px rgba(201, 169, 97, 0.1);
         }
 
         .form-select {
             width: 100%;
             padding: 12px 15px;
-            border: 1px solid var(--gray-light);
+            border: 1px solid var(--success);
             border-radius: 8px;
             font-size: 15px;
             transition: var(--transition);
-            background-color: var(--light-color);
+            background-color: var(--gold-light);
         }
 
         .form-select:focus {
             outline: none;
-            border-color: var(--primary-color);
+            border-color: var(--primary);
             box-shadow: 0 0 0 3px rgba(201, 169, 97, 0.1);
         }
 
@@ -24471,8 +24473,8 @@ transform: translateY(20px);
         .file-input-label {
             display: block;
             padding: 12px 15px;
-            background-color: var(--gray-light);
-            border: 1px solid var(--gray-light);
+            background-color: var(--success);
+            border: 1px solid var(--success);
             border-radius: 8px;
             text-align: center;
             cursor: pointer;
@@ -24492,7 +24494,7 @@ transform: translateY(20px);
 
         .skill-tag {
             background-color: rgba(201, 169, 97, 0.1);
-            color: var(--primary-color);
+            color: var(--primary);
             padding: 6px 12px;
             border-radius: 20px;
             font-size: 14px;
@@ -24512,7 +24514,7 @@ transform: translateY(20px);
         }
 
         .btn-primary {
-            background-color: var(--primary-color);
+            background-color: var(--primary);
             color: white;
             border: none;
             padding: 12px 25px;
@@ -24536,7 +24538,7 @@ transform: translateY(20px);
         }
 
         .btn-secondary {
-            background-color: var(--gray-light);
+            background-color: var(--success);
             color: var(--dark-color);
             border: none;
             padding: 12px 25px;
@@ -24574,19 +24576,19 @@ transform: translateY(20px);
             height: 50px;
             text-align: center;
             font-size: 1.2rem;
-            border: 1px solid var(--gray-light);
+            border: 1px solid var(--success);
             border-radius: 8px;
-            background-color: var(--light-color);
+            background-color: var(--gold-light);
         }
 
         .otp-input:focus {
             outline: none;
-            border-color: var(--primary-color);
+            border-color: var(--primary);
             box-shadow: 0 0 0 3px rgba(201, 169, 97, 0.1);
         }
 
         .resend-otp {
-            color: var(--primary-color);
+            color: var(--primary);
             background: none;
             border: none;
             cursor: pointer;
@@ -24601,7 +24603,7 @@ transform: translateY(20px);
         }
 
         .switch-form {
-            color: var(--primary-color);
+            color: var(--primary);
             background: none;
             border: none;
             cursor: pointer;
@@ -24675,7 +24677,7 @@ transform: translateY(20px);
 
 
           .beautician-hero {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            background: linear-gradient(135deg, var(--primary), var(--secondary-color));
             color: white;
             padding: 100px 0;
             text-align: center;
@@ -24710,7 +24712,7 @@ transform: translateY(20px);
         .btn-hero {
             display: inline-block;
             background-color: white;
-            color: var(--primary-color);
+            color: var(--primary);
             padding: 15px 30px;
             border-radius: var(--border-radius);
             text-decoration: none;
@@ -24757,7 +24759,7 @@ transform: translateY(20px);
 
         .modal-header {
             padding: 25px;
-            border-bottom: 1px solid var(--gray-light);
+            border-bottom: 1px solid var(--success);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -24790,7 +24792,7 @@ transform: translateY(20px);
         .auth-tabs {
             display: flex;
             margin-bottom: 25px;
-            border-bottom: 1px solid var(--gray-light);
+            border-bottom: 1px solid var(--success);
         }
 
         .auth-tab {
@@ -24808,8 +24810,8 @@ transform: translateY(20px);
         }
 
         .auth-tab.active {
-            color: var(--primary-color);
-            border-bottom-color: var(--primary-color);
+            color: var(--primary);
+            border-bottom-color: var(--primary);
         }
 
         /* Form Styles */
@@ -24835,32 +24837,32 @@ transform: translateY(20px);
         .form-input {
             width: 100%;
             padding: 12px 15px;
-            border: 1px solid var(--gray-light);
+            border: 1px solid var(--success);
             border-radius: 8px;
             font-size: 15px;
             transition: var(--transition);
-            background-color: var(--light-color);
+            background-color: var(--gold-light);
         }
 
         .form-input:focus {
             outline: none;
-            border-color: var(--primary-color);
+            border-color: var(--primary);
             box-shadow: 0 0 0 3px rgba(201, 169, 97, 0.1);
         }
 
         .form-select {
             width: 100%;
             padding: 12px 15px;
-            border: 1px solid var(--gray-light);
+            border: 1px solid var(--success);
             border-radius: 8px;
             font-size: 15px;
             transition: var(--transition);
-            background-color: var(--light-color);
+            background-color: var(--gold-light);
         }
 
         .form-select:focus {
             outline: none;
-            border-color: var(--primary-color);
+            border-color: var(--primary);
             box-shadow: 0 0 0 3px rgba(201, 169, 97, 0.1);
         }
 
@@ -24879,8 +24881,8 @@ transform: translateY(20px);
         .file-input-label {
             display: block;
             padding: 12px 15px;
-            background-color: var(--gray-light);
-            border: 1px solid var(--gray-light);
+            background-color: var(--success);
+            border: 1px solid var(--success);
             border-radius: 8px;
             text-align: center;
             cursor: pointer;
@@ -24900,7 +24902,7 @@ transform: translateY(20px);
 
         .skill-tag {
             background-color: rgba(201, 169, 97, 0.1);
-            color: var(--primary-color);
+            color: var(--primary);
             padding: 6px 12px;
             border-radius: 20px;
             font-size: 14px;
@@ -24920,7 +24922,7 @@ transform: translateY(20px);
         }
 
         .btn-primary {
-            background-color: var(--primary-color);
+            background-color: var(--primary);
             color: white;
             border: none;
             padding: 12px 25px;
@@ -24937,7 +24939,7 @@ transform: translateY(20px);
         }
 
         .btn-secondary {
-            background-color: var(--gray-light);
+            background-color: var(--success);
             color: var(--dark-color);
             border: none;
             padding: 12px 25px;
@@ -24975,19 +24977,19 @@ transform: translateY(20px);
             height: 50px;
             text-align: center;
             font-size: 1.2rem;
-            border: 1px solid var(--gray-light);
+            border: 1px solid var(--success);
             border-radius: 8px;
-            background-color: var(--light-color);
+            background-color: var(--gold-light);
         }
 
         .otp-input:focus {
             outline: none;
-            border-color: var(--primary-color);
+            border-color: var(--primary);
             box-shadow: 0 0 0 3px rgba(201, 169, 97, 0.1);
         }
 
         .resend-otp {
-            color: var(--primary-color);
+            color: var(--primary);
             background: none;
             border: none;
             cursor: pointer;
@@ -25002,7 +25004,7 @@ transform: translateY(20px);
         }
 
         .switch-form {
-            color: var(--primary-color);
+            color: var(--primary);
             background: none;
             border: none;
             cursor: pointer;
