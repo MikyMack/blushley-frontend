@@ -1863,7 +1863,7 @@ a:hover {
   gap: 16px;
 }
 .header-default .box-nav-ul {
-  gap: 20px;
+  gap: 15px;
 }
 .header-default .wrapper-header-right {
   display: flex;
@@ -2120,7 +2120,7 @@ a:hover {
 }
 
 #header .box-nav-ul .item-link {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 26px;
   font-weight: 600;
   display: flex;
@@ -2133,6 +2133,7 @@ a:hover {
   transition: all 0.3s ease;
   position: relative;
   color: #8b7355;
+  white-space:nowrap;
 }
 #header .box-nav-ul .item-link .icon {
   font-size: 12px;
@@ -19891,6 +19892,9 @@ ul.list-text.type-number {
     position: relative;
     min-height: 450px;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .page-title-video {
