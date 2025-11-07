@@ -14507,7 +14507,7 @@ ul.list-text.type-number {
   content: "";
   height: 100%;
   width: 1px;
-  background-color: var(--line);
+
   top: 0;
   left: 50%;
 }

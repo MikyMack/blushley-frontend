@@ -4,7 +4,7 @@
 <head>
     <!-- Basic Page Needs -->
     <meta charset="utf-8">
-    <title>Blushelys - Banner Management</title>
+    <title>Blushelys - Banner & Poster Management</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <!-- Theme Style -->
@@ -52,6 +52,44 @@
         .status-badge.verified {
             background-color: #e6f7ff;
             color: #5c4d3b;
+        }
+
+        /* Content Type Toggle */
+        .content-type-toggle {
+            display: flex;
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 4px;
+            margin-bottom: 24px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .content-type-btn {
+            flex: 1;
+            padding: 12px 20px;
+            border: none;
+            background: transparent;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            color: #6b7280;
+        }
+
+        .content-type-btn.active {
+            background: white;
+            color: #5c4d3b;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-type-btn:hover:not(.active) {
+            background: rgba(255, 255, 255, 0.5);
+            color: #374151;
         }
 
         /* Modern Modal Styles */
@@ -400,12 +438,18 @@
             background-color: #f9fafb;
         }
 
-        .banner-image {
+        .banner-image, .poster-image {
             width: 120px;
             height: 60px;
             border-radius: 6px;
             object-fit: cover;
             border: 1px solid #e5e7eb;
+        }
+
+        .poster-image {
+            width: 80px;
+            height: 120px;
+            object-fit: cover;
         }
 
         .banner-name {
@@ -556,7 +600,9 @@
             background-color: #f5f5f5;
         }
 
- 
+        .wg-pagination li.active {
+            background: linear-gradient(135deg, #5c4d3b 0%, #5c4d3b 100%);
+        }
 
         .wg-pagination li.active a {
             color: white;
@@ -665,8 +711,9 @@
                 </div>
                 <!-- /preload -->
                 
+                <!-- Your existing sidebar code remains the same -->
                 <!-- section-menu-left -->
-                <div class="section-menu-left">
+             <div class="section-menu-left">
                     <div class="box-logo">
                         <a href="/dashboard" id="site-logo-inner">
                             <img style="width:60px;" id="logo_header" alt="logo" src="images/logo/blushley-png-without-shade.png"
@@ -708,7 +755,7 @@
                                         </a>
                                     </li>
 
-                                    <li class="menu-item">
+                                    <li class="menu-item ">
                                         <a href="admin-shop.html" class="menu-item-button">
                                             <div class="icon"><i class="icon-heart"></i></div>
                                             <div class="text">Shop Management</div>
@@ -740,7 +787,12 @@
                                             <div class="text">Freelance Management</div>
                                         </a>
                                     </li>
-
+    <li class="menu-item ">
+                                        <a href="admin-users.html" class="menu-item-button">
+                                            <div class="icon"><i class="icon-users"></i></div>
+                                            <div class="text">User Management</div>
+                                        </a>
+                                    </li>
                                     <li class="menu-item active">
                                         <a href="admin-banners.html" class="menu-item-button">
                                             <div class="icon"><i class="icon-image"></i></div>
@@ -755,7 +807,7 @@
                                         </a>
                                     </li>
 
-                                    <li class="menu-item">
+                                    <li class="menu-item ">
                                         <a href="admin-blogs.html" class="menu-item-button">
                                             <div class="icon"><i class="icon-book-open"></i></div>
                                             <div class="text">Blogs Management</div>
@@ -795,54 +847,9 @@
                                 <div class="button-show-hide">
                                     <i class="icon-chevron-left"></i>
                                 </div>
-
                             </div>
                             <div class="header-grid">
-                                <div class="header-item button-dark-light">
-                                    <i class="icon-moon"></i>
-                                </div>
-
-                                <div class="header-item button-zoom-maximize">
-                                    <div class="">
-                                        <i class="icon-maximize"></i>
-                                    </div>
-                                </div>
-                                <div class="popup-wrap user type-header">
-                                    <div class="dropdown">
-                                        <button class="btn btn-secondary dropdown-toggle" type="button"
-                                            id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <span class="header-user wg-user">
-                                                <span class="image">
-                                                    <img src="admin-images/avatar/user-1.png" alt="">
-                                                </span>
-                                                <span class="flex flex-column">
-                                                    <span class="body-text text-main-dark">Blushelys</span>
-                                                    <span class="text-tiny">Admin</span>
-                                                </span>
-                                            </span>
-                                        </button>
-                                        <ul class="dropdown-menu dropdown-menu-end has-content"
-                                            aria-labelledby="dropdownMenuButton3">
-
-                                            <li>
-                                                <a href="#" class="user-item">
-                                                    <div class="icon">
-                                                        <i class="icon-headphones"></i>
-                                                    </div>
-                                                    <div class="body-title-2">Support</div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/logout" class="user-item">
-                                                    <div class="icon">
-                                                        <i class="icon-log-out"></i>
-                                                    </div>
-                                                    <div class="body-title-2">Log out</div>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
+                                <!-- Your existing header items -->
                             </div>
                         </div>
                     </div>
@@ -855,7 +862,7 @@
                             <!-- main-content-wrap -->
                             <div class="main-content-wrap">
                                 <div class="flex items-center flex-wrap justify-between gap20 mb-30">
-                                    <h3>Banner Management</h3>
+                                    <h3>Banner & Poster Management</h3>
                                     <ul class="breadcrumbs flex items-center flex-wrap justify-start gap10">
                                         <li>
                                             <a href="/dashboard">
@@ -867,20 +874,32 @@
                                         </li>
                                         <li>
                                             <a href="#">
-                                                <div class="text-tiny">Banners</div>
+                                                <div class="text-tiny">Content</div>
                                             </a>
                                         </li>
                                         <li>
                                             <i class="icon-chevron-right"></i>
                                         </li>
                                         <li>
-                                            <div class="text-tiny">Banner Management</div>
+                                            <div class="text-tiny">Banner & Poster Management</div>
                                         </li>
                                     </ul>
                                 </div>
                                 
+                                <!-- Content Type Toggle -->
+                                <div class="content-type-toggle">
+                                    <button class="content-type-btn active" data-type="banners">
+                                        <i class="icon-image"></i>
+                                        <span>Banners</span>
+                                    </button>
+                                    <button class="content-type-btn" data-type="posters">
+                                        <i class="icon-layers"></i>
+                                        <span>Posters</span>
+                                    </button>
+                                </div>
+
                                 <!-- banner-list -->
-                                <div class="wg-box">
+                                <div class="wg-box" id="banners-section">
                                     <div class="title-box">
                                         <i class="icon-image"></i>
                                         <div class="body-text">Tip: Manage website banners. You can toggle banner status, edit banner details, and upload new banners.</div>
@@ -891,7 +910,7 @@
                                             <div class="show">
                                                 <div class="text-tiny">Showing</div>
                                                 <div class="select">
-                                                    <select id="limit-select">
+                                                    <select id="banner-limit-select">
                                                         <option value="10">10</option>
                                                         <option value="20">20</option>
                                                         <option value="30">30</option>
@@ -900,9 +919,9 @@
                                                 <div class="text-tiny">entries</div>
                                             </div>
                                             <div class="form-search">
-                                                <input type="text" id="search-input"
+                                                <input type="text" id="banner-search-input"
                                                     placeholder="Search by banner name...">
-                                                <button id="search-btn"><i class="icon-search"></i></button>
+                                                <button id="banner-search-btn"><i class="icon-search"></i></button>
                                             </div>
                                         </div>
                                         <button class="add-banner-btn" onclick="showAddBannerModal()">
@@ -930,13 +949,72 @@
 
                                     <div class="divider"></div>
                                     <div class="flex items-center justify-between flex-wrap gap10">
-                                        <div class="text-tiny" id="showing-entries">Showing 0 entries</div>
-                                        <ul class="wg-pagination" id="pagination">
+                                        <div class="text-tiny" id="banner-showing-entries">Showing 0 entries</div>
+                                        <ul class="wg-pagination" id="banner-pagination">
                                             <!-- Pagination will be loaded here dynamically -->
                                         </ul>
                                     </div>
                                 </div>
                                 <!-- /banner-list -->
+
+                                <!-- poster-list -->
+                                <div class="wg-box" id="posters-section" style="display: none;">
+                                    <div class="title-box">
+                                        <i class="icon-layers"></i>
+                                        <div class="body-text">Tip: Manage website posters. You can toggle poster status, edit poster details, and upload new posters.</div>
+                                    </div>
+
+                                    <div class="flex items-center justify-between gap10 flex-wrap">
+                                        <div class="wg-filter flex-grow">
+                                            <div class="show">
+                                                <div class="text-tiny">Showing</div>
+                                                <div class="select">
+                                                    <select id="poster-limit-select">
+                                                        <option value="10">10</option>
+                                                        <option value="20">20</option>
+                                                        <option value="30">30</option>
+                                                    </select>
+                                                </div>
+                                                <div class="text-tiny">entries</div>
+                                            </div>
+                                            <div class="form-search">
+                                                <input type="text" id="poster-search-input"
+                                                    placeholder="Search by poster name...">
+                                                <button id="poster-search-btn"><i class="icon-search"></i></button>
+                                            </div>
+                                        </div>
+                                        <button class="add-banner-btn" onclick="showAddPosterModal()">
+                                            <i class="icon-plus"></i> Add Poster
+                                        </button>
+                                    </div>
+
+                                    <div class="banners-list-container">
+                                        <table class="banner-list-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Poster</th>
+                                                    <th>Name</th>
+                                                    <th>Link</th>
+                                                    <th>Status</th>
+                                                    <th>Created</th>
+                                                    <th>Actions</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="posters-list">
+                                                <!-- Poster rows will be dynamically inserted here -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <div class="divider"></div>
+                                    <div class="flex items-center justify-between flex-wrap gap10">
+                                        <div class="text-tiny" id="poster-showing-entries">Showing 0 entries</div>
+                                        <ul class="wg-pagination" id="poster-pagination">
+                                            <!-- Pagination will be loaded here dynamically -->
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- /poster-list -->
 
                                 <!-- Add Banner Modal -->
                                 <div id="add-banner-modal" class="modal">
@@ -977,7 +1055,7 @@
                                                         <h4><i class="icon-image"></i> Banner Image</h4>
                                                     </div>
                                                     <div class="form-group">
-                                                        <div class="file-upload-area" id="add-file-upload-area">
+                                                        <div class="file-upload-area" id="add-banner-file-upload-area">
                                                             <div class="upload-content">
                                                                 <i class="icon-upload"></i>
                                                                 <p>Drag & drop banner image here or click to browse</p>
@@ -986,7 +1064,7 @@
                                                             <input type="file" id="add-banner-image" name="image" 
                                                                    accept="image/*" required>
                                                         </div>
-                                                        <div class="image-preview-grid" id="add-image-preview-grid"></div>
+                                                        <div class="image-preview-grid" id="add-banner-image-preview-grid"></div>
                                                     </div>
                                                 </div>
 
@@ -1015,6 +1093,90 @@
                                                     </button>
                                                     <button type="submit" class="btn btn-primary">
                                                         <i class="icon-save"></i> Add Banner
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Add Poster Modal -->
+                                <div id="add-poster-modal" class="modal">
+                                    <div class="modal-content modern-modal">
+                                        <div class="modal-header">
+                                            <div class="modal-title">
+                                                <i class="icon-layers"></i>
+                                                <h3>Add New Poster</h3>
+                                            </div>
+                                            <button class="close-btn" onclick="closeModal('add-poster-modal')">
+                                                <i class="icon-x"></i>
+                                            </button>
+                                        </div>
+                                        
+                                        <div class="modal-body">
+                                            <form id="add-poster-form" enctype="multipart/form-data">
+                                                <!-- Poster Information -->
+                                                <div class="form-section">
+                                                    <div class="section-header">
+                                                        <h4><i class="icon-info"></i> Poster Information</h4>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="add-poster-name">Poster Name*</label>
+                                                        <input type="text" id="add-poster-name" name="name" 
+                                                               placeholder="Enter poster name" required>
+                                                    </div>
+                                                    
+                                                    <div class="form-group">
+                                                        <label for="add-poster-link">Poster Link*</label>
+                                                        <input type="url" id="add-poster-link" name="link" 
+                                                               placeholder="https://example.com/page" required>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Poster Image -->
+                                                <div class="form-section">
+                                                    <div class="section-header">
+                                                        <h4><i class="icon-image"></i> Poster Image</h4>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <div class="file-upload-area" id="add-poster-file-upload-area">
+                                                            <div class="upload-content">
+                                                                <i class="icon-upload"></i>
+                                                                <p>Drag & drop poster image here or click to browse</p>
+                                                                <small>Recommended: 600x800 pixels for best display</small>
+                                                            </div>
+                                                            <input type="file" id="add-poster-image" name="image" 
+                                                                   accept="image/*" required>
+                                                        </div>
+                                                        <div class="image-preview-grid" id="add-poster-image-preview-grid"></div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Status -->
+                                                <div class="form-section">
+                                                    <div class="section-header">
+                                                        <h4><i class="icon-toggle-right"></i> Status</h4>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="add-poster-status">Active Status</label>
+                                                        <div class="status-toggle">
+                                                            <input type="checkbox" id="add-poster-status" name="isActive" checked>
+                                                            <label for="add-poster-status" class="toggle-label">
+                                                                <span class="toggle-text">Active</span>
+                                                                <span class="toggle-slider"></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Form Actions -->
+                                                <div class="form-actions">
+                                                    <button type="button" class="btn btn-secondary" 
+                                                            onclick="closeModal('add-poster-modal')">
+                                                        <i class="icon-x"></i> Cancel
+                                                    </button>
+                                                    <button type="submit" class="btn btn-primary">
+                                                        <i class="icon-save"></i> Add Poster
                                                     </button>
                                                 </div>
                                             </form>
@@ -1062,11 +1224,11 @@
                                                     </div>
                                                     <div class="form-group">
                                                         <label>Current Image</label>
-                                                        <div class="current-image" id="edit-current-image"></div>
+                                                        <div class="current-image" id="edit-banner-current-image"></div>
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="edit-banner-image">Update Image</label>
-                                                        <div class="file-upload-area" id="edit-file-upload-area">
+                                                        <div class="file-upload-area" id="edit-banner-file-upload-area">
                                                             <div class="upload-content">
                                                                 <i class="icon-upload"></i>
                                                                 <p>Drag & drop new banner image here or click to browse</p>
@@ -1075,7 +1237,7 @@
                                                             <input type="file" id="edit-banner-image" name="image" 
                                                                    accept="image/*">
                                                         </div>
-                                                        <div class="image-preview-grid" id="edit-image-preview-grid"></div>
+                                                        <div class="image-preview-grid" id="edit-banner-image-preview-grid"></div>
                                                     </div>
                                                 </div>
 
@@ -1111,6 +1273,95 @@
                                     </div>
                                 </div>
 
+                                <!-- Edit Poster Modal -->
+                                <div id="edit-poster-modal" class="modal">
+                                    <div class="modal-content modern-modal">
+                                        <div class="modal-header">
+                                            <div class="modal-title">
+                                                <i class="icon-edit-3"></i>
+                                                <h3>Edit Poster</h3>
+                                            </div>
+                                            <button class="close-btn" onclick="closeModal('edit-poster-modal')">
+                                                <i class="icon-x"></i>
+                                            </button>
+                                        </div>
+                                        
+                                        <div class="modal-body">
+                                            <form id="edit-poster-form" enctype="multipart/form-data">
+                                                <input type="hidden" id="edit-poster-id" name="id">
+                                                
+                                                <!-- Poster Information -->
+                                                <div class="form-section">
+                                                    <div class="section-header">
+                                                        <h4><i class="icon-info"></i> Poster Information</h4>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="edit-poster-name">Poster Name*</label>
+                                                        <input type="text" id="edit-poster-name" name="name" required>
+                                                    </div>
+                                                    
+                                                    <div class="form-group">
+                                                        <label for="edit-poster-link">Poster Link*</label>
+                                                        <input type="url" id="edit-poster-link" name="link" required>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Poster Image -->
+                                                <div class="form-section">
+                                                    <div class="section-header">
+                                                        <h4><i class="icon-image"></i> Poster Image</h4>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Current Image</label>
+                                                        <div class="current-image" id="edit-poster-current-image"></div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="edit-poster-image">Update Image</label>
+                                                        <div class="file-upload-area" id="edit-poster-file-upload-area">
+                                                            <div class="upload-content">
+                                                                <i class="icon-upload"></i>
+                                                                <p>Drag & drop new poster image here or click to browse</p>
+                                                                <small>Recommended: 600x800 pixels for best display</small>
+                                                            </div>
+                                                            <input type="file" id="edit-poster-image" name="image" 
+                                                                   accept="image/*">
+                                                        </div>
+                                                        <div class="image-preview-grid" id="edit-poster-image-preview-grid"></div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Status -->
+                                                <div class="form-section">
+                                                    <div class="section-header">
+                                                        <h4><i class="icon-toggle-right"></i> Status</h4>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="edit-poster-status">Active Status</label>
+                                                        <div class="status-toggle">
+                                                            <input type="checkbox" id="edit-poster-status" name="isActive">
+                                                            <label for="edit-poster-status" class="toggle-label">
+                                                                <span class="toggle-text">Active</span>
+                                                                <span class="toggle-slider"></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Form Actions -->
+                                                <div class="form-actions">
+                                                    <button type="button" class="btn btn-secondary" 
+                                                            onclick="closeModal('edit-poster-modal')">
+                                                        <i class="icon-x"></i> Cancel
+                                                    </button>
+                                                    <button type="submit" class="btn btn-primary">
+                                                        <i class="icon-save"></i> Update Poster
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <!-- Delete Confirmation Modal -->
                                 <div id="delete-confirm-modal" class="modal">
                                     <div class="modal-content">
@@ -1124,7 +1375,7 @@
                                             </button>
                                         </div>
                                         <div class="modal-body">
-                                            <p>Are you sure you want to delete this banner? This action cannot be undone.</p>
+                                            <p id="delete-confirm-message">Are you sure you want to delete this item? This action cannot be undone.</p>
                                             <div class="form-actions">
                                                 <button type="button" class="btn btn-secondary"
                                                     onclick="closeModal('delete-confirm-modal')">Cancel</button>
@@ -1137,33 +1388,67 @@
 
                                 <script>
                                     // Global variables
-                                    let currentPage = 1;
-                                    let limit = 10;
-                                    let searchQuery = '';
+                                    let currentContentType = 'banners';
+                                    let bannerCurrentPage = 1;
+                                    let posterCurrentPage = 1;
+                                    let bannerLimit = 10;
+                                    let posterLimit = 10;
+                                    let bannerSearchQuery = '';
+                                    let posterSearchQuery = '';
                                     let banners = [];
-                                    let bannerToDelete = null;
+                                    let posters = [];
+                                    let itemToDelete = null;
+                                    let deleteType = '';
 
                                     // DOM Content Loaded
                                     document.addEventListener('DOMContentLoaded', function () {
                                         // Initialize
                                         fetchBanners();
+                                        fetchPosters();
 
-                                        // Event listeners
-                                        document.getElementById('limit-select').addEventListener('change', function () {
-                                            limit = parseInt(this.value);
-                                            currentPage = 1;
+                                        // Content type toggle
+                                        document.querySelectorAll('.content-type-btn').forEach(btn => {
+                                            btn.addEventListener('click', function() {
+                                                const type = this.getAttribute('data-type');
+                                                switchContentType(type);
+                                            });
+                                        });
+
+                                        // Banner event listeners
+                                        document.getElementById('banner-limit-select').addEventListener('change', function () {
+                                            bannerLimit = parseInt(this.value);
+                                            bannerCurrentPage = 1;
                                             fetchBanners();
                                         });
 
-                                        document.getElementById('search-btn').addEventListener('click', function () {
-                                            searchQuery = document.getElementById('search-input').value;
-                                            currentPage = 1;
+                                        document.getElementById('banner-search-btn').addEventListener('click', function () {
+                                            bannerSearchQuery = document.getElementById('banner-search-input').value;
+                                            bannerCurrentPage = 1;
                                             fetchBanners();
                                         });
 
+                                        // Poster event listeners
+                                        document.getElementById('poster-limit-select').addEventListener('change', function () {
+                                            posterLimit = parseInt(this.value);
+                                            posterCurrentPage = 1;
+                                            fetchPosters();
+                                        });
+
+                                        document.getElementById('poster-search-btn').addEventListener('click', function () {
+                                            posterSearchQuery = document.getElementById('poster-search-input').value;
+                                            posterCurrentPage = 1;
+                                            fetchPosters();
+                                        });
+
+                                        // Form submissions
                                         document.getElementById('add-banner-form').addEventListener('submit', function (e) {
                                             e.preventDefault();
                                             addBanner();
+                                        });
+
+                                        document.getElementById('add-poster-form').addEventListener('submit', function (e) {
+                                            e.preventDefault();
+                                            addPoster();
                                         });
 
                                         document.getElementById('edit-banner-form').addEventListener('submit', function (e) {
@@ -1171,71 +1456,113 @@
                                             updateBanner();
                                         });
 
+                                        document.getElementById('edit-poster-form').addEventListener('submit', function (e) {
+                                            e.preventDefault();
+                                            updatePoster();
+                                        });
+
                                         document.getElementById('confirm-delete-btn').addEventListener('click', function () {
-                                            if (bannerToDelete) {
-                                                deleteBanner(bannerToDelete);
-                                                bannerToDelete = null;
+                                            if (itemToDelete && deleteType) {
+                                                if (deleteType === 'banner') {
+                                                    deleteBanner(itemToDelete);
+                                                } else {
+                                                    deletePoster(itemToDelete);
+                                                }
+                                                itemToDelete = null;
+                                                deleteType = '';
                                             }
                                         });
 
-                                        // Image preview functionality for add modal
-                                        document.getElementById('add-banner-image').addEventListener('change', function(e) {
-                                            const file = e.target.files[0];
-                                            const previewGrid = document.getElementById('add-image-preview-grid');
-                                            previewGrid.innerHTML = '';
-
-                                            if (file && file.type.startsWith('image/')) {
-                                                const reader = new FileReader();
-                                                reader.onload = function(e) {
-                                                    const img = document.createElement('img');
-                                                    img.src = e.target.result;
-                                                    img.alt = 'Banner preview';
-                                                    previewGrid.appendChild(img);
-                                                };
-                                                reader.readAsDataURL(file);
-                                            }
-                                        });
-
-                                        // Image preview functionality for edit modal
-                                        document.getElementById('edit-banner-image').addEventListener('change', function(e) {
-                                            const file = e.target.files[0];
-                                            const previewGrid = document.getElementById('edit-image-preview-grid');
-                                            previewGrid.innerHTML = '';
-
-                                            if (file && file.type.startsWith('image/')) {
-                                                const reader = new FileReader();
-                                                reader.onload = function(e) {
-                                                    const img = document.createElement('img');
-                                                    img.src = e.target.result;
-                                                    img.alt = 'Banner preview';
-                                                    previewGrid.appendChild(img);
-                                                };
-                                                reader.readAsDataURL(file);
-                                            }
-                                        });
+                                        // Image preview functionality
+                                        setupImagePreview('add-banner-image', 'add-banner-image-preview-grid');
+                                        setupImagePreview('add-poster-image', 'add-poster-image-preview-grid');
+                                        setupImagePreview('edit-banner-image', 'edit-banner-image-preview-grid');
+                                        setupImagePreview('edit-poster-image', 'edit-poster-image-preview-grid');
                                     });
+
+                                    // Switch between banners and posters
+                                    function switchContentType(type) {
+                                        currentContentType = type;
+                                        
+                                        // Update toggle buttons
+                                        document.querySelectorAll('.content-type-btn').forEach(btn => {
+                                            btn.classList.remove('active');
+                                        });
+                                        document.querySelector(`[data-type="${type}"]`).classList.add('active');
+                                        
+                                        // Show/hide sections
+                                        if (type === 'banners') {
+                                            document.getElementById('banners-section').style.display = 'block';
+                                            document.getElementById('posters-section').style.display = 'none';
+                                        } else {
+                                            document.getElementById('banners-section').style.display = 'none';
+                                            document.getElementById('posters-section').style.display = 'block';
+                                        }
+                                    }
+
+                                    // Setup image preview
+                                    function setupImagePreview(inputId, previewGridId) {
+                                        document.getElementById(inputId).addEventListener('change', function(e) {
+                                            const file = e.target.files[0];
+                                            const previewGrid = document.getElementById(previewGridId);
+                                            previewGrid.innerHTML = '';
+
+                                            if (file && file.type.startsWith('image/')) {
+                                                const reader = new FileReader();
+                                                reader.onload = function(e) {
+                                                    const img = document.createElement('img');
+                                                    img.src = e.target.result;
+                                                    img.alt = 'Preview';
+                                                    previewGrid.appendChild(img);
+                                                };
+                                                reader.readAsDataURL(file);
+                                            }
+                                        });
+                                    }
 
                                     // Fetch banners from API
                                     async function fetchBanners() {
                                         try {
                                             // In a real implementation, this would be an API call
-                                            // For demo purposes, we'll use mock data
                                             banners = getMockBanners();
                                             
                                             // Filter by search query if provided
-                                            if (searchQuery) {
+                                            if (bannerSearchQuery) {
                                                 banners = banners.filter(banner => 
-                                                    banner.name.toLowerCase().includes(searchQuery.toLowerCase())
+                                                    banner.name.toLowerCase().includes(bannerSearchQuery.toLowerCase())
                                                 );
                                             }
                                             
                                             renderBanners(banners);
-                                            renderPagination(Math.ceil(banners.length / limit), currentPage);
-                                            document.getElementById('showing-entries').textContent = `Showing ${Math.min(banners.length, limit)} of ${banners.length} entries`;
+                                            renderPagination('banner', Math.ceil(banners.length / bannerLimit), bannerCurrentPage);
+                                            document.getElementById('banner-showing-entries').textContent = `Showing ${Math.min(banners.length, bannerLimit)} of ${banners.length} entries`;
                                         } catch (error) {
                                             console.error('Error fetching banners:', error);
                                             alert('Failed to load banners. Please try again later.');
                                             document.getElementById('banners-list').innerHTML = '<tr><td colspan="6" class="text-center">Failed to load banners</td></tr>';
+                                        }
+                                    }
+
+                                    // Fetch posters from API
+                                    async function fetchPosters() {
+                                        try {
+                                            // In a real implementation, this would be an API call
+                                            posters = getMockPosters();
+                                            
+                                            // Filter by search query if provided
+                                            if (posterSearchQuery) {
+                                                posters = posters.filter(poster => 
+                                                    poster.name.toLowerCase().includes(posterSearchQuery.toLowerCase())
+                                                );
+                                            }
+                                            
+                                            renderPosters(posters);
+                                            renderPagination('poster', Math.ceil(posters.length / posterLimit), posterCurrentPage);
+                                            document.getElementById('poster-showing-entries').textContent = `Showing ${Math.min(posters.length, posterLimit)} of ${posters.length} entries`;
+                                        } catch (error) {
+                                            console.error('Error fetching posters:', error);
+                                            alert('Failed to load posters. Please try again later.');
+                                            document.getElementById('posters-list').innerHTML = '<tr><td colspan="6" class="text-center">Failed to load posters</td></tr>';
                                         }
                                     }
 
@@ -1245,8 +1572,8 @@
                                         bannersList.innerHTML = '';
 
                                         // Calculate pagination
-                                        const startIndex = (currentPage - 1) * limit;
-                                        const endIndex = startIndex + limit;
+                                        const startIndex = (bannerCurrentPage - 1) * bannerLimit;
+                                        const endIndex = startIndex + bannerLimit;
                                         const paginatedBanners = banners.slice(startIndex, endIndex);
 
                                         if (paginatedBanners.length === 0) {
@@ -1286,7 +1613,7 @@
                                                         <button class="item toggle" onclick="toggleBanner('${banner.id}')">
                                                             <i class="fa fa-toggle-${banner.isActive ? 'on' : 'off'}"></i>
                                                         </button>
-                                                        <button class="item trash" onclick="confirmDeleteBanner('${banner.id}')">
+                                                        <button class="item trash" onclick="confirmDeleteItem('${banner.id}', 'banner')">
                                                             <i class="icon-trash-2"></i>
                                                         </button>
                                                     </div>
@@ -1297,11 +1624,76 @@
                                         });
                                     }
 
+                                    // Render poster list
+                                    function renderPosters(posters) {
+                                        const postersList = document.getElementById('posters-list');
+                                        postersList.innerHTML = '';
+
+                                        // Calculate pagination
+                                        const startIndex = (posterCurrentPage - 1) * posterLimit;
+                                        const endIndex = startIndex + posterLimit;
+                                        const paginatedPosters = posters.slice(startIndex, endIndex);
+
+                                        if (paginatedPosters.length === 0) {
+                                            postersList.innerHTML = '<tr><td colspan="6" class="text-center">No posters found matching your criteria.</td></tr>';
+                                            return;
+                                        }
+
+                                        paginatedPosters.forEach(poster => {
+                                            const posterRow = document.createElement('tr');
+                                            posterRow.id = `poster-${poster.id}`;
+
+                                            const posterImage = poster.image || 'https://via.placeholder.com/80x120?text=No+Image';
+
+                                            posterRow.innerHTML = `
+                                                <td>
+                                                    <img src="${posterImage}" alt="${poster.name}" class="poster-image" onerror="this.src='https://via.placeholder.com/80x120?text=No+Image'">
+                                                </td>
+                                                <td>
+                                                    <div class="banner-name">${poster.name}</div>
+                                                </td>
+                                                <td>
+                                                    <a href="${poster.link}" target="_blank" class="banner-link">${poster.link}</a>
+                                                </td>
+                                                <td>
+                                                    <span class="status-badge ${poster.isActive ? 'active' : 'inactive'}">
+                                                        ${poster.isActive ? 'Active' : 'Inactive'}
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    <div class="text-tiny">${poster.createdAt}</div>
+                                                </td>
+                                                <td>
+                                                    <div class="banner-actions">
+                                                        <button class="item edit" onclick="showEditPosterModal('${poster.id}')">
+                                                            <i class="icon-edit-3"></i>
+                                                        </button>
+                                                        <button class="item toggle" onclick="togglePoster('${poster.id}')">
+                                                            <i class="fa fa-toggle-${poster.isActive ? 'on' : 'off'}"></i>
+                                                        </button>
+                                                        <button class="item trash" onclick="confirmDeleteItem('${poster.id}', 'poster')">
+                                                            <i class="icon-trash-2"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            `;
+
+                                            postersList.appendChild(posterRow);
+                                        });
+                                    }
+
                                     // Show add banner modal
                                     function showAddBannerModal() {
                                         document.getElementById('add-banner-form').reset();
-                                        document.getElementById('add-image-preview-grid').innerHTML = '';
+                                        document.getElementById('add-banner-image-preview-grid').innerHTML = '';
                                         document.getElementById('add-banner-modal').style.display = 'block';
+                                    }
+
+                                    // Show add poster modal
+                                    function showAddPosterModal() {
+                                        document.getElementById('add-poster-form').reset();
+                                        document.getElementById('add-poster-image-preview-grid').innerHTML = '';
+                                        document.getElementById('add-poster-modal').style.display = 'block';
                                     }
 
                                     // Show edit banner modal
@@ -1319,7 +1711,7 @@
                                         document.getElementById('edit-banner-status').checked = banner.isActive;
 
                                         // Load current image
-                                        const imageContainer = document.getElementById('edit-current-image');
+                                        const imageContainer = document.getElementById('edit-banner-current-image');
                                         imageContainer.innerHTML = '';
                                         if (banner.image) {
                                             const imgDiv = document.createElement('div');
@@ -1331,10 +1723,43 @@
                                         }
 
                                         // Clear image preview
-                                        document.getElementById('edit-image-preview-grid').innerHTML = '';
+                                        document.getElementById('edit-banner-image-preview-grid').innerHTML = '';
 
                                         // Show modal
                                         document.getElementById('edit-banner-modal').style.display = 'block';
+                                    }
+
+                                    // Show edit poster modal
+                                    function showEditPosterModal(posterId) {
+                                        const poster = posters.find(p => p.id === posterId);
+                                        if (!poster) {
+                                            alert('Poster not found');
+                                            return;
+                                        }
+
+                                        // Populate form fields
+                                        document.getElementById('edit-poster-id').value = poster.id;
+                                        document.getElementById('edit-poster-name').value = poster.name;
+                                        document.getElementById('edit-poster-link').value = poster.link;
+                                        document.getElementById('edit-poster-status').checked = poster.isActive;
+
+                                        // Load current image
+                                        const imageContainer = document.getElementById('edit-poster-current-image');
+                                        imageContainer.innerHTML = '';
+                                        if (poster.image) {
+                                            const imgDiv = document.createElement('div');
+                                            imgDiv.className = 'current-image';
+                                            imgDiv.innerHTML = `
+                                                <img src="${poster.image}" alt="Poster Image" style="max-width: 100%; border-radius: 8px;">
+                                            `;
+                                            imageContainer.appendChild(imgDiv);
+                                        }
+
+                                        // Clear image preview
+                                        document.getElementById('edit-poster-image-preview-grid').innerHTML = '';
+
+                                        // Show modal
+                                        document.getElementById('edit-poster-modal').style.display = 'block';
                                     }
 
                                     // Add banner
@@ -1369,6 +1794,41 @@
                                         } catch (error) {
                                             console.error('Error:', error);
                                             alert('Error adding banner');
+                                        }
+                                    }
+
+                                    // Add poster
+                                    async function addPoster() {
+                                        const form = document.getElementById('add-poster-form');
+                                        const formData = new FormData(form);
+
+                                        try {
+                                            // In a real implementation, this would be an API call
+                                            const newPoster = {
+                                                id: 'PST' + Date.now(),
+                                                name: formData.get('name'),
+                                                link: formData.get('link'),
+                                                image: 'https://via.placeholder.com/600x800?text=New+Poster',
+                                                isActive: formData.get('isActive') === 'on',
+                                                createdAt: new Date().toLocaleDateString('en-US', { 
+                                                    year: 'numeric', 
+                                                    month: 'short', 
+                                                    day: 'numeric' 
+                                                })
+                                            };
+
+                                            // Simulate API call delay
+                                            await new Promise(resolve => setTimeout(resolve, 1000));
+
+                                            // Add the poster to our mock data
+                                            posters.unshift(newPoster);
+
+                                            alert('Poster added successfully!');
+                                            closeModal('add-poster-modal');
+                                            fetchPosters();
+                                        } catch (error) {
+                                            console.error('Error:', error);
+                                            alert('Error adding poster');
                                         }
                                     }
 
@@ -1408,6 +1868,42 @@
                                         }
                                     }
 
+                                    // Update poster
+                                    async function updatePoster() {
+                                        const form = document.getElementById('edit-poster-form');
+                                        const formData = new FormData(form);
+                                        const posterId = document.getElementById('edit-poster-id').value;
+
+                                        try {
+                                            // In a real implementation, this would be an API call
+                                            const updatedPoster = {
+                                                id: posterId,
+                                                name: formData.get('name'),
+                                                link: formData.get('link'),
+                                                isActive: formData.get('isActive') === 'on'
+                                            };
+
+                                            // Simulate API call delay
+                                            await new Promise(resolve => setTimeout(resolve, 1000));
+
+                                            // Update the poster in our mock data
+                                            const posterIndex = posters.findIndex(p => p.id === posterId);
+                                            if (posterIndex !== -1) {
+                                                posters[posterIndex] = {
+                                                    ...posters[posterIndex],
+                                                    ...updatedPoster
+                                                };
+                                            }
+
+                                            alert('Poster updated successfully!');
+                                            closeModal('edit-poster-modal');
+                                            fetchPosters();
+                                        } catch (error) {
+                                            console.error('Error:', error);
+                                            alert('Error updating poster');
+                                        }
+                                    }
+
                                     // Toggle banner status
                                     function toggleBanner(bannerId) {
                                         // In a real implementation, this would be an API call
@@ -1420,9 +1916,28 @@
                                         fetchBanners();
                                     }
 
-                                    // Confirm delete banner
-                                    function confirmDeleteBanner(bannerId) {
-                                        bannerToDelete = bannerId;
+                                    // Toggle poster status
+                                    function togglePoster(posterId) {
+                                        // In a real implementation, this would be an API call
+                                        const posterIndex = posters.findIndex(p => p.id === posterId);
+                                        if (posterIndex !== -1) {
+                                            posters[posterIndex].isActive = !posters[posterIndex].isActive;
+                                        }
+
+                                        alert(`Poster ${posters[posterIndex].isActive ? 'activated' : 'deactivated'} successfully!`);
+                                        fetchPosters();
+                                    }
+
+                                    // Confirm delete item
+                                    function confirmDeleteItem(itemId, type) {
+                                        itemToDelete = itemId;
+                                        deleteType = type;
+                                        
+                                        const message = type === 'banner' 
+                                            ? 'Are you sure you want to delete this banner? This action cannot be undone.'
+                                            : 'Are you sure you want to delete this poster? This action cannot be undone.';
+                                        
+                                        document.getElementById('delete-confirm-message').textContent = message;
                                         document.getElementById('delete-confirm-modal').style.display = 'block';
                                     }
 
@@ -1439,18 +1954,31 @@
                                         fetchBanners();
                                     }
 
+                                    // Delete poster
+                                    function deletePoster(posterId) {
+                                        // In a real implementation, this would be an API call
+                                        const posterIndex = posters.findIndex(p => p.id === posterId);
+                                        if (posterIndex !== -1) {
+                                            posters.splice(posterIndex, 1);
+                                        }
+
+                                        alert('Poster deleted successfully!');
+                                        closeModal('delete-confirm-modal');
+                                        fetchPosters();
+                                    }
+
                                     // Close modal
                                     function closeModal(modalId) {
                                         document.getElementById(modalId).style.display = 'none';
                                     }
 
                                     // Pagination functions
-                                    function renderPagination(totalPages, currentPage) {
-                                        const paginationContainer = document.getElementById('pagination');
+                                    function renderPagination(type, totalPages, currentPage) {
+                                        const paginationContainer = document.getElementById(`${type}-pagination`);
                                         paginationContainer.innerHTML = '';
 
                                         // Always show first page button
-                                        addPageButton(paginationContainer, 1, currentPage);
+                                        addPageButton(paginationContainer, type, 1, currentPage);
 
                                         // Show previous ellipsis if needed
                                         if (currentPage > 3) {
@@ -1464,7 +1992,7 @@
                                         const endPage = Math.min(totalPages - 1, currentPage + 1);
 
                                         for (let i = startPage; i <= endPage; i++) {
-                                            addPageButton(paginationContainer, i, currentPage);
+                                            addPageButton(paginationContainer, type, i, currentPage);
                                         }
 
                                         // Show next ellipsis if needed
@@ -1476,11 +2004,11 @@
 
                                         // Always show last page button if there are multiple pages
                                         if (totalPages > 1) {
-                                            addPageButton(paginationContainer, totalPages, currentPage);
+                                            addPageButton(paginationContainer, type, totalPages, currentPage);
                                         }
                                     }
 
-                                    function addPageButton(container, pageNumber, currentPage) {
+                                    function addPageButton(container, type, pageNumber, currentPage) {
                                         const pageItem = document.createElement('li');
                                         if (pageNumber === currentPage) {
                                             pageItem.className = 'active';
@@ -1491,8 +2019,13 @@
                                         pageLink.textContent = pageNumber;
                                         pageLink.onclick = (e) => {
                                             e.preventDefault();
-                                            currentPage = pageNumber;
-                                            fetchBanners();
+                                            if (type === 'banner') {
+                                                bannerCurrentPage = pageNumber;
+                                                fetchBanners();
+                                            } else {
+                                                posterCurrentPage = pageNumber;
+                                                fetchPosters();
+                                            }
                                         };
 
                                         pageItem.appendChild(pageLink);
@@ -1526,7 +2059,35 @@
                                                 isActive: false,
                                                 createdAt: 'Mar 5, 2024'
                                             }
-                                         
+                                        ];
+                                    }
+
+                                    function getMockPosters() {
+                                        return [
+                                            {
+                                                id: 'PST001',
+                                                name: 'Beauty Workshop',
+                                                link: 'https://blushelys.com/workshop',
+                                                image: 'images/beautician/beautician6.png',
+                                                isActive: true,
+                                                createdAt: 'Mar 12, 2024'
+                                            },
+                                            {
+                                                id: 'PST002',
+                                                name: 'Hair Care Tips',
+                                                link: 'https://blushelys.com/hair-care',
+                                                image: 'images/beautician/beautician6.png',
+                                                isActive: true,
+                                                createdAt: 'Mar 8, 2024'
+                                            },
+                                            {
+                                                id: 'PST003',
+                                                name: 'Skin Care Guide',
+                                                link: 'https://blushelys.com/skin-care',
+                                                image: 'images/beautician/beautician6.png',
+                                                isActive: false,
+                                                createdAt: 'Mar 3, 2024'
+                                            }
                                         ];
                                     }
                                 </script>
