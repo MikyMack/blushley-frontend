@@ -287,12 +287,13 @@
 
         /* Buttons */
         .action-button {
-            padding: 8px 16px;
+            padding: 5px;
             border-radius: 6px;
             border: none;
             font-weight: 500;
             cursor: pointer;
             transition: var(--transition);
+            font-size: 10px;
         }
 
         .confirm-button {
@@ -372,7 +373,7 @@
         .status-badge {
             padding: 6px 12px;
             border-radius: 20px;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 500;
         }
 
@@ -1110,10 +1111,7 @@
                     <i class="fas fa-calendar-alt"></i>
                     <span>Appointments</span>
                 </li>
-                <li class="nav-item" data-page="clients">
-                    <i class="fas fa-users"></i>
-                    <span>Clients</span>
-                </li>
+
                 <li class="nav-item" data-page="earnings">
                     <i class="fas fa-chart-line"></i>
                     <span>Earnings</span>
@@ -1265,64 +1263,7 @@
                         </div>
                     </div>
 
-                    <!-- Recent Clients -->
-                    <div class="section-card">
-                        <div class="section-header">
-                            <h3 class="section-title">Recent Clients</h3>
-                            <a href="#" class="view-all-link">View All Clients</a>
-                        </div>
-                        <div class="table-responsive">
-                            <table class="data-table">
-                                <thead>
-                                    <tr>
-                                        <th>Client</th>
-                                        <th>Last Visit</th>
-                                        <th>Total Visits</th>
-                                        <th>Phone</th>
-                                        <th>Actions</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Emily Johnson</td>
-                                        <td>Oct 12, 2023</td>
-                                        <td>24</td>
-                                        <td>(555) 123-4567</td>
-                                        <td>
-                                            <button class="action-button edit-button">View Profile</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Michael Brown</td>
-                                        <td>Today</td>
-                                        <td>1</td>
-                                        <td>(555) 987-6543</td>
-                                        <td>
-                                            <button class="action-button edit-button">View Profile</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Sophia Williams</td>
-                                        <td>Oct 10, 2023</td>
-                                        <td>42</td>
-                                        <td>(555) 456-7890</td>
-                                        <td>
-                                            <button class="action-button edit-button">View Profile</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>James Miller</td>
-                                        <td>Oct 8, 2023</td>
-                                        <td>15</td>
-                                        <td>(555) 234-5678</td>
-                                        <td>
-                                            <button class="action-button edit-button">View Profile</button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+                 
                 </div>
             </div>
 
@@ -1438,77 +1379,7 @@
             </div>
 
             <!-- Clients Page -->
-            <div class="page-content" id="clients-page">
-                <div class="section-card">
-                    <div class="section-header">
-                        <h3 class="section-title">Client Management</h3>
-                        <button class="action-button add-button" id="add-client-btn">
-                            <i class="fas fa-plus"></i> Add Client
-                        </button>
-                    </div>
-                    <div class="table-responsive">
-                        <table class="data-table">
-                            <thead>
-                                <tr>
-                                    <th>Client</th>
-                                    <th>Phone</th>
-                                    <th>Email</th>
-                                    <th>Last Visit</th>
-                                    <th>Total Visits</th>
-                                    <th>Preferred Services</th>
-                                    <th>Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Emily Johnson</td>
-                                    <td>(555) 123-4567</td>
-                                    <td>emily@example.com</td>
-                                    <td>Oct 12, 2023</td>
-                                    <td>24</td>
-                                    <td>Hair Color, Cut</td>
-                                    <td>
-                                        <button class="action-button edit-button">Edit</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Michael Brown</td>
-                                    <td>(555) 987-6543</td>
-                                    <td>michael@example.com</td>
-                                    <td>Today</td>
-                                    <td>1</td>
-                                    <td>Beard Trim</td>
-                                    <td>
-                                        <button class="action-button edit-button">Edit</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Sophia Williams</td>
-                                    <td>(555) 456-7890</td>
-                                    <td>sophia@example.com</td>
-                                    <td>Oct 10, 2023</td>
-                                    <td>42</td>
-                                    <td>Full Service</td>
-                                    <td>
-                                        <button class="action-button edit-button">Edit</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>James Miller</td>
-                                    <td>(555) 234-5678</td>
-                                    <td>james@example.com</td>
-                                    <td>Oct 8, 2023</td>
-                                    <td>15</td>
-                                    <td>Haircut</td>
-                                    <td>
-                                        <button class="action-button edit-button">Edit</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
+       
 
             <!-- Earnings Page -->
             <div class="page-content" id="earnings-page">

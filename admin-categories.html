@@ -81,7 +81,7 @@
 
         .category-btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(255, 107, 147, 0.3);
+            box-shadow: 0 8px 25px rgba(184, 152, 117, 0.3);
         }
 
         .category-btn-outline {
@@ -231,7 +231,7 @@
             width: 40px;
             height: 40px;
             border-radius: 8px;
-            background: linear-gradient(135deg, #ff6b93 0%, #ff8e53 100%);
+            background: linear-gradient(135deg, #b89875 0%, #d4b896 100%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -244,6 +244,14 @@
             font-size: 16px;
             font-weight: 600;
             color: #333;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .verified-badge {
+            color: #1890ff;
+            font-size: 14px;
         }
 
         .category-info p {
@@ -283,6 +291,18 @@
         .status-badge.inactive {
             background: #ffebee;
             color: #c62828;
+        }
+
+        .status-badge.verified {
+            background: #e6f7ff;
+            color: #1890ff;
+            border: 1px solid #1890ff;
+        }
+
+        .status-badge.pending {
+            background: #fff7e6;
+            color: #fa8c16;
+            border: 1px solid #fa8c16;
         }
 
         .category-actions-cell {
@@ -330,6 +350,24 @@
             background: #e1bee7;
         }
 
+        .action-btn.verify {
+            background: #e6f7ff;
+            color: #1890ff;
+        }
+
+        .action-btn.verify:hover {
+            background: #bae7ff;
+        }
+
+        .action-btn.verified {
+            background: #f6ffed;
+            color: #52c41a;
+        }
+
+        .action-btn.verified:hover {
+            background: #d9f7be;
+        }
+
         /* Modal Styles */
         .category-modal {
             display: none;
@@ -372,7 +410,7 @@
         }
 
         .category-modal-title i {
-            color: #ff6b93;
+            color: #b89875;
         }
 
         .category-modal-close {
@@ -415,7 +453,7 @@
 
         .category-form-input:focus {
             outline: none;
-            border-color: #ff6b93;
+            border-color: #b89875;
         }
 
         .category-form-textarea {
@@ -431,7 +469,7 @@
 
         .category-form-textarea:focus {
             outline: none;
-            border-color: #ff6b93;
+            border-color: #b89875;
         }
 
         .category-form-select {
@@ -446,7 +484,7 @@
 
         .category-form-select:focus {
             outline: none;
-            border-color: #ff6b93;
+            border-color: #b89875;
         }
 
         .subcategory-section {
@@ -550,13 +588,102 @@
         }
 
         .category-modal-btn-save {
-            background: linear-gradient(135deg, #5c4d3b 0%, #ff8e53 100%);
+            background: linear-gradient(135deg, #5c4d3b 0%, #b89875 100%);
             color: white;
         }
 
         .category-modal-btn-save:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(255, 107, 147, 0.3);
+            box-shadow: 0 4px 15px rgba(184, 152, 117, 0.3);
+        }
+
+        /* Verification Modal */
+        .verification-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .verification-modal-content {
+            background: white;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .verification-modal-header {
+            padding: 20px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .verification-modal-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .verification-modal-title i {
+            color: #1890ff;
+        }
+
+        .verification-modal-body {
+            padding: 20px;
+        }
+
+        .verification-message {
+            margin-bottom: 20px;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .verification-modal-footer {
+            padding: 20px;
+            border-top: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+        }
+
+        .verification-modal-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .verification-modal-btn-cancel {
+            background: #f5f5f5;
+            color: #666;
+        }
+
+        .verification-modal-btn-cancel:hover {
+            background: #e0e0e0;
+        }
+
+        .verification-modal-btn-confirm {
+            background: #1890ff;
+            color: white;
+        }
+
+        .verification-modal-btn-confirm:hover {
+            background: #096dd9;
+            transform: translateY(-2px);
         }
 
         /* Responsive Design */
@@ -738,7 +865,12 @@
                                             <div class="text">Freelance Management</div>
                                         </a>
                                     </li>
-
+    <li class="menu-item ">
+                                        <a href="admin-users.html" class="menu-item-button">
+                                            <div class="icon"><i class="icon-users"></i></div>
+                                            <div class="text">User Management</div>
+                                        </a>
+                                    </li>
                                     <li class="menu-item">
                                         <a href="admin-banners.html" class="menu-item-button">
                                             <div class="icon"><i class="icon-image"></i></div>
@@ -928,6 +1060,7 @@
                                                     <th>Subcategories</th>
                                                     <th>Products</th>
                                                     <th>Status</th>
+                                                    <th>Verification</th>
                                                     <th>Actions</th>
                                                 </tr>
                                             </thead>
@@ -939,7 +1072,9 @@
                                                                 <i class="fas fa-spa"></i>
                                                             </div>
                                                             <div class="category-info">
-                                                                <h4>Skincare</h4>
+                                                                <h4>Skincare
+                                                                    <i class="fas fa-check-circle verified-badge"></i>
+                                                                </h4>
                                                                 <p>Face care, body care, treatments</p>
                                                             </div>
                                                         </div>
@@ -957,12 +1092,18 @@
                                                         <span class="status-badge active">Active</span>
                                                     </td>
                                                     <td>
+                                                        <span class="status-badge verified">Verified</span>
+                                                    </td>
+                                                    <td>
                                                         <div class="category-actions-cell">
                                                             <button class="action-btn edit" title="Edit" data-category-id="1">
                                                                 <i class="fas fa-edit"></i>
                                                             </button>
                                                             <button class="action-btn toggle" title="Toggle Status">
                                                                 <i class="fas fa-toggle-on"></i>
+                                                            </button>
+                                                            <button class="action-btn verified" title="Unverify">
+                                                                <i class="fas fa-check-circle"></i>
                                                             </button>
                                                             <button class="action-btn delete" title="Delete">
                                                                 <i class="fas fa-trash"></i>
@@ -995,12 +1136,18 @@
                                                         <span class="status-badge active">Active</span>
                                                     </td>
                                                     <td>
+                                                        <span class="status-badge pending">Pending</span>
+                                                    </td>
+                                                    <td>
                                                         <div class="category-actions-cell">
                                                             <button class="action-btn edit" title="Edit" data-category-id="2">
                                                                 <i class="fas fa-edit"></i>
                                                             </button>
                                                             <button class="action-btn toggle" title="Toggle Status">
                                                                 <i class="fas fa-toggle-on"></i>
+                                                            </button>
+                                                            <button class="action-btn verify" title="Verify">
+                                                                <i class="fas fa-check-circle"></i>
                                                             </button>
                                                             <button class="action-btn delete" title="Delete">
                                                                 <i class="fas fa-trash"></i>
@@ -1032,12 +1179,18 @@
                                                         <span class="status-badge inactive">Inactive</span>
                                                     </td>
                                                     <td>
+                                                        <span class="status-badge pending">Pending</span>
+                                                    </td>
+                                                    <td>
                                                         <div class="category-actions-cell">
                                                             <button class="action-btn edit" title="Edit" data-category-id="3">
                                                                 <i class="fas fa-edit"></i>
                                                             </button>
                                                             <button class="action-btn toggle" title="Toggle Status">
                                                                 <i class="fas fa-toggle-off"></i>
+                                                            </button>
+                                                            <button class="action-btn verify" title="Verify">
+                                                                <i class="fas fa-check-circle"></i>
                                                             </button>
                                                             <button class="action-btn delete" title="Delete">
                                                                 <i class="fas fa-trash"></i>
@@ -1052,7 +1205,9 @@
                                                                 <i class="fas fa-spray-can"></i>
                                                             </div>
                                                             <div class="category-info">
-                                                                <h4>Haircare</h4>
+                                                                <h4>Haircare
+                                                                    <i class="fas fa-check-circle verified-badge"></i>
+                                                                </h4>
                                                                 <p>Shampoos, conditioners, treatments</p>
                                                             </div>
                                                         </div>
@@ -1070,12 +1225,18 @@
                                                         <span class="status-badge active">Active</span>
                                                     </td>
                                                     <td>
+                                                        <span class="status-badge verified">Verified</span>
+                                                    </td>
+                                                    <td>
                                                         <div class="category-actions-cell">
                                                             <button class="action-btn edit" title="Edit" data-category-id="4">
                                                                 <i class="fas fa-edit"></i>
                                                             </button>
                                                             <button class="action-btn toggle" title="Toggle Status">
                                                                 <i class="fas fa-toggle-on"></i>
+                                                            </button>
+                                                            <button class="action-btn verified" title="Unverify">
+                                                                <i class="fas fa-check-circle"></i>
                                                             </button>
                                                             <button class="action-btn delete" title="Delete">
                                                                 <i class="fas fa-trash"></i>
@@ -1207,6 +1368,54 @@
                                     </div>
                                 </div>
 
+                                <!-- Verification Modal -->
+                                <div class="verification-modal" id="verification-modal">
+                                    <div class="verification-modal-content">
+                                        <div class="verification-modal-header">
+                                            <div class="verification-modal-title">
+                                                <i class="fas fa-check-circle"></i>
+                                                Verify Category
+                                            </div>
+                                            <button class="category-modal-close" id="close-verification-modal">
+                                                <i class="fas fa-times"></i>
+                                            </button>
+                                        </div>
+                                        <div class="verification-modal-body">
+                                            <div class="verification-message" id="verification-message">
+                                                Are you sure you want to verify this category? Verified categories will be marked with a verification badge.
+                                            </div>
+                                        </div>
+                                        <div class="verification-modal-footer">
+                                            <button class="verification-modal-btn verification-modal-btn-cancel" id="cancel-verification">Cancel</button>
+                                            <button class="verification-modal-btn verification-modal-btn-confirm" id="confirm-verification">Verify Category</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Unverification Modal -->
+                                <div class="verification-modal" id="unverification-modal">
+                                    <div class="verification-modal-content">
+                                        <div class="verification-modal-header">
+                                            <div class="verification-modal-title">
+                                                <i class="fas fa-times-circle"></i>
+                                                Unverify Category
+                                            </div>
+                                            <button class="category-modal-close" id="close-unverification-modal">
+                                                <i class="fas fa-times"></i>
+                                            </button>
+                                        </div>
+                                        <div class="verification-modal-body">
+                                            <div class="verification-message" id="unverification-message">
+                                                Are you sure you want to remove verification from this category? The verification badge will be removed.
+                                            </div>
+                                        </div>
+                                        <div class="verification-modal-footer">
+                                            <button class="verification-modal-btn verification-modal-btn-cancel" id="cancel-unverification">Cancel</button>
+                                            <button class="verification-modal-btn verification-modal-btn-confirm" id="confirm-unverification">Unverify Category</button>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <!-- /category-management -->
                             </div>
                             <!-- /main-content-wrap -->
@@ -1247,6 +1456,18 @@
             const editSubcategoryList = document.getElementById('edit-subcategory-list');
             const updateCategoryBtn = document.getElementById('update-category');
 
+            // Verification modal elements
+            const verificationModal = document.getElementById('verification-modal');
+            const closeVerificationModal = document.getElementById('close-verification-modal');
+            const cancelVerification = document.getElementById('cancel-verification');
+            const confirmVerification = document.getElementById('confirm-verification');
+
+            // Unverification modal elements
+            const unverificationModal = document.getElementById('unverification-modal');
+            const closeUnverificationModal = document.getElementById('close-unverification-modal');
+            const cancelUnverification = document.getElementById('cancel-unverification');
+            const confirmUnverification = document.getElementById('confirm-unverification');
+
             // Sample category data (in a real app, this would come from a database)
             const categoryData = {
                 1: {
@@ -1254,6 +1475,7 @@
                     description: "Face care, body care, treatments",
                     icon: "spa",
                     status: "active",
+                    verified: true,
                     subcategories: ["Face Serums", "Moisturizers", "Cleansers", "Toners", "Sunscreens"]
                 },
                 2: {
@@ -1261,6 +1483,7 @@
                     description: "Cosmetics, beauty products",
                     icon: "palette",
                     status: "active",
+                    verified: false,
                     subcategories: ["Lipstick", "Foundation", "Eyeshadow", "Mascara", "Blush", "Concealer"]
                 },
                 3: {
@@ -1268,6 +1491,7 @@
                     description: "Perfumes, body mists, oils",
                     icon: "air-freshener",
                     status: "inactive",
+                    verified: false,
                     subcategories: ["Perfumes", "Body Mists", "Essential Oils"]
                 },
                 4: {
@@ -1275,9 +1499,13 @@
                     description: "Shampoos, conditioners, treatments",
                     icon: "spray-can",
                     status: "active",
+                    verified: true,
                     subcategories: ["Shampoo", "Conditioner", "Hair Masks", "Hair Oils", "Hair Serums"]
                 }
             };
+
+            // Track which category is being verified/unverified
+            let currentVerificationCategoryId = null;
 
             // Open create category modal
             createCategoryBtn.addEventListener('click', function() {
@@ -1399,6 +1627,7 @@
                 
                 // Update the category data (in a real app, this would update the database)
                 categoryData[categoryId] = {
+                    ...categoryData[categoryId],
                     name,
                     description,
                     icon,
@@ -1423,7 +1652,21 @@
                 if (row) {
                     // Update category name and description
                     const categoryInfo = row.querySelector('.category-info');
-                    categoryInfo.querySelector('h4').textContent = category.name;
+                    const nameElement = categoryInfo.querySelector('h4');
+                    nameElement.innerHTML = category.name;
+                    
+                    // Add or remove verification badge
+                    if (category.verified) {
+                        if (!nameElement.querySelector('.verified-badge')) {
+                            nameElement.innerHTML += ' <i class="fas fa-check-circle verified-badge"></i>';
+                        }
+                    } else {
+                        const badge = nameElement.querySelector('.verified-badge');
+                        if (badge) {
+                            badge.remove();
+                        }
+                    }
+                    
                     categoryInfo.querySelector('p').textContent = category.description;
                     
                     // Update category icon
@@ -1455,9 +1698,29 @@
                     statusBadge.textContent = category.status.charAt(0).toUpperCase() + category.status.slice(1);
                     statusBadge.className = `status-badge ${category.status}`;
                     
+                    // Update verification status
+                    const verificationBadge = row.querySelectorAll('.status-badge')[1];
+                    if (category.verified) {
+                        verificationBadge.textContent = 'Verified';
+                        verificationBadge.className = 'status-badge verified';
+                    } else {
+                        verificationBadge.textContent = 'Pending';
+                        verificationBadge.className = 'status-badge pending';
+                    }
+                    
                     // Update toggle button icon
                     const toggleBtn = row.querySelector('.action-btn.toggle i');
                     toggleBtn.className = category.status === 'active' ? 'fas fa-toggle-on' : 'fas fa-toggle-off';
+                    
+                    // Update verification button
+                    const verifyBtn = row.querySelector('.action-btn.verify, .action-btn.verified');
+                    if (category.verified) {
+                        verifyBtn.className = 'action-btn verified';
+                        verifyBtn.title = 'Unverify';
+                    } else {
+                        verifyBtn.className = 'action-btn verify';
+                        verifyBtn.title = 'Verify';
+                    }
                 }
             }
 
@@ -1495,12 +1758,86 @@
                 });
             });
 
+            // Verify category buttons
+            document.querySelectorAll('.action-btn.verify').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const row = this.closest('tr');
+                    const categoryId = row.getAttribute('data-category-id');
+                    const categoryName = row.querySelector('h4').textContent.trim();
+                    
+                    currentVerificationCategoryId = categoryId;
+                    
+                    // Update verification message
+                    document.getElementById('verification-message').textContent = 
+                        `Are you sure you want to verify the category "${categoryName}"? Verified categories will be marked with a verification badge.`;
+                    
+                    // Show verification modal
+                    verificationModal.style.display = 'flex';
+                });
+            });
+
+            // Unverify category buttons
+            document.querySelectorAll('.action-btn.verified').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const row = this.closest('tr');
+                    const categoryId = row.getAttribute('data-category-id');
+                    const categoryName = row.querySelector('h4').textContent.trim();
+                    
+                    currentVerificationCategoryId = categoryId;
+                    
+                    // Update unverification message
+                    document.getElementById('unverification-message').textContent = 
+                        `Are you sure you want to remove verification from the category "${categoryName}"? The verification badge will be removed.`;
+                    
+                    // Show unverification modal
+                    unverificationModal.style.display = 'flex';
+                });
+            });
+
+            // Confirm verification
+            confirmVerification.addEventListener('click', function() {
+                if (currentVerificationCategoryId && categoryData[currentVerificationCategoryId]) {
+                    categoryData[currentVerificationCategoryId].verified = true;
+                    updateCategoryRow(currentVerificationCategoryId, categoryData[currentVerificationCategoryId]);
+                    verificationModal.style.display = 'none';
+                    alert('Category verified successfully!');
+                }
+            });
+
+            // Confirm unverification
+            confirmUnverification.addEventListener('click', function() {
+                if (currentVerificationCategoryId && categoryData[currentVerificationCategoryId]) {
+                    categoryData[currentVerificationCategoryId].verified = false;
+                    updateCategoryRow(currentVerificationCategoryId, categoryData[currentVerificationCategoryId]);
+                    unverificationModal.style.display = 'none';
+                    alert('Category verification removed successfully!');
+                }
+            });
+
+            // Close verification modal
+            closeVerificationModal.addEventListener('click', function() {
+                verificationModal.style.display = 'none';
+            });
+
+            cancelVerification.addEventListener('click', function() {
+                verificationModal.style.display = 'none';
+            });
+
+            // Close unverification modal
+            closeUnverificationModal.addEventListener('click', function() {
+                unverificationModal.style.display = 'none';
+            });
+
+            cancelUnverification.addEventListener('click', function() {
+                unverificationModal.style.display = 'none';
+            });
+
             // Delete category buttons
             document.querySelectorAll('.action-btn.delete').forEach(btn => {
                 btn.addEventListener('click', function() {
                     const row = this.closest('tr');
                     const categoryId = row.getAttribute('data-category-id');
-                    const categoryName = row.querySelector('h4').textContent;
+                    const categoryName = row.querySelector('h4').textContent.trim();
                     
                     if (confirm(`Are you sure you want to delete the category "${categoryName}"?`)) {
                         // In a real application, this would delete the category from the database
@@ -1554,6 +1891,7 @@
                     description,
                     icon,
                     status: 'active',
+                    verified: false,
                     subcategories
                 };
                 
@@ -1588,6 +1926,9 @@
                 const subcategoryTags = displaySubcategories.map(sub => `<span class="subcategory-tag">${sub}</span>`).join('');
                 const moreTag = category.subcategories.length > 3 ? `<span class="subcategory-tag">+${category.subcategories.length - 3} more</span>` : '';
                 
+                // Create verification badge if verified
+                const verificationBadge = category.verified ? '<i class="fas fa-check-circle verified-badge"></i>' : '';
+                
                 row.innerHTML = `
                     <td>
                         <div class="category-name-cell">
@@ -1595,7 +1936,7 @@
                                 <i class="fas fa-${category.icon}"></i>
                             </div>
                             <div class="category-info">
-                                <h4>${category.name}</h4>
+                                <h4>${category.name}${verificationBadge}</h4>
                                 <p>${category.description}</p>
                             </div>
                         </div>
@@ -1611,12 +1952,18 @@
                         <span class="status-badge ${category.status}">${category.status.charAt(0).toUpperCase() + category.status.slice(1)}</span>
                     </td>
                     <td>
+                        <span class="status-badge ${category.verified ? 'verified' : 'pending'}">${category.verified ? 'Verified' : 'Pending'}</span>
+                    </td>
+                    <td>
                         <div class="category-actions-cell">
                             <button class="action-btn edit" title="Edit" data-category-id="${categoryId}">
                                 <i class="fas fa-edit"></i>
                             </button>
                             <button class="action-btn toggle" title="Toggle Status">
                                 <i class="fas fa-toggle-${category.status === 'active' ? 'on' : 'off'}"></i>
+                            </button>
+                            <button class="action-btn ${category.verified ? 'verified' : 'verify'}" title="${category.verified ? 'Unverify' : 'Verify'}">
+                                <i class="fas fa-check-circle"></i>
                             </button>
                             <button class="action-btn delete" title="Delete">
                                 <i class="fas fa-trash"></i>
@@ -1662,9 +2009,34 @@
                     updateCategoryStats();
                 });
                 
+                const verifyBtn = row.querySelector('.action-btn.verify, .action-btn.verified');
+                verifyBtn.addEventListener('click', function() {
+                    const row = this.closest('tr');
+                    const categoryId = row.getAttribute('data-category-id');
+                    const categoryName = row.querySelector('h4').textContent.trim();
+                    
+                    currentVerificationCategoryId = categoryId;
+                    
+                    if (this.classList.contains('verify')) {
+                        // Update verification message
+                        document.getElementById('verification-message').textContent = 
+                            `Are you sure you want to verify the category "${categoryName}"? Verified categories will be marked with a verification badge.`;
+                        
+                        // Show verification modal
+                        verificationModal.style.display = 'flex';
+                    } else {
+                        // Update unverification message
+                        document.getElementById('unverification-message').textContent = 
+                            `Are you sure you want to remove verification from the category "${categoryName}"? The verification badge will be removed.`;
+                        
+                        // Show unverification modal
+                        unverificationModal.style.display = 'flex';
+                    }
+                });
+                
                 const deleteBtn = row.querySelector('.action-btn.delete');
                 deleteBtn.addEventListener('click', function() {
-                    const categoryName = this.closest('tr').querySelector('h4').textContent;
+                    const categoryName = this.closest('tr').querySelector('h4').textContent.trim();
                     if (confirm(`Are you sure you want to delete the category "${categoryName}"?`)) {
                         row.remove();
                         delete categoryData[categoryId];
