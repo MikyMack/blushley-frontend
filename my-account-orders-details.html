@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
 
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 
     <!-- Favicon and Touch Icons  -->
 
@@ -91,7 +93,7 @@
                     </div>
                     <div class="col-xl-3 col-md-4 col-6">
                         <a href="index.html" class="logo-header">
-                        <img src="images/logo/logoggg.png" alt="logo" class="logo">
+                            <img src="images/logo/logoggg.png" alt="logo" class="logo">
                         </a>
                     </div>
                     <div class="col-xl-6 d-none d-xl-block">
@@ -118,11 +120,16 @@
 
 
                                 </li>
-                                <li class="menu-item"><a href="beautician-services.html" class="item-link">Services</a>
+                                <li class="menu-item salon-at-home-link"><a href="beautician-services.html"
+                                        class="item-link">Salon at Home</a>
                                 </li>
 
-                                <li class="menu-item position-relative">
-                                    <a href="blog-grid.html" class="item-link">Beauty tips</a>
+
+                                <li class="menu-item book-salon-link"><a href="salon-service.html"
+                                        class="item-link">Book a Salon</a>
+                                </li>
+                                <li class="menu-item ">
+                                    <a href="blog-grid.html" class="item-link">Beauty Tips</a>
 
                                 </li>
 
@@ -147,10 +154,13 @@
                                 <div class="dropdown-account dropdown-login">
                                     <div class="sub-top">
                                         <a href="login.html" class="nav-acc-link">My Account</a>
-                                          <a href="my-account-orders.html" class="nav-acc-link"> Orders</a>
-                                            <a href="booking-history.html" class="nav-acc-link">My Bookings</a>
-                                     
+                                        <a href="my-account-orders.html" class="nav-acc-link"> Orders</a>
+                                        <a href="booking-history.html" class="nav-acc-link">My Bookings</a>
+
                                     </div>
+                                    <!-- <div class="sub-bot">
+                                        <span class="body-text-">Support</span>
+                                    </div>-->
                                 </div>
                             </li>
                             <li class="nav-wishlist"><a href="wish-list.html" class="nav-icon-item">
@@ -159,6 +169,64 @@
 
                                 </a>
                             </li>
+                            <!--notifications  ICON with Loyalty points -->
+                            <li class="nav-loyalty">
+                                <a href="#" class="nav-icon-item" id="loyaltyToggle">
+                                    <i class="fa-regular fa-bell"></i>
+                                    <span class="loyalty-badge"></span>
+                                </a>
+
+                                <!-- Loyalty Points Panel -->
+                                <div class="loyalty-panel" id="loyaltyPanel">
+                                    <div class="loyalty-header">
+                                        <h5 class="mb-0">Notifications</h5>
+
+                                        <button class="mark-all-read" id="markAllRead">Mark All</button>
+                                        <button type="button" class="btn-close" id="closeLoyalty"
+                                            aria-label="Close"></button>
+                                    </div>
+
+                                    <div class="loyalty-points-display">
+                                        <div class="points-number">1000</div>
+                                        <div class="points-label">Loyalty Points</div>
+                                    </div>
+
+                                    <div class="loyalty-activity">
+                                        <h6 class="mb-3">Recent Notifications</h6>
+
+                                        <div class="activity-item unread">
+                                            <div>
+                                                <div class="activity-desc">New order shipped</div>
+                                                <div class="activity-date">Nov 6, 2025</div>
+                                            </div>
+                                            <button class="mark-read-btn">
+                                                <i class="fa-regular fa-circle-check"></i>
+                                            </button>
+                                        </div>
+
+                                        <div class="activity-item unread">
+                                            <div>
+                                                <div class="activity-desc">Appointment reminder</div>
+                                                <div class="activity-date">Nov 5, 2025</div>
+                                            </div>
+                                            <button class="mark-read-btn">
+                                                <i class="fa-regular fa-circle-check"></i>
+                                            </button>
+                                        </div>
+
+                                        <div class="activity-item unread">
+                                            <div>
+                                                <div class="activity-desc">Special offer available</div>
+                                                <div class="activity-date">Nov 4, 2025</div>
+                                            </div>
+                                            <button class="mark-read-btn">
+                                                <i class="fa-regular fa-circle-check"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
                             <li class="nav-cart"><a href="#shoppingCart" data-bs-toggle="modal" class="nav-icon-item">
 
                                     <img src="images/icons/shopping-bag.svg" alt="cart icon">
@@ -224,7 +292,7 @@
         <!-- /page-title -->
 
         <div class="btn-sidebar-account">
-            <button data-bs-toggle="offcanvas" data-bs-target="#mbAccount" aria-controls="offcanvas"><i class="icon icon-squares-four"></i></button>
+            <button data-bs-toggle="offcanvas" data-bs-target="#mbAccount" aria-controls="offcanvas"><i class="icon icon-user"></i></button>
         </div>
 
         <!-- my-account -->
@@ -239,6 +307,17 @@
                                 </div>
                                 <h6 class="mb_4">Tony Nguyen</h6>
                                 <div class="body-text-1">blushley@gmail.com</div>
+                                <!-- Dynamic Loyalty Tier Card -->
+                                <div class="lp-loyalty-tier" id="lpTierCard">
+                                    <div class="lp-tier-badge" id="lpTierBadge">🥇 Gold Member</div>
+                                    <div class="lp-points-display">
+                                        <div class="lp-points-number" id="lpPointsValue">1000</div>
+                                        <div class="lp-points-text">Loyalty Points</div>
+                                    </div>
+                                    <div class="lp-tier-info" id="lpTierInfo">
+                                        1500 points to Platinum tier
+                                    </div>
+                                </div>
                             </div>
                             <ul class="my-account-nav">
                                 <li>
@@ -894,7 +973,7 @@
     <div class="offcanvas offcanvas-start canvas-sidebar" id="mbAccount">
         <div class="canvas-wrapper">
             <header class="canvas-header">
-                <span class="text-btn-uppercase">SIDEBAR ACCOUNT</span>
+                <span class="text-btn-uppercase">My Profile</span>
                 <span class="icon-close icon-close-popup" data-bs-dismiss="offcanvas" aria-label="Close"></span>
             </header>
             <div class="canvas-body sidebar-mobile-append"></div>
@@ -2782,6 +2861,63 @@
 
         var AUTOHIDE = Boolean(0);
     </script>
+
+    <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const loyaltyToggle = document.getElementById('loyaltyToggle');
+                const loyaltyPanel = document.getElementById('loyaltyPanel');
+                const closeLoyalty = document.getElementById('closeLoyalty');
+
+                if (loyaltyToggle && loyaltyPanel) {
+                    // Toggle panel
+                    loyaltyToggle.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        loyaltyPanel.classList.toggle('show');
+                    });
+
+                    // Close panel
+                    if (closeLoyalty) {
+                        closeLoyalty.addEventListener('click', function (e) {
+                            e.stopPropagation();
+                            loyaltyPanel.classList.remove('show');
+                        });
+                    }
+
+                    // Close when clicking outside
+                    document.addEventListener('click', function (e) {
+                        if (!e.target.closest('.nav-loyalty')) {
+                            loyaltyPanel.classList.remove('show');
+                        }
+                    });
+                } else {
+                    console.log('Loyalty elements not found');
+                }
+            });
+
+            // Mark individual as read
+            document.querySelectorAll('.mark-read-btn').forEach(btn => {
+                btn.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    this.closest('.activity-item').classList.toggle('read');
+                    this.closest('.activity-item').classList.remove('unread');
+                });
+            });
+
+            // Mark all as read
+            const markAllRead = document.getElementById('markAllRead');
+            if (markAllRead) {
+                markAllRead.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    document.querySelectorAll('.activity-item').forEach(item => {
+                        item.classList.add('read');
+                        item.classList.remove('unread');
+                    });
+                });
+            }
+        </script>
+
+
 
      <script>  if (document.querySelector("#sib-form")) { const script = document.createElement('script');script.src = 'js/sibforms.js';script.defer = true;document.body.appendChild(script);}</script>
     

@@ -1938,3 +1938,5 @@ function applyFilters() {
         // Redirect to salon dashboard or show success message
     });
 });
+
+

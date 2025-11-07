@@ -102,18 +102,48 @@
     #000000 100%    
   );*/
  
+ /* --gradient-maroon: radial-gradient(ellipse at 80% 50%, 
+    #A52A2A 0%,     
+    #7B1E1E 30%,   
+    #4F1111 55%,    
+    #2B0707 80%,    
+    #000000 100%    
+  );*/
 
+  /*--gradient-maroon: radial-gradient(ellipse at 80% 50%, 
+  #8B6F6F 0%,     
+  #6D5555 30%,    
+  #4A3C3C 55%,   
+  #2D2424 80%,    
+  #1a1414 100%    
+);*/
 
-  --gradient-maroon: radial-gradient(ellipse at 80% 50%, 
-  #8B6F6F 0%,     /* Softer Mauve-Brown */
-  #6D5555 30%,    /* Muted Brown */
-  #4A3C3C 55%,    /* Deep Brown */
-  #2D2424 80%,    /* Very Dark Brown */
-  #1a1414 100%    /* Almost Black */
+/*--gradient-maroon: radial-gradient(ellipse at 80% 50%, 
+  #9B6B6B 0%,    
+  #7A4E4E 30%,    
+  #5C3838 55%,   
+  #3A2525 80%,   
+  #1F1616 100%   
+);*/
+
+/*--gradient-maroon: radial-gradient(ellipse at 80% 50%, 
+  #A56B6B 0%,     
+  #855050 30%,   
+  #5F3636 55%,   
+  #3D2323 80%,   
+  #1E1515 100%    
+);*/
+
+--gradient-maroon: radial-gradient(ellipse at 80% 50%, 
+  #B85555 0%,     /* Rich Rose-Maroon (vibrant start) */
+  #943E3E 30%,    /* Deep Maroon-Red */
+  #6B2828 55%,    /* Burgundy-Maroon */
+  #421818 80%,    /* Dark Wine */
+  #1C0D0D 100%    /* Deep Black-Maroon */
 );
 
   /* Main - Lighter, softer dark */
-  --main: #4A3C3C;
+  --main: #943E3E;
 
   --light-maroon:linear-gradient(135deg, #a8907d 0%, #c4b5a0 100%);
 
@@ -293,6 +323,10 @@ section {
 
 /* Elements
 -------------------------------------------------------------- */
+
+
+
+
 html {
   margin-right: 0 !important;
   scroll-behavior: smooth;
@@ -14547,13 +14581,14 @@ ul.list-text.type-number {
 .btn-sidebar-account button {
   width: 40px;
   height: 40px;
-  border-radius: 0;
-  border: 1px solid var(--main);
+  border-radius: 20px;
+  border: 1px solid white;
   padding: 0;
   justify-content: center;
 }
 .btn-sidebar-account button:hover {
-  background-color: var(--white);
+  background: var(--gradient-maroon);
+  border-color: var(--main);
 }
 
 .account-details .form-account-details {
@@ -25067,3 +25102,1112 @@ transform: translateY(20px);
                 height: 35px;
             }
         }
+
+
+        /************ Filter in Beautician services page*********************/
+
+       
+     /*   .bs-btn-brand {
+            background-color: var(--main);
+            color: var(--white);
+            border: none;
+        }
+
+        .bs-btn-brand:hover {
+            background-color: var(--burgundy);
+            color: var(--white);
+        }
+
+        .bs-btn-outline-brand {
+            border: 2px solid var(--main);
+            color: var(--main);
+        }
+
+        .bs-btn-outline-brand:hover {
+            background-color: var(--main);
+            color: var(--white);
+        }
+
+      
+        .bs-form-check-input:checked {
+            background-color: var(--main);
+            border-color: var(--main);
+        }
+
+   
+        .bs-view-btn {
+            width: 36px;
+            height: 36px;
+            border: 1px solid var(--line);
+        }
+
+        .bs-view-btn:hover,
+        .bs-view-btn.bs-active {
+            background-color: var(--main);
+            border-color: var(--main);
+            color: var(--white);
+        }
+
+     
+        .bs-category-link {
+            text-decoration: none;
+            color: var(--text-light);
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+
+        .bs-category-link:hover,
+        .bs-category-link.bs-active {
+            background-color: var(--pink);
+            color: var(--main);
+        }
+
+        .bs-category-link.bs-active {
+            font-weight: 500;
+        }
+
+        .bs-count-badge {
+            color: var(--text-light);
+            font-size: 0.85rem;
+        }
+
+        
+        .bs-price-slider {
+            height: 6px;
+            background: var(--line);
+            border-radius: 3px;
+            position: relative;
+        }
+
+        .bs-price-slider::before {
+            content: '';
+            position: absolute;
+            height: 100%;
+            background: var(--gradient-gold);
+            left: 0;
+            right: 40%;
+            border-radius: 3px;
+        }
+
+        .bs-slider-handle {
+            width: 18px;
+            height: 18px;
+            background: var(--white);
+            border: 3px solid var(--main);
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .bs-slider-handle:first-of-type {
+            left: 0;
+        }
+
+        .bs-slider-handle:last-of-type {
+            right: 40%;
+        }
+
+       
+        .bs-filter-option:hover {
+            background-color: var(--pink);
+        }
+
+       
+        .bs-location-tag {
+            padding: 8px 16px;
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .bs-location-tag:hover {
+            background: var(--pink);
+            border-color: var(--main);
+            color: var(--main);
+        }
+
+        .bs-location-tag.bs-active {
+            background: var(--main);
+            border-color: var(--main);
+            color: var(--white);
+        }
+
+       
+        .bs-stars {
+            color: var(--critical);
+        }
+
+       
+        .bs-custom-select {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b6b6b' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            padding-right: 40px;
+            appearance: none;
+        }
+
+     
+        .bs-filter-card {
+            box-shadow: var(--shadow1);
+        }
+
+     
+        .bs-form-check-label {
+            color: var(--text-light);
+        }
+
+        
+        .bs-input-group-text {
+            background-color: var(--surface);
+            border-color: var(--line);
+            color: var(--text-light);
+        }
+
+        .bs-form-control {
+            border-color: var(--line);
+        }
+
+        .bs-form-control:focus {
+            border-color: var(--main);
+            box-shadow: 0 0 0 0.2rem var(--main-rgba-1);
+        }
+       
+        .bs-text-brand {
+            color: var(--main) !important;
+        }
+*/
+
+        /***Beautician grid cards***/
+
+        .bs-beautician-card {
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            height: 100%;
+        }
+        
+        .bs-beautician-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+        
+        .bs-card-img-wrapper {
+            position: relative;
+            overflow: hidden;
+            height: 280px;
+            background: #e9ecef;
+        }
+        
+        .bs-card-img-wrapper img {
+            width: 100%;
+           
+            object-fit: cover;
+        }
+        
+        .bs-availability-badge {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: #28a745;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        
+        .bs-availability-badge.bs-tomorrow {
+            background: #ffc107;
+            color: #000;
+        }
+        
+        .bs-card-body {
+            padding: 1.25rem;
+        }
+        
+        .bs-beautician-id {
+            color: #6c757d;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        
+        .bs-rating-section {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .bs-stars {
+            color: #ffc107;
+            font-size: 0.9rem;
+        }
+        
+        .bs-review-count {
+            color: #6c757d;
+            font-size: 0.875rem;
+        }
+        
+        .bs-location-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            background: #f8f9fa;
+            padding: 0.35rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: #495057;
+            margin-bottom: 0.75rem;
+        }
+        
+        .bs-location-badge i {
+            color: #dc3545;
+            font-size: 0.75rem;
+        }
+        
+        .bs-description {
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin-bottom: 1rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .bs-service-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+        
+        .bs-service-tag {
+            background: #e7f3ff;
+            color: #0066cc;
+            padding: 0.35rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .bs-card-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .bs-btn-profile {
+            flex: 1;
+            background: #d4b5a0;
+            border: none;
+            color: var(--main);
+            font-weight: 600;
+            padding: 0.6rem;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+        
+        .bs-btn-profile:hover {
+            background: var(--gradient-maroon);
+            color: #fff;
+        }
+        
+        .bs-btn-icon {
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #dee2e6;
+            background: white;
+            border-radius: 20px;
+            color: var(--main);
+            transition: all 0.3s;
+            font-size:24px;
+        }
+        
+        .bs-btn-icon:hover {
+            background:var(--gradient-maroon);
+            color: white;
+            border-color: #adb5bd;
+        }
+        
+        
+        .bs-btn-icon.bs-calendar:hover {
+            background: var(--gradient-maroon);
+            color: white;
+            border-color: #d4b5a0;
+        }
+        
+        .bs-btn-icon.bs-star:hover {
+            background:var(--gradient-maroon);
+            color: white;
+            border-color: #ffc107;
+        }
+        
+        .bs-price-info {
+            font-size: 0.9rem;
+            color: #28a745;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Price Section Styles */
+.bs-price-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 16px 0;
+    padding: 12px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    gap: 12px;
+}
+
+.bs-price-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.price-label {
+    font-size: 12px;
+    color: #666;
+    font-weight: 500;
+}
+
+.price-value {
+    font-size: 22px;
+    font-weight: 700;
+    color: #22c55e;
+    margin-top: 2px;
+}
+
+.btn-view-services {
+    background: #8b4f4f;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.3s;
+}
+
+.btn-view-services:hover {
+    background: #6d3939;
+}
+
+.bs-more-services {
+    background: #f0f0f0;
+    color: #666;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+/* Service Item in Modal */
+.bs-service-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px;
+    border-bottom: 1px solid #f0f0f0;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    transition: all 0.3s;
+}
+
+.bs-service-item:hover {
+    background: #f8f9fa;
+}
+
+.bs-service-item:last-child {
+    border-bottom: none;
+}
+
+.bs-service-info h6 {
+    margin: 0 0 6px 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.bs-service-duration {
+    font-size: 13px;
+    color: #666;
+}
+
+.bs-service-price {
+    font-size: 20px;
+    font-weight: 700;
+    color: #22c55e;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .bs-price-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .btn-view-services {
+        width: 100%;
+    }
+    
+    .bs-service-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+
+
+        
+        /* Modal Styles */
+        .bs-location-modal {
+            display: none;
+            position: fixed;
+            z-index: 1050;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+        
+        .bs-modal-content-custom {
+            background-color: #fff;
+            margin: 10% auto;
+            padding: 2rem;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 500px;
+        }
+        
+        .bs-location-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .bs-location-list li {
+            padding: 0.5rem 1rem;
+            background: #f8f9fa;
+            border-radius: 6px;
+            font-size: 0.9rem;
+        }
+        
+        .bs-more-locations {
+            color: #d4b5a0;
+            text-decoration: underline;
+            cursor: pointer;
+            font-size: 0.85rem;
+            margin-left: 0.25rem;
+        }
+        
+        .bs-more-locations:hover {
+            color: #c49e88;
+        }
+
+
+        /*******Beautician services filter sticky********/
+
+        .canvas-filter {
+  position: sticky;
+  top: 20px;
+  width: 280px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  height: fit-content;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+}
+
+.bs-calendar .book-now-text {
+    display: none;
+    margin-left: 8px;
+}
+
+.bs-calendar:hover .book-now-text {
+    display: inline;
+}
+
+
+/* Mobile Responsive Styles */
+
+@media (max-width: 991px) {
+    /* Show filter toggle button on mobile */
+    .mobile-filter-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+        padding: 12px 20px;
+        background: var(--light-maroon, #333);
+        color: var(--white, #fff);
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 20px;
+        cursor: pointer;
+    }
+
+    /* Convert sidebar filter to slide-in panel */
+    .canvas-filter {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        max-width: 400px;
+        height: 100vh;
+        z-index: 9999;
+        background: var(--white, #fff);
+        transition: left 0.3s ease;
+        overflow-y: auto;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .canvas-filter.active {
+        left: 0;
+    }
+
+    /* Dark overlay background */
+    .filter-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 9998;
+    }
+
+    .filter-overlay.active {
+        display: block;
+    }
+
+    /* Add close button styling */
+    .canvas-header .icon-close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: var(--surface, #f5f5f5);
+        cursor: pointer;
+        font-size: 20px;
+        color: var(--main, #333);
+    }
+
+    /* Make header sticky */
+    .canvas-header {
+        position: sticky;
+        top: 0;
+        background: var(--white, #fff);
+        z-index: 10;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Make footer sticky with apply button */
+    .canvas-bottom {
+        position: sticky;
+        bottom: 0;
+        background: var(--white, #fff);
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Adjust layout wrapper for mobile */
+    .layout-wrapper {
+        flex-direction: column !important;
+        gap: 0 !important;
+    }
+
+    .layout-wrapper aside {
+        flex: none !important;
+        width: 100% !important;
+    }
+
+    /* Compact spacing for mobile */
+    .canvas-body {
+        padding: 16px 20px;
+    }
+
+    .widget-facet {
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+@media (max-width: 575px) {
+    /* Full width on small phones */
+    .canvas-filter {
+        max-width: 100%;
+    }
+
+    /* More compact spacing */
+    .canvas-body {
+        padding: 12px 16px;
+    }
+
+    .widget-facet {
+        margin-bottom: 16px;
+        padding-bottom: 16px;
+    }
+}
+
+/* Hide filter button on desktop */
+.mobile-filter-toggle {
+    display: none;
+}
+
+@media (max-width: 991px) {
+    /* Show filter toggle button on mobile only */
+    .mobile-filter-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+        padding: 12px 20px;
+        background: var(--light-maroon, #333);
+        color: var(--white, #fff);
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 20px;
+        cursor: pointer;
+    }
+
+    /* Convert sidebar filter to slide-in panel */
+    .canvas-filter {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        max-width: 400px;
+        height: 100vh;
+        z-index: 9999;
+        background: var(--white, #fff);
+        transition: left 0.3s ease;
+        overflow-y: auto;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .canvas-filter.active {
+        left: 0;
+    }
+
+    /* Dark overlay background */
+    .filter-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 9998;
+    }
+
+    .filter-overlay.active {
+        display: block;
+    }
+
+    /* Add close button styling */
+    .canvas-header .icon-close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: var(--surface, #f5f5f5);
+        cursor: pointer;
+        font-size: 20px;
+        color: var(--main, #333);
+    }
+
+    /* Make header sticky */
+    .canvas-header {
+        position: sticky;
+        top: 0;
+        background: var(--white, #fff);
+        z-index: 10;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Make footer sticky with apply button */
+    .canvas-bottom {
+        position: sticky;
+        bottom: 0;
+        background: var(--white, #fff);
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Adjust layout wrapper for mobile */
+    .layout-wrapper {
+        flex-direction: column !important;
+        gap: 0 !important;
+    }
+
+    .layout-wrapper aside {
+        flex: none !important;
+        width: 100% !important;
+    }
+
+    /* Compact spacing for mobile */
+    .canvas-body {
+        padding: 16px 20px;
+    }
+
+    .widget-facet {
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+@media (max-width: 575px) {
+    /* Full width on small phones */
+    .canvas-filter {
+        max-width: 100%;
+    }
+
+    /* More compact spacing */
+    .canvas-body {
+        padding: 12px 16px;
+    }
+
+    .widget-facet {
+        margin-bottom: 16px;
+        padding-bottom: 16px;
+    }
+}
+
+/* Hide close button on desktop (992px and above) */
+@media (min-width: 992px) {
+    .canvas-header .icon-close {
+        display: none !important;
+    }
+}
+
+/************Home page Navbar Loyalty pioints code***************/
+
+.nav-loyalty {
+    position: relative;
+}
+
+.loyalty-badge {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    background: #28a745;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    border: 2px solid white;
+    animation: pulse-loyalty 2s infinite;
+}
+
+@keyframes pulse-loyalty {
+    0%, 100% { 
+        transform: scale(1); 
+        box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.7);
+    }
+    50% { 
+        transform: scale(1.05); 
+        box-shadow: 0 0 0 4px rgba(255, 215, 0, 0);
+    }
+}
+
+.loyalty-panel {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 15px;
+    width: 320px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    padding: 1.5rem;
+    display: none;
+    z-index: 1000;
+}
+
+.loyalty-panel.show {
+    display: block;
+}
+
+.loyalty-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.loyalty-points-display {
+    background: linear-gradient(135deg, #ffffff, #f8f9fa);
+    border-radius: 10px;
+    padding: .5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    border: 2px solid #d4af37;
+    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.15);
+    padding: 5px 0px;
+}
+
+.points-number {
+    font-size: 2rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, #d4af37, #f4c430);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    padding: 5px 0px;
+}
+
+.points-label {
+    color: #666;
+    font-size: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 0.25rem;
+    padding: 5px 0px;
+}
+
+.loyalty-activity {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.activity-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.activity-item:last-child {
+    border-bottom: none;
+}
+
+.activity-desc {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.activity-date {
+    font-size: 0.75rem;
+    color: #999;
+}
+
+.activity-points {
+    font-weight: bold;
+    color: #FFA500;
+}
+
+.activity-points.positive {
+    color: #28a745;
+}
+
+.activity-points.negative {
+    color: #dc3545;
+}
+
+.nav-loyalty .fa-bell {
+    font-size: 20px;
+    color: var(--primary);
+}
+
+.nav-loyalty .nav-icon-item {
+    position: relative;
+    display: inline-block;
+}
+
+.mark-all-read {
+    background: none;
+    border: none;
+    color: #d4af37;
+    font-size: 0.7rem;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    margin-left: auto;
+}
+
+.mark-all-read:hover {
+    text-decoration: underline;
+}
+
+.activity-item.unread {
+    background: #f8f9ff;
+    border-left: 3px solid #d4af37;
+    border-radius: 4px;
+}
+
+.mark-read-btn {
+    background: none;
+    border: none;
+    color: #999;
+    font-size: 1.1rem;
+    cursor: pointer;
+    opacity: 0;
+    padding: 0.25rem;
+    margin-left: 0.5rem;
+    transition: all 0.3s;
+}
+
+.activity-item:hover .mark-read-btn {
+    opacity: 1;
+}
+
+.mark-read-btn:hover {
+    color: #28a745;
+}
+
+.activity-item.read {
+    opacity: 0.5;
+    background: transparent;
+    border-left: none;
+}
+
+
+/* CSS Styles with lp- prefix */
+        .lp-account-avatar {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-width: 400px;
+            margin: 40px auto;
+        }
+
+        .lp-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            border: 4px solid #FFD700;
+            overflow: hidden;
+        }
+
+        .lp-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .lp-account-avatar h6 {
+            font-size: 24px;
+            color: #2d3748;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .lp-body-text {
+            color: #718096;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        /* Gamified Loyalty Tier Card */
+        .lp-loyalty-tier {
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 20px;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            transition: all 0.5s ease;
+        }
+
+        .lp-tier-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(255,255,255,0.9);
+            color: #DAA520;
+            padding: 0px 15px;
+            border-radius: 20px;
+            font-size: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .lp-points-display {
+            color: white;
+            margin-bottom: 15px;
+            text-align:center;
+        }
+
+        .lp-points-number {
+            font-size: 36px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            padding-top:15px;
+            
+        }
+
+        .lp-points-text {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-top: 5px;
+        }
+
+        .lp-tier-info {
+            background: rgba(255,255,255,0.2);
+            border-radius: 10px;
+            padding: 12px;
+            font-size: 13px;
+            color: white;
+            margin-top: 15px;
+        }
+
+        /* Different tier colors (you can use these for different tiers) */
+        .lp-tier-bronze { 
+            background: linear-gradient(10deg, #CD7F32 0%, #B87333 100%); 
+        }
+        .lp-tier-bronze .lp-tier-badge { color: #CD7F32; }
+
+        .lp-tier-silver { 
+            background: linear-gradient(10deg, #C0C0C0 0%, #A8A8A8 100%); 
+        }
+        .lp-tier-silver .lp-tier-badge { color: #808080; }
+
+        .lp-tier-gold { 
+            background: linear-gradient(10deg, #FFD700 0%, #FFA500 100%); 
+        }
+        .lp-tier-gold .lp-tier-badge { color: #DAA520; }
+
+        .lp-tier-platinum { 
+            background: linear-gradient(10deg, #E5E4E2 0%, #B4B4B4 100%); 
+        }
+        .lp-tier-platinum .lp-tier-badge { color: #636363; }
+
+        .lp-tier-diamond { 
+            background: linear-gradient(10deg, #b9f2ff 0%, #4facfe 100%); 
+        }
+        .lp-tier-diamond .lp-tier-badge { color: #4facfe; }
