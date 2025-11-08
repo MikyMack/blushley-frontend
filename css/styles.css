@@ -345,7 +345,11 @@ body {
   font-weight: 400;
   color: var(--main);
   background-color: var(--white);
+  margin: 0;
+    padding: 0;
 }
+
+
 
 img {
   max-width: 100%;
@@ -386,6 +390,20 @@ li {
   padding-right: 15px;
 }
 
+#header {
+    margin-top: 0 !important;
+    top: 0 !important;
+}
+
+.header-default {
+    margin-top: 0 !important;
+    top: 0 !important;
+}
+
+.tf-topbar {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
 .container-full4,
 .container-full3,
 .container-full2,
@@ -3142,6 +3160,11 @@ footer .footer-wrap {
 footer .footer-body {
   padding: 20px 0;
 }
+
+.footer-bottom {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
 footer .footer-bottom-wrap {
   padding-top: 14px;
   border-top: 1px solid var(--line);
@@ -5707,6 +5730,11 @@ input.style-line-bottom::placeholder {
 }
 
 /*------------ pop up ---------------- */
+
+.modal,
+.offcanvas {
+    position: fixed;
+}
 .offcanvas {
   z-index: 3000;
   border: none !important;
@@ -12249,6 +12277,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 
 .canvas-filter {
   max-width: 320px;
+   padding-bottom: 0; 
 }
 .canvas-filter .canvas-header {
   display: flex;
@@ -16533,9 +16562,9 @@ ul.list-text.type-number {
   .header-default .wrapper-header {
     min-height: 82px;
   }
-  .header-absolute {
+  /*.header-absolute {
     margin-bottom: -82px;
-  }
+  }*/
   .footer .footer-menu {
     gap: 100px;
   }
@@ -17436,11 +17465,11 @@ ul.list-text.type-number {
   .btn-style-6 {
     padding: 8px 10px;
   }
-  /*footer {
-    padding-bottom: 67px;
-  }*/
+  #footer {
+    margin-bottom: 0 !important;
+}
   footer .footer-menu {
-    margin-bottom: 30px;
+    margin-bottom: 0px;
   }
   footer .footer-menu > div {
     width: 50%;
@@ -25678,7 +25707,7 @@ transform: translateY(20px);
         left: -100%;
         width: 100%;
         max-width: 400px;
-        height: 100vh;
+        /*height: 100vh;*/
         z-index: 9999;
         background: var(--white, #fff);
         transition: left 0.3s ease;
@@ -25735,6 +25764,8 @@ transform: translateY(20px);
         bottom: 0;
         background: var(--white, #fff);
         box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 0; /* Add this */
+    padding-bottom: 0; /* Add this if needed */
     }
 
     /* Adjust layout wrapper for mobile */
@@ -26211,3 +26242,7 @@ transform: translateY(20px);
             background: linear-gradient(10deg, #b9f2ff 0%, #4facfe 100%); 
         }
         .lp-tier-diamond .lp-tier-badge { color: #4facfe; }
+
+        #wrapper { outline: 2px solid red; }
+footer { outline: 2px solid blue; }
+body { outline: 2px dashed green; }
