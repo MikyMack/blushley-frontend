@@ -35,7 +35,7 @@
             border: 1px solid #e0e0e0;
             background: white;
         }
-        
+
         .login-type-btn {
             flex: 1;
             padding: 12px 16px;
@@ -51,31 +51,32 @@
             font-size: 14px;
             color: #333;
         }
-        
+
         .login-type-btn.active {
             background: var(--primary-color, #4a0514);
             color: white;
-            border-radius:  10px;
+            border-radius: 10px;
         }
-        
+
         .login-type-btn:not(.active):hover {
             background: #f5f5f5;
         }
-        
+
         .login-form {
             display: none;
         }
-        
+
         .login-form.active {
             display: block;
         }
-        
+
         /* Ensure existing design remains unchanged */
         .form-login fieldset {
             margin-bottom: 20px;
         }
-        
-        .form-login input, .form-login select {
+
+        .form-login input,
+        .form-login select {
             width: 100%;
             padding: 14px 16px;
             border: 1px solid #e0e0e0;
@@ -83,8 +84,9 @@
             font-size: 16px;
             transition: all 0.3s;
         }
-        
-        .form-login input:focus, .form-login select:focus {
+
+        .form-login input:focus,
+        .form-login select:focus {
             border-color: var(--primary-color, #3f0713);
             box-shadow: 0 0 0 3px rgba(85, 5, 22, 0.2);
             outline: none;
@@ -105,9 +107,12 @@
         }
 
         .seller-register-scroll {
-            max-height: 460px; /* defined height per requirement */
-            overflow-y: auto;  /* vertical overflow */
-            padding-right: 6px; /* space for scrollbar */
+            max-height: 460px;
+            /* defined height per requirement */
+            overflow-y: auto;
+            /* vertical overflow */
+            padding-right: 6px;
+            /* space for scrollbar */
         }
 
         .seller-grid {
@@ -158,7 +163,7 @@
             gap: 8px;
         }
 
-        .seller-inline > * {
+        .seller-inline>* {
             flex: 1;
         }
 
@@ -221,28 +226,40 @@
         .seller-register-panel input[type="file"] {
             padding: 10px 12px;
         }
+
         .login-type-selector {
             margin-top: 1rem;
         }
 
         /* Section spacing */
-        #seller-register-form fieldset { margin: 0; }
-        #seller-register-form .seller-inline input { min-height: 48px; }
-        @media(max-width:500px){
-            .login-type-btn{
+        #seller-register-form fieldset {
+            margin: 0;
+        }
+
+        #seller-register-form .seller-inline input {
+            min-height: 48px;
+        }
+
+        @media(max-width:500px) {
+            .login-type-btn {
                 padding: 12px 7px;
             }
-            .login-type-btn span{
+
+            .login-type-btn span {
                 font-size: 12px;
             }
-            .login-type-btn i{
+
+            .login-type-btn i {
                 font-size: 12px;
             }
-            .form-login button,.tf-cart-checkbox label{
+
+            .form-login button,
+            .tf-cart-checkbox label {
                 font-size: 12px;
             }
-            .ln-signin{
-                padding: 10px!important;
+
+            .ln-signin {
+                padding: 10px !important;
             }
         }
     </style>
@@ -498,14 +515,15 @@
                                         aria-required="true" required />
                                 </fieldset>
                                 <fieldset class="position-relative password-item">
-                                    <input type="tel" name="freelance-mobile" placeholder="Mobile Number*" pattern="[0-9]{10}"
-                                        maxlength="10" inputmode="numeric" required />
+                                    <input type="tel" name="freelance-mobile" placeholder="Mobile Number*"
+                                        pattern="[0-9]{10}" maxlength="10" inputmode="numeric" required />
                                     <span class="toggle-password unshow">
                                         <i class="icon-eye-hide-line"></i>
                                     </span>
                                 </fieldset>
                                 <fieldset class="">
-                                    <select name="service-type" required style="width: 100%; padding: 14px 16px; border: 1px solid #e0e0e0; border-radius: 8px;">
+                                    <select name="service-type" required
+                                        style="width: 100%; padding: 14px 16px; border: 1px solid #e0e0e0; border-radius: 8px;">
                                         <option value="" disabled selected>Select Your Service*</option>
                                         <option value="hair-styling">Hair Styling</option>
                                         <option value="makeup">Makeup Artist</option>
@@ -564,7 +582,8 @@
                                             Remember me
                                         </label>
                                     </div>
-                                    <button type="button" class="btn-link-like" id="openSellerRegister">Register as Seller</button>
+                                    <button type="button" class="btn-link-like" id="openSellerRegister">Register as
+                                        Seller</button>
                                 </div>
                             </div>
                             <div class="button-submit">
@@ -578,7 +597,8 @@
                         <div class="seller-register-panel" id="seller-register-panel">
                             <div class="seller-section-title">
                                 <h5 style="margin:0;">Register as Seller</h5>
-                                <button type="button" class="btn-link-like" id="backToSellerLogin">Back to Login</button>
+                                <button type="button" class="btn-link-like" id="backToSellerLogin">Back to
+                                    Login</button>
                             </div>
                             <div class="seller-register-scroll">
                                 <form action="#" id="seller-register-form">
@@ -587,13 +607,15 @@
                                             <input type="text" name="full-name" placeholder="Full Name*" required />
                                         </fieldset>
                                         <fieldset>
-                                            <input type="tel" name="phone" placeholder="Phone Number*" pattern="[0-9]{10}" maxlength="10" inputmode="numeric" required />
+                                            <input type="tel" name="phone" placeholder="Phone Number*"
+                                                pattern="[0-9]{10}" maxlength="10" inputmode="numeric" required />
                                         </fieldset>
                                         <fieldset>
                                             <input type="email" name="email" placeholder="Email Address*" required />
                                         </fieldset>
                                         <fieldset>
-                                            <input type="text" name="business-location" placeholder="Business Location*" required />
+                                            <input type="text" name="business-location" placeholder="Business Location*"
+                                                required />
                                         </fieldset>
                                         <fieldset>
                                             <select name="proof-type" required>
@@ -605,10 +627,12 @@
                                             </select>
                                         </fieldset>
                                         <fieldset>
-                                            <input type="text" name="proof-number" placeholder="Proof Number*" required />
+                                            <input type="text" name="proof-number" placeholder="Proof Number*"
+                                                required />
                                         </fieldset>
                                         <fieldset>
-                                            <input type="text" name="business-name" placeholder="Business Name*" required />
+                                            <input type="text" name="business-name" placeholder="Business Name*"
+                                                required />
                                         </fieldset>
                                         <fieldset>
                                             <select name="business-type" required>
@@ -622,14 +646,17 @@
                                         </fieldset>
                                     </div>
 
-                                
+
 
                                     <div style="margin-top: 12px;">
-                                        <textarea name="business-description" rows="4" placeholder="Business Description: Tell us about your business" style="width:100%; padding: 14px 16px; border: 1px solid #e0e0e0; border-radius: 8px;"></textarea>
+                                        <textarea name="business-description" rows="4"
+                                            placeholder="Business Description: Tell us about your business"
+                                            style="width:100%; padding: 14px 16px; border: 1px solid #e0e0e0; border-radius: 8px;"></textarea>
                                     </div>
 
                                     <div style="margin-top: 12px;">
-                                        <label class="text-caption-1" style="display:block; margin-bottom:6px;">Business Logo</label>
+                                        <label class="text-caption-1" style="display:block; margin-bottom:6px;">Business
+                                            Logo</label>
                                         <input type="file" name="business-logo" accept="image/*" />
                                     </div>
 
@@ -647,7 +674,8 @@
                         </div>
 
                         <div class="button-submit">
-                            <button style="width: 100%!important;" class="tf-btn btn-google" type="button" style="display: flex; align-items: center; justify-content: center; gap: 8px;">
+                            <button style="width: 100%!important;" class="tf-btn btn-google" type="button"
+                                style="display: flex; align-items: center; justify-content: center; gap: 8px;">
                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -675,130 +703,130 @@
         <!-- Your existing footer code remains the same -->
         <!-- Footer -->
         <footer id="footer" class="footer">
-    <div class="footer-wrap">
-        <div class="footer-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-5">
-                        <div class="footer-infor">
-                            <div class="footer-logo">
-                                <a href="index.html">
-                                    <img src="images/logo/blushley-png-without-shade.png" alt="">
-                                </a>
+            <div class="footer-wrap">
+                <div class="footer-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-5">
+                                <div class="footer-infor">
+                                    <div class="footer-logo">
+                                        <a href="index.html">
+                                            <img src="images/logo/blushley-png-without-shade.png" alt="">
+                                        </a>
+                                    </div>
+                                    <p>Premium beauty products and professional beautician services. Shop skincare,
+                                        makeup, and hair care essentials, or book appointments with our network of
+                                        experienced beauticians.</p>
+                                </div>
                             </div>
-                            <p>Premium beauty products and professional beautician services. Shop skincare,
-                                makeup, and hair care essentials, or book appointments with our network of
-                                experienced beauticians.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="footer-menu footer-menu-texts">
-                            <div class="footer-col-block">
+                            <div class="col-lg-4">
+                                <div class="footer-menu footer-menu-texts">
+                                    <div class="footer-col-block">
+                                        <div class="footer-heading text-button footer-heading-mobile">
+                                            Information
+                                        </div>
+                                        <div class="tf-collapse-content">
+                                            <ul class="footer-menu-list">
+                                                <li class="text-caption-1">
+                                                    <a href="about-us.html" class="footer-menu_item">About Us</a>
+                                                </li>
+                                                <li class="text-caption-1">
+                                                    <a href="contact.html" class="footer-menu_item">Contact us</a>
+                                                </li>
+                                                <li class="text-caption-1">
+                                                    <a href="my-account.html" class="footer-menu_item">My Account</a>
+                                                </li>
+                                                <li class="text-caption-1">
+                                                    <a href="#" class="footer-menu_item">Terms & Conditions</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="footer-col-block">
+                                        <div class="footer-heading text-button footer-heading-mobile">
+                                            Services
+                                        </div>
+                                        <div class="tf-collapse-content">
+                                            <ul class="footer-menu-list">
+                                                <li class="text-caption-1">
+                                                    <a href="#" class="footer-menu_item">Shipping</a>
+                                                </li>
+                                                <li class="text-caption-1">
+                                                    <a href="#" class="footer-menu_item">Return & Refund</a>
+                                                </li>
+                                                <li class="text-caption-1">
+                                                    <a href="wish-list.html" class="footer-menu_item">My Wishlist</a>
+                                                </li>
+                                                <li class="text-caption-1">
+                                                    <a href="#" class="footer-menu_item">Privacy Policy</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
                                 <div class="footer-heading text-button footer-heading-mobile">
-                                    Information
+                                    contact us
                                 </div>
-                                <div class="tf-collapse-content">
-                                    <ul class="footer-menu-list">
-                                        <li class="text-caption-1">
-                                            <a href="about-us.html" class="footer-menu_item">About Us</a>
-                                        </li>
-                                        <li class="text-caption-1">
-                                            <a href="contact.html" class="footer-menu_item">Contact us</a>
-                                        </li>
-                                        <li class="text-caption-1">
-                                            <a href="my-account.html" class="footer-menu_item">My Account</a>
-                                        </li>
-                                        <li class="text-caption-1">
-                                            <a href="#" class="footer-menu_item">Terms & Conditions</a>
-                                        </li>
-                                    </ul>
+                                <div class="footer-address">
+                                    <p>Trivandrum, Kerala</p>
                                 </div>
-                            </div>
-                            <div class="footer-col-block">
-                                <div class="footer-heading text-button footer-heading-mobile">
-                                    Services
-                                </div>
-                                <div class="tf-collapse-content">
-                                    <ul class="footer-menu-list">
-                                        <li class="text-caption-1">
-                                            <a href="#" class="footer-menu_item">Shipping</a>
-                                        </li>
-                                        <li class="text-caption-1">
-                                            <a href="#" class="footer-menu_item">Return & Refund</a>
-                                        </li>
-                                        <li class="text-caption-1">
-                                            <a href="wish-list.html" class="footer-menu_item">My Wishlist</a>
-                                        </li>
-                                        <li class="text-caption-1">
-                                            <a href="#" class="footer-menu_item">Privacy Policy</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="footer-heading text-button footer-heading-mobile">
-                            contact us
-                        </div>
-                        <div class="footer-address">
-                            <p>Trivandrum, Kerala</p>
-                        </div>
-                        <ul class="footer-info">
-                            <li>
-                                <i class="icon-mail"></i>
-                                <p>blushley@gmail.com</p>
-                            </li>
-                            <li>
-                                <i class="icon-phone"></i>
-                                <p>315-666-6688</p>
-                            </li>
-                        </ul>
-                          <div class="tf-cur mt-3">
+                                <ul class="footer-info">
+                                    <li>
+                                        <i class="icon-mail"></i>
+                                        <p>blushley@gmail.com</p>
+                                    </li>
+                                    <li>
+                                        <i class="icon-phone"></i>
+                                        <p>315-666-6688</p>
+                                    </li>
+                                </ul>
+                                <div class="tf-cur mt-3">
                                     <ul class="tf-social-icon">
                                         <li><a href="#" class="social-facebook"><i class="icon icon-fb"></i></a></li>
                                         <li><a href="#" class="social-twiter"><i class="icon icon-x"></i></a></li>
-                                        <li><a href="#" class="social-instagram"><i class="icon icon-instagram"></i></a></li>
+                                        <li><a href="#" class="social-instagram"><i class="icon icon-instagram"></i></a>
+                                        </li>
                                     </ul>
                                 </div>
-                    </div>
-                 
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="footer-bottom-wrap">
-                            <div class="left">
-                                <p class="text-caption-1">©2025 Blushley. All Rights Reserved.</p>
-                              
                             </div>
-                            <div class="tf-payment">
-                                <p class="text-caption-1">Payment:</p>
-                                <ul>
-                                    <li><img src="images/payment/img-1.png" alt=""></li>
-                                    <li><img src="images/payment/img-2.png" alt=""></li>
-                                    <li><img src="images/payment/img-3.png" alt=""></li>
-                                    <li><img src="images/payment/img-4.png" alt=""></li>
-                                    <li><img src="images/payment/img-5.png" alt=""></li>
-                                    <li><img src="images/payment/img-6.png" alt=""></li>
-                                </ul>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="footer-bottom-wrap">
+                                    <div class="left">
+                                        <p class="text-caption-1">©2025 Blushley. All Rights Reserved.</p>
+
+                                    </div>
+                                    <div class="tf-payment">
+                                        <p class="text-caption-1">Payment:</p>
+                                        <ul>
+                                            <li><img src="images/payment/img-1.png" alt=""></li>
+                                            <li><img src="images/payment/img-2.png" alt=""></li>
+                                            <li><img src="images/payment/img-3.png" alt=""></li>
+                                            <li><img src="images/payment/img-4.png" alt=""></li>
+                                            <li><img src="images/payment/img-5.png" alt=""></li>
+                                            <li><img src="images/payment/img-6.png" alt=""></li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</footer>
+        </footer>
         <!-- /Footer -->
 
     </div>
     <!-- #wrapper -->
 
-    <!-- Your existing modals and JavaScript includes remain the same -->
 
     <!-- Javascript -->
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -814,23 +842,23 @@
 
     <script>
         // Login type selector functionality
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const loginTypeBtns = document.querySelectorAll('.login-type-btn');
             const loginForms = document.querySelectorAll('.login-form');
             const sellerRegisterPanel = document.getElementById('seller-register-panel');
             const sellerLoginForm = document.getElementById('seller-login');
             const openSellerRegisterBtn = document.getElementById('openSellerRegister');
             const backToSellerLoginBtn = document.getElementById('backToSellerLogin');
-            
+
             loginTypeBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
+                btn.addEventListener('click', function () {
                     // Remove active class from all buttons and forms
                     loginTypeBtns.forEach(b => b.classList.remove('active'));
                     loginForms.forEach(form => form.classList.remove('active'));
-                    
+
                     // Add active class to clicked button
                     this.classList.add('active');
-                    
+
                     // Show corresponding form
                     const loginType = this.getAttribute('data-type');
                     document.getElementById(`${loginType}-login`).classList.add('active');
@@ -844,16 +872,16 @@
                     }
                 });
             });
-            
+
             // Form validation
             document.querySelectorAll('.login-form').forEach(form => {
-                form.addEventListener('submit', function(e) {
+                form.addEventListener('submit', function (e) {
                     e.preventDefault();
-                    
+
                     // Get all required inputs in this form
                     const requiredInputs = this.querySelectorAll('input[required], select[required]');
                     let isValid = true;
-                    
+
                     requiredInputs.forEach(input => {
                         if (!input.value.trim()) {
                             isValid = false;
@@ -862,7 +890,7 @@
                             input.style.borderColor = '#e0e0e0';
                         }
                     });
-                    
+
                     if (isValid) {
                         const formType = this.id.split('-')[0];
                         alert(`${formType.charAt(0).toUpperCase() + formType.slice(1)} login successful!`);
@@ -875,12 +903,12 @@
 
             // Seller Register toggle
             if (openSellerRegisterBtn && backToSellerLoginBtn && sellerRegisterPanel && sellerLoginForm) {
-                openSellerRegisterBtn.addEventListener('click', function() {
+                openSellerRegisterBtn.addEventListener('click', function () {
                     sellerRegisterPanel.classList.add('active');
                     sellerLoginForm.style.display = 'none';
                 });
 
-                backToSellerLoginBtn.addEventListener('click', function() {
+                backToSellerLoginBtn.addEventListener('click', function () {
                     sellerRegisterPanel.classList.remove('active');
                     sellerLoginForm.style.display = '';
                 });
@@ -921,7 +949,7 @@
             }
 
             addCategoryBtn?.addEventListener('click', addCategoryFromInput);
-            categoryInput?.addEventListener('keydown', function(ev) {
+            categoryInput?.addEventListener('keydown', function (ev) {
                 if (ev.key === 'Enter') {
                     ev.preventDefault();
                     addCategoryFromInput();
@@ -930,7 +958,7 @@
 
             // Seller Register form validation
             const sellerRegisterForm = document.getElementById('seller-register-form');
-            sellerRegisterForm?.addEventListener('submit', function(e) {
+            sellerRegisterForm?.addEventListener('submit', function (e) {
                 e.preventDefault();
                 const requiredInputs = this.querySelectorAll('input[required], select[required], textarea[required]');
                 let isValid = true;
@@ -952,4 +980,5 @@
     </script>
 
 </body>
+
 </html>
