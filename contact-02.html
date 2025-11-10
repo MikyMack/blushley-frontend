@@ -26,7 +26,115 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/logo/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/logo/favicon-16x16.png">
     <link rel="apple-touch-icon-precomposed" sizes="180x180" href="images/logo/apple-touch-icon.png">
+  <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .contact-section {
+            background-color: white;
+            border-radius: 12px;
 
+            padding: 40px 30px;
+            margin: 30px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #2c3e50;
+            font-size: 28px;
+            font-weight: 600;
+        }
+        
+        .contact-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .contact-item {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            padding: 20px 15px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+                     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-item:hover {
+            background-color: #f8f9fa;
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-icon {
+            font-size: 32px;
+            margin-bottom: 15px;
+            color: #3498db;
+        }
+        
+        .text-title {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #2c3e50;
+            font-size: 18px;
+        }
+        
+        .text-secondary {
+            color: #7f8c8d;
+            font-size: 16px;
+        }
+        
+        .open-time {
+            margin-bottom: 5px;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .contact-details {
+                flex-direction: column;
+            }
+            
+            .contact-item {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            
+            .section-title {
+                font-size: 24px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .contact-section {
+                padding: 25px 15px;
+            }
+            
+            .section-title {
+                font-size: 22px;
+                margin-bottom: 30px;
+            }
+        }
+    </style>
 </head>
 
 <body class="preload-wrapper">
@@ -220,41 +328,28 @@
         <!-- /page-title -->
 
         <!-- Store locations -->
-        <section class="flat-spacing">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="contact-us-map">
-                          <!--  <div class="wrap-map">
-                                <div id="map-contact" class="map-contact"  data-map-zoom="16" data-map-scroll="true"></div>
-                            </div>-->
-                            <div class="right">
-                                <h4>Information</h4>
-                                <div class="mb_20">
-                                    <div class="text-title mb_8">Phone:</div>
-                                    <p class="text-secondary">+1 666 234 8888</p>
-                                </div>
-                                <div class="mb_20">
-                                    <div class="text-title mb_8">Email:</div>
-                                    <p class="text-secondary">blushley@gmail.com</p>
-                                </div>
-                                <div class="mb_20">
-                                    <div class="text-title mb_8">Address:</div>
-                                    <p class="text-secondary">Trivandrum , Kerala</p>
-                                </div>
-                                <div>
-                                    <div class="text-title mb_8">Open Time:</div>
-                                    <p class="mb_4 open-time">
-                                        <span class="text-secondary">Mon - Sat:</span> 7:30am - 8:00pm PST
-                                    </p>
-                                    <p class="open-time">
-                                        <span class="text-secondary">Sunday:</span> 9:00am - 5:00pm PST
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+         <section class="contact-section">
+            <h2 class="section-title">Contact Information</h2>
+            <div class="contact-details">
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div class="text-title">Phone</div>
+                    <p class="text-secondary">+1 666 234 8888</p>
                 </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">✉️</div>
+                    <div class="text-title">Email</div>
+                    <p class="text-secondary">blushley@gmail.com</p>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div class="text-title">Address</div>
+                    <p class="text-secondary">Trivandrum, Kerala</p>
+                </div>
+                
+           
             </div>
         </section>
         <!-- /Store locations -->
