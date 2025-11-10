@@ -2481,6 +2481,33 @@
 
         var AUTOHIDE = Boolean(0);
     </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const navAccount = document.querySelector('.nav-account');
+    const navIconItem = navAccount.querySelector('.nav-icon-item');
+    
+    // Toggle dropdown on click
+    navIconItem.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        navAccount.classList.toggle('show-dropdown');
+    });
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!navAccount.contains(e.target)) {
+            navAccount.classList.remove('show-dropdown');
+        }
+    });
+    
+    // Prevent dropdown from closing when clicking inside it
+    const dropdown = navAccount.querySelector('.dropdown-account');
+    dropdown.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+});
+
+</script>
 
      <script>  if (document.querySelector("#sib-form")) { const script = document.createElement('script');script.src = 'js/sibforms.js';script.defer = true;document.body.appendChild(script);}</script>
 </body>
