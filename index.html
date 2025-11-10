@@ -19,6 +19,9 @@
     <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
 
     <!-- Favicon and Touch Icons  -->
 
@@ -29,7 +32,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="180x180" href="images/logo/apple-touch-icon.png">
     <!-- Add Lineicons CSS -->
     <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
-  
+
 </head>
 
 <body class="preload-wrapper">
@@ -115,7 +118,7 @@
                                         class="item-link">Salon at Home</a>
                                 </li>
 
-                               
+
                                 <li class="menu-item book-salon-link"><a href="salon-service.html"
                                         class="item-link">Book a Salon</a>
                                 </li>
@@ -160,6 +163,64 @@
 
                                 </a>
                             </li>
+                          
+                            <!--notifications  ICON with Loyalty points -->
+                            <li class="nav-loyalty">
+                                <a href="#" class="nav-icon-item" id="loyaltyToggle">
+                                    <i class="fa-regular fa-bell"></i>
+                                    <span class="loyalty-badge"></span>
+                                </a>
+
+                                <!-- Loyalty Points Panel -->
+                                <div class="loyalty-panel" id="loyaltyPanel">
+                                    <div class="loyalty-header">
+                                        <h5 class="mb-0">Notifications</h5>
+
+                                        <button class="mark-all-read" id="markAllRead">Mark All</button>
+                                        <button type="button" class="btn-close" id="closeLoyalty"
+                                            aria-label="Close"></button>
+                                    </div>
+
+                                    <div class="loyalty-points-display">
+                                        <div class="points-number">1000</div>
+                                        <div class="points-label">Loyalty Points</div>
+                                    </div>
+
+                                    <div class="loyalty-activity">
+                                        <h6 class="mb-3">Recent Notifications</h6>
+
+                                        <div class="activity-item unread">
+                                            <div>
+                                                <div class="activity-desc">New order shipped</div>
+                                                <div class="activity-date">Nov 6, 2025</div>
+                                            </div>
+                                            <button class="mark-read-btn">
+                                                <i class="fa-regular fa-circle-check"></i>
+                                            </button>
+                                        </div>
+
+                                        <div class="activity-item unread">
+                                            <div>
+                                                <div class="activity-desc">Appointment reminder</div>
+                                                <div class="activity-date">Nov 5, 2025</div>
+                                            </div>
+                                            <button class="mark-read-btn">
+                                                <i class="fa-regular fa-circle-check"></i>
+                                            </button>
+                                        </div>
+
+                                        <div class="activity-item unread">
+                                            <div>
+                                                <div class="activity-desc">Special offer available</div>
+                                                <div class="activity-date">Nov 4, 2025</div>
+                                            </div>
+                                            <button class="mark-read-btn">
+                                                <i class="fa-regular fa-circle-check"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
                             <li class="nav-cart"><a href="#shoppingCart" data-bs-toggle="modal" class="nav-icon-item">
 
                                     <img src="images/icons/shopping-bag.svg" alt="cart icon">
@@ -172,7 +233,6 @@
         </header>
 
         <!-- /Header -->
-
 
         <!-- /Top Bar -->
         <div class="tf-topbar topbar-white  discount-bar">
@@ -1556,6 +1616,204 @@
     </div>
 </footer>
 
+        <!-- Seller Registration Modal -->
+        <div class="modal-overlay" id="sellerModal">
+            <div class="auth-modal">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="sellerModalTitle">Sell With BLUSHLEY</h2>
+                    <button class="close-modal" id="closeSellerModal">&times;</button>
+                </div>
+
+                <div class="modal-body">
+                    <!-- Auth Tabs -->
+                    <div class="auth-tabs">
+                        <button class="auth-tab active" data-tab="seller-register">Register</button>
+                        <button class="auth-tab" data-tab="seller-login">Login</button>
+                    </div>
+
+                    <!-- Seller Register Form -->
+                    <form class="auth-form active" id="sellerRegisterForm">
+                        <div class="form-group">
+                            <label class="form-label" for="sellerFullName">Full Name</label>
+                            <input type="text" class="form-input" id="sellerFullName" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="sellerPhoneNumber">Phone Number</label>
+                            <input type="tel" class="form-input" id="sellerPhoneNumber" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="sellerEmail">Email Address</label>
+                            <input type="email" class="form-input" id="sellerEmail" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="sellerLocation">Business Location</label>
+                            <input type="text" class="form-input" id="sellerLocation" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="sellerProofType">Proof Type</label>
+                            <select class="form-select" id="sellerProofType" required>
+                                <option value="">Select proof type</option>
+                                <option value="Aadhaar Card">Aadhaar Card</option>
+                                <option value="PAN Card">PAN Card</option>
+                                <option value="Driving License">Driving License</option>
+                                <option value="Passport">Passport</option>
+                                <option value="Voter ID">Voter ID</option>
+                                <option value="Business Registration">Business Registration</option>
+                                <option value="GST Certificate">GST Certificate</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="sellerProofNumber">Proof Number</label>
+                            <input type="text" class="form-input" id="sellerProofNumber" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="sellerBusinessName">Business Name</label>
+                            <input type="text" class="form-input" id="sellerBusinessName" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="sellerBusinessType">Business Type</label>
+                            <select class="form-select" id="sellerBusinessType" required>
+                                <option value="">Select business type</option>
+                                <option value="Individual">Individual</option>
+                                <option value="Partnership">Partnership</option>
+                                <option value="Private Limited">Private Limited</option>
+                                <option value="LLP">LLP</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Product Categories</label>
+                            <div class="skills-container" id="productCategoriesContainer">
+                                <!-- Product categories will be added here dynamically -->
+                            </div>
+                            <div class="add-skill-input">
+                                <input type="text" class="form-input" id="newProductCategory"
+                                    placeholder="Add a product category">
+                                <button type="button" class="btn-secondary" id="addProductCategoryBtn">Add</button>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Business Description</label>
+                            <textarea class="form-input" id="sellerBusinessDescription" rows="3"
+                                placeholder="Tell us about your business"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Business Logo</label>
+                            <div class="file-input-wrapper">
+                                <input type="file" class="file-input" id="sellerLogo" accept="image/*">
+                                <label class="file-input-label" for="sellerLogo">
+                                    <i class="fas fa-upload"></i> Choose Business Logo
+                                </label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-primary">Register as Seller</button>
+
+                        <div class="form-footer">
+                            <p>Already have a seller account? <button type="button" class="switch-form"
+                                    data-switch-to="seller-login">Login here</button></p>
+                        </div>
+                    </form>
+
+                    <!-- Seller Login Form -->
+                    <form class="auth-form" id="sellerLoginForm">
+                        <div class="form-group">
+                            <label class="form-label" for="sellerLoginEmail">Email Address</label>
+                            <input type="email" class="form-input" id="sellerLoginEmail" required>
+                        </div>
+
+                        <button type="submit" class="btn-primary">Send OTP</button>
+
+                        <div class="form-footer">
+                            <p>Don't have a seller account? <button type="button" class="switch-form"
+                                    data-switch-to="seller-register">Register here</button></p>
+                        </div>
+                    </form>
+
+                    <!-- OTP Verification -->
+                    <div class="otp-section" id="sellerOtpSection">
+                        <h3>Enter OTP</h3>
+                        <p>We've sent a 6-digit OTP to your email</p>
+
+                        <div class="otp-inputs">
+                            <input type="text" class="otp-input" maxlength="1" data-index="0">
+                            <input type="text" class="otp-input" maxlength="1" data-index="1">
+                            <input type="text" class="otp-input" maxlength="1" data-index="2">
+                            <input type="text" class="otp-input" maxlength="1" data-index="3">
+                            <input type="text" class="otp-input" maxlength="1" data-index="4">
+                            <input type="text" class="otp-input" maxlength="1" data-index="5">
+                        </div>
+
+                        <button class="btn-primary" id="verifySellerOtpBtn"><a href="sales-dashboard.html">Verify
+                                OTP</a></button>
+                        <button class="resend-otp" id="resendSellerOtpBtn">Resend OTP</button>
+                    </div>
+
+                    <!-- Success Message -->
+                    <div class="success-message" id="sellerSuccessMessage">
+                        <div class="success-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3>Registration Successful!</h3>
+                        <p>Your seller account has been created successfully. Our team will review your application and
+                            contact you shortly.</p>
+                        <button class="btn-primary" id="goToSellerLoginBtn">Go to Login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Salon Login Modal -->
+        <div class="modal-overlay" id="salonModal">
+            <div class="auth-modal">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="salonModalTitle">Salon Login</h2>
+                    <button class="close-modal" id="closeSalonModal">&times;</button>
+                </div>
+
+                <div class="modal-body">
+                    <!-- Salon Login Form -->
+                    <form class="auth-form active" id="salonLoginForm">
+                        <div class="form-group">
+                            <label class="form-label" for="salonEmail">Email Address</label>
+                            <input type="email" class="form-input" id="salonEmail" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="salonPassword">Password</label>
+                            <input type="password" class="form-input" id="salonPassword" required>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="remember-forgot">
+                                <div class="remember-me">
+                                    <input type="checkbox" id="rememberSalon">
+                                    <label for="rememberSalon">Remember me</label>
+                                </div>
+                                <a href="#" class="forgot-password">Forgot Password?</a>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-primary">Login</button>
+
+                        <div class="form-footer">
+                            <p>Don't have a salon account? <a href="#" class="contact-link">Contact us to register</a>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
 
 
         <div class="mobile-nav-wrapper show" id="mobileNavWrapper">
@@ -2579,7 +2837,7 @@
                                 </div>
                                 <div class="tf-mini-cart-bottom">
                                     <div class="tf-mini-cart-tool">
-                                       <!-- <div class="tf-mini-cart-tool-btn btn-add-note">
+                                        <!-- <div class="tf-mini-cart-tool-btn btn-add-note">
                                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <g clip-path="url(#clip0_6133_36620)">
@@ -3665,9 +3923,67 @@
                 }, false);
             })();
         </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const loyaltyToggle = document.getElementById('loyaltyToggle');
+                const loyaltyPanel = document.getElementById('loyaltyPanel');
+                const closeLoyalty = document.getElementById('closeLoyalty');
+
+                if (loyaltyToggle && loyaltyPanel) {
+                    // Toggle panel
+                    loyaltyToggle.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        loyaltyPanel.classList.toggle('show');
+                    });
+
+                    // Close panel
+                    if (closeLoyalty) {
+                        closeLoyalty.addEventListener('click', function (e) {
+                            e.stopPropagation();
+                            loyaltyPanel.classList.remove('show');
+                        });
+                    }
+
+                    // Close when clicking outside
+                    document.addEventListener('click', function (e) {
+                        if (!e.target.closest('.nav-loyalty')) {
+                            loyaltyPanel.classList.remove('show');
+                        }
+                    });
+                } else {
+                    console.log('Loyalty elements not found');
+                }
+            });
+
+            // Mark individual as read
+            document.querySelectorAll('.mark-read-btn').forEach(btn => {
+                btn.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    this.closest('.activity-item').classList.toggle('read');
+                    this.closest('.activity-item').classList.remove('unread');
+                });
+            });
+
+            // Mark all as read
+            const markAllRead = document.getElementById('markAllRead');
+            if (markAllRead) {
+                markAllRead.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    document.querySelectorAll('.activity-item').forEach(item => {
+                        item.classList.add('read');
+                        item.classList.remove('unread');
+                    });
+                });
+            }
+        </script>
+
+</body>
+
+</html>
 
 
-        <script>  if (document.querySelector("#sib-form")) { const script = document.createElement('script'); script.src = 'js/sibforms.js'; script.defer = true; document.body.appendChild(script); }</script>
+<script>  if (document.querySelector("#sib-form")) { const script = document.createElement('script'); script.src = 'js/sibforms.js'; script.defer = true; document.body.appendChild(script); }</script>
 </body>
 
 </html>
