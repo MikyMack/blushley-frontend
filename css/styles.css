@@ -25603,6 +25603,10 @@ ul.list-text.type-number {
   max-height: calc(100vh - 40px);
   overflow-y: auto;
 }
+.offcanvas.canvas-filter,
+  #filterShop.offcanvas {
+    z-index: 9999 !important; /* ✅ Will override Bootstrap */
+  }
 
 .bs-calendar .book-now-text {
   display: none;
@@ -25771,19 +25775,19 @@ ul.list-text.type-number {
   .canvas-filter {
     position: fixed;
     top: 0;
-    left: -100%;
+   
     width: 100%;
     max-width: 400px;
     height: 100vh;
-    z-index: 9999;
+    z-index: 9999 !important;
     background: var(--white, #fff);
     transition: left 0.3s ease;
     overflow-y: auto;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
   }
-
-  .canvas-filter.active {
-    left: 0;
+ .offcanvas.canvas-filter,
+  #filterShop.offcanvas {
+    z-index: 9999 !important; /* ✅ Will override Bootstrap */
   }
 
   /* Dark overlay background */
@@ -25872,12 +25876,8 @@ ul.list-text.type-number {
   }
 }
 
-/* Hide close button on desktop (992px and above) */
-@media (min-width: 992px) {
-  .canvas-header .icon-close {
-    display: none !important;
-  }
-}
+
+
 
 /************Home page Navbar Loyalty pioints code***************/
 
