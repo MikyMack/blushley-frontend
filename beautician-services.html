@@ -32,8 +32,6 @@
 
 <body class="preload-wrapper">
 
-
-
     <!-- Scroll Top -->
     <button id="scroll-top">
         <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -146,9 +144,9 @@
                                 <div class="dropdown-account dropdown-login">
                                     <div class="sub-top">
                                         <a href="login.html" class="nav-acc-link">My Account</a>
-                                          <a href="my-account-orders.html" class="nav-acc-link"> Orders</a>
-                                            <a href="booking-history.html" class="nav-acc-link">My Bookings</a>
-                                     
+                                        <a href="my-account-orders.html" class="nav-acc-link"> Orders</a>
+                                        <a href="booking-history.html" class="nav-acc-link">My Bookings</a>
+
                                     </div>
                                 </div>
                             </li>
@@ -194,424 +192,493 @@
         </div>
         <!-- /page-title -->
 
-        <!-- Section beautician list -->
-        <section class="flat-spacing">
-            <div class="container">
-                <div class="tf-shop-control">
-                    <div class="tf-control-filter">
-                        <a href="#filterShop" data-bs-toggle="offcanvas" aria-controls="filterShop"
-                            class="tf-btn-filter"><span class="icon icon-filter"></span><span
-                                class="text">Filters</span></a>
-                        <div class="d-none d-lg-flex shop-sale-text">
-                            <i class="icon icon-checkCircle"></i>
-                            <p class="text-caption-1">Available today only</p>
-                        </div>
-                    </div>
-                    <ul class="tf-control-layout">
-                        <li class="tf-view-layout-switch sw-layout-list list-layout active" data-value-layout="list">
-                            <div class="item">
+
+        <div >
+            <div class="layout-wrapper mt-5" style="display: flex; gap: 30px;">
+
+                <aside style="flex: 0 0 280px;">
+                    <!-- Filter -->
+                    <div class="canvas-filter mb-5" id="filterShop">
+                        <div class="canvas-wrapper">
+                            <div class="canvas-header">
+                                <h5>Filters</h5>
                             </div>
-                        </li>
-                    </ul>
-                    <div class="tf-control-sorting">
-                        <p class="d-none d-lg-block text-caption-1">Sort by:</p>
-                        <div class="tf-dropdown-sort" data-bs-toggle="dropdown">
-                            <div class="btn-select">
-                                <span class="text-sort-value">Best rated</span>
-                                <span class="icon icon-arrow-down"></span>
-                            </div>
-                            <div class="dropdown-menu">
-                                <div class="select-item" data-sort-value="best-rated">
-                                    <span class="text-value-item">Best rated</span>
-                                </div>
-                                <div class="select-item" data-sort-value="most-reviews">
-                                    <span class="text-value-item">Most reviews</span>
-                                </div>
-                                <div class="select-item" data-sort-value="experience">
-                                    <span class="text-value-item">Most experience</span>
-                                </div>
-                                <div class="select-item" data-sort-value="price-low-high">
-                                    <span class="text-value-item">Price, low to high</span>
-                                </div>
-                                <div class="select-item" data-sort-value="price-high-low">
-                                    <span class="text-value-item">Price, high to low</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="wrapper-control-shop">
-                    <div class="meta-filter-shop">
-                        <div id="beautician-count" class="count-text">Showing 6 beauticians</div>
-                        <div id="applied-filters"></div>
-                        <button id="remove-all" class="remove-all-filters text-btn-uppercase"
-                            style="display: none;">REMOVE ALL <i class="icon icon-close"></i></button>
-                    </div>
-                    <div class="tf-list-layout wrapper-shop" id="listLayout">
+                            <div class="canvas-body">
 
-                        <!-- Beautician card 1 -->
-                        <div class="card-product style-list bs-card-product" data-rating="5" data-service="makeup" data-price="80"
-                            data-location="indiranagar,koramangala">
-                            <div class="card-product-wrapper  bs-card-product-wrapper">
-                                <a href="beautician-profile.html" class="product-img bs-product-img">
-                                    <img class="lazyload img-product" data-src="images/beautician/beautician1.png"
-                                        src="images/beautician/beautician1.png" alt="Sarah Johnson">
-                                </a>
-                            </div>
-                            <div class="card-product-info bs-card-product-info>
-                                <a href="beautician-profile.html" class="title link">ID no. :1</a>
-                                <div class="price">
-                                    <span class="rating-badge">★★★★★</span>
-                                    <span class="review-count">(248 reviews)</span>
-                                </div>
-
-                                <!-- Location Badge -->
-                                <div class="location-info">
-                                    <span class="icon icon-location"></span>
-                                    <span class="location-text">
-                                        Service areas: Indiranagar, Koramangala, Whitefield
-                                        <button class="view-more-locations" data-beautician-id="1">+5 more
-                                            areas</button>
-                                    </span>
-                                </div>
-
-                                <!-- Modal/Popup for full location list -->
-                                <div id="location-modal-1" class="beautician-location-modal" style="display: none;">
-                                    <div class="beautician-modal-content">
-                                        <h4>Service Areas - ID no. 1</h4>
-                                        <ul class="beautician-full-location-list">
-                                            <li>Indiranagar</li>
-                                            <li>Koramangala</li>
-                                            <li>Whitefield</li>
-                                            <li>HSR Layout</li>
-                                            <li>Marathahalli</li>
-                                            <li>BTM Layout</li>
-                                            <li>Electronic City</li>
-                                            <li>JP Nagar</li>
-                                        </ul>
-                                        <button class="beautician-close-modal">Close</button>
-                                    </div>
-                                </div>
-
-                                <p class="description text-secondary text-line-clamp-2">Professional Makeup Artist &
-                                    Skincare Specialist with 8 years of experience. Specializing in bridal makeup, party
-                                    makeup, and facial treatments.</p>
-
-                                <div class="variant-wrap-list">
-                                    <ul class="list-color-product">
-                                        <li class="list-color-item beautician-list">
-                                            <span class="d-none text-capitalize color-filter">Bridal</span>
-                                            <span class="service-tag">Bridal Makeup</span>
-                                        </li>
-                                        <li class="list-color-item beautician-list">
-                                            <span class="d-none text-capitalize color-filter">Makeup</span>
-                                            <span class="service-tag">Makeup</span>
-                                        </li>
-                                        <li class="list-color-item beautician-list">
-                                            <span class="d-none text-capitalize color-filter">Skincare</span>
-                                            <span class="service-tag">Skincare</span>
-                                        </li>
+                                <!-- Service Categories -->
+                                <div class="widget-facet facet-categories">
+                                    <h6 class="facet-title">Services</h6>
+                                    <ul class="facet-content">
+                                        <li><a href="#" class="categories-item">Haircut & Styling <span
+                                                    class="count-cate">(25)</span></a></li>
+                                        <li><a href="#" class="categories-item">Facials & Skincare <span
+                                                    class="count-cate">(18)</span></a></li>
+                                        <li><a href="#" class="categories-item">Bleaching & Cleanup <span
+                                                    class="count-cate">(10)</span></a></li>
+                                        <li><a href="#" class="categories-item">Bridal Makeup <span
+                                                    class="count-cate">(8)</span></a></li>
+                                        <li><a href="#" class="categories-item">Manicure & Pedicure <span
+                                                    class="count-cate">(12)</span></a></li>
+                                        <li><a href="#" class="categories-item">Hair Coloring <span
+                                                    class="count-cate">(15)</span></a></li>
                                     </ul>
-                                    <div class="size-box list-product-btn">
-                                        <!--  <span class="price-info">From <strong>₹80</strong>/hour</span>-->
-                                        <span class="availability-badge">Available Today</span>
+                                </div>
+
+                                <!-- Price Range -->
+                                <div class="widget-facet facet-price">
+                                    <h6 class="facet-title">Price Range</h6>
+                                    <div class="price-val-range" id="price-value-range" data-min="100" data-max="5000">
                                     </div>
-                                    <div class="list-product-btn">
-                                        <a href="beautician-profile.html" class="btn-main-product">View Profile</a>
-                                        <a onclick="openBookingModal()" class="box-icon btn-icon-action"
-                                            title="Book Now">
-                                            <span class="icon icon-calendar"></span>
-                                            <span class="tooltip" >Book Now</span>
-                                           
-                                        </a>
-                                        <a href="javascript:void(0);" class="box-icon compare btn-icon-action bs-box-icon"
-                                            title="Reviews">
-                                            <span class="icon icon-star bs-icon-star"></span>
-                                            <span class="tooltip bs-tool-tip">Reviews</span>
-                                        </a>
-                                   
+                                    <div class="box-price-product">
+                                        <div class="box-price-item">
+                                            <span class="title-price">Min price</span>
+                                            <div class="price-val" id="price-min-value" data-currency="₹"></div>
+                                        </div>
+                                        <div class="box-price-item">
+                                            <span class="title-price">Max price</span>
+                                            <div class="price-val" id="price-max-value" data-currency="₹"></div>
+                                        </div>
                                     </div>
                                 </div>
+
+                                <!-- Availability -->
+                                <div class="widget-facet facet-fieldset">
+                                    <h6 class="facet-title">Availability</h6>
+                                    <div class="box-fieldset-item">
+                                        <fieldset class="fieldset-item">
+                                            <input type="radio" name="availability" class="tf-check"
+                                                id="availableToday">
+                                            <label for="availableToday">Available Today</label>
+                                        </fieldset>
+                                        <fieldset class="fieldset-item">
+                                            <input type="radio" name="availability" class="tf-check"
+                                                id="availableThisWeek">
+                                            <label for="availableThisWeek">Available This Week</label>
+                                        </fieldset>
+                                        <fieldset class="fieldset-item">
+                                            <input type="radio" name="availability" class="tf-check"
+                                                id="availableWeekend">
+                                            <label for="availableWeekend">Weekend Slots</label>
+                                        </fieldset>
+                                    </div>
+                                </div>
+
+                                <!-- Gender Preference -->
+                                <div class="widget-facet facet-fieldset">
+                                    <h6 class="facet-title">For Whom</h6>
+                                    <div class="box-fieldset-item">
+                                        <fieldset class="fieldset-item">
+                                            <input type="checkbox" name="gender" class="tf-check" id="forWomen">
+                                            <label for="forWomen">Women</label>
+                                        </fieldset>
+                                        <fieldset class="fieldset-item">
+                                            <input type="checkbox" name="gender" class="tf-check" id="forMen">
+                                            <label for="forMen">Men</label>
+                                        </fieldset>
+                                        <fieldset class="fieldset-item">
+                                            <input type="checkbox" name="gender" class="tf-check" id="forUnisex">
+                                            <label for="forUnisex">Unisex</label>
+                                        </fieldset>
+                                    </div>
+                                </div>
+
+                                <!-- Location -->
+                                <div class="widget-facet facet-location">
+                                    <h6 class="facet-title">Location</h6>
+                                    <div class="box-fieldset-item">
+                                        <fieldset class="fieldset-item">
+                                            <input type="checkbox" name="gender" class="tf-check" id="forWomen">
+                                            <label for="forWomen">HSR Layout</label>
+                                        </fieldset>
+                                        <fieldset class="fieldset-item">
+                                            <input type="checkbox" name="gender" class="tf-check" id="forMen">
+                                            <label for="forMen">Indiranagar</label>
+                                        </fieldset>
+                                        <fieldset class="fieldset-item">
+                                            <input type="checkbox" name="gender" class="tf-check" id="forUnisex">
+                                            <label for="forUnisex">Koramangala</label>
+                                        </fieldset>
+                                    </div>
+                                </div>
+
+                                <!-- Ratings -->
+                                <div class="widget-facet facet-rating">
+                                    <h6 class="facet-title">Ratings</h6>
+                                    <div class="box-fieldset-item">
+                                        <fieldset class="fieldset-item">
+                                            <input type="radio" name="rating" class="tf-check" id="rating4plus">
+                                            <label for="rating4plus">4★ & above</label>
+                                        </fieldset>
+                                        <fieldset class="fieldset-item">
+                                            <input type="radio" name="rating" class="tf-check" id="rating3plus">
+                                            <label for="rating3plus">3★ & above</label>
+                                        </fieldset>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="canvas-bottom">
+                                <button id="reset-filter" class="tf-btn btn-reset">Reset Filters</button>
                             </div>
                         </div>
-                        <!-- Beautician card 2 -->
-                       <div class="card-product style-list bs-card-product" data-rating="4.5" data-service="hair" data-price="60">
-                            <div class="card-product-wrapper bs-card-product-wrapper">
-                                <a href="beautician-profile.html" class="product-img bs-product-img">
-                                    <img class="lazyload img-product" data-src="images/beautician/beautician2.png"
-                                        src="images/beautician/beautician2.png" alt="Maria Garcia">
-                                   
-                                </a>
-                            </div>
-                            <div class="card-product-info bs-card-product-info">
-                                <a href="beautician-profile.html" class="title link">Maria Garcia</a>
-                                <div class="price">
-                                    <span class="rating-badge">★★★★☆</span>
-                                    <span class="review-count">(156 reviews)</span>
-                                </div>
-                                <p class="description text-secondary text-line-clamp-2">Hair Styling & Coloring Expert.
-                                    6 years of experience in trendy cuts, color treatments, and special occasion
-                                    styling.</p>
-                                <div class="variant-wrap-list">
-                                    <ul class="list-color-product">
-                                        <li class="list-color-item beautician-list">
-                                            <span class="d-none text-capitalize color-filter">Hair</span>
-                                            <span class="service-tag">Hair Styling</span>
-                                        </li>
-                                        <li class="list-color-item beautician-list">
-                                            <span class="d-none text-capitalize color-filter">Coloring</span>
-                                            <span class="service-tag">Coloring</span>
-                                        </li>
-                                        <li class="list-color-item beautician-list">
-                                            <span class="d-none text-capitalize color-filter">Treatment</span>
-                                            <span class="service-tag">Treatment</span>
-                                        </li>
-                                    </ul>
-                                    <div class="size-box list-product-btn">
-                                        <span class="price-info">From <strong>₹60</strong>/hour</span>
-                                        <span class="availability-badge">Available Tomorrow</span>
-                                    </div>
-                                    <div class="list-product-btn">
-                                        <a href="beautician-profile.html" class="btn-main-product bs-btn-main-product" >View Profile</a>
-                                        <a href="booking.html" class="box-icon wishlist btn-icon-action bs-btn-icon-action"
-                                            title="Book Now">
-                                            <span class="icon icon-calendar"></span>
-                                            <span class="tooltip bs-tooltip">Book Now</span>
-                                        </a>
-                                        <a href="javascript:void(0);" class="box-icon compare btn-icon-action bs-box-icon"
-                                            title="Reviews">
-                                            <span class="icon icon-star bs-icon-star"></span>
-                                            <span class="tooltip bs-tool-tip">Reviews</span>
-                                        </a>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Beautician card 3 -->
-                        <div class="card-product style-list bs-card-product" data-rating="5" data-service="skincare" data-price="100">
-                            <div class="card-product-wrapper bs-card-product-wrapper">
-                                <a href="beautician-profile.html" class="product-img bs-product-img">
-                                    <img class="lazyload img-product" data-src="images/beautician/beautician3.png"
-                                        src="images/beautician/beautician3.png" alt="Emily Chen">
-                                    <!-- <img class="lazyload img-hover" data-src="images/beautician-3-hover.jpg" src="images/beautician-3-hover.jpg" alt="Emily Chen">-->
-                                </a>
-                            </div>
-                            <div class="card-product-info bs-card-product-info">
-                                <a href="beautician-profile.html" class="title link">Emily Chen</a>
-                                <div class="price">
-                                    <span class="rating-badge">★★★★★</span>
-                                    <span class="review-count">(189 reviews)</span>
-                                </div>
-                                <p class="description text-secondary text-line-clamp-2">Certified Skincare Specialist. 5
-                                    years experience in facials, skincare analysis, and therapeutic treatments using
-                                    premium products.</p>
-                                <div class="variant-wrap-list">
-                                    <ul class="list-color-product">
-                                        <li class="list-color-item beautician-list">
-                                            <span class="d-none text-capitalize color-filter">Facial</span>
-                                            <span class="service-tag">Facials</span>
-                                        </li>
-                                        <li class="list-color-item beautician-list">
-                                            <span class="d-none text-capitalize color-filter">Skincare</span>
-                                            <span class="service-tag">Skincare</span>
-                                        </li>
-                                        <li class="list-color-item beautician-list">
-                                            <span class="d-none text-capitalize color-filter">Treatment</span>
-                                            <span class="service-tag">Treatment</span>
-                                        </li>
-                                    </ul>
-                                    <div class="size-box list-product-btn">
-                                        <span class="price-info">From <strong>₹100</strong>/hour</span>
-                                        <span class="availability-badge">Available Today</span>
-                                    </div>
-                                    <div class="list-product-btn">
-                                        <a href="beautician-profile.html" class="btn-main-product bs-btn-main-product">View Profile</a>
-                                        <a href="booking.html" class="box-icon wishlist btn-icon-action bs-btn-icon-action"
-                                            title="Book Now">
-                                            <span class="icon icon-calendar"></span>
-                                            <span class="tooltip">Book Now</span>
-                                        </a>
-                                        <a href="javascript:void(0);" class="box-icon compare btn-icon-action bs-box-icon"
-                                            title="Reviews">
-                                            <span class="icon icon-star bs-icon-star"></span>
-                                            <span class="tooltip bs-tool-tip">Reviews</span>
-                                        </a>
-                                       
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                       
-
-                        <!-- pagination -->
-                        <ul class="wg-pagination">
-                            <li><a href="#" class="pagination-item text-button">1</a></li>
-                            <li class="active">
-                                <div class="pagination-item text-button">2</div>
-                            </li>
-                            <li><a href="#" class="pagination-item text-button">3</a></li>
-                            <li><a href="#" class="pagination-item text-button"><i class="icon-arrRight"></i></a></li>
-                        </ul>
                     </div>
-                </div>
+
+                    <!-- /Filter -->
+                </aside>
+
+
+
+                <main style="flex: 1;" class="bs-grid-cards mt-3 mb-5">
+                    <!-- Grid Cards -->
+                    <div class="row g-4">
+                        <!-- Card 1 -->
+                        <div class="col-sm-12 col-md-6 col-lg-6">
+                            <div class="card bs-beautician-card">
+                                <div class="bs-card-img-wrapper">
+                                    <img src="images/beautician/beautician1.png" alt="Beautician">
+                                    <span class="bs-availability-badge">Available Today</span>
+                                </div>
+                                <div class="card-body bs-card-body">
+                                    <div class="bs-beautician-id">ID no. :1</div>
+                                    <div class="bs-rating-section">
+                                        <div class="bs-stars">
+                                            <span class="star filled">★</span>
+                                            <span class="star filled">★</span>
+                                            <span class="star filled">★</span>
+                                            <span class="star filled">★</span>
+                                            <span class="star half">★</span>
+                                        </div>
+                                        <span class="bs-review-count">(248 reviews)</span>
+                                    </div>
+                                    <div class="bs-location-badge">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Indiranagar, Koramangala, Whitefield</span>
+                                        <span class="bs-more-locations" onclick="openLocationModal(1)">+5 more</span>
+                                    </div>
+                                    <p class="bs-description">
+                                        Professional Makeup Artist & Skincare Specialist with 8 years of experience.
+                                        Specializing in bridal makeup, party makeup, and facial treatments.
+                                    </p>
+                                    <div class="bs-service-tags">
+                                        <span class="bs-service-tag">Bridal Makeup</span>
+                                        <span class="bs-service-tag">Makeup</span>
+                                        <span class="bs-service-tag">Skincare</span>
+                                        <span class="bs-more-services">+5 more</span>
+                                    </div>
+
+                                    <div class="bs-price-section">
+                                        <div class="bs-price-info">
+                                            <span class="price-label">Starting from</span>
+                                            <span class="price-value">₹1,000</span>
+                                        </div>
+                                        <button class="btn-view-services" onclick="openServicesModal(1)">
+                                            View All Services
+                                        </button>
+                                    </div>
+
+                                    <div class="bs-card-actions">
+                                        <a href="beautician-profile.html">
+                                            <button class="btn bs-btn-profile">View Profile</button>
+                                        </a>
+
+                                        <button class="btn bs-btn-icon bs-calendar" title="Book Now"
+                                            onclick="openBookingModal()">
+                                            <i class="icon-calendar"></i>
+                                        </button>
+                                        <a href="javascript:void(0);"></a>
+                                        <button class="btn bs-btn-icon bs-star" title="Reviews"
+                                            onclick="openReviewPopup()">
+                                            <i class="icon-star"></i>
+                                        </button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="col-sm-12 col-md-6 col-lg-6">
+                            <div class="card bs-beautician-card">
+                                <div class="bs-card-img-wrapper">
+                                    <img src="images/beautician/beautician2.png" alt="Beautician">
+                                    <span class="bs-availability-badge bs-tomorrow">Available Tomorrow</span>
+                                </div>
+                                <div class="card-body bs-card-body">
+                                    <div class="bs-beautician-id">ID no. :2</div>
+                                    <div class="bs-rating-section">
+                                        <div class="bs-stars">
+                                            <span class="star filled">★</span>
+                                            <span class="star filled">★</span>
+                                            <span class="star filled">★</span>
+                                            <span class="star filled">★</span>
+                                            <span class="star half">★</span>
+                                        </div>
+                                        <span class="bs-review-count">(156 reviews)</span>
+                                    </div>
+                                    <div class="bs-location-badge">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Jayanagar, Basavanagudi</span>
+                                    </div>
+                                    <p class="bs-description">
+                                        Hair Styling & Coloring Expert with 6 years of experience in trendy cuts, color
+                                        treatments, and special occasion styling.
+                                    </p>
+                                    <div class="bs-service-tags">
+                                        <span class="bs-service-tag">Hair Styling</span>
+                                        <span class="bs-service-tag">Coloring</span>
+                                        <span class="bs-service-tag">Treatment</span>
+                                    </div>
+                                    <div class="bs-price-section">
+                                        <div class="bs-price-info">
+                                            <span class="price-label">Starting from</span>
+                                            <span class="price-value">₹800</span>
+                                        </div>
+                                        <button class="btn-view-services" onclick="openServicesModal(2)">
+                                            View All Services
+                                        </button>
+                                    </div>
+                                    <div class="bs-card-actions">
+                                        <a href="beautician-profile.html">
+                                            <button class="btn bs-btn-profile">View Profile</button>
+                                        </a>
+
+                                        <button class="btn bs-btn-icon bs-calendar" title="Book Now"
+                                            onclick="openBookingModal()">
+
+                                            <i class="icon-calendar"></i>
+
+                                        </button>
+
+                                        <button class="btn bs-btn-icon bs-star" title="Reviews">
+
+                                            <i class="icon-star"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 (Example) -->
+                        <div class="col-sm-12 col-md-6 col-lg-6">
+                            <div class="card bs-beautician-card">
+                                <div class="bs-card-img-wrapper">
+                                    <img src="images/beautician/beautician3.png" alt="Beautician">
+                                    <span class="bs-availability-badge">Available Today</span>
+                                </div>
+                                <div class="card-body bs-card-body">
+                                    <div class="bs-beautician-id">ID no. :3</div>
+                                    <div class="bs-rating-section">
+                                        <div class="bs-stars">
+                                            <span class="star filled">★</span>
+                                            <span class="star filled">★</span>
+                                            <span class="star filled">★</span>
+                                            <span class="star filled">★</span>
+                                            <span class="star half">★</span>
+                                        </div>
+                                        <span class="bs-review-count">(192 reviews)</span>
+                                    </div>
+                                    <div class="bs-location-badge">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>HSR Layout, BTM</span>
+                                    </div>
+                                    <p class="bs-description">
+                                        Nail Art Specialist and Spa Therapist with expertise in manicures, pedicures,
+                                        and
+                                        relaxation treatments. 5 years experience.
+                                    </p>
+                                    <div class="bs-service-tags">
+                                        <span class="bs-service-tag">Nail Art</span>
+                                        <span class="bs-service-tag">Spa</span>
+                                        <span class="bs-service-tag">Manicure</span>
+                                    </div>
+                                    <div class="bs-price-section">
+                                        <div class="bs-price-info">
+                                            <span class="price-label">Starting from</span>
+                                            <span class="price-value">₹800</span>
+                                        </div>
+                                        <button class="btn-view-services" onclick="openServicesModal(2)">
+                                            View All Services
+                                        </button>
+                                    </div>
+                                    <div class="bs-card-actions">
+                                        <a href="beautician-profile.html">
+                                            <button class="btn bs-btn-profile">View Profile</button>
+                                        </a>
+
+                                        <button class="btn bs-btn-icon bs-calendar" title="Book Now"
+                                            onclick="openBookingModal()">
+
+                                            <i class="icon-calendar"></i>
+
+                                        </button>
+
+                                        <button class="btn bs-btn-icon bs-star" title="Reviews">
+
+                                            <i class="icon-star"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Location Modal -->
+                    <div id="bsLocationModal" class="bs-location-modal">
+                        <div class="bs-modal-content-custom">
+                            <h5 class="mb-3">Service Areas - ID no. <span id="bsModalBeauticianId">1</span></h5>
+                            <ul class="bs-location-list" id="bsLocationList">
+                                <li>Indiranagar</li>
+                                <li>Koramangala</li>
+                                <li>Whitefield</li>
+                                <li>HSR Layout</li>
+                                <li>Marathahalli</li>
+                                <li>BTM Layout</li>
+                                <li>Electronic City</li>
+                                <li>JP Nagar</li>
+                            </ul>
+                            <button class="btn btn-secondary w-100" onclick="closeLocationModal()">Close</button>
+                        </div>
+                    </div>
+
+                </main>
             </div>
-        </section>
-        <!-- /Section beautician list -->
 
-           <!-- Beautician CTA Banner - Enhanced Version -->
-        <section class="beautician-banner">
-            <div class="banner-bg-pattern"></div>
-            <div class="container">
-                <div class="banner-content">
-                    <div class="banner-visual">
-                        <div class="icon-circle">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                                <circle cx="9" cy="7" r="4"></circle>
-                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="banner-text">
-                        <div class="banner-tag">JOIN OUR NETWORK</div>
-                        <h3 class="banner-title">
-                            Are You a <span class="text-highlight">Beauty Professional?</span>
-                        </h3>
-                        <p class="banner-subtitle">
-                            Join our exclusive network of premium beauty experts. Connect with high-value clients and
-                            grow your business with us.
-                        </p>
-                        <ul class="banner-benefits">
-                            <li>✓ Premium Client Base</li>
-                            <li>✓ Flexible Scheduling</li>
-                            <li>✓ Higher Earnings</li>
-                        </ul>
-                    </div>
-                    <div class="banner-cta">
-                        <a href="/beautician-register.html" class="btn-beautician">
-                            <span>Join Our Team</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2.5">
-                                <path d="M5 12h14M12 5l7 7-7 7" />
-                            </svg>
-                        </a>
-                        <p class="cta-subtext">Start earning in 48 hours</p>
-                    </div>
+        </div>
+  
+
+    <!-- Services Modal  -->
+    <div class="modal fade" id="bsServicesModal" tabindex="-1" aria-labelledby="servicesModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="servicesModalLabel">
+                        Services & Pricing - ID no. <span id="bsServicesModalId">1</span>
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-            </div>
-        </section>
-        <!-- /Beautician CTA Banner -->
-
-          <!-- Booking Modal -->
-        <div class="sbm-modal-overlay" id="bookingModal">
-            <div class="sbm-modal-container">
-                <div class="sbm-modal-header">
-                    <div class="sbm-modal-title">Book Your Appointment</div>
-                    <div class="sbm-modal-subtitle">Beautician ID: #BT001</div>
-                    <button class="sbm-close-btn" onclick="closeBookingModal()">×</button>
-                </div>
-
-                <div class="sbm-modal-body">
-                    <!-- Services Section -->
-                    <div class="sbm-section">
-                        <div class="sbm-section-title">
-                            <div class="sbm-section-icon">✂</div>
-                            Select Services
-                        </div>
-                        <div class="sbm-services-grid" id="servicesGrid">
-                            <!-- Services will be populated here -->
-                        </div>
-                    </div>
-
-                    <!-- Date Selection -->
-                    <div class="sbm-section">
-                        <div class="sbm-section-title">
-                            <div class="sbm-section-icon">📅</div>
-                            Choose Date
-                        </div>
-                        <div class="sbm-date-selector" id="dateSelector">
-                            <!-- Dates will be populated here -->
-                        </div>
-                    </div>
-
-                    <!-- Time Slots -->
-                    <div class="sbm-section">
-                        <div class="sbm-section-title">
-                            <div class="sbm-section-icon">🕐</div>
-                            Available Time Slots
-                        </div>
-                        <div class="sbm-slots-container" id="slotsContainer">
-                            <!-- Slots will be populated here -->
-                        </div>
-                    </div>
-
-                    <!-- User Details -->
-                    <div class="sbm-section">
-                        <div class="sbm-section-title">
-                            <div class="sbm-section-icon">👤</div>
-                            Your Details
-                        </div>
-                        <div class="sbm-form-row">
-                            <div class="sbm-form-group">
-                                <label class="sbm-form-label">Full Name *</label>
-                                <input type="text" class="sbm-form-input" id="userName" placeholder="Enter your name" required>
-                            </div>
-                            <div class="sbm-form-group">
-                                <label class="sbm-form-label">Phone Number *</label>
-                                <input type="tel" class="sbm-form-input" id="userPhone" placeholder="+91 XXXXX XXXXX" required>
-                            </div>
-                        </div>
-                        <div class="sbm-form-group">
-                            <label class="sbm-form-label">Email Address</label>
-                            <input type="email" class="sbm-form-input" id="userEmail" placeholder="your.email@example.com">
-                        </div>
-                         <div class="sbm-section-title">
-                                <div class="sbm-section-icon">📍</div>
-                                Service Address
-                            </div>
-                            
-                            <div class="sbm-form-group">
-                                <label class="sbm-form-label">Landmark / Additional Details</label>
-                                <input type="text" class="sbm-form-input" id="addressDetails"
-                                    placeholder="Nearby landmark or additional directions">
-                            </div>
-                            <div class="sbm-form-group">
-                                <label class="sbm-form-label">Complete Address *</label>
-                                <input type="text" class="sbm-form-input" id="userAddress"
-                                    placeholder="Enter your complete address (House/Flat No, Street, Area)">
-                            </div>
-                             <div class="sbm-form-group">
-                                <label for="customerAddress" class="sbm-form-label">Google Maps Link</label>
-                                <input type="text" id="customerAddress" name="customerAddress"
-                                    placeholder="Enter your address or paste Google Maps link" class="sbm-form-input" />
-                                <small style="color: #777;">
-                                    Example: https://maps.app.goo.gl/abcd1234
-                                </small>
-                            </div>
-                            
-                        
-                        <div class="sbm-form-group">
-                            <label class="sbm-form-label">Special Requests (Optional)</label>
-                            <textarea class="sbm-form-textarea" id="userNotes" placeholder="Any specific requirements or preferences..."></textarea>
-                        </div>
-                    </div>
-                </div>               
-
-                <div class="sbm-modal-footer">
-                    <div class="sbm-total-price">
-                        Total: <span class="sbm-price-amount" id="totalPrice">₹0</span>
-                    </div>
-                    <button class="sbm-submit-btn" onclick="submitBooking()">Confirm Booking</button>
+                <div class="modal-body" id="bsServicesModalBody">
+                    <!-- Services will be loaded here -->
                 </div>
             </div>
         </div>
+    </div>
 
 
+    <!-- Booking Modal -->
+    <div class="sbm-modal-overlay" id="bookingModal">
+        <div class="sbm-modal-container">
+            <div class="sbm-modal-header">
+                <div class="sbm-modal-title">Book Your Appointment</div>
+                <div class="sbm-modal-subtitle">Beautician ID: #BT001</div>
+                <button class="sbm-close-btn" onclick="closeBookingModal()">×</button>
+            </div>
+
+            <div class="sbm-modal-body">
+                <!-- Services Section -->
+                <div class="sbm-section">
+                    <div class="sbm-section-title">
+                        <div class="sbm-section-icon">✂</div>
+                        Select Services
+                    </div>
+                    <div class="sbm-services-grid" id="servicesGrid">
+                        <!-- Services will be populated here -->
+                    </div>
+                </div>
+
+                <!-- Date Selection -->
+                <div class="sbm-section">
+                    <div class="sbm-section-title">
+                        <div class="sbm-section-icon">📅</div>
+                        Choose Date
+                    </div>
+                    <div class="sbm-date-selector" id="dateSelector">
+                        <!-- Dates will be populated here -->
+                    </div>
+                </div>
+
+                <!-- Time Slots -->
+                <div class="sbm-section">
+                    <div class="sbm-section-title">
+                        <div class="sbm-section-icon">🕐</div>
+                        Available Time Slots
+                    </div>
+                    <div class="sbm-slots-container" id="slotsContainer">
+                        <!-- Slots will be populated here -->
+                    </div>
+                </div>
+
+                <!-- User Details -->
+                <div class="sbm-section">
+                    <div class="sbm-section-title">
+                        <div class="sbm-section-icon">👤</div>
+                        Your Details
+                    </div>
+                    <div class="sbm-form-row">
+                        <div class="sbm-form-group">
+                            <label class="sbm-form-label">Full Name *</label>
+                            <input type="text" class="sbm-form-input" id="userName" placeholder="Enter your name"
+                                required>
+                        </div>
+                        <div class="sbm-form-group">
+                            <label class="sbm-form-label">Phone Number *</label>
+                            <input type="tel" class="sbm-form-input" id="userPhone" placeholder="+91 XXXXX XXXXX"
+                                required>
+                        </div>
+                    </div>
+                    <div class="sbm-form-group">
+                        <label class="sbm-form-label">Email Address</label>
+                        <input type="email" class="sbm-form-input" id="userEmail" placeholder="your.email@example.com">
+                    </div>
+                    <div class="sbm-section-title">
+                        <div class="sbm-section-icon">📍</div>
+                        Service Address
+                    </div>
+
+                    <div class="sbm-form-group">
+                        <label class="sbm-form-label">Landmark / Additional Details</label>
+                        <input type="text" class="sbm-form-input" id="addressDetails"
+                            placeholder="Nearby landmark or additional directions">
+                    </div>
+                    <div class="sbm-form-group">
+                        <label class="sbm-form-label">Complete Address *</label>
+                        <input type="text" class="sbm-form-input" id="userAddress"
+                            placeholder="Enter your complete address (House/Flat No, Street, Area)">
+                    </div>
+                    <div class="sbm-form-group">
+                        <label for="customerAddress" class="sbm-form-label">Google Maps Link</label>
+                        <input type="text" id="customerAddress" name="customerAddress"
+                            placeholder="Enter your address or paste Google Maps link" class="sbm-form-input" />
+                        <small style="color: #777;">
+                            Example: https://maps.app.goo.gl/abcd1234
+                        </small>
+                    </div>
+
+
+                    <div class="sbm-form-group">
+                        <label class="sbm-form-label">Special Requests (Optional)</label>
+                        <textarea class="sbm-form-textarea" id="userNotes"
+                            placeholder="Any specific requirements or preferences..."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sbm-modal-footer">
+                <div class="sbm-total-price">
+                    Total: <span class="sbm-price-amount" id="totalPrice">₹0</span>
+                </div>
+                <button class="sbm-submit-btn" onclick="submitBooking()">Confirm Booking</button>
+            </div>
+        </div>
+    </div>
+
+    <!------------------ End Booking Modal ------------------>
+
+
+
+
+    <!-- Footer -->
 
 
         <footer id="footer" class="footer">
@@ -733,6 +800,8 @@
         </div>
     </div>
 </footer>
+
+  </div>
 
 
         <div class="mobile-nav-wrapper show" id="mobileNavWrapper">
@@ -2722,7 +2791,6 @@
     <script type="text/javascript" src="js/shop.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 
-   
 
     <script>
         window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
@@ -2756,7 +2824,7 @@
                 <span>⭐</span>
                 Reviews & Ratings
             </h2>
-            
+
             <button class="review-popup-close" id="closeReviewPopup">&times;</button>
         </div>
 
@@ -2844,7 +2912,8 @@
                             </div>
                             <div class="review-stars">★★★★★</div>
                         </div>
-                        <p class="review-text">Absolutely amazing service! She did my bridal makeup and I couldn't be
+                        <p class="review-text">Absolutely amazing service! She did my bridal makeup and I couldn't
+                            be
                             happier. Very professional and talented. Highly recommend! 💕</p>
                     </div>
 
@@ -3069,56 +3138,56 @@
         });
     </script>
     <script>
-            const services = [
-                { id: 1, name: "Bridal Makeup", price: 15000, duration: "3 hours" },
-                { id: 2, name: "Party Makeup", price: 3500, duration: "1.5 hours" },
-                { id: 3, name: "Facial Treatment", price: 2000, duration: "1 hour" },
-                { id: 4, name: "Hair Styling", price: 1500, duration: "1 hour" },
-                { id: 5, name: "Pre-Bridal Package", price: 25000, duration: "Multiple sessions" },
-                { id: 6, name: "Saree Draping", price: 1000, duration: "30 min" },
-                { id: 7, name: "Airbrush Makeup", price: 5000, duration: "2 hours" },
-                { id: 8, name: "HD Makeup", price: 4000, duration: "2 hours" }
-            ];
+        const services = [
+            { id: 1, name: "Bridal Makeup", price: 15000, duration: "3 hours" },
+            { id: 2, name: "Party Makeup", price: 3500, duration: "1.5 hours" },
+            { id: 3, name: "Facial Treatment", price: 2000, duration: "1 hour" },
+            { id: 4, name: "Hair Styling", price: 1500, duration: "1 hour" },
+            { id: 5, name: "Pre-Bridal Package", price: 25000, duration: "Multiple sessions" },
+            { id: 6, name: "Saree Draping", price: 1000, duration: "30 min" },
+            { id: 7, name: "Airbrush Makeup", price: 5000, duration: "2 hours" },
+            { id: 8, name: "HD Makeup", price: 4000, duration: "2 hours" }
+        ];
 
-            const timeSlots = [
-                "09:00 AM", "10:00 AM", "11:00 AM", "12:00 PM",
-                "02:00 PM", "03:00 PM", "04:00 PM", "05:00 PM",
-                "06:00 PM", "07:00 PM"
-            ];
+        const timeSlots = [
+            "09:00 AM", "10:00 AM", "11:00 AM", "12:00 PM",
+            "02:00 PM", "03:00 PM", "04:00 PM", "05:00 PM",
+            "06:00 PM", "07:00 PM"
+        ];
 
-            let selectedServices = [];
-            let selectedDate = null;
-            let selectedSlot = null;
+        let selectedServices = [];
+        let selectedDate = null;
+        let selectedSlot = null;
 
-            function openBookingModal() {
-                const modal = document.getElementById('bookingModal');
-                if (modal) {
-                    modal.classList.add('sbm-active');
-                    document.body.style.overflow = 'hidden';
-                    initializeModal();
-                }
+        function openBookingModal() {
+            const modal = document.getElementById('bookingModal');
+            if (modal) {
+                modal.classList.add('sbm-active');
+                document.body.style.overflow = 'hidden';
+                initializeModal();
             }
+        }
 
-            function closeBookingModal() {
-                const modal = document.getElementById('bookingModal');
-                if (modal) {
-                    modal.classList.remove('sbm-active');
-                    document.body.style.overflow = '';
-                    resetModal();
-                }
+        function closeBookingModal() {
+            const modal = document.getElementById('bookingModal');
+            if (modal) {
+                modal.classList.remove('sbm-active');
+                document.body.style.overflow = '';
+                resetModal();
             }
+        }
 
-            function initializeModal() {
-                populateServices();
-                populateDates();
-                populateSlots();
-            }
+        function initializeModal() {
+            populateServices();
+            populateDates();
+            populateSlots();
+        }
 
-            function populateServices() {
-                const grid = document.getElementById('servicesGrid');
-                if (!grid) return;
-                
-                grid.innerHTML = services.map(service => `
+        function populateServices() {
+            const grid = document.getElementById('servicesGrid');
+            if (!grid) return;
+
+            grid.innerHTML = services.map(service => `
                     <div class="sbm-service-card" onclick="toggleService(${service.id})">
                         <div class="sbm-service-name">${service.name}</div>
                         <div class="sbm-service-price">₹${service.price}</div>
@@ -3126,173 +3195,335 @@
                         <div class="sbm-badge-available">Available</div>
                     </div>
                 `).join('');
+        }
+
+        function populateDates() {
+            const container = document.getElementById('dateSelector');
+            if (!container) return;
+
+            const dates = [];
+            const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+
+            for (let i = 0; i < 7; i++) {
+                const date = new Date();
+                date.setDate(date.getDate() + i);
+                dates.push({
+                    day: days[date.getDay()],
+                    date: date.getDate(),
+                    month: date.getMonth() + 1,
+                    full: date
+                });
             }
 
-            function populateDates() {
-                const container = document.getElementById('dateSelector');
-                if (!container) return;
-                
-                const dates = [];
-                const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-                
-                for (let i = 0; i < 7; i++) {
-                    const date = new Date();
-                    date.setDate(date.getDate() + i);
-                    dates.push({
-                        day: days[date.getDay()],
-                        date: date.getDate(),
-                        month: date.getMonth() + 1,
-                        full: date
-                    });
-                }
-
-                container.innerHTML = dates.map((d, i) => `
+            container.innerHTML = dates.map((d, i) => `
                     <button class="sbm-date-btn ${i === 0 ? 'sbm-selected' : ''}" onclick="selectDate(${i})">
                         <div class="sbm-date-day">${d.day}</div>
                         <div class="sbm-date-num">${d.date}/${d.month}</div>
                     </button>
                 `).join('');
 
-                selectedDate = 0;
-            }
+            selectedDate = 0;
+        }
 
-            function populateSlots() {
-                const container = document.getElementById('slotsContainer');
-                if (!container) return;
-                
-                const bookedSlots = [2, 5, 8]; // Demo: some slots are booked
-                
-                container.innerHTML = timeSlots.map((slot, i) => `
+        function populateSlots() {
+            const container = document.getElementById('slotsContainer');
+            if (!container) return;
+
+            const bookedSlots = [2, 5, 8]; // Demo: some slots are booked
+
+            container.innerHTML = timeSlots.map((slot, i) => `
                     <button class="sbm-slot-btn" onclick="selectSlot(${i})" ${bookedSlots.includes(i) ? 'disabled' : ''}>
                         ${slot}
                     </button>
                 `).join('');
+        }
+
+        function toggleService(serviceId) {
+            const index = selectedServices.indexOf(serviceId);
+            const cards = document.querySelectorAll('.sbm-service-card');
+
+            if (index > -1) {
+                selectedServices.splice(index, 1);
+                cards[serviceId - 1].classList.remove('sbm-selected');
+            } else {
+                selectedServices.push(serviceId);
+                cards[serviceId - 1].classList.add('sbm-selected');
             }
 
-            function toggleService(serviceId) {
-                const index = selectedServices.indexOf(serviceId);
-                const cards = document.querySelectorAll('.sbm-service-card');
-                
-                if (index > -1) {
-                    selectedServices.splice(index, 1);
-                    cards[serviceId - 1].classList.remove('sbm-selected');
-                } else {
-                    selectedServices.push(serviceId);
-                    cards[serviceId - 1].classList.add('sbm-selected');
-                }
-                
-                updateTotal();
+            updateTotal();
+        }
+
+        function selectDate(index) {
+            selectedDate = index;
+            const buttons = document.querySelectorAll('.sbm-date-btn');
+            buttons.forEach((btn, i) => {
+                btn.classList.toggle('sbm-selected', i === index);
+            });
+        }
+
+        function selectSlot(index) {
+            selectedSlot = index;
+            const buttons = document.querySelectorAll('.sbm-slot-btn');
+            buttons.forEach((btn, i) => {
+                btn.classList.toggle('sbm-selected', i === index);
+            });
+        }
+
+        function updateTotal() {
+            const totalElement = document.getElementById('totalPrice');
+            if (!totalElement) return;
+
+            const total = selectedServices.reduce((sum, id) => {
+                const service = services.find(s => s.id === id);
+                return sum + service.price;
+            }, 0);
+
+            totalElement.textContent = `₹${total}`;
+        }
+
+        function submitBooking() {
+            const name = document.getElementById('userName').value;
+            const phone = document.getElementById('userPhone').value;
+
+            if (!name || !phone) {
+                alert('Please fill in all required fields');
+                return;
             }
 
-            function selectDate(index) {
-                selectedDate = index;
-                const buttons = document.querySelectorAll('.sbm-date-btn');
-                buttons.forEach((btn, i) => {
-                    btn.classList.toggle('sbm-selected', i === index);
+            if (selectedServices.length === 0) {
+                alert('Please select at least one service');
+                return;
+            }
+
+            if (selectedSlot === null) {
+                alert('Please select a time slot');
+                return;
+            }
+
+            const bookingData = {
+                name,
+                phone,
+                email: document.getElementById('userEmail').value,
+                services: selectedServices.map(id => services.find(s => s.id === id).name),
+                date: selectedDate,
+                slot: timeSlots[selectedSlot],
+                notes: document.getElementById('userNotes').value,
+                total: document.getElementById('totalPrice').textContent
+            };
+
+            console.log('Booking submitted:', bookingData);
+            alert('Booking confirmed! We will send you a confirmation message shortly.');
+            closeBookingModal();
+        }
+
+        function resetModal() {
+            selectedServices = [];
+            selectedDate = null;
+            selectedSlot = null;
+
+            const userName = document.getElementById('userName');
+            const userPhone = document.getElementById('userPhone');
+            const userEmail = document.getElementById('userEmail');
+            const userNotes = document.getElementById('userNotes');
+
+            if (userName) userName.value = '';
+            if (userPhone) userPhone.value = '';
+            if (userEmail) userEmail.value = '';
+            if (userNotes) userNotes.value = '';
+
+            updateTotal();
+        }
+
+        // Initialize when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function () {
+            // Close modal on overlay click
+            const modal = document.getElementById('bookingModal');
+            if (modal) {
+                modal.addEventListener('click', function (e) {
+                    if (e.target === this) {
+                        closeBookingModal();
+                    }
                 });
             }
 
-            function selectSlot(index) {
-                selectedSlot = index;
-                const buttons = document.querySelectorAll('.sbm-slot-btn');
-                buttons.forEach((btn, i) => {
-                    btn.classList.toggle('sbm-selected', i === index);
+            // Close modal on Escape key
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') {
+                    const modal = document.getElementById('bookingModal');
+                    if (modal && modal.classList.contains('sbm-active')) {
+                        closeBookingModal();
+                    }
+                }
+            });
+        });
+    </script>
+
+    <script>
+        function openLocationModal(beauticianId) {
+            document.getElementById('bsModalBeauticianId').textContent = beauticianId;
+            document.getElementById('bsLocationModal').style.display = 'block';
+        }
+
+        function closeLocationModal() {
+            document.getElementById('bsLocationModal').style.display = 'none';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function (event) {
+            const modal = document.getElementById('bsLocationModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+    <script>
+        // Services data for each beautician
+        const beauticianServices = {
+            1: [
+                { name: "Bridal Makeup", price: 15000, duration: "3 hours" },
+                { name: "Party Makeup", price: 3500, duration: "1.5 hours" },
+                { name: "Facial Treatment", price: 2000, duration: "1 hour" },
+                { name: "Hair Styling", price: 1500, duration: "1 hour" },
+                { name: "Pre-Bridal Package", price: 25000, duration: "Multiple sessions" },
+                { name: "Saree Draping", price: 1000, duration: "30 min" },
+                { name: "Airbrush Makeup", price: 5000, duration: "2 hours" },
+                { name: "HD Makeup", price: 4000, duration: "2 hours" }
+            ],
+            2: [
+                { name: "Hair Cut & Styling", price: 1200, duration: "1 hour" },
+                { name: "Hair Coloring", price: 3000, duration: "2 hours" },
+                { name: "Hair Treatment", price: 2500, duration: "1.5 hours" },
+                { name: "Keratin Treatment", price: 8000, duration: "3 hours" },
+                { name: "Hair Spa", price: 1500, duration: "1 hour" },
+                { name: "Balayage", price: 5000, duration: "3 hours" },
+                { name: "Hair Extensions", price: 4000, duration: "2 hours" },
+                { name: "Scalp Treatment", price: 800, duration: "45 min" }
+            ],
+            3: [
+                { name: "Manicure", price: 800, duration: "45 min" },
+                { name: "Pedicure", price: 1000, duration: "1 hour" },
+                { name: "Nail Art", price: 1500, duration: "1 hour" },
+                { name: "Gel Nails", price: 2000, duration: "1.5 hours" },
+                { name: "Spa Manicure", price: 1200, duration: "1 hour" },
+                { name: "Spa Pedicure", price: 1500, duration: "1.5 hours" },
+                { name: "Nail Extensions", price: 2500, duration: "2 hours" },
+                { name: "Foot Massage", price: 500, duration: "30 min" }
+            ]
+        };
+
+        function openServicesModal(beauticianId) {
+            document.getElementById('bsServicesModalId').textContent = beauticianId;
+
+            const services = beauticianServices[beauticianId] || [];
+            let html = '';
+
+            services.forEach(service => {
+                html += `
+            <div class="bs-service-item">
+                <div class="bs-service-info">
+                    <h6>${service.name}</h6>
+                    <div class="bs-service-duration">⏱ ${service.duration}</div>
+                </div>
+                <div class="bs-service-price">₹${service.price.toLocaleString('en-IN')}</div>
+            </div>
+        `;
+            });
+
+            document.getElementById('bsServicesModalBody').innerHTML = html;
+
+            // Use Bootstrap modal
+            const modal = new bootstrap.Modal(document.getElementById('bsServicesModal'));
+            modal.show();
+        }
+    </script>
+
+    <script>
+
+        // Mobile Filter Toggle Functionality
+        document.addEventListener('DOMContentLoaded', function () {
+
+            // Create filter toggle button for mobile
+            const aside = document.querySelector('.layout-wrapper aside');
+            const filterDiv = document.getElementById('filterShop');
+
+            if (aside && filterDiv) {
+                // Create mobile filter button
+                const filterButton = document.createElement('button');
+                filterButton.className = 'mobile-filter-toggle';
+                filterButton.innerHTML = `
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M2.5 5.83333H17.5M5.83333 10H14.1667M8.33333 14.1667H11.6667" 
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span>Filters</span>
+        `;
+
+                // Create overlay
+                const overlay = document.createElement('div');
+                overlay.className = 'filter-overlay';
+
+                // Insert button before filter
+                aside.insertBefore(filterButton, filterDiv);
+                document.body.appendChild(overlay);
+
+                // Add close button to filter header
+                const canvasHeader = filterDiv.querySelector('.canvas-header');
+                if (canvasHeader && !canvasHeader.querySelector('.icon-close')) {
+                    const closeBtn = document.createElement('span');
+                    closeBtn.className = 'icon-close';
+                    closeBtn.innerHTML = '';
+                    canvasHeader.appendChild(closeBtn);
+
+                    // Close button click
+                    closeBtn.addEventListener('click', closeFilter);
+                }
+
+                // Toggle filter
+                filterButton.addEventListener('click', function () {
+                    filterDiv.classList.add('active');
+                    overlay.classList.add('active');
+                    document.body.style.overflow = 'hidden';
                 });
-            }
 
-            function updateTotal() {
-                const totalElement = document.getElementById('totalPrice');
-                if (!totalElement) return;
-                
-                const total = selectedServices.reduce((sum, id) => {
-                    const service = services.find(s => s.id === id);
-                    return sum + service.price;
-                }, 0);
-                
-                totalElement.textContent = `₹${total}`;
-            }
+                // Close on overlay click
+                overlay.addEventListener('click', closeFilter);
 
-            function submitBooking() {
-                const name = document.getElementById('userName').value;
-                const phone = document.getElementById('userPhone').value;
-                
-                if (!name || !phone) {
-                    alert('Please fill in all required fields');
-                    return;
+                // Close filter function
+                function closeFilter() {
+                    filterDiv.classList.remove('active');
+                    overlay.classList.remove('active');
+                    document.body.style.overflow = '';
                 }
-                
-                if (selectedServices.length === 0) {
-                    alert('Please select at least one service');
-                    return;
-                }
-                
-                if (selectedSlot === null) {
-                    alert('Please select a time slot');
-                    return;
-                }
-                
-                const bookingData = {
-                    name,
-                    phone,
-                    email: document.getElementById('userEmail').value,
-                    services: selectedServices.map(id => services.find(s => s.id === id).name),
-                    date: selectedDate,
-                    slot: timeSlots[selectedSlot],
-                    notes: document.getElementById('userNotes').value,
-                    total: document.getElementById('totalPrice').textContent
-                };
-                
-                console.log('Booking submitted:', bookingData);
-                alert('Booking confirmed! We will send you a confirmation message shortly.');
-                closeBookingModal();
-            }
 
-            function resetModal() {
-                selectedServices = [];
-                selectedDate = null;
-                selectedSlot = null;
-                
-                const userName = document.getElementById('userName');
-                const userPhone = document.getElementById('userPhone');
-                const userEmail = document.getElementById('userEmail');
-                const userNotes = document.getElementById('userNotes');
-                
-                if (userName) userName.value = '';
-                if (userPhone) userPhone.value = '';
-                if (userEmail) userEmail.value = '';
-                if (userNotes) userNotes.value = '';
-                
-                updateTotal();
-            }
+                // Close on window resize if desktop
+                window.addEventListener('resize', function () {
+                    if (window.innerWidth > 991) {
+                        closeFilter();
+                    }
+                });
 
-            // Initialize when DOM is loaded
-            document.addEventListener('DOMContentLoaded', function() {
-                // Close modal on overlay click
-                const modal = document.getElementById('bookingModal');
-                if (modal) {
-                    modal.addEventListener('click', function(e) {
-                        if (e.target === this) {
-                            closeBookingModal();
+                // Apply filters button functionality
+                const resetBtn = document.getElementById('reset-filter');
+                if (resetBtn) {
+                    const originalResetHandler = resetBtn.onclick;
+                    resetBtn.addEventListener('click', function (e) {
+                        // Call original handler if exists
+                        if (originalResetHandler) {
+                            originalResetHandler.call(this, e);
+                        }
+                        // Close filter on mobile after applying
+                        if (window.innerWidth <= 991) {
+                            setTimeout(closeFilter, 300);
                         }
                     });
                 }
+            }
+        });
+    </script>
+    <script>  if (document.querySelector("#sib-form")) { const script = document.createElement('script'); script.src = 'js/sibforms.js'; script.defer = true; document.body.appendChild(script); }</script>
 
-                // Close modal on Escape key
-                document.addEventListener('keydown', function(e) {
-                    if (e.key === 'Escape') {
-                        const modal = document.getElementById('bookingModal');
-                        if (modal && modal.classList.contains('sbm-active')) {
-                            closeBookingModal();
-                        }
-                    }
-                });
-            });
-        </script>
 
-      <script>  if (document.querySelector("#sib-form")) { const script = document.createElement('script');script.src = 'js/sibforms.js';script.defer = true;document.body.appendChild(script);}</script>
+
 </body>
-
-
-
 
 </html>
