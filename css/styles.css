@@ -19451,7 +19451,7 @@ ul.list-text.type-number {
   padding-bottom: 100px !important;
 }
 .br-beautician-hero {
-  background: linear-gradient(135deg, var(--primary) 0%, #b8945f 100%);
+  background: linear-gradient(135deg, var(--primary) 0%, #b8945f 100%) !important;
   color: var(--white);
   padding: 80px 0;
   position: relative;
@@ -19520,7 +19520,7 @@ ul.list-text.type-number {
 .btn-hero:hover {
   transform: translateY(-3px);
   box-shadow: 0px 16px 40px 0px rgba(0, 0, 0, 0.2);
-  color: var(--primary);
+  color: white;
 }
 
 .btn-hero-secondary {
@@ -26504,5 +26504,128 @@ footer#footer {
 
             .la-check-btn {
                 width: 100%;
+            }
+        }
+   .premium-ecommerce-slider-section {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slider-viewport-container-main {
+            position: relative;
+            width: 100%;
+            height: 600px;
+            overflow: hidden;
+       
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            cursor: grab;
+            user-select: none;
+        }
+
+        .slider-viewport-container-main:active {
+            cursor: grabbing;
+        }
+
+        .slider-track-wrapper-element {
+            display: flex;
+            height: 100%;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            will-change: transform;
+        }
+
+        .slider-track-wrapper-element.no-transition {
+            transition: none;
+        }
+
+        .individual-slide-item-wrapper {
+            min-width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slide-background-image-element {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            pointer-events: none;
+        }
+
+        .slide-overlay-gradient-layer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+            pointer-events: none;
+        }
+
+        .pagination-dots-container-bottom {
+            position: absolute;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+
+        .dot-indicator-item-element {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .dot-indicator-item-element.active-dot-state {
+            width: 32px;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        @media (max-width: 1024px) {
+            .slider-viewport-container-main {
+                height: 500px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slider-viewport-container-main {
+                height: 400px;
+                border-radius: 16px;
+            }
+
+            .pagination-dots-container-bottom {
+                bottom: 16px;
+                gap: 8px;
+            }
+
+            .dot-indicator-item-element {
+                width: 8px;
+                height: 8px;
+            }
+
+            .dot-indicator-item-element.active-dot-state {
+                width: 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .slider-viewport-container-main {
+                height: 300px;
+                border-radius: 12px;
+            }
+
+            .premium-ecommerce-slider-section {
+                max-width: 100%;
             }
         }

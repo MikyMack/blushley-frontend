@@ -1588,4 +1588,154 @@ function applyFilters() {
 
 
 
- 
+   const sliderViewport = document.getElementById('sliderViewport');
+        const sliderTrack = document.getElementById('sliderTrack');
+        const paginationDots = document.querySelectorAll('.dot-indicator-item-element');
+        
+        let currentSlidePosition = 0;
+        const totalSlidesCount = 5;
+        let autoPlayIntervalId;
+        
+        // Touch and drag variables
+        let isDraggingActive = false;
+        let startPositionX = 0;
+        let currentTranslateX = 0;
+        let previousTranslateX = 0;
+        let animationFrameId = 0;
+
+        // Update slider position
+        function updateSliderTransform() {
+            sliderTrack.style.transform = `translateX(-${currentSlidePosition * 100}%)`;
+            updateActiveDotIndicator();
+        }
+
+        // Update active dot
+        function updateActiveDotIndicator() {
+            paginationDots.forEach((dot, index) => {
+                if (index === currentSlidePosition) {
+                    dot.classList.add('active-dot-state');
+                } else {
+                    dot.classList.remove('active-dot-state');
+                }
+            });
+        }
+
+        // Go to specific slide
+        function navigateToSlide(slideIndex) {
+            currentSlidePosition = slideIndex;
+            updateSliderTransform();
+            resetAutoPlayTimer();
+        }
+
+        // Next slide
+        function advanceToNextSlide() {
+            currentSlidePosition = (currentSlidePosition + 1) % totalSlidesCount;
+            updateSliderTransform();
+        }
+
+        // Auto play functionality
+        function initializeAutoPlay() {
+            autoPlayIntervalId = setInterval(() => {
+                advanceToNextSlide();
+            }, 3500);
+        }
+
+        function resetAutoPlayTimer() {
+            clearInterval(autoPlayIntervalId);
+            initializeAutoPlay();
+        }
+
+        // Get position from event
+        function getPositionFromEvent(evt) {
+            return evt.type.includes('mouse') ? evt.pageX : evt.touches[0].clientX;
+        }
+
+        // Animation loop
+        function performAnimationLoop() {
+            if (isDraggingActive) {
+                setSliderTransformPosition();
+                animationFrameId = requestAnimationFrame(performAnimationLoop);
+            }
+        }
+
+        function setSliderTransformPosition() {
+            sliderTrack.style.transform = `translateX(${currentTranslateX}px)`;
+        }
+
+        // Touch/Mouse start
+        function handleInteractionStart(evt) {
+            if (evt.type === 'mousedown') {
+                evt.preventDefault();
+            }
+            
+            isDraggingActive = true;
+            startPositionX = getPositionFromEvent(evt);
+            animationFrameId = requestAnimationFrame(performAnimationLoop);
+            sliderTrack.classList.add('no-transition');
+            clearInterval(autoPlayIntervalId);
+        }
+
+        // Touch/Mouse move
+        function handleInteractionMove(evt) {
+            if (!isDraggingActive) return;
+            
+            const currentPositionX = getPositionFromEvent(evt);
+            const deltaX = currentPositionX - startPositionX;
+            currentTranslateX = previousTranslateX + deltaX;
+        }
+
+        // Touch/Mouse end
+        function handleInteractionEnd() {
+            if (!isDraggingActive) return;
+            
+            isDraggingActive = false;
+            cancelAnimationFrame(animationFrameId);
+            sliderTrack.classList.remove('no-transition');
+
+            const movedDistance = currentTranslateX - previousTranslateX;
+            const slideWidth = sliderViewport.offsetWidth;
+            
+            // Determine if swipe was significant enough
+            if (Math.abs(movedDistance) > slideWidth / 4) {
+                if (movedDistance > 0 && currentSlidePosition > 0) {
+                    currentSlidePosition--;
+                } else if (movedDistance < 0 && currentSlidePosition < totalSlidesCount - 1) {
+                    currentSlidePosition++;
+                }
+            }
+
+            previousTranslateX = -currentSlidePosition * slideWidth;
+            currentTranslateX = previousTranslateX;
+            
+            updateSliderTransform();
+            initializeAutoPlay();
+        }
+
+        // Event listeners for dots
+        paginationDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                navigateToSlide(index);
+            });
+        });
+
+        // Mouse events
+        sliderViewport.addEventListener('mousedown', handleInteractionStart);
+        sliderViewport.addEventListener('mousemove', handleInteractionMove);
+        sliderViewport.addEventListener('mouseup', handleInteractionEnd);
+        sliderViewport.addEventListener('mouseleave', handleInteractionEnd);
+
+        // Touch events
+        sliderViewport.addEventListener('touchstart', handleInteractionStart);
+        sliderViewport.addEventListener('touchmove', handleInteractionMove);
+        sliderViewport.addEventListener('touchend', handleInteractionEnd);
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            const slideWidth = sliderViewport.offsetWidth;
+            previousTranslateX = -currentSlidePosition * slideWidth;
+            currentTranslateX = previousTranslateX;
+            updateSliderTransform();
+        });
+
+        // Initialize
+        initializeAutoPlay();
