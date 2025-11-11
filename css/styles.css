@@ -3,6 +3,7 @@
     * Name: Modave - Multipurpose eCommerce
     * Version: 1.0.2
     * Author: blushley
+
     * Author URI: http://blushley.com 
 
 	* Abstracts variable
@@ -3049,6 +3050,7 @@ header.header-bg {
 
 .nav-account {
   position: relative;
+    z-index: 9999 !important; 
 }
 .nav-account .dropdown-account {
   pointer-events: none;
@@ -5741,10 +5743,14 @@ input.style-line-bottom::placeholder {
 }
 
 .modal-backdrop {
-  background-color: var(--backdrop);
+  background-color: var(--backdrop) ;
 }
 .modal-backdrop.show {
   opacity: 1;
+}
+
+.modal-backdrop.show {
+  display: none !important;
 }
 
 .modal {
@@ -26629,3 +26635,7 @@ footer#footer {
                 max-width: 100%;
             }
         }
+
+ 
+
+

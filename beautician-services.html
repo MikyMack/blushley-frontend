@@ -28,6 +28,26 @@
     <link rel="icon" type="image/png" sizes="16x16" href="images/logo/favicon-16x16.png">
     <link rel="apple-touch-icon-precomposed" sizes="180x180" href="images/logo/apple-touch-icon.png">
 
+    <style>
+        #filterShop .icon-close {
+            display: none !important;
+        }
+
+        @media (max-width: 991px) {
+            #filterShop .icon-close {
+                display: block !important;
+            }
+        }
+
+        /* Disable black filter overlay globally */
+        .filter-overlay {
+            display: none !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+        }
+    </style>
+
 </head>
 
 <body class="preload-wrapper">
@@ -331,217 +351,236 @@
 
                 <main style="flex: 1;" class="bs-grid-cards mt-3 mb-5">
                     <div class="container">
-                    <!-- Grid Cards -->
-                    <div class="row g-4">
-                        <!-- Card 1 -->
-                        <div class="col-sm-12 col-md-6 col-lg-6">
-                            <div class="card bs-beautician-card">
-                                <div class="bs-card-img-wrapper">
-                                   <!-- <img src="images/beautician/beautician1.png" alt="Beautician">-->
-                                    <span class="bs-availability-badge">Available Today</span>
+                        <!-- Grid Cards -->
+                        <div class="row g-4">
+                            <!-- Card 1 -->
+                            <div class="col-sm-12 col-md-6 col-lg-6">
+                                <div class="card bs-beautician-card">
+                                    <div class="bs-card-img-wrapper">
+                                        <!-- <img src="images/beautician/beautician1.png" alt="Beautician">-->
+                                        <span class="bs-availability-badge">Available Today</span>
+                                    </div>
+                                    <div class="card-body bs-card-body">
+                                        <div class="bs-beautician-id">ID no. :1</div>
+                                        <div class="bs-rating-section">
+                                            <div class="bs-stars">
+                                                <span class="star filled">★</span>
+                                                <span class="star filled">★</span>
+                                                <span class="star filled">★</span>
+                                                <span class="star filled">★</span>
+                                                <span class="star half">★</span>
+                                            </div>
+                                            <span class="bs-review-count">(248 reviews)</span>
+                                        </div>
+                                        <div class="bs-location-badge">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            <span>Indiranagar, Koramangala, Whitefield</span>
+                                            <span class="bs-more-locations" onclick="openLocationModal(1)">+5
+                                                more</span>
+                                        </div>
+                                        <p class="bs-description">
+                                            Professional Makeup Artist & Skincare Specialist with 8 years of experience.
+                                            Specializing in bridal makeup, party makeup, and facial treatments.
+                                        </p>
+                                        <div class="bs-service-tags">
+                                            <span class="bs-service-tag">Bridal Makeup</span>
+                                            <span class="bs-service-tag">Makeup</span>
+                                            <span class="bs-service-tag">Skincare</span>
+                                            <span class="bs-more-services">+5 more</span>
+                                        </div>
+
+                                        <div class="bs-price-section">
+                                            <div class="bs-price-info">
+                                                <span class="price-label">Starting from</span>
+                                                <span class="price-value">₹1,000</span>
+                                            </div>
+                                            <button class="btn-view-services" onclick="openServicesModal(1)">
+                                                View All Services
+                                            </button>
+                                        </div>
+
+                                        <div class="bs-card-actions">
+                                            <a href="beautician-profile.html">
+                                                <button class="btn bs-btn-profile">View Profile</button>
+                                            </a>
+
+                                            <button class="btn bs-btn-icon bs-calendar" title="Book Now"
+                                                onclick="openBookingModal()">
+                                                <i class="icon-calendar"></i>
+                                            </button>
+                                            <a href="javascript:void(0);"></a>
+                                            <button class="btn bs-btn-icon bs-star" title="Reviews"
+                                                onclick="openReviewPopup()">
+                                                <i class="icon-star"></i>
+                                            </button>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="card-body bs-card-body">
-                                    <div class="bs-beautician-id">ID no. :1</div>
-                                    <div class="bs-rating-section">
-                                        <div class="bs-stars">
-                                            <span class="star filled">★</span>
-                                            <span class="star filled">★</span>
-                                            <span class="star filled">★</span>
-                                            <span class="star filled">★</span>
-                                            <span class="star half">★</span>
+                            </div>
+
+                            <!-- Card 2 -->
+                            <div class="col-sm-12 col-md-6 col-lg-6">
+                                <div class="card bs-beautician-card">
+                                    <div class="bs-card-img-wrapper">
+                                        <!-- <img src="images/beautician/beautician2.png" alt="Beautician">-->
+                                        <span class="bs-availability-badge bs-tomorrow">Available Tomorrow</span>
+                                    </div>
+                                    <div class="card-body bs-card-body">
+                                        <div class="bs-beautician-id">ID no. :2</div>
+                                        <div class="bs-rating-section">
+                                            <div class="bs-stars">
+                                                <span class="star filled">★</span>
+                                                <span class="star filled">★</span>
+                                                <span class="star filled">★</span>
+                                                <span class="star filled">★</span>
+                                                <span class="star half">★</span>
+                                            </div>
+                                            <span class="bs-review-count">(156 reviews)</span>
                                         </div>
-                                        <span class="bs-review-count">(248 reviews)</span>
-                                    </div>
-                                    <div class="bs-location-badge">
-                                        <i class="fas fa-map-marker-alt"></i>
-                                        <span>Indiranagar, Koramangala, Whitefield</span>
-                                        <span class="bs-more-locations" onclick="openLocationModal(1)">+5 more</span>
-                                    </div>
-                                    <p class="bs-description">
-                                        Professional Makeup Artist & Skincare Specialist with 8 years of experience.
-                                        Specializing in bridal makeup, party makeup, and facial treatments.
-                                    </p>
-                                    <div class="bs-service-tags">
-                                        <span class="bs-service-tag">Bridal Makeup</span>
-                                        <span class="bs-service-tag">Makeup</span>
-                                        <span class="bs-service-tag">Skincare</span>
-                                        <span class="bs-more-services">+5 more</span>
-                                    </div>
-
-                                    <div class="bs-price-section">
-                                        <div class="bs-price-info">
-                                            <span class="price-label">Starting from</span>
-                                            <span class="price-value">₹1,000</span>
+                                        <div class="bs-location-badge">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            <span>Jayanagar, Basavanagudi</span>
                                         </div>
-                                        <button class="btn-view-services" onclick="openServicesModal(1)">
-                                            View All Services
-                                        </button>
+                                        <p class="bs-description">
+                                            Hair Styling & Coloring Expert with 6 years of experience in trendy cuts,
+                                            color
+                                            treatments, and special occasion styling.
+                                        </p>
+                                        <div class="bs-service-tags">
+                                            <span class="bs-service-tag">Hair Styling</span>
+                                            <span class="bs-service-tag">Coloring</span>
+                                            <span class="bs-service-tag">Treatment</span>
+                                        </div>
+                                        <div class="bs-price-section">
+                                            <div class="bs-price-info">
+                                                <span class="price-label">Starting from</span>
+                                                <span class="price-value">₹800</span>
+                                            </div>
+                                            <button class="btn-view-services" onclick="openServicesModal(2)">
+                                                View All Services
+                                            </button>
+                                        </div>
+                                        <div class="bs-card-actions">
+                                            <a href="beautician-profile.html">
+                                                <button class="btn bs-btn-profile">View Profile</button>
+                                            </a>
+
+                                            <button class="btn bs-btn-icon bs-calendar" title="Book Now"
+                                                onclick="openBookingModal()">
+
+                                                <i class="icon-calendar"></i>
+
+                                            </button>
+
+                                            <button class="btn bs-btn-icon bs-star" title="Reviews">
+
+                                                <i class="icon-star"></i>
+                                            </button>
+                                        </div>
                                     </div>
+                                </div>
+                            </div>
 
-                                    <div class="bs-card-actions">
-                                        <a href="beautician-profile.html">
-                                            <button class="btn bs-btn-profile">View Profile</button>
-                                        </a>
+                            <!-- Card 3 (Example) -->
+                            <div class="col-sm-12 col-md-6 col-lg-6">
+                                <div class="card bs-beautician-card">
+                                    <div class="bs-card-img-wrapper">
+                                        <!-- <img src="images/beautician/beautician3.png" alt="Beautician">-->
+                                        <span class="bs-availability-badge">Available Today</span>
+                                    </div>
+                                    <div class="card-body bs-card-body">
+                                        <div class="bs-beautician-id">ID no. :3</div>
+                                        <div class="bs-rating-section">
+                                            <div class="bs-stars">
+                                                <span class="star filled">★</span>
+                                                <span class="star filled">★</span>
+                                                <span class="star filled">★</span>
+                                                <span class="star filled">★</span>
+                                                <span class="star half">★</span>
+                                            </div>
+                                            <span class="bs-review-count">(192 reviews)</span>
+                                        </div>
+                                        <div class="bs-location-badge">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            <span>HSR Layout, BTM</span>
+                                        </div>
+                                        <p class="bs-description">
+                                            Nail Art Specialist and Spa Therapist with expertise in manicures,
+                                            pedicures,
+                                            and
+                                            relaxation treatments. 5 years experience.
+                                        </p>
+                                        <div class="bs-service-tags">
+                                            <span class="bs-service-tag">Nail Art</span>
+                                            <span class="bs-service-tag">Spa</span>
+                                            <span class="bs-service-tag">Manicure</span>
+                                        </div>
+                                        <div class="bs-price-section">
+                                            <div class="bs-price-info">
+                                                <span class="price-label">Starting from</span>
+                                                <span class="price-value">₹800</span>
+                                            </div>
+                                            <button class="btn-view-services" onclick="openServicesModal(2)">
+                                                View All Services
+                                            </button>
+                                        </div>
+                                        <div class="bs-card-actions">
+                                            <a href="beautician-profile.html">
+                                                <button class="btn bs-btn-profile">View Profile</button>
+                                            </a>
 
-                                        <button class="btn bs-btn-icon bs-calendar" title="Book Now"
-                                            onclick="openBookingModal()">
-                                            <i class="icon-calendar"></i>
-                                        </button>
-                                        <a href="javascript:void(0);"></a>
-                                        <button class="btn bs-btn-icon bs-star" title="Reviews"
-                                            onclick="openReviewPopup()">
-                                            <i class="icon-star"></i>
-                                        </button>
-                                        </a>
+                                            <button class="btn bs-btn-icon bs-calendar" title="Book Now"
+                                                onclick="openBookingModal()">
+
+                                                <i class="icon-calendar"></i>
+
+                                            </button>
+
+                                            <button class="btn bs-btn-icon bs-star" title="Reviews">
+
+                                                <i class="icon-star"></i>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Card 2 -->
-                        <div class="col-sm-12 col-md-6 col-lg-6">
-                            <div class="card bs-beautician-card">
-                                <div class="bs-card-img-wrapper">
-                                   <!-- <img src="images/beautician/beautician2.png" alt="Beautician">-->
-                                    <span class="bs-availability-badge bs-tomorrow">Available Tomorrow</span>
-                                </div>
-                                <div class="card-body bs-card-body">
-                                    <div class="bs-beautician-id">ID no. :2</div>
-                                    <div class="bs-rating-section">
-                                        <div class="bs-stars">
-                                            <span class="star filled">★</span>
-                                            <span class="star filled">★</span>
-                                            <span class="star filled">★</span>
-                                            <span class="star filled">★</span>
-                                            <span class="star half">★</span>
-                                        </div>
-                                        <span class="bs-review-count">(156 reviews)</span>
-                                    </div>
-                                    <div class="bs-location-badge">
-                                        <i class="fas fa-map-marker-alt"></i>
-                                        <span>Jayanagar, Basavanagudi</span>
-                                    </div>
-                                    <p class="bs-description">
-                                        Hair Styling & Coloring Expert with 6 years of experience in trendy cuts, color
-                                        treatments, and special occasion styling.
-                                    </p>
-                                    <div class="bs-service-tags">
-                                        <span class="bs-service-tag">Hair Styling</span>
-                                        <span class="bs-service-tag">Coloring</span>
-                                        <span class="bs-service-tag">Treatment</span>
-                                    </div>
-                                    <div class="bs-price-section">
-                                        <div class="bs-price-info">
-                                            <span class="price-label">Starting from</span>
-                                            <span class="price-value">₹800</span>
-                                        </div>
-                                        <button class="btn-view-services" onclick="openServicesModal(2)">
-                                            View All Services
-                                        </button>
-                                    </div>
-                                    <div class="bs-card-actions">
-                                        <a href="beautician-profile.html">
-                                            <button class="btn bs-btn-profile">View Profile</button>
-                                        </a>
+                         <ul class="wg-pagination justify-content-center salon-pagination">
+                        <li>
+                            <a href="#" class="pagination-item text-button">1</a>
+                        </li>
+                        <li class="active">
+                            <div class="pagination-item text-button">2</div>
+                        </li>
+                        <li>
+                            <a href="#" class="pagination-item text-button">3</a>
+                        </li>
+                        <li>
+                            <a href="#" class="pagination-item text-button"><i class="icon-arrRight"></i></a>
+                        </li>
+                    </ul>
 
-                                        <button class="btn bs-btn-icon bs-calendar" title="Book Now"
-                                            onclick="openBookingModal()">
 
-                                            <i class="icon-calendar"></i>
 
-                                        </button>
-
-                                        <button class="btn bs-btn-icon bs-star" title="Reviews">
-
-                                            <i class="icon-star"></i>
-                                        </button>
-                                    </div>
-                                </div>
+                        <!-- Location Modal -->
+                        <div id="bsLocationModal" class="bs-location-modal">
+                            <div class="bs-modal-content-custom">
+                                <h5 class="mb-3">Service Areas - ID no. <span id="bsModalBeauticianId">1</span></h5>
+                                <ul class="bs-location-list" id="bsLocationList">
+                                    <li>Indiranagar</li>
+                                    <li>Koramangala</li>
+                                    <li>Whitefield</li>
+                                    <li>HSR Layout</li>
+                                    <li>Marathahalli</li>
+                                    <li>BTM Layout</li>
+                                    <li>Electronic City</li>
+                                    <li>JP Nagar</li>
+                                </ul>
+                                <button class="btn btn-secondary w-100" onclick="closeLocationModal()">Close</button>
                             </div>
                         </div>
-
-                        <!-- Card 3 (Example) -->
-                        <div class="col-sm-12 col-md-6 col-lg-6">
-                            <div class="card bs-beautician-card">
-                                <div class="bs-card-img-wrapper">
-                                   <!-- <img src="images/beautician/beautician3.png" alt="Beautician">-->
-                                    <span class="bs-availability-badge">Available Today</span>
-                                </div>
-                                <div class="card-body bs-card-body">
-                                    <div class="bs-beautician-id">ID no. :3</div>
-                                    <div class="bs-rating-section">
-                                        <div class="bs-stars">
-                                            <span class="star filled">★</span>
-                                            <span class="star filled">★</span>
-                                            <span class="star filled">★</span>
-                                            <span class="star filled">★</span>
-                                            <span class="star half">★</span>
-                                        </div>
-                                        <span class="bs-review-count">(192 reviews)</span>
-                                    </div>
-                                    <div class="bs-location-badge">
-                                        <i class="fas fa-map-marker-alt"></i>
-                                        <span>HSR Layout, BTM</span>
-                                    </div>
-                                    <p class="bs-description">
-                                        Nail Art Specialist and Spa Therapist with expertise in manicures, pedicures,
-                                        and
-                                        relaxation treatments. 5 years experience.
-                                    </p>
-                                    <div class="bs-service-tags">
-                                        <span class="bs-service-tag">Nail Art</span>
-                                        <span class="bs-service-tag">Spa</span>
-                                        <span class="bs-service-tag">Manicure</span>
-                                    </div>
-                                    <div class="bs-price-section">
-                                        <div class="bs-price-info">
-                                            <span class="price-label">Starting from</span>
-                                            <span class="price-value">₹800</span>
-                                        </div>
-                                        <button class="btn-view-services" onclick="openServicesModal(2)">
-                                            View All Services
-                                        </button>
-                                    </div>
-                                    <div class="bs-card-actions">
-                                        <a href="beautician-profile.html">
-                                            <button class="btn bs-btn-profile">View Profile</button>
-                                        </a>
-
-                                        <button class="btn bs-btn-icon bs-calendar" title="Book Now"
-                                            onclick="openBookingModal()">
-
-                                            <i class="icon-calendar"></i>
-
-                                        </button>
-
-                                        <button class="btn bs-btn-icon bs-star" title="Reviews">
-
-                                            <i class="icon-star"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!-- Location Modal -->
-                    <div id="bsLocationModal" class="bs-location-modal">
-                        <div class="bs-modal-content-custom">
-                            <h5 class="mb-3">Service Areas - ID no. <span id="bsModalBeauticianId">1</span></h5>
-                            <ul class="bs-location-list" id="bsLocationList">
-                                <li>Indiranagar</li>
-                                <li>Koramangala</li>
-                                <li>Whitefield</li>
-                                <li>HSR Layout</li>
-                                <li>Marathahalli</li>
-                                <li>BTM Layout</li>
-                                <li>Electronic City</li>
-                                <li>JP Nagar</li>
-                            </ul>
-                            <button class="btn btn-secondary w-100" onclick="closeLocationModal()">Close</button>
-                        </div>
-                    </div>
                     </div>
 
                 </main>
@@ -921,7 +960,9 @@
         <div class="canvas-wrapper">
             <div class="canvas-header">
                 <h5>Filters</h5>
-               <span class="icon-close icon-close-popup" data-bs-dismiss="offcanvas" aria-label="Close"></span>
+                <span class="icon-close d-block d-lg-none" data-bs-dismiss="offcanvas" aria-label="Close">×</span>
+
+
             </div>
 
             <div class="canvas-body">

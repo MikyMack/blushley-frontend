@@ -1586,12 +1586,13 @@ function applyFilters() {
 
 
 
+document.addEventListener('DOMContentLoaded', function() {
 
-
-   const sliderViewport = document.getElementById('sliderViewport');
+        const sliderViewport = document.getElementById('sliderViewport');
         const sliderTrack = document.getElementById('sliderTrack');
         const paginationDots = document.querySelectorAll('.dot-indicator-item-element');
         
+          if (sliderViewport && sliderTrack && paginationDots.length > 0) {
         let currentSlidePosition = 0;
         const totalSlidesCount = 5;
         let autoPlayIntervalId;
@@ -1739,3 +1740,39 @@ function applyFilters() {
 
         // Initialize
         initializeAutoPlay();
+    }
+
+    
+});
+
+
+        /**************active navbar code******** */
+
+     
+
+$(document).ready(function() {
+    // Get current page URL
+    var currentPage = window.location.pathname.split('/').pop();
+    
+    // If no page specified, default to index.html
+    if (currentPage === '' || currentPage === '/') {
+        currentPage = 'index.html';
+    }
+    
+    console.log('Current Page:', currentPage); // Debug line
+    
+    // Remove active class from ALL li elements in navigation
+    $('.box-nav-ul li').removeClass('active');
+    
+    // Add active class to matching menu item
+    $('.box-nav-ul li').each(function() {
+        var linkHref = $(this).find('.item-link').attr('href');
+        
+        console.log('Link href:', linkHref); // Debug line
+        
+        if (linkHref === currentPage) {
+            $(this).addClass('active');
+            console.log('Active class added to:', linkHref); // Debug line
+        }
+    });
+});
