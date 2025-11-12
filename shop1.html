@@ -3377,42 +3377,8 @@
 
 </script>
 
-// Add this script right before </body> tag in all HTML pages
 
-$(document).ready(function() {
-    // Get current page filename
-    var currentPage = window.location.pathname.split('/').pop();
-    
-    // Default to index.html if empty
-    if (currentPage === '' || currentPage === '/') {
-        currentPage = 'index.html';
-    }
-    
-    console.log('Current Page:', currentPage);
-    
-    // Remove active class from all menu items
-    $('.box-nav-ul .menu-item').removeClass('active');
-    $('.nav-ul-mb .nav-mb-item').removeClass('active'); // Also handle mobile menu
-    
-    // Add active class to matching menu item
-    $('.box-nav-ul .menu-item').each(function() {
-        var linkHref = $(this).find('.item-link').attr('href');
-        
-        if (linkHref === currentPage) {
-            $(this).addClass('active');
-            console.log('Active set for:', linkHref);
-        }
-    });
-    
-    // Also update mobile menu
-    $('.nav-ul-mb .nav-mb-item').each(function() {
-        var linkHref = $(this).find('.mb-menu-link').attr('href');
-        
-        if (linkHref === currentPage) {
-            $(this).addClass('active');
-        }
-    });
-});
+
 
     <script>  if (document.querySelector("#sib-form")) { const script = document.createElement('script'); script.src = 'js/sibforms.js'; script.defer = true; document.body.appendChild(script); }</script>
 
