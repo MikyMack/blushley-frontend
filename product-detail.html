@@ -27,6 +27,18 @@
     <link rel="icon" type="image/png" sizes="16x16" href="images/logo/favicon-16x16.png">
     <link rel="apple-touch-icon-precomposed" sizes="180x180" href="images/logo/apple-touch-icon.png">
 
+    <style>
+/* Prevent modal backdrop from blocking shopping cart */
+body.modal-open {
+    overflow: auto !important;
+    padding-right: 0 !important;
+}
+
+.modal-backdrop {
+    display: none !important;
+}
+</style>
+
 </head>
 
 <body class="preload-wrapper">
@@ -3508,8 +3520,8 @@ Lorem ipsum dolor sit amet consectetur adipiscing elit proin, aliquam porttitor 
 
 
     <!-- Javascript -->
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/jquery.min.js"></script>
+      <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>   
     <script type="text/javascript" src="js/bootstrap-select.min.js"></script>
     <script type="text/javascript" src="js/lazysize.min.js"></script>
     <script type="text/javascript" src="js/wow.min.js"></script>
@@ -3543,6 +3555,82 @@ Lorem ipsum dolor sit amet consectetur adipiscing elit proin, aliquam porttitor 
 
     <script type="module" src="js/model-viewer.min.js"></script>
     <script type="module" src="js/zoom.js"></script>
+
+ 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Check if nav-account exists before accessing it
+    const navAccount = document.querySelector('.nav-account');
+    
+    if (navAccount) {
+        const navIconItem = navAccount.querySelector('.nav-icon-item');
+        
+        if (navIconItem) {
+            // Toggle dropdown on click
+            navIconItem.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                navAccount.classList.toggle('show-dropdown');
+            });
+        }
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!navAccount.contains(e.target)) {
+                navAccount.classList.remove('show-dropdown');
+            }
+        });
+        
+        // Prevent dropdown from closing when clicking inside it
+        const dropdown = navAccount.querySelector('.dropdown-account');
+        if (dropdown) {
+            dropdown.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+        }
+    }
+    
+    // CRITICAL FIX: Remove any leftover modal artifacts on page load
+    function cleanupModalArtifacts() {
+        // Remove all modal backdrops
+        document.querySelectorAll('.modal-backdrop').forEach(function(backdrop) {
+            backdrop.remove();
+        });
+        
+        // Reset body styles
+        document.body.classList.remove('modal-open');
+        document.body.style.overflow = '';
+        document.body.style.paddingRight = '';
+    }
+    
+    // Clean up on page load
+    cleanupModalArtifacts();
+    
+    // Clean up whenever a modal is hidden
+    if (typeof $ !== 'undefined') {
+        $(document).on('hidden.bs.modal', '.modal', function() {
+            cleanupModalArtifacts();
+        });
+        
+        // Also clean up when shopping cart is opened
+        $(document).on('show.bs.modal', '#shoppingCart', function() {
+            cleanupModalArtifacts();
+        });
+    }
+});
+
+// Also add a fallback cleanup that runs slightly later
+setTimeout(function() {
+    document.querySelectorAll('.modal-backdrop').forEach(function(backdrop) {
+        backdrop.remove();
+    });
+    document.body.classList.remove('modal-open');
+    document.body.style.overflow = '';
+    document.body.style.paddingRight = '';
+}, 500);
+</script>
+
+
 
      <script>  if (document.querySelector("#sib-form")) { const script = document.createElement('script');script.src = 'js/sibforms.js';script.defer = true;document.body.appendChild(script);}</script>
     

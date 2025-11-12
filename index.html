@@ -93,7 +93,7 @@
                     <div class="col-xl-6 d-none d-xl-block">
                         <nav class="box-navigation text-center">
                             <ul class="box-nav-ul d-flex align-items-center justify-content-center">
-                                <li class="menu-item active">
+                                <li class="menu-item">
                                     <a href="index.html" class="item-link">Home</a>
                                     <!--  <div class="sub-menu mega-menu">
                                      <div class="container">
@@ -119,10 +119,10 @@
                                 </li>
 
 
-                                <li class="menu-item book-salon-link"><a href="salon-service.html"
+                                <li class="menu-item book-salon-link active"><a href="salon-service.html"
                                         class="item-link">Book a Salon</a>
                                 </li>
-                                <li class="menu-item ">
+                                <li class="menu-item">
                                     <a href="blog-grid.html" class="item-link">Beauty Tips</a>
 
                                 </li>
@@ -536,12 +536,12 @@
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <div class="collection-default hover-img wow fadeInUp" data-wow-delay="0s">
-                                            <a class="img-style">
+                                            <a class="img-style" href="beautician-services.html">
                                                 <img class="lazyload" data-src="images/collections/radiant-skin.png"
                                                     src="images/collections/radiant-skin.png" alt="banner-cls">
                                             </a>
                                             <div class="content text-center">
-                                                <h6 class="title"><a href="shop-collection.html" class="link">Radiant
+                                                <h6 class="title"><a href="salon-service.html" class="link">Radiant
                                                         Skin</a></h6>
 
                                             </div>
@@ -549,12 +549,12 @@
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="collection-default hover-img wow fadeInUp" data-wow-delay="0.1s">
-                                            <a class="img-style">
+                                            <a class="img-style" href="beautician-services.html">
                                                 <img class="lazyload" data-src="images/collections/glamorous-look.png"
                                                     src="images/collections/glamorous-look.png" alt="banner-cls">
                                             </a>
                                             <div class="content text-center">
-                                                <h6 class="title"><a href="shop-collection.html" class="link">Glamorous
+                                                <h6 class="title"><a href="salon-service.html" class="link">Glamorous
                                                         Looks</a></h6>
 
                                             </div>
@@ -1577,13 +1577,13 @@
                                             <a href="about-us.html" class="footer-menu_item">About Us</a>
                                         </li>
                                         <li class="text-caption-1">
-                                            <a href="contact.html" class="footer-menu_item">Contact us</a>
+                                            <a href="contact-02.html" class="footer-menu_item">Contact us</a>
                                         </li>
                                         <li class="text-caption-1">
                                             <a href="my-account.html" class="footer-menu_item">My Account</a>
                                         </li>
                                         <li class="text-caption-1">
-                                            <a href="#" class="footer-menu_item">Terms & Conditions</a>
+                                            <a href="term-of-use.html" class="footer-menu_item">Terms & Conditions</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -1595,13 +1595,13 @@
                                 <div class="tf-collapse-content">
                                     <ul class="footer-menu-list">
                                         <li class="text-caption-1">
-                                            <a href="#" class="footer-menu_item">Shipping</a>
+                                            <a href="my-account-orders.html" class="footer-menu_item">My Orders</a>
                                         </li>
                                         <li class="text-caption-1">
                                             <a href="#" class="footer-menu_item">Return & Refund</a>
                                         </li>
                                         <li class="text-caption-1">
-                                            <a href="wish-list.html" class="footer-menu_item">My Wishlist</a>
+                                            <a href="wi.html" class="footer-menu_item">My Wishlist</a>
                                         </li>
                                         <li class="text-caption-1">
                                             <a href="#" class="footer-menu_item">Privacy Policy</a>
@@ -1667,6 +1667,8 @@
         </div>
     </div>
 </footer>
+
+</div>
 
         <!-- Seller Registration Modal -->
         <div class="modal-overlay" id="sellerModal">
@@ -4030,9 +4032,37 @@
             }
         </script>
 
-</body>
+           <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const navAccount = document.querySelector('.nav-account');
+    const navIconItem = navAccount.querySelector('.nav-icon-item');
+    
+    // Toggle dropdown on click
+    navIconItem.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        navAccount.classList.toggle('show-dropdown');
+    });
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!navAccount.contains(e.target)) {
+            navAccount.classList.remove('show-dropdown');
+        }
+    });
+    
+    // Prevent dropdown from closing when clicking inside it
+    const dropdown = navAccount.querySelector('.dropdown-account');
+    dropdown.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+});
 
-</html>
+</script>
+
+
+
+
 
 
 <script>  if (document.querySelector("#sib-form")) { const script = document.createElement('script'); script.src = 'js/sibforms.js'; script.defer = true; document.body.appendChild(script); }</script>
